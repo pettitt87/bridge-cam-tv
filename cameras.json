@@ -1,0 +1,1217 @@
+{
+  "categories": [
+    {
+      "id": "local",
+      "name": "Local — Lockport & Joliet"
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago"
+    },
+    {
+      "id": "traffic",
+      "name": "Highways & Traffic"
+    },
+    {
+      "id": "trains",
+      "name": "Trains & Rail"
+    },
+    {
+      "id": "nyc",
+      "name": "New York City"
+    },
+    {
+      "id": "nye",
+      "name": "New Year's Eve Spots"
+    },
+    {
+      "id": "beaches",
+      "name": "Beaches & Surf"
+    },
+    {
+      "id": "harbors",
+      "name": "Harbors & Ships"
+    },
+    {
+      "id": "planes",
+      "name": "Airports & Planes"
+    },
+    {
+      "id": "wildlife",
+      "name": "Wildlife & Animals"
+    },
+    {
+      "id": "aquarium",
+      "name": "Aquariums & Underwater"
+    },
+    {
+      "id": "skylines",
+      "name": "City Skylines"
+    },
+    {
+      "id": "landmarks",
+      "name": "Landmarks & Monuments"
+    },
+    {
+      "id": "nightlife",
+      "name": "Nightlife & Streets"
+    },
+    {
+      "id": "volcano",
+      "name": "Volcanoes & Nature"
+    },
+    {
+      "id": "space",
+      "name": "Space & Rockets"
+    },
+    {
+      "id": "world",
+      "name": "Around the World"
+    },
+    {
+      "id": "smalltown",
+      "name": "Small Town America"
+    }
+  ],
+  "cameras": [
+    {
+      "id": "bt1",
+      "name": "9th Street Bridge",
+      "sub": "LOCKPORT, IL · BROWN TECH · HLS",
+      "type": "hls",
+      "url": "https://brown-technologies.net/live-camera/cam1/live.m3u8",
+      "tags": [
+        "local"
+      ]
+    },
+    {
+      "id": "bt2",
+      "name": "City Hall Yard",
+      "sub": "LOCKPORT, IL · BROWN TECH · HLS",
+      "type": "hls",
+      "url": "https://brown-technologies.net/live-camera/cam2/live.m3u8",
+      "tags": [
+        "local"
+      ]
+    },
+    {
+      "id": "i355n",
+      "name": "I-355 @ Spring Creek Plaza — North",
+      "sub": "LOCKPORT, IL · TOLLWAY · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://cctv.travelmidwest.com/snapshots/IL-ISTHA_1_Will_SEB_I-355-CASH_4157660_-8800050_1_N.jpg",
+      "tags": [
+        "local",
+        "traffic"
+      ]
+    },
+    {
+      "id": "i355s",
+      "name": "I-355 @ Spring Creek Plaza — South",
+      "sub": "LOCKPORT, IL · TOLLWAY · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://cctv.travelmidwest.com/snapshots/IL-ISTHA_1_Will_SEB_I-355-CASH_4157660_-8800050_1_S.jpg",
+      "tags": [
+        "local",
+        "traffic"
+      ]
+    },
+    {
+      "id": "i55lock",
+      "name": "I-55 @ Lockport Rd",
+      "sub": "BOLINGBROOK, IL · IDOT · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD1_1_Will_NB_I-55_4160876_-8816292_1_NONE.jpg",
+      "tags": [
+        "local",
+        "traffic"
+      ]
+    },
+    {
+      "id": "i55us30",
+      "name": "I-55 @ US 30",
+      "sub": "JOLIET, IL · IDOT · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD1_1_Will_SWB_I-55_4158419_-8816869_1_NONE.jpg",
+      "tags": [
+        "local",
+        "traffic"
+      ]
+    },
+    {
+      "id": "i55caton",
+      "name": "I-55 South of Caton Farm Rd",
+      "sub": "JOLIET, IL · IDOT · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD1_1_Will_NB_I-55_4156485_-8818055_1_NONE.jpg",
+      "tags": [
+        "local",
+        "traffic"
+      ]
+    },
+    {
+      "id": "i55jeff",
+      "name": "I-55 North of Jefferson St",
+      "sub": "JOLIET, IL · IDOT · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://cctv.travelmidwest.com/snapshots/IL-IDOTD1_1_Will_NEB_I-55_4152799_-8818419_1_NONE.jpg",
+      "tags": [
+        "local",
+        "traffic"
+      ]
+    },
+    {
+      "id": "i355dup",
+      "name": "I-355 NB @ Maple Ave",
+      "sub": "DUPAGE CO, IL · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://cctv.travelmidwest.com/snapshots/IL-DUPAGECOUNTY_1_DuPage_NB_I-355_4178609_-8805520_1_N.jpg",
+      "tags": [
+        "traffic"
+      ]
+    },
+    {
+      "id": "i88dup",
+      "name": "I-88 EB @ I-355",
+      "sub": "DUPAGE CO, IL · TOLLWAY · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://cctv.travelmidwest.com/snapshots/IL-ISTHA_1_DuPage_EB_I-88_4180939_-8805290_1_S.jpg",
+      "tags": [
+        "traffic"
+      ]
+    },
+    {
+      "id": "irm",
+      "name": "Illinois Railway Museum",
+      "sub": "UNION, IL · LIVE RAILCAM",
+      "type": "yt",
+      "vid": "fMwmFqD0RE8",
+      "refresh": {
+        "channel": "@IRMorg1"
+      },
+      "tags": [
+        "local",
+        "trains"
+      ]
+    },
+    {
+      "id": "skydeck",
+      "name": "Willis Tower Skydeck",
+      "sub": "CHICAGO, IL · EARTHCAM",
+      "type": "yt",
+      "vid": "O0UGT7AT3aw",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Chicago Skydeck"
+      },
+      "tags": [
+        "chicago",
+        "skylines",
+        "landmarks"
+      ]
+    },
+    {
+      "id": "lakefront",
+      "name": "Chicago Lakefront — The Playpen",
+      "sub": "CHICAGO, IL · LAKEFRONT LIVE 4K",
+      "type": "yt",
+      "vid": "RE8AufGLrT4",
+      "refresh": {
+        "channel": "@LakefrontLive"
+      },
+      "tags": [
+        "chicago",
+        "beaches",
+        "skylines"
+      ]
+    },
+    {
+      "id": "southsky",
+      "name": "Chicago Southern Skyline",
+      "sub": "CHICAGO, IL · SOUTH LOOP VIEW",
+      "type": "yt",
+      "vid": "ycpn7oEdB_U",
+      "refresh": {
+        "channel": "@ChicagoSouthSky"
+      },
+      "tags": [
+        "chicago",
+        "skylines"
+      ]
+    },
+    {
+      "id": "midwayec",
+      "name": "Midway Airport — EarthCam",
+      "sub": "CHICAGO, IL · EARTHCAM",
+      "type": "yt",
+      "vid": "0ZzPWoeZzuI",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Midway Airport"
+      },
+      "tags": [
+        "chicago",
+        "planes"
+      ]
+    },
+    {
+      "id": "midwayst",
+      "name": "Midway Airport 4K — StreamTime",
+      "sub": "CHICAGO, IL · STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "67BCsiW-1Io",
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Midway Airport"
+      },
+      "tags": [
+        "chicago",
+        "planes"
+      ]
+    },
+    {
+      "id": "milwaukee",
+      "name": "Milwaukee Skyline",
+      "sub": "MILWAUKEE, WI · EARTHCAM",
+      "type": "yt",
+      "vid": "MT5Og9gOKuM",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Milwaukee"
+      },
+      "tags": [
+        "skylines"
+      ]
+    },
+    {
+      "id": "deshler",
+      "name": "Deshler Crossing Railcam",
+      "sub": "DESHLER, OH · VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "TjMwpB8JRw8",
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Deshler"
+      },
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "id": "lagrange",
+      "name": "La Grange Street Running",
+      "sub": "LA GRANGE, KY · VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "OtssjZ3hdX0",
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "La Grange"
+      },
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "id": "ashland",
+      "name": "Ashland Railcam",
+      "sub": "ASHLAND, VA · VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "_eArnSLGhSo",
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Ashland"
+      },
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "id": "folkston",
+      "name": "Folkston Funnel",
+      "sub": "FOLKSTON, GA · VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "FHYqepozgiQ",
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Folkston"
+      },
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "id": "cheyenne",
+      "name": "Cheyenne Depot Railcam",
+      "sub": "CHEYENNE, WY · VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "p9CJkmVgxp0",
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cheyenne"
+      },
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "id": "stlouis",
+      "name": "St. Louis Railcam",
+      "sub": "ST. LOUIS, MO · VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "9eqVB3JbJHc",
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Saint Louis"
+      },
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "id": "seattletrain",
+      "name": "Seattle Railcam",
+      "sub": "SEATTLE, WA · VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "pHqTDmH7H7c",
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Seattle"
+      },
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "id": "kctrain",
+      "name": "Kansas City Railcam",
+      "sub": "KANSAS CITY, MO · VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "PyLw5HQKiYU",
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Kansas City"
+      },
+      "tags": [
+        "trains"
+      ]
+    },
+    {
+      "id": "tsq1",
+      "name": "Times Square Crossroads",
+      "sub": "NEW YORK, NY · EARTHCAM",
+      "type": "yt",
+      "vid": "z-jYdOIKcTQ",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Times Square Crossroads"
+      },
+      "tags": [
+        "nyc",
+        "nye",
+        "nightlife"
+      ]
+    },
+    {
+      "id": "tsq2",
+      "name": "Times Square North 4K",
+      "sub": "NEW YORK, NY · EARTHCAM",
+      "type": "yt",
+      "vid": "JQ_jwk_7OVE",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Times Square North"
+      },
+      "tags": [
+        "nyc",
+        "nye",
+        "nightlife"
+      ]
+    },
+    {
+      "id": "wtc",
+      "name": "World Trade Center",
+      "sub": "NEW YORK, NY · EARTHCAM",
+      "type": "yt",
+      "vid": "5C9oM7C2Q9k",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "World Trade Center"
+      },
+      "tags": [
+        "nyc",
+        "skylines",
+        "landmarks",
+        "nye"
+      ]
+    },
+    {
+      "id": "liberty",
+      "name": "Statue of Liberty CrownCam",
+      "sub": "NEW YORK, NY · EARTHCAM",
+      "type": "yt",
+      "vid": "YHRYOL03ydw",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Statue of Liberty"
+      },
+      "tags": [
+        "nyc",
+        "landmarks"
+      ]
+    },
+    {
+      "id": "littleitaly",
+      "name": "Mulberry St — Little Italy",
+      "sub": "NEW YORK, NY · EARTHCAM",
+      "type": "yt",
+      "vid": "ATi3zih-tu8",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Mulberry"
+      },
+      "tags": [
+        "nyc",
+        "nightlife"
+      ]
+    },
+    {
+      "id": "nycharbor",
+      "name": "NYC Harbor — Brooklyn",
+      "sub": "BROOKLYN, NY · STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "l7b5RFAkKhY",
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "New York City Harbor"
+      },
+      "tags": [
+        "nyc",
+        "harbors",
+        "skylines"
+      ]
+    },
+    {
+      "id": "fremont",
+      "name": "Fremont Street Experience",
+      "sub": "LAS VEGAS, NV · 24/7 LIVE",
+      "type": "yt",
+      "vid": "ZvYvZLfPatQ",
+      "tags": [
+        "nye",
+        "nightlife"
+      ]
+    },
+    {
+      "id": "shibuya",
+      "name": "Shibuya Scramble Crossing",
+      "sub": "TOKYO, JAPAN · LIVE",
+      "type": "yt",
+      "vid": "dfVK7ld38Ys",
+      "tags": [
+        "nye",
+        "nightlife",
+        "world"
+      ]
+    },
+    {
+      "id": "nola",
+      "name": "New Orleans Balcony View",
+      "sub": "NEW ORLEANS, LA · EARTHCAM",
+      "type": "yt",
+      "vid": "C32EiZiQPkQ",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "New Orleans Balcony"
+      },
+      "tags": [
+        "nye",
+        "nightlife"
+      ]
+    },
+    {
+      "id": "ftlaud",
+      "name": "Fort Lauderdale Beach",
+      "sub": "FT. LAUDERDALE, FL · PTZTV",
+      "type": "yt",
+      "vid": "pXx3YQVSUGg",
+      "refresh": {
+        "channel": "@PTZtv",
+        "match": "Fort Lauderdale Beach"
+      },
+      "tags": [
+        "beaches"
+      ]
+    },
+    {
+      "id": "wildwood",
+      "name": "Wildwoods Beach Cam",
+      "sub": "WILDWOOD, NJ · EARTHCAM",
+      "type": "yt",
+      "vid": "cK71xhMRtds",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Wildwoods"
+      },
+      "tags": [
+        "beaches"
+      ]
+    },
+    {
+      "id": "sanibel",
+      "name": "Sanibel Island",
+      "sub": "SANIBEL, FL · EARTHCAM",
+      "type": "yt",
+      "vid": "4LTSTw4jnZc",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Sanibel"
+      },
+      "tags": [
+        "beaches"
+      ]
+    },
+    {
+      "id": "napili",
+      "name": "Napili Bay Beach 4K",
+      "sub": "WEST MAUI, HI · AFAR TV",
+      "type": "yt",
+      "vid": "UpwNqncnqTE",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "Napili Bay"
+      },
+      "tags": [
+        "beaches"
+      ]
+    },
+    {
+      "id": "northshore",
+      "name": "North Shore Big Waves",
+      "sub": "OAHU, HI · AFAR TV",
+      "type": "yt",
+      "vid": "Vl-IBa9JTH4",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "North Shore"
+      },
+      "tags": [
+        "beaches"
+      ]
+    },
+    {
+      "id": "keywest",
+      "name": "Key West Harbor",
+      "sub": "KEY WEST, FL · PTZTV",
+      "type": "yt",
+      "vid": "iHJbTrQSZys",
+      "refresh": {
+        "channel": "@PTZtv",
+        "match": "Key West"
+      },
+      "tags": [
+        "beaches",
+        "harbors"
+      ]
+    },
+    {
+      "id": "portmiami",
+      "name": "PortMiami + Marine Radio",
+      "sub": "MIAMI, FL · PTZTV",
+      "type": "yt",
+      "vid": "DxZziUUr6CY",
+      "refresh": {
+        "channel": "@PTZtv",
+        "match": "Port Miami"
+      },
+      "tags": [
+        "harbors"
+      ]
+    },
+    {
+      "id": "soolocks",
+      "name": "Soo Locks",
+      "sub": "SAULT STE MARIE, MI · STREAMTIME",
+      "type": "yt",
+      "vid": "TkY4BzCikQ4",
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Soo Locks"
+      },
+      "tags": [
+        "harbors"
+      ]
+    },
+    {
+      "id": "porthuron",
+      "name": "Port Huron — Blue Water Bridge",
+      "sub": "PORT HURON, MI · STREAMTIME",
+      "type": "yt",
+      "vid": "AwP_Q6IGwFs",
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Port Huron"
+      },
+      "tags": [
+        "harbors"
+      ]
+    },
+    {
+      "id": "welland",
+      "name": "Welland Canal",
+      "sub": "PORT COLBORNE, ON · STREAMTIME",
+      "type": "yt",
+      "vid": "yF7XdpkL34w",
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Port Colborne"
+      },
+      "tags": [
+        "harbors"
+      ]
+    },
+    {
+      "id": "lock19",
+      "name": "Mississippi River Lock 19",
+      "sub": "KEOKUK, IA · STREAMTIME",
+      "type": "yt",
+      "vid": "GXsEbZaj0bU",
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Lock 19"
+      },
+      "tags": [
+        "harbors"
+      ]
+    },
+    {
+      "id": "pier23",
+      "name": "Pier 23 — San Francisco Bay",
+      "sub": "SAN FRANCISCO, CA · STREAMTIME",
+      "type": "yt",
+      "vid": "a5IW4I-z2rs",
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Pier 23"
+      },
+      "tags": [
+        "harbors",
+        "skylines"
+      ]
+    },
+    {
+      "id": "lakehood",
+      "name": "Lake Hood Seaplane Base",
+      "sub": "ANCHORAGE, AK · STREAMTIME",
+      "type": "yt",
+      "vid": "61pi8UjLOlo",
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Lake Hood"
+      },
+      "tags": [
+        "harbors",
+        "planes"
+      ]
+    },
+    {
+      "id": "miamiair",
+      "name": "Miami Airport + Tower Radio",
+      "sub": "MIAMI, FL · PTZTV",
+      "type": "yt",
+      "vid": "_GUsXnlVJmo",
+      "refresh": {
+        "channel": "@PTZtv",
+        "match": "Miami Airport"
+      },
+      "tags": [
+        "planes"
+      ]
+    },
+    {
+      "id": "brooks",
+      "name": "Brooks Falls Brown Bears",
+      "sub": "KATMAI, AK · EXPLORE.ORG",
+      "type": "yt",
+      "vid": "J7ZrIDvqlic",
+      "refresh": {
+        "channel": "@explorelivenaturecams",
+        "match": "Brooks Falls"
+      },
+      "tags": [
+        "wildlife"
+      ]
+    },
+    {
+      "id": "tembe",
+      "name": "Tembe Elephant Park",
+      "sub": "SOUTH AFRICA · EXPLORE.ORG",
+      "type": "yt",
+      "vid": "0P_LBKqVbfs",
+      "refresh": {
+        "channel": "@explorelivenaturecams",
+        "match": "Elephant"
+      },
+      "tags": [
+        "wildlife"
+      ]
+    },
+    {
+      "id": "decorah",
+      "name": "Decorah Eagles North Nest",
+      "sub": "DECORAH, IA · EXPLORE.ORG",
+      "type": "yt",
+      "vid": "GGIE1E-kaMQ",
+      "refresh": {
+        "channel": "@explorelivenaturecams",
+        "match": "Decorah"
+      },
+      "tags": [
+        "wildlife"
+      ]
+    },
+    {
+      "id": "wolves",
+      "name": "International Wolf Center",
+      "sub": "ELY, MN · EXPLORE.ORG",
+      "type": "yt",
+      "vid": "5e4lsEe4Vew",
+      "refresh": {
+        "channel": "@explorelivenaturecams",
+        "match": "Wolf Center"
+      },
+      "tags": [
+        "wildlife"
+      ]
+    },
+    {
+      "id": "giraffe",
+      "name": "Giraffe Paddock",
+      "sub": "GREENVILLE, SC · EARTHCAM",
+      "type": "yt",
+      "vid": "sLRtUoPNH2k",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Giraffe"
+      },
+      "tags": [
+        "wildlife"
+      ]
+    },
+    {
+      "id": "watering",
+      "name": "African Watering Hole",
+      "sub": "CHOBE, BOTSWANA · EARTHCAM",
+      "type": "yt",
+      "vid": "iqdRLSdSjWI",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Watering Hole"
+      },
+      "tags": [
+        "wildlife"
+      ]
+    },
+    {
+      "id": "kittens",
+      "name": "Kitten Rescue Cat Cam",
+      "sub": "LOS ANGELES, CA · EXPLORE.ORG",
+      "type": "yt",
+      "vid": "-m_nQT62B4Y",
+      "refresh": {
+        "channel": "@explorelivenaturecams",
+        "match": "Kitten"
+      },
+      "tags": [
+        "wildlife"
+      ]
+    },
+    {
+      "id": "pigeonriver",
+      "name": "Pigeon River Cam",
+      "sub": "HARTFORD, TN · EARTHCAM",
+      "type": "yt",
+      "vid": "6tq8S2pp8PQ",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Pigeon River"
+      },
+      "tags": [
+        "wildlife",
+        "smalltown"
+      ]
+    },
+    {
+      "id": "manatee",
+      "name": "Underwater Manatee Cam",
+      "sub": "HOMOSASSA SPRINGS, FL · EXPLORE.ORG",
+      "type": "yt",
+      "vid": "Fz6sl9YJZE0",
+      "refresh": {
+        "channel": "@explorelivenaturecams",
+        "match": "Manatee"
+      },
+      "tags": [
+        "wildlife",
+        "aquarium"
+      ]
+    },
+    {
+      "id": "kelp",
+      "name": "Kelp Forest Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "w3LjpFhySTg",
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Kelp"
+      },
+      "tags": [
+        "aquarium"
+      ]
+    },
+    {
+      "id": "jelly",
+      "name": "Jelly Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "eQ_foBERmzA",
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Live Jelly"
+      },
+      "tags": [
+        "aquarium"
+      ]
+    },
+    {
+      "id": "shark",
+      "name": "Shark Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "tEtg5Kg3voQ",
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Shark"
+      },
+      "tags": [
+        "aquarium"
+      ]
+    },
+    {
+      "id": "otter",
+      "name": "Sea Otter Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "abbR-Ttd-cA",
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Otter"
+      },
+      "tags": [
+        "aquarium",
+        "wildlife"
+      ]
+    },
+    {
+      "id": "opensea",
+      "name": "Open Sea Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "n_GpVsz4nHU",
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Open Sea"
+      },
+      "tags": [
+        "aquarium"
+      ]
+    },
+    {
+      "id": "baltaqua",
+      "name": "Baltimore Aquarium Cam",
+      "sub": "BALTIMORE, MD · EARTHCAM",
+      "type": "yt",
+      "vid": "KSxc-N67TU4",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Aquarium Cam"
+      },
+      "tags": [
+        "aquarium"
+      ]
+    },
+    {
+      "id": "reef",
+      "name": "Tropical Reef Cam",
+      "sub": "EXPLORE.ORG",
+      "type": "yt",
+      "vid": "DHUnz4dyb54",
+      "refresh": {
+        "channel": "@explorelivenaturecams",
+        "match": "Tropical Reef"
+      },
+      "tags": [
+        "aquarium"
+      ]
+    },
+    {
+      "id": "libertybell",
+      "name": "Liberty Bell — Independence Hall",
+      "sub": "PHILADELPHIA, PA · EARTHCAM",
+      "type": "yt",
+      "vid": "F1EQEDL4ddU",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Liberty Bell"
+      },
+      "tags": [
+        "landmarks"
+      ]
+    },
+    {
+      "id": "washmon",
+      "name": "Washington Monument",
+      "sub": "WASHINGTON, D.C. · EARTHCAM",
+      "type": "yt",
+      "vid": "oDCAAfOSqvA",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Washington Monument"
+      },
+      "tags": [
+        "landmarks"
+      ]
+    },
+    {
+      "id": "cleveland",
+      "name": "Terminal Tower Cam",
+      "sub": "CLEVELAND, OH · EARTHCAM",
+      "type": "yt",
+      "vid": "iHqqkh_Lths",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Terminal Tower"
+      },
+      "tags": [
+        "skylines"
+      ]
+    },
+    {
+      "id": "philly",
+      "name": "Philadelphia Skyline",
+      "sub": "PHILADELPHIA, PA · EARTHCAM",
+      "type": "yt",
+      "vid": "9mMnqO1UuIU",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Live: Philadelphia"
+      },
+      "tags": [
+        "skylines"
+      ]
+    },
+    {
+      "id": "iss",
+      "name": "ISS — Earth From Space",
+      "sub": "LOW EARTH ORBIT · NASA/AFAR TV",
+      "type": "yt",
+      "vid": "tj4knR4r1UU",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "ISS"
+      },
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "id": "canaveral",
+      "name": "Cape Canaveral Launch View",
+      "sub": "FLORIDA · AFAR TV",
+      "type": "yt",
+      "vid": "Bm7WPwOOkZM",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "Cape Canaveral"
+      },
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "id": "etna",
+      "name": "Mount Etna 4K",
+      "sub": "SICILY, ITALY · AFAR TV",
+      "type": "yt",
+      "vid": "6-WqLFrrAtw",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "Etna"
+      },
+      "tags": [
+        "volcano",
+        "world"
+      ]
+    },
+    {
+      "id": "popo",
+      "name": "Popocatépetl Volcano 4K",
+      "sub": "MEXICO · AFAR TV",
+      "type": "yt",
+      "vid": "f-a0L9Cwb7s",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "Popocat"
+      },
+      "tags": [
+        "volcano"
+      ]
+    },
+    {
+      "id": "fuego",
+      "name": "Fuego Volcano 4K",
+      "sub": "GUATEMALA · AFAR TV",
+      "type": "yt",
+      "vid": "5kpWKkJ-xKY",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "Fuego Volcano Eruption"
+      },
+      "tags": [
+        "volcano"
+      ]
+    },
+    {
+      "id": "iceland",
+      "name": "Iceland Volcano Watch",
+      "sub": "REYKJANES, ICELAND · AFAR TV",
+      "type": "yt",
+      "vid": "qkSvU9j4kqM",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "Iceland Volcano Watch (Multi"
+      },
+      "tags": [
+        "volcano"
+      ]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon Rainforest & Sangay",
+      "sub": "ECUADOR · AFAR TV",
+      "type": "yt",
+      "vid": "vK3RouzZoT4",
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "Amazon"
+      },
+      "tags": [
+        "volcano",
+        "world",
+        "wildlife"
+      ]
+    },
+    {
+      "id": "rialto",
+      "name": "Rialto Bridge 4K",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "Kmf_wiTFuXY",
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "Rialto"
+      },
+      "tags": [
+        "world",
+        "landmarks"
+      ]
+    },
+    {
+      "id": "grandcanal",
+      "name": "Grand Canal from Ca' Angeli",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "zKGzYuT5tg0",
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "Grand Canal from Ca"
+      },
+      "tags": [
+        "world"
+      ]
+    },
+    {
+      "id": "sanmarco",
+      "name": "San Marco Basin",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "ASqGNET31VY",
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "San Marco Basin in Live"
+      },
+      "tags": [
+        "world"
+      ]
+    },
+    {
+      "id": "jackson",
+      "name": "Jackson Town Square PTZ",
+      "sub": "JACKSON HOLE, WY · SEEJH",
+      "type": "yt",
+      "vid": "B_waF26In9o",
+      "refresh": {
+        "channel": "UCEpDjqeFIGTqHwk-uULx72Q",
+        "match": "Town Square"
+      },
+      "tags": [
+        "smalltown",
+        "landmarks"
+      ]
+    },
+    {
+      "id": "roswell",
+      "name": "Roswell UFO Cam",
+      "sub": "ROSWELL, NM · EARTHCAM",
+      "type": "yt",
+      "vid": "kLoFxVhRWtQ",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Roswell"
+      },
+      "tags": [
+        "smalltown"
+      ]
+    },
+    {
+      "id": "buffalo",
+      "name": "World's Largest Buffalo",
+      "sub": "JAMESTOWN, ND · EARTHCAM",
+      "type": "yt",
+      "vid": "VWDi2Po3ZsQ",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Buffalo Monument"
+      },
+      "tags": [
+        "smalltown",
+        "landmarks"
+      ]
+    },
+    {
+      "id": "snowman",
+      "name": "Snowman Cam — Wildlife Feeder",
+      "sub": "GAYLORD, MI · EARTHCAM",
+      "type": "yt",
+      "vid": "IU_-Pl9O5jQ",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Snowman"
+      },
+      "tags": [
+        "smalltown",
+        "wildlife"
+      ]
+    }
+  ]
+}

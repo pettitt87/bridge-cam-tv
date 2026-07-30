@@ -10,10 +10,14 @@
     font-family: "Space Grotesk", "DM Sans", sans-serif;
     cursor: none;
   }
-  #video {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
+  #video, #snap {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     object-fit: contain; background: #000;
+  }
+  #snap, #yt-wrap { display: none; }
+  #yt-wrap {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: #000;
   }
   #hud {
     position: absolute; top: 40px; left: 50px; right: 50px;
@@ -24,10 +28,17 @@
   #hud.hidden { opacity: 0; }
   .cam-name  { color: #fff;    font-size: 34px; font-weight: 600; letter-spacing: 1px; }
   .cam-sub   { color: #9ca3af; font-size: 22px; margin-top: 6px; letter-spacing: 2px; }
+  .cam-cat   { color: #22c55e; font-size: 20px; margin-top: 10px; letter-spacing: 2px; }
+  #hud-right { text-align: right; }
   #status    { font-size: 26px; font-weight: 700; letter-spacing: 2px; }
+  #rotate-badge {
+    display: none; margin-top: 10px; color: #0b1220; background: #22c55e;
+    font-size: 18px; font-weight: 700; letter-spacing: 2px;
+    padding: 4px 12px; border-radius: 4px;
+  }
   #help {
     position: absolute; bottom: 40px; left: 0; right: 0;
-    text-align: center; color: #9ca3af; font-size: 22px;
+    text-align: center; color: #9ca3af; font-size: 21px;
     letter-spacing: 1px; transition: opacity 0.4s; z-index: 10;
     text-shadow: 0 2px 8px rgba(0,0,0,0.9);
   }
@@ -47,75 +58,79 @@
     border-radius: 50%; animation: spin 1s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Menu ── */
+  #menu {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(4, 8, 16, 0.94); z-index: 20; display: none;
+  }
+  #menu.open { display: flex; }
+  #menu-cats {
+    width: 34%; height: 100%; overflow: hidden;
+    border-right: 1px solid #1f2937; padding: 50px 0;
+    box-sizing: border-box;
+  }
+  #menu-cams {
+    flex: 1; height: 100%; overflow: hidden; padding: 50px 0;
+    box-sizing: border-box;
+  }
+  .m-item {
+    padding: 14px 40px; font-size: 26px; color: #9ca3af;
+    letter-spacing: 1px; white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .m-item .cnt { color: #4b5563; font-size: 20px; margin-left: 10px; }
+  .m-item.sel { color: #fff; background: #111827; }
+  .m-item.focus { color: #0b1220; background: #22c55e; font-weight: 600; }
+  .m-item.focus .cnt { color: #0b1220; }
+  .m-sub { color: #6b7280; font-size: 17px; letter-spacing: 1px; display: block; }
+  .m-item.focus .m-sub { color: #14532d; }
+  #menu-title {
+    position: absolute; bottom: 24px; left: 0; right: 0; text-align: center;
+    color: #4b5563; font-size: 18px; letter-spacing: 2px;
+  }
 </style>
 </head>
 <body>
 
 <video id="video" autoplay muted></video>
-<img id="snap" referrerpolicy="no-referrer" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;display:none;" alt="">
-<div id="yt-wrap" style="position:absolute;top:0;left:0;width:100%;height:100%;background:#000;display:none;"></div>
+<img id="snap" referrerpolicy="no-referrer" alt="">
+<div id="yt-wrap"></div>
 
 <div id="overlay">
   <div class="spinner"></div>
-  <div id="overlay-text">CONNECTING...</div>
+  <div id="overlay-text">LOADING CAMERA LIST...</div>
   <div id="overlay-sub"></div>
 </div>
 
-<div id="hud">
+<div id="hud" class="hidden">
   <div>
     <div class="cam-name" id="cam-name"></div>
     <div class="cam-sub" id="cam-sub"></div>
+    <div class="cam-cat" id="cam-cat"></div>
   </div>
-  <div id="status" style="color:#f59e0b">&#9679; CONNECTING</div>
+  <div id="hud-right">
+    <div id="status" style="color:#f59e0b">&#9679; CONNECTING</div>
+    <div id="rotate-badge">&#8635; AUTO-ROTATE</div>
+  </div>
 </div>
 
-<div id="help">
-  <b>&#9664; &#9654;</b> or <b>CH +/&#8722;</b> switch camera &nbsp;&nbsp;&middot;&nbsp;&nbsp; <b>OK</b> show/hide info &nbsp;&nbsp;&middot;&nbsp;&nbsp; <b>BACK</b> exit
+<div id="help" class="hidden">
+  <b>OK</b> menu &nbsp;&middot;&nbsp; <b>&#9664; &#9654;</b> or <b>CH +/&#8722;</b> next cam &nbsp;&middot;&nbsp; <b>&#9654;&#10073;&#10073;</b> auto-rotate &nbsp;&middot;&nbsp; <b>BACK</b> exit
+</div>
+
+<div id="menu">
+  <div id="menu-cats"></div>
+  <div id="menu-cams"></div>
+  <div id="menu-title">&#9650;&#9660; NAVIGATE &nbsp;&middot;&nbsp; &#9664;&#9654; SWITCH PANE &nbsp;&middot;&nbsp; OK SELECT &nbsp;&middot;&nbsp; BACK CLOSE</div>
 </div>
 
 <script src="hls.min.js"></script>
 <script>
 (function () {
-  var BASE = 'https://brown-technologies.net';
-  var CCTV = 'https://cctv.travelmidwest.com/snapshots/';
-  var CAMERAS = [
-    { type: 'hls', url: BASE + '/live-camera/cam1/live.m3u8',
-      id: 'BT-CAM-01', name: '9th Street Bridge',
-      sub: 'LOCKPORT, IL · BT-CAM-01 · HLS' },
-    { type: 'hls', url: BASE + '/live-camera/cam2/live.m3u8',
-      id: 'BT-CAM-02', name: 'City Hall Yard',
-      sub: 'LOCKPORT, IL · BT-CAM-02 · HLS' },
-    { type: 'jpg', url: CCTV + 'IL-ISTHA_1_Will_SEB_I-355-CASH_4157660_-8800050_1_N.jpg',
-      id: 'TOLLWAY', name: 'I-355 @ Spring Creek Plaza — North',
-      sub: 'LOCKPORT, IL · ILLINOIS TOLLWAY · SNAPSHOT' },
-    { type: 'jpg', url: CCTV + 'IL-ISTHA_1_Will_SEB_I-355-CASH_4157660_-8800050_1_S.jpg',
-      id: 'TOLLWAY', name: 'I-355 @ Spring Creek Plaza — South',
-      sub: 'LOCKPORT, IL · ILLINOIS TOLLWAY · SNAPSHOT' },
-    { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_NB_I-55_4160876_-8816292_1_NONE.jpg',
-      id: 'IDOT D1', name: 'I-55 @ Lockport Rd',
-      sub: 'BOLINGBROOK, IL · IDOT DISTRICT 1 · SNAPSHOT' },
-    { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_SWB_I-55_4158419_-8816869_1_NONE.jpg',
-      id: 'IDOT D1', name: 'I-55 @ US 30',
-      sub: 'JOLIET, IL · IDOT DISTRICT 1 · SNAPSHOT' },
-    { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_NB_I-55_4156485_-8818055_1_NONE.jpg',
-      id: 'IDOT D1', name: 'I-55 South of Caton Farm Rd',
-      sub: 'JOLIET, IL · IDOT DISTRICT 1 · SNAPSHOT' },
-    { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_NEB_I-55_4152799_-8818419_1_NONE.jpg',
-      id: 'IDOT D1', name: 'I-55 North of Jefferson St',
-      sub: 'JOLIET, IL · IDOT DISTRICT 1 · SNAPSHOT' },
-    { type: 'yt', vid: 'fMwmFqD0RE8', chan: 'UCF-ZXdKznuR8USRwfru222Q',
-      id: 'RAILCAM', name: 'Illinois Railway Museum',
-      sub: 'UNION, IL · LIVE RAILCAM · YOUTUBE' },
-    { type: 'yt', vid: 'RE8AufGLrT4', chan: 'UCKrTulUx22nWscKWpQarAOQ',
-      id: 'SKYLINE', name: 'Chicago Lakefront — The Playpen',
-      sub: 'CHICAGO, IL · LAKEFRONT LIVE 4K · YOUTUBE' },
-    { type: 'yt', vid: 'ycpn7oEdB_U', chan: 'UCz7CQR0xt-A4y1Asl9NBdUA',
-      id: 'SKYLINE', name: 'Chicago Southern Skyline',
-      sub: 'CHICAGO, IL · SOUTH LOOP VIEW · YOUTUBE' },
-    { type: 'yt', vid: 'O0UGT7AT3aw',
-      id: 'SKYLINE', name: 'Willis Tower Skydeck',
-      sub: 'CHICAGO, IL · EARTHCAM · YOUTUBE' }
-  ];
+  var DATA_URL = 'cameras.json';
+  var SNAP_INTERVAL = 30000;
+  var ROTATE_SECONDS = 60;
 
   var video      = document.getElementById('video');
   var snap       = document.getElementById('snap');
@@ -127,20 +142,29 @@
   var help       = document.getElementById('help');
   var camName    = document.getElementById('cam-name');
   var camSub     = document.getElementById('cam-sub');
+  var camCat     = document.getElementById('cam-cat');
   var statusEl   = document.getElementById('status');
+  var rotBadge   = document.getElementById('rotate-badge');
+  var menuEl     = document.getElementById('menu');
+  var catsEl     = document.getElementById('menu-cats');
+  var camsEl     = document.getElementById('menu-cams');
 
-  var activeCam  = 0;
-  var hls        = null;
-  var hudTimer   = null;
-  var retryTimer = null;
-  var snapTimer  = null;
-  var snapFails  = 0;
-  var SNAP_INTERVAL = 30000;
+  var CATS = [];        // [{id,name,cams:[cam,...]}]
+  var activeCat = 0;    // index into CATS
+  var activeIdx = 0;    // index into CATS[activeCat].cams
+  var hls = null, hudTimer = null, retryTimer = null, snapTimer = null;
+  var snapFails = 0;
+  var rotateTimer = null;
+  var menuOpen = false, menuPane = 0, menuCat = 0, menuIdx = 0;
+
+  function cur() {
+    return CATS.length ? CATS[activeCat].cams[activeIdx] : null;
+  }
 
   function setStatus(state) {
     var map = {
       connecting: ['● CONNECTING', '#f59e0b'],
-      live:       ['● LIVE',       '#22c55e'],
+      live:       ['● LIVE', '#22c55e'],
       youtube:    ['● LIVE · YOUTUBE', '#22c55e'],
       snapshot:   ['● SNAPSHOT · UPDATES EVERY FEW MIN', '#f59e0b'],
       error:      ['● RECONNECTING', '#ef4444']
@@ -162,22 +186,6 @@
     }
   }
 
-  function toggleHud() {
-    if (hud.classList.contains('hidden')) {
-      showHud(true);
-    } else {
-      if (hudTimer) clearTimeout(hudTimer);
-      hud.classList.add('hidden');
-      help.classList.add('hidden');
-    }
-  }
-
-  function scheduleRetry() {
-    setStatus('error');
-    if (retryTimer) clearTimeout(retryTimer);
-    retryTimer = setTimeout(function () { load(activeCam); }, 4000);
-  }
-
   function stopStreams() {
     if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
     if (snapTimer)  { clearTimeout(snapTimer);  snapTimer  = null; }
@@ -193,32 +201,29 @@
 
   function playStream(cam, url, liveState, preferNative) {
     var onUp = function () {
-      if (CAMERAS[activeCam] !== cam) return;
+      if (cur() !== cam) return;
       video.play();
       overlay.classList.add('hidden');
       setStatus(liveState);
     };
     var onDown = function () {
-      if (CAMERAS[activeCam] !== cam) return;
+      if (cur() !== cam) return;
       overlay.classList.remove('hidden');
       overlayTxt.textContent = 'STREAM ERROR';
       overlaySub.textContent = 'Retrying in a few seconds...';
-      scheduleRetry();
+      setStatus('error');
+      if (retryTimer) clearTimeout(retryTimer);
+      retryTimer = setTimeout(function () { load(activeCat, activeIdx); }, 5000);
     };
-
     var nativeOk = video.canPlayType('application/vnd.apple.mpegurl');
     var useNative = preferNative ? !!nativeOk : !(window.Hls && Hls.isSupported());
 
     if (!useNative && window.Hls && Hls.isSupported()) {
-      hls = new Hls({
-        lowLatencyMode: true,
-        liveSyncDurationCount: 3,
-        maxBufferLength: 10
-      });
+      hls = new Hls({ lowLatencyMode: true, liveSyncDurationCount: 3, maxBufferLength: 10 });
       hls.loadSource(url);
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, onUp);
-      hls.on(Hls.Events.ERROR, function (e, data) { if (data.fatal) onDown(); });
+      hls.on(Hls.Events.ERROR, function (e, d) { if (d.fatal) onDown(); });
     } else if (nativeOk) {
       video.onloadedmetadata = onUp;
       video.onerror = onDown;
@@ -230,34 +235,11 @@
     }
   }
 
-  function loadYouTube(cam) {
-    video.style.display = 'none';
-    snap.style.display = 'none';
-    ytWrap.style.display = 'block';
-
-    var src = cam.vid
-      ? 'https://www.youtube.com/embed/' + cam.vid + '?'
-      : 'https://www.youtube.com/embed/live_stream?channel=' + cam.chan + '&';
-    src += 'autoplay=1&mute=1&controls=0&playsinline=1&rel=0';
-
-    var iframe = document.createElement('iframe');
-    iframe.setAttribute('allow', 'autoplay; encrypted-media');
-    iframe.setAttribute('frameborder', '0');
-    iframe.style.cssText = 'width:100%;height:100%;border:0;';
-    iframe.onload = function () {
-      if (CAMERAS[activeCam] !== cam) return;
-      overlay.classList.add('hidden');
-      setStatus('youtube');
-    };
-    iframe.src = src;
-    ytWrap.appendChild(iframe);
-  }
-
   function snapLoop(cam) {
     var loader = new Image();
     loader.referrerPolicy = 'no-referrer';
     loader.onload = function () {
-      if (CAMERAS[activeCam] !== cam) return;
+      if (cur() !== cam) return;
       snap.src = loader.src;
       snapFails = 0;
       overlay.classList.add('hidden');
@@ -265,7 +247,7 @@
       snapTimer = setTimeout(function () { snapLoop(cam); }, SNAP_INTERVAL);
     };
     loader.onerror = function () {
-      if (CAMERAS[activeCam] !== cam) return;
+      if (cur() !== cam) return;
       snapFails++;
       if (snapFails >= 5) {
         setStatus('error');
@@ -278,66 +260,182 @@
     loader.src = cam.url + '?t=' + Date.now();
   }
 
-  function load(index) {
-    activeCam = index;
-    var cam = CAMERAS[index];
+  function loadYouTube(cam) {
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('allow', 'autoplay; encrypted-media');
+    iframe.setAttribute('frameborder', '0');
+    iframe.style.cssText = 'width:100%;height:100%;border:0;';
+    iframe.onload = function () {
+      if (cur() !== cam) return;
+      overlay.classList.add('hidden');
+      setStatus('youtube');
+    };
+    iframe.src = 'https://www.youtube.com/embed/' + cam.vid +
+      '?autoplay=1&mute=1&controls=0&playsinline=1&rel=0';
+    ytWrap.appendChild(iframe);
+  }
+
+  function load(catIdx, camIdx) {
+    activeCat = catIdx;
+    activeIdx = camIdx;
+    var cat = CATS[catIdx];
+    var cam = cat.cams[camIdx];
 
     stopStreams();
-
     setStatus('connecting');
     overlay.classList.remove('hidden');
     overlayTxt.textContent = 'CONNECTING...';
     overlaySub.textContent = cam.name;
     camName.textContent = cam.name;
-    camSub.textContent  = cam.sub;
+    camSub.textContent  = cam.sub || '';
+    camCat.textContent  = cat.name.toUpperCase() + ' · ' + (camIdx + 1) + '/' + cat.cams.length;
     showHud(true);
 
-    if (cam.type === 'jpg') {
-      video.style.display = 'none';
-      ytWrap.style.display = 'none';
-      snap.style.display = 'block';
-      snap.removeAttribute('src');
-      snapLoop(cam);
-      return;
-    }
+    video.style.display  = (cam.type === 'jpg' || cam.type === 'yt') ? 'none' : 'block';
+    snap.style.display   = cam.type === 'jpg' ? 'block' : 'none';
+    ytWrap.style.display = cam.type === 'yt' ? 'block' : 'none';
+    if (cam.type !== 'jpg') snap.removeAttribute('src');
 
-    if (cam.type === 'yt') {
-      loadYouTube(cam);
-      return;
-    }
-
-    video.style.display = 'block';
-    snap.style.display = 'none';
-    ytWrap.style.display = 'none';
-    playStream(cam, cam.url, 'live', false);
+    if (cam.type === 'jpg')      snapLoop(cam);
+    else if (cam.type === 'yt')  loadYouTube(cam);
+    else                         playStream(cam, cam.url, 'live', false);
   }
 
-  function switchCam(delta) {
-    var next = (activeCam + delta + CAMERAS.length) % CAMERAS.length;
-    load(next);
+  function step(delta) {
+    var n = CATS[activeCat].cams.length;
+    load(activeCat, (activeIdx + delta + n) % n);
+  }
+
+  /* ── Auto-rotate ── */
+  function setRotate(on) {
+    if (rotateTimer) { clearInterval(rotateTimer); rotateTimer = null; }
+    if (on) {
+      rotateTimer = setInterval(function () { if (!menuOpen) step(1); }, ROTATE_SECONDS * 1000);
+      rotBadge.style.display = 'inline-block';
+    } else {
+      rotBadge.style.display = 'none';
+    }
+    showHud(true);
+  }
+
+  /* ── Menu ── */
+  function renderMenu() {
+    var i, c, div;
+    catsEl.innerHTML = '';
+    for (i = 0; i < CATS.length; i++) {
+      div = document.createElement('div');
+      div.className = 'm-item' +
+        (i === menuCat ? (menuPane === 0 ? ' focus' : ' sel') : '');
+      div.innerHTML = CATS[i].name +
+        '<span class="cnt">' + CATS[i].cams.length + '</span>';
+      catsEl.appendChild(div);
+    }
+    camsEl.innerHTML = '';
+    var cams = CATS[menuCat].cams;
+    for (i = 0; i < cams.length; i++) {
+      c = cams[i];
+      div = document.createElement('div');
+      div.className = 'm-item' + (menuPane === 1 && i === menuIdx ? ' focus' : '');
+      div.innerHTML = c.name + '<span class="m-sub">' + (c.sub || '') + '</span>';
+      camsEl.appendChild(div);
+    }
+    var pane = menuPane === 0 ? catsEl : camsEl;
+    var idx  = menuPane === 0 ? menuCat : menuIdx;
+    var node = pane.children[idx];
+    if (node) {
+      var want = node.offsetTop - pane.clientHeight / 2 + node.clientHeight;
+      pane.scrollTop = Math.max(0, want);
+    }
+  }
+
+  function openMenu() {
+    menuOpen = true;
+    menuPane = 0;
+    menuCat = activeCat;
+    menuIdx = activeIdx;
+    menuEl.classList.add('open');
+    renderMenu();
+  }
+  function closeMenu() {
+    menuOpen = false;
+    menuEl.classList.remove('open');
+  }
+
+  function menuKey(code) {
+    var n;
+    if (code === 38 || code === 40) {           // up / down
+      var d = code === 38 ? -1 : 1;
+      if (menuPane === 0) {
+        menuCat = (menuCat + d + CATS.length) % CATS.length;
+        menuIdx = 0;
+      } else {
+        n = CATS[menuCat].cams.length;
+        menuIdx = (menuIdx + d + n) % n;
+      }
+      renderMenu();
+    } else if (code === 37) {                   // left
+      menuPane = 0; renderMenu();
+    } else if (code === 39) {                   // right
+      menuPane = 1; renderMenu();
+    } else if (code === 13) {                   // OK
+      if (menuPane === 0) { menuPane = 1; menuIdx = 0; renderMenu(); }
+      else { closeMenu(); load(menuCat, menuIdx); }
+    } else if (code === 461) {                  // back
+      if (menuPane === 1) { menuPane = 0; renderMenu(); }
+      else closeMenu();
+    }
   }
 
   document.addEventListener('keydown', function (e) {
-    switch (e.keyCode) {
-      case 37:  // left
-      case 34:  // channel down
-        switchCam(-1); break;
-      case 39:  // right
-      case 33:  // channel up
-        switchCam(1); break;
-      case 13:  // OK / enter
-        toggleHud(); break;
-      case 461: // webOS back
-        window.close(); break;
+    var code = e.keyCode;
+    if (code === 461) e.preventDefault();
+    if (!CATS.length) {
+      if (code === 461) window.close();
+      return;
+    }
+    if (menuOpen) { menuKey(code); return; }
+    switch (code) {
+      case 13:  openMenu(); break;                       // OK
+      case 37: case 34: step(-1); break;                 // left / ch-down
+      case 39: case 33: step(1);  break;                 // right / ch-up
+      case 38: case 40: showHud(true); break;            // up/down peek hud
+      case 415: case 19: case 80:                        // play / pause / P
+        setRotate(!rotateTimer); break;
+      case 461: window.close(); break;                   // back
     }
   });
 
-  // Resume cleanly when app is brought back from background
   document.addEventListener('visibilitychange', function () {
-    if (!document.hidden) load(activeCam);
+    if (!document.hidden && CATS.length) load(activeCat, activeIdx);
   });
 
-  load(0);
+  /* ── Boot ── */
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', DATA_URL + '?v=' + Date.now(), true);
+  xhr.onload = function () {
+    try {
+      var data = JSON.parse(xhr.responseText);
+      var all = data.cameras;
+      var i, j, cat;
+      for (i = 0; i < data.categories.length; i++) {
+        cat = { id: data.categories[i].id, name: data.categories[i].name, cams: [] };
+        for (j = 0; j < all.length; j++) {
+          if (all[j].tags && all[j].tags.indexOf(cat.id) !== -1) cat.cams.push(all[j]);
+        }
+        if (cat.cams.length) CATS.push(cat);
+      }
+      CATS.push({ id: 'all', name: 'All Cameras', cams: all });
+      load(0, 0);
+    } catch (err) {
+      overlayTxt.textContent = 'CAMERA LIST ERROR';
+      overlaySub.textContent = String(err).slice(0, 80);
+    }
+  };
+  xhr.onerror = function () {
+    overlayTxt.textContent = 'CAMERA LIST UNAVAILABLE';
+    overlaySub.textContent = 'Check internet connection.';
+  };
+  xhr.send();
 })();
 </script>
 </body>
