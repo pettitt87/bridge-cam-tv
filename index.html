@@ -8,7 +8,6 @@
     margin: 0; padding: 0; width: 100%; height: 100%;
     background: #000; overflow: hidden;
     font-family: "Space Grotesk", "DM Sans", sans-serif;
-    cursor: none;
   }
   #video, #snap {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -26,6 +25,7 @@
     text-shadow: 0 2px 8px rgba(0,0,0,0.9);
   }
   #hud.hidden { opacity: 0; }
+  #hud, #help { pointer-events: none; }
   .cam-name  { color: #fff;    font-size: 34px; font-weight: 600; letter-spacing: 1px; }
   .cam-sub   { color: #9ca3af; font-size: 22px; margin-top: 6px; letter-spacing: 2px; }
   .cam-cat   { color: #22c55e; font-size: 20px; margin-top: 10px; letter-spacing: 2px; }
@@ -328,6 +328,9 @@
         (i === menuCat ? (menuPane === 0 ? ' focus' : ' sel') : '');
       div.innerHTML = CATS[i].name +
         '<span class="cnt">' + CATS[i].cams.length + '</span>';
+      div.onclick = (function (idx) {
+        return function () { menuCat = idx; menuPane = 1; menuIdx = 0; renderMenu(); };
+      })(i);
       catsEl.appendChild(div);
     }
     camsEl.innerHTML = '';
@@ -337,6 +340,9 @@
       div = document.createElement('div');
       div.className = 'm-item' + (menuPane === 1 && i === menuIdx ? ' focus' : '');
       div.innerHTML = c.name + '<span class="m-sub">' + (c.sub || '') + '</span>';
+      div.onclick = (function (catI, camI) {
+        return function () { closeMenu(); load(catI, camI); };
+      })(menuCat, i);
       camsEl.appendChild(div);
     }
     var pane = menuPane === 0 ? catsEl : camsEl;
