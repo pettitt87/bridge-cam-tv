@@ -52,7 +52,7 @@
 <body>
 
 <video id="video" autoplay muted></video>
-<img id="snap" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;display:none;" alt="">
+<img id="snap" referrerpolicy="no-referrer" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;display:none;" alt="">
 <div id="yt-wrap" style="position:absolute;top:0;left:0;width:100%;height:100%;background:#000;display:none;"></div>
 
 <div id="overlay">
@@ -103,13 +103,13 @@
     { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_NEB_I-55_4152799_-8818419_1_NONE.jpg',
       id: 'IDOT D1', name: 'I-55 North of Jefferson St',
       sub: 'JOLIET, IL · IDOT DISTRICT 1 · SNAPSHOT' },
-    { type: 'yt', chan: 'UCF-ZXdKznuR8USRwfru222Q',
+    { type: 'yt', vid: 'fMwmFqD0RE8', chan: 'UCF-ZXdKznuR8USRwfru222Q',
       id: 'RAILCAM', name: 'Illinois Railway Museum',
       sub: 'UNION, IL · LIVE RAILCAM · YOUTUBE' },
-    { type: 'yt', chan: 'UCKrTulUx22nWscKWpQarAOQ',
+    { type: 'yt', vid: 'RE8AufGLrT4', chan: 'UCKrTulUx22nWscKWpQarAOQ',
       id: 'SKYLINE', name: 'Chicago Lakefront — The Playpen',
       sub: 'CHICAGO, IL · LAKEFRONT LIVE 4K · YOUTUBE' },
-    { type: 'yt', chan: 'UCz7CQR0xt-A4y1Asl9NBdUA',
+    { type: 'yt', vid: 'ycpn7oEdB_U', chan: 'UCz7CQR0xt-A4y1Asl9NBdUA',
       id: 'SKYLINE', name: 'Chicago Southern Skyline',
       sub: 'CHICAGO, IL · SOUTH LOOP VIEW · YOUTUBE' },
     { type: 'yt', vid: 'O0UGT7AT3aw',
@@ -255,6 +255,7 @@
 
   function snapLoop(cam) {
     var loader = new Image();
+    loader.referrerPolicy = 'no-referrer';
     loader.onload = function () {
       if (CAMERAS[activeCam] !== cam) return;
       snap.src = loader.src;
