@@ -116,7 +116,7 @@
 </div>
 
 <div id="help" class="hidden">
-  <b>OK</b> menu &nbsp;&middot;&nbsp; <b>&#9664; &#9654;</b> or <b>CH +/&#8722;</b> next cam &nbsp;&middot;&nbsp; <b>&#9654;&#10073;&#10073;</b> auto-rotate &nbsp;&middot;&nbsp; <b style="color:#ef4444">&#9679;</b> YT sign-in &nbsp;&middot;&nbsp; <b>BACK</b> exit
+  <b>OK</b> menu &nbsp;&middot;&nbsp; <b>&#9664; &#9654;</b> next cam &nbsp;&middot;&nbsp; <b>&#9654;&#10073;&#10073;</b> auto-rotate &nbsp;&middot;&nbsp; <b style="color:#22c55e">&#9679;</b> ad-free in YouTube app &nbsp;&middot;&nbsp; <b>BACK</b> exit
 </div>
 
 <div id="menu">
@@ -401,15 +401,27 @@
       case 38: case 40: showHud(true); break;            // up/down peek hud
       case 415: case 19: case 80:                        // play / pause / P
         setRotate(!rotateTimer); break;
-      case 403:                                          // red: YouTube sign-in
-        overlay.classList.remove('hidden');
-        overlayTxt.textContent = 'OPENING YOUTUBE SIGN-IN';
-        overlaySub.textContent =
-          'Sign in with the code at youtube.com/activate, then exit and reopen this app.';
-        setTimeout(function () {
-          window.location.href = 'https://www.youtube.com/tv';
-        }, 4000);
+      case 403:                                          // red: reload app
+        window.location.reload();
         break;
+      case 404: case 71: {                               // green / G: open in YouTube app
+        var c = cur();
+        if (!c || c.type !== 'yt') { showHud(true); break; }
+        try {
+          var br = new PalmServiceBridge();
+          br.onservicecallback = function () {};
+          br.call('luna://com.webos.applicationManager/launch', JSON.stringify({
+            id: 'youtube.leanback.v4',
+            params: { contentTarget: 'https://www.youtube.com/tv?v=' + c.vid }
+          }));
+        } catch (err) {
+          overlay.classList.remove('hidden');
+          overlayTxt.textContent = 'CANNOT OPEN YOUTUBE APP';
+          overlaySub.textContent = 'This TV blocked the app hand-off.';
+          setTimeout(function () { overlay.classList.add('hidden'); }, 4000);
+        }
+        break;
+      }
       case 461: window.close(); break;                   // back
     }
   });
