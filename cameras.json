@@ -409,7 +409,8 @@
         "nyc",
         "nye",
         "nightlife"
-      ]
+      ],
+      "nyeOff": -5
     },
     {
       "id": "tsq2",
@@ -425,7 +426,8 @@
         "nyc",
         "nye",
         "nightlife"
-      ]
+      ],
+      "nyeOff": -5
     },
     {
       "id": "wtc",
@@ -442,7 +444,8 @@
         "skylines",
         "landmarks",
         "nye"
-      ]
+      ],
+      "nyeOff": -5
     },
     {
       "id": "liberty",
@@ -499,7 +502,8 @@
       "tags": [
         "nye",
         "nightlife"
-      ]
+      ],
+      "nyeOff": -8
     },
     {
       "id": "shibuya",
@@ -511,7 +515,8 @@
         "nye",
         "nightlife",
         "world"
-      ]
+      ],
+      "nyeOff": 9
     },
     {
       "id": "nola",
@@ -526,7 +531,8 @@
       "tags": [
         "nye",
         "nightlife"
-      ]
+      ],
+      "nyeOff": -6
     },
     {
       "id": "ftlaud",

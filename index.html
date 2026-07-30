@@ -31,14 +31,15 @@
   .cam-cat   { color: #22c55e; font-size: 20px; margin-top: 10px; letter-spacing: 2px; }
   #hud-right { text-align: right; }
   #status    { font-size: 26px; font-weight: 700; letter-spacing: 2px; }
-  #rotate-badge {
-    display: none; margin-top: 10px; color: #0b1220; background: #22c55e;
+  .badge {
+    display: none; margin-top: 10px; margin-left: 8px; color: #0b1220; background: #22c55e;
     font-size: 18px; font-weight: 700; letter-spacing: 2px;
     padding: 4px 12px; border-radius: 4px;
   }
+  #sound-badge { background: #60a5fa; }
   #help {
     position: absolute; bottom: 40px; left: 0; right: 0;
-    text-align: center; color: #9ca3af; font-size: 21px;
+    text-align: center; color: #9ca3af; font-size: 20px;
     letter-spacing: 1px; transition: opacity 0.4s; z-index: 10;
     text-shadow: 0 2px 8px rgba(0,0,0,0.9);
   }
@@ -58,6 +59,27 @@
     border-radius: 50%; animation: spin 1s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Grid ── */
+  #grid {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: #000; z-index: 15; display: none;
+    grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px;
+  }
+  #grid.open { display: grid; }
+  .g-cell {
+    position: relative; background: #0b1220; overflow: hidden;
+    border: 3px solid #1f2937; box-sizing: border-box;
+  }
+  .g-cell.sel { border-color: #22c55e; }
+  .g-cell video, .g-cell img, .g-cell iframe {
+    width: 100%; height: 100%; object-fit: contain; border: 0; display: block;
+    background: #000;
+  }
+  .g-label {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 6px 14px;
+    font-size: 19px; color: #fff; background: rgba(0,0,0,0.55); letter-spacing: 1px;
+  }
 
   /* ── Menu ── */
   #menu {
@@ -111,13 +133,21 @@
   </div>
   <div id="hud-right">
     <div id="status" style="color:#f59e0b">&#9679; CONNECTING</div>
-    <div id="rotate-badge">&#8635; AUTO-ROTATE</div>
+    <span class="badge" id="rotate-badge">&#8635; AUTO-ROTATE</span>
+    <span class="badge" id="sound-badge">&#128266; SOUND</span>
   </div>
 </div>
 
 <div id="help" class="hidden">
-  <b>OK</b> menu &nbsp;&middot;&nbsp; <b>&#9664; &#9654;</b> next cam &nbsp;&middot;&nbsp; <b>&#9654;&#10073;&#10073;</b> auto-rotate &nbsp;&middot;&nbsp; <b style="color:#22c55e">&#9679;</b> ad-free in YouTube app &nbsp;&middot;&nbsp; <b>BACK</b> exit
+  <b>OK</b> menu &middot; <b>&#9664;&#9654;</b> cam &middot; <b>&#9654;&#10073;&#10073;</b> rotate
+  &middot; <b style="color:#ef4444">&#9679;</b> grid
+  &middot; <b style="color:#22c55e">&#9679;</b> YT app
+  &middot; <b style="color:#facc15">&#9679;</b> &#9733; fav
+  &middot; <b style="color:#60a5fa">&#9679;</b> sound
+  &middot; <b>BACK</b> exit
 </div>
+
+<div id="grid"></div>
 
 <div id="menu">
   <div id="menu-cats"></div>
@@ -131,6 +161,7 @@
   var DATA_URL = 'cameras.json';
   var SNAP_INTERVAL = 30000;
   var ROTATE_SECONDS = 60;
+  var STORE_KEY = 'bctv';
 
   var video      = document.getElementById('video');
   var snap       = document.getElementById('snap');
@@ -145,22 +176,75 @@
   var camCat     = document.getElementById('cam-cat');
   var statusEl   = document.getElementById('status');
   var rotBadge   = document.getElementById('rotate-badge');
+  var sndBadge   = document.getElementById('sound-badge');
+  var gridEl     = document.getElementById('grid');
   var menuEl     = document.getElementById('menu');
   var catsEl     = document.getElementById('menu-cats');
   var camsEl     = document.getElementById('menu-cams');
 
-  var CATS = [];        // [{id,name,cams:[cam,...]}]
-  var activeCat = 0;    // index into CATS
-  var activeIdx = 0;    // index into CATS[activeCat].cams
+  var allCams = [], catDefs = [];
+  var CATS = [];
+  var activeCat = 0, activeIdx = 0;
   var hls = null, hudTimer = null, retryTimer = null, snapTimer = null;
   var snapFails = 0;
   var rotateTimer = null;
+  var soundOn = false;
+  var favs = [];
   var menuOpen = false, menuPane = 0, menuCat = 0, menuIdx = 0;
+  var gridOpen = false, gridPage = 0, gridSel = 0, gridMedia = [];
 
   function cur() {
     return CATS.length ? CATS[activeCat].cams[activeIdx] : null;
   }
 
+  /* ── Persistence ── */
+  function store() {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify({
+        catId: CATS.length ? CATS[activeCat].id : null,
+        camId: cur() ? cur().id : null,
+        rotate: !!rotateTimer,
+        sound: soundOn,
+        favs: favs
+      }));
+    } catch (e) {}
+  }
+  function restore() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }
+    catch (e) { return {}; }
+  }
+
+  /* ── Categories ── */
+  function rebuildCats() {
+    var i, j, cat;
+    CATS = [];
+    if (favs.length) {
+      var fc = [];
+      for (j = 0; j < allCams.length; j++) {
+        if (favs.indexOf(allCams[j].id) !== -1) fc.push(allCams[j]);
+      }
+      if (fc.length) CATS.push({ id: 'favs', name: '★ My Cams', cams: fc });
+    }
+    for (i = 0; i < catDefs.length; i++) {
+      cat = { id: catDefs[i].id, name: catDefs[i].name, cams: [] };
+      for (j = 0; j < allCams.length; j++) {
+        if (allCams[j].tags && allCams[j].tags.indexOf(cat.id) !== -1) cat.cams.push(allCams[j]);
+      }
+      if (cat.cams.length) CATS.push(cat);
+    }
+    CATS.push({ id: 'all', name: 'All Cameras', cams: allCams });
+  }
+  function findCat(id) {
+    for (var i = 0; i < CATS.length; i++) if (CATS[i].id === id) return i;
+    return -1;
+  }
+  function findCam(catIdx, camId) {
+    var cams = CATS[catIdx].cams;
+    for (var i = 0; i < cams.length; i++) if (cams[i].id === camId) return i;
+    return -1;
+  }
+
+  /* ── HUD / status ── */
   function setStatus(state) {
     var map = {
       connecting: ['● CONNECTING', '#f59e0b'],
@@ -173,7 +257,6 @@
     statusEl.textContent = s[0];
     statusEl.style.color = s[1];
   }
-
   function showHud(autoHide) {
     hud.classList.remove('hidden');
     help.classList.remove('hidden');
@@ -185,7 +268,16 @@
       }, 6000);
     }
   }
+  function refreshHudText() {
+    var cat = CATS[activeCat], cam = cur();
+    if (!cam) return;
+    var star = favs.indexOf(cam.id) !== -1 ? '★ ' : '';
+    camName.textContent = star + cam.name;
+    camSub.textContent  = cam.sub || '';
+    camCat.textContent  = cat.name.toUpperCase() + ' · ' + (activeIdx + 1) + '/' + cat.cams.length;
+  }
 
+  /* ── Players ── */
   function stopStreams() {
     if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
     if (snapTimer)  { clearTimeout(snapTimer);  snapTimer  = null; }
@@ -199,12 +291,33 @@
     snapFails = 0;
   }
 
+  function applySound() {
+    sndBadge.style.display = soundOn ? 'inline-block' : 'none';
+    var cam = cur();
+    if (!cam) return;
+    if (cam.type === 'yt') {
+      var f = ytWrap.getElementsByTagName('iframe')[0];
+      if (f && f.contentWindow) {
+        var cmds = soundOn
+          ? [{ event: 'command', func: 'unMute', args: [] },
+             { event: 'command', func: 'setVolume', args: [100] }]
+          : [{ event: 'command', func: 'mute', args: [] }];
+        for (var i = 0; i < cmds.length; i++) {
+          f.contentWindow.postMessage(JSON.stringify(cmds[i]), '*');
+        }
+      }
+    } else {
+      video.muted = !soundOn;
+    }
+  }
+
   function playStream(cam, url, liveState, preferNative) {
     var onUp = function () {
       if (cur() !== cam) return;
       video.play();
       overlay.classList.add('hidden');
       setStatus(liveState);
+      applySound();
     };
     var onDown = function () {
       if (cur() !== cam) return;
@@ -239,7 +352,7 @@
     var loader = new Image();
     loader.referrerPolicy = 'no-referrer';
     loader.onload = function () {
-      if (cur() !== cam) return;
+      if (cur() !== cam || gridOpen) return;
       snap.src = loader.src;
       snapFails = 0;
       overlay.classList.add('hidden');
@@ -247,7 +360,7 @@
       snapTimer = setTimeout(function () { snapLoop(cam); }, SNAP_INTERVAL);
     };
     loader.onerror = function () {
-      if (cur() !== cam) return;
+      if (cur() !== cam || gridOpen) return;
       snapFails++;
       if (snapFails >= 5) {
         setStatus('error');
@@ -269,26 +382,25 @@
       if (cur() !== cam) return;
       overlay.classList.add('hidden');
       setStatus('youtube');
+      if (soundOn) setTimeout(applySound, 1500);
     };
     iframe.src = 'https://www.youtube.com/embed/' + cam.vid +
-      '?autoplay=1&mute=1&controls=0&playsinline=1&rel=0';
+      '?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&enablejsapi=1' +
+      '&origin=' + encodeURIComponent(window.location.origin);
     ytWrap.appendChild(iframe);
   }
 
   function load(catIdx, camIdx) {
     activeCat = catIdx;
     activeIdx = camIdx;
-    var cat = CATS[catIdx];
-    var cam = cat.cams[camIdx];
+    var cam = CATS[catIdx].cams[camIdx];
 
     stopStreams();
     setStatus('connecting');
     overlay.classList.remove('hidden');
     overlayTxt.textContent = 'CONNECTING...';
     overlaySub.textContent = cam.name;
-    camName.textContent = cam.name;
-    camSub.textContent  = cam.sub || '';
-    camCat.textContent  = cat.name.toUpperCase() + ' · ' + (camIdx + 1) + '/' + cat.cams.length;
+    refreshHudText();
     showHud(true);
 
     video.style.display  = (cam.type === 'jpg' || cam.type === 'yt') ? 'none' : 'block';
@@ -299,6 +411,7 @@
     if (cam.type === 'jpg')      snapLoop(cam);
     else if (cam.type === 'yt')  loadYouTube(cam);
     else                         playStream(cam, cam.url, 'live', false);
+    store();
   }
 
   function step(delta) {
@@ -306,16 +419,183 @@
     load(activeCat, (activeIdx + delta + n) % n);
   }
 
-  /* ── Auto-rotate ── */
+  /* ── Auto-rotate + NYE midnight chase ── */
+  function nyePick(cams, now) {
+    var utcMin = now.getUTCHours() * 60 + now.getUTCMinutes();
+    var best = -1, bestScore = 1e9, i, cam, localMin, score;
+    for (i = 0; i < cams.length; i++) {
+      cam = cams[i];
+      if (typeof cam.nyeOff !== 'number') continue;
+      localMin = ((utcMin + cam.nyeOff * 60) % 1440 + 1440) % 1440;
+      if (localMin < 45) score = localMin;                 // partying right now
+      else score = 100 + (1440 - localMin);                // minutes until midnight
+      if (score < bestScore) { bestScore = score; best = i; }
+    }
+    return best;
+  }
+  function isNyeWindow(d) {
+    var m = d.getUTCMonth(), day = d.getUTCDate();
+    return (m === 11 && day === 31) || (m === 0 && day === 1);
+  }
+  function rotateTick() {
+    if (menuOpen || gridOpen) return;
+    var cat = CATS[activeCat];
+    var now = new Date();
+    if (cat.id === 'nye' && isNyeWindow(now)) {
+      var pick = nyePick(cat.cams, now);
+      if (pick !== -1) {
+        if (pick !== activeIdx) load(activeCat, pick);
+        return;
+      }
+    }
+    step(1);
+  }
   function setRotate(on) {
     if (rotateTimer) { clearInterval(rotateTimer); rotateTimer = null; }
     if (on) {
-      rotateTimer = setInterval(function () { if (!menuOpen) step(1); }, ROTATE_SECONDS * 1000);
+      rotateTimer = setInterval(rotateTick, ROTATE_SECONDS * 1000);
+      var nye = CATS[activeCat] && CATS[activeCat].id === 'nye' && isNyeWindow(new Date());
+      rotBadge.innerHTML = nye ? '&#127878; MIDNIGHT CHASE' : '&#8635; AUTO-ROTATE';
       rotBadge.style.display = 'inline-block';
+      if (nye) rotateTick();
     } else {
       rotBadge.style.display = 'none';
     }
     showHud(true);
+    store();
+  }
+
+  /* ── Favorites ── */
+  function toggleFav() {
+    var cam = cur();
+    if (!cam) return;
+    var i = favs.indexOf(cam.id);
+    if (i === -1) favs.push(cam.id); else favs.splice(i, 1);
+    var catId = CATS[activeCat].id, camId = cam.id;
+    rebuildCats();
+    var ci = findCat(catId);
+    if (ci === -1) ci = findCat('all');
+    var xi = findCam(ci, camId);
+    if (xi === -1) { ci = findCat('all'); xi = findCam(ci, camId); }
+    activeCat = ci;
+    activeIdx = xi === -1 ? 0 : xi;
+    refreshHudText();
+    showHud(true);
+    store();
+  }
+
+  /* ── Grid ── */
+  function destroyGridMedia() {
+    for (var i = 0; i < gridMedia.length; i++) {
+      if (gridMedia[i].hls) try { gridMedia[i].hls.destroy(); } catch (e) {}
+      if (gridMedia[i].timer) clearInterval(gridMedia[i].timer);
+    }
+    gridMedia = [];
+  }
+  function gridCells() {
+    var cams = CATS[activeCat].cams;
+    return cams.slice(gridPage * 4, gridPage * 4 + 4);
+  }
+  function renderGridSel() {
+    var cells = gridEl.children;
+    for (var i = 0; i < cells.length; i++) {
+      cells[i].className = 'g-cell' + (i === gridSel ? ' sel' : '');
+    }
+  }
+  function renderGrid() {
+    destroyGridMedia();
+    gridEl.innerHTML = '';
+    var cams = CATS[activeCat].cams;
+    var maxPage = Math.max(0, Math.ceil(cams.length / 4) - 1);
+    if (gridPage > maxPage) gridPage = maxPage;
+    if (gridPage < 0) gridPage = 0;
+    var cells = gridCells();
+    if (gridSel >= cells.length) gridSel = cells.length - 1;
+
+    for (var i = 0; i < cells.length; i++) {
+      (function (cam, idx) {
+        var cell = document.createElement('div');
+        cell.className = 'g-cell' + (idx === gridSel ? ' sel' : '');
+        var rec = {};
+        if (cam.type === 'jpg') {
+          var img = document.createElement('img');
+          img.referrerPolicy = 'no-referrer';
+          img.src = cam.url + '?t=' + Date.now();
+          rec.timer = setInterval(function () {
+            img.src = cam.url + '?t=' + Date.now();
+          }, SNAP_INTERVAL);
+          cell.appendChild(img);
+        } else if (cam.type === 'yt') {
+          var f = document.createElement('iframe');
+          f.setAttribute('allow', 'autoplay; encrypted-media');
+          f.setAttribute('frameborder', '0');
+          f.src = 'https://www.youtube.com/embed/' + cam.vid +
+            '?autoplay=1&mute=1&controls=0&playsinline=1&rel=0';
+          cell.appendChild(f);
+        } else {
+          var v = document.createElement('video');
+          v.autoplay = true; v.muted = true;
+          if (window.Hls && Hls.isSupported()) {
+            rec.hls = new Hls({ maxBufferLength: 6 });
+            rec.hls.loadSource(cam.url);
+            rec.hls.attachMedia(v);
+          } else if (v.canPlayType('application/vnd.apple.mpegurl')) {
+            v.src = cam.url;
+          }
+          cell.appendChild(v);
+        }
+        var lbl = document.createElement('div');
+        lbl.className = 'g-label';
+        lbl.textContent = (favs.indexOf(cam.id) !== -1 ? '★ ' : '') + cam.name;
+        cell.appendChild(lbl);
+        cell.onclick = function () { exitGrid(gridPage * 4 + idx); };
+        gridMedia.push(rec);
+        gridEl.appendChild(cell);
+      })(cells[i], i);
+    }
+  }
+  function openGrid() {
+    gridOpen = true;
+    stopStreams();
+    overlay.classList.add('hidden');
+    hud.classList.add('hidden');
+    help.classList.add('hidden');
+    ytWrap.style.display = 'none';
+    snap.style.display = 'none';
+    video.style.display = 'none';
+    gridPage = Math.floor(activeIdx / 4);
+    gridSel = activeIdx % 4;
+    renderGrid();
+    gridEl.classList.add('open');
+  }
+  function exitGrid(playIdx) {
+    destroyGridMedia();
+    gridEl.classList.remove('open');
+    gridEl.innerHTML = '';
+    gridOpen = false;
+    load(activeCat, playIdx == null ? activeIdx : playIdx);
+  }
+  function gridKey(code) {
+    var count = gridCells().length;
+    if (code === 37) {                       // left
+      if (gridSel > 0) { gridSel--; renderGridSel(); }
+      else { gridPage--; gridSel = 3; renderGrid(); }
+    } else if (code === 39) {                // right
+      if (gridSel < count - 1) { gridSel++; renderGridSel(); }
+      else { gridPage++; gridSel = 0; renderGrid(); }
+    } else if (code === 38) {                // up
+      if (gridSel >= 2) { gridSel -= 2; renderGridSel(); }
+    } else if (code === 40) {                // down
+      if (gridSel + 2 < count) { gridSel += 2; renderGridSel(); }
+    } else if (code === 33) {                // ch up: next page
+      gridPage++; gridSel = 0; renderGrid();
+    } else if (code === 34) {                // ch down: prev page
+      gridPage--; gridSel = 0; renderGrid();
+    } else if (code === 13) {                // OK: fullscreen selection
+      exitGrid(gridPage * 4 + gridSel);
+    } else if (code === 461 || code === 403) {
+      exitGrid(null);
+    }
   }
 
   /* ── Menu ── */
@@ -339,7 +619,8 @@
       c = cams[i];
       div = document.createElement('div');
       div.className = 'm-item' + (menuPane === 1 && i === menuIdx ? ' focus' : '');
-      div.innerHTML = c.name + '<span class="m-sub">' + (c.sub || '') + '</span>';
+      div.innerHTML = (favs.indexOf(c.id) !== -1 ? '★ ' : '') + c.name +
+        '<span class="m-sub">' + (c.sub || '') + '</span>';
       div.onclick = (function (catI, camI) {
         return function () { closeMenu(); load(catI, camI); };
       })(menuCat, i);
@@ -353,7 +634,6 @@
       pane.scrollTop = Math.max(0, want);
     }
   }
-
   function openMenu() {
     menuOpen = true;
     menuPane = 0;
@@ -366,10 +646,9 @@
     menuOpen = false;
     menuEl.classList.remove('open');
   }
-
   function menuKey(code) {
     var n;
-    if (code === 38 || code === 40) {           // up / down
+    if (code === 38 || code === 40) {
       var d = code === 38 ? -1 : 1;
       if (menuPane === 0) {
         menuCat = (menuCat + d + CATS.length) % CATS.length;
@@ -379,19 +658,20 @@
         menuIdx = (menuIdx + d + n) % n;
       }
       renderMenu();
-    } else if (code === 37) {                   // left
+    } else if (code === 37) {
       menuPane = 0; renderMenu();
-    } else if (code === 39) {                   // right
+    } else if (code === 39) {
       menuPane = 1; renderMenu();
-    } else if (code === 13) {                   // OK
+    } else if (code === 13) {
       if (menuPane === 0) { menuPane = 1; menuIdx = 0; renderMenu(); }
       else { closeMenu(); load(menuCat, menuIdx); }
-    } else if (code === 461) {                  // back
+    } else if (code === 461) {
       if (menuPane === 1) { menuPane = 0; renderMenu(); }
       else closeMenu();
     }
   }
 
+  /* ── Keys ── */
   document.addEventListener('keydown', function (e) {
     var code = e.keyCode;
     if (code === 461) e.preventDefault();
@@ -400,6 +680,7 @@
       return;
     }
     if (menuOpen) { menuKey(code); return; }
+    if (gridOpen) { gridKey(code); return; }
     switch (code) {
       case 13:  openMenu(); break;                       // OK
       case 37: case 34: step(-1); break;                 // left / ch-down
@@ -407,10 +688,8 @@
       case 38: case 40: showHud(true); break;            // up/down peek hud
       case 415: case 19: case 80:                        // play / pause / P
         setRotate(!rotateTimer); break;
-      case 403:                                          // red: reload app
-        window.location.reload();
-        break;
-      case 404: case 71: {                               // green / G: open in YouTube app
+      case 403: case 82: openGrid(); break;              // red / R: grid
+      case 404: case 71: {                               // green / G: native YT app
         var c = cur();
         if (!c || c.type !== 'yt') { showHud(true); break; }
         try {
@@ -428,12 +707,21 @@
         }
         break;
       }
+      case 405: case 70: toggleFav(); break;             // yellow / F: favorite
+      case 406: case 83:                                 // blue / S: sound
+        soundOn = !soundOn;
+        applySound();
+        showHud(true);
+        store();
+        break;
       case 461: window.close(); break;                   // back
     }
   });
 
   document.addEventListener('visibilitychange', function () {
-    if (!document.hidden && CATS.length) load(activeCat, activeIdx);
+    if (document.hidden || !CATS.length) return;
+    if (gridOpen) renderGrid();
+    else load(activeCat, activeIdx);
   });
 
   /* ── Boot ── */
@@ -442,17 +730,20 @@
   xhr.onload = function () {
     try {
       var data = JSON.parse(xhr.responseText);
-      var all = data.cameras;
-      var i, j, cat;
-      for (i = 0; i < data.categories.length; i++) {
-        cat = { id: data.categories[i].id, name: data.categories[i].name, cams: [] };
-        for (j = 0; j < all.length; j++) {
-          if (all[j].tags && all[j].tags.indexOf(cat.id) !== -1) cat.cams.push(all[j]);
-        }
-        if (cat.cams.length) CATS.push(cat);
-      }
-      CATS.push({ id: 'all', name: 'All Cameras', cams: all });
-      load(0, 0);
+      allCams = data.cameras;
+      catDefs = data.categories;
+      var saved = restore();
+      if (saved.favs && saved.favs.length) favs = saved.favs;
+      soundOn = !!saved.sound;
+      rebuildCats();
+
+      var ci = saved.catId != null ? findCat(saved.catId) : -1;
+      if (ci === -1) ci = 0;
+      var xi = saved.camId != null ? findCam(ci, saved.camId) : -1;
+      if (xi === -1) xi = 0;
+      load(ci, xi);
+      if (saved.rotate) setRotate(true);
+      applySound();
     } catch (err) {
       overlayTxt.textContent = 'CAMERA LIST ERROR';
       overlaySub.textContent = String(err).slice(0, 80);
