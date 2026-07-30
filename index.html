@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lockport Bridge Cam</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    background: #000; overflow: hidden;
+    font-family: "Space Grotesk", "DM Sans", sans-serif;
+    cursor: none;
+  }
+  #video {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: contain; background: #000;
+  }
+  #hud {
+    position: absolute; top: 40px; left: 50px; right: 50px;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    transition: opacity 0.4s; z-index: 10;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+  }
+  #hud.hidden { opacity: 0; }
+  .cam-name  { color: #fff;    font-size: 34px; font-weight: 600; letter-spacing: 1px; }
+  .cam-sub   { color: #9ca3af; font-size: 22px; margin-top: 6px; letter-spacing: 2px; }
+  #status    { font-size: 26px; font-weight: 700; letter-spacing: 2px; }
+  #help {
+    position: absolute; bottom: 40px; left: 0; right: 0;
+    text-align: center; color: #9ca3af; font-size: 22px;
+    letter-spacing: 1px; transition: opacity 0.4s; z-index: 10;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+  }
+  #help.hidden { opacity: 0; }
+  #help b { color: #fff; }
+  #overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: #0b1220; z-index: 5; transition: opacity 0.5s;
+  }
+  #overlay.hidden { opacity: 0; pointer-events: none; }
+  #overlay-text { color: #fff;    font-size: 40px; letter-spacing: 4px; font-weight: 600; }
+  #overlay-sub  { color: #6b7280; font-size: 24px; margin-top: 14px; letter-spacing: 2px; }
+  .spinner {
+    width: 60px; height: 60px; margin-bottom: 30px;
+    border: 4px solid #1f2937; border-top-color: #22c55e;
+    border-radius: 50%; animation: spin 1s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<video id="video" autoplay muted></video>
+<img id="snap" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;display:none;" alt="">
+<div id="yt-wrap" style="position:absolute;top:0;left:0;width:100%;height:100%;background:#000;display:none;"></div>
+
+<div id="overlay">
+  <div class="spinner"></div>
+  <div id="overlay-text">CONNECTING...</div>
+  <div id="overlay-sub"></div>
+</div>
+
+<div id="hud">
+  <div>
+    <div class="cam-name" id="cam-name"></div>
+    <div class="cam-sub" id="cam-sub"></div>
+  </div>
+  <div id="status" style="color:#f59e0b">&#9679; CONNECTING</div>
+</div>
+
+<div id="help">
+  <b>&#9664; &#9654;</b> or <b>CH +/&#8722;</b> switch camera &nbsp;&nbsp;&middot;&nbsp;&nbsp; <b>OK</b> show/hide info &nbsp;&nbsp;&middot;&nbsp;&nbsp; <b>BACK</b> exit
+</div>
+
+<script src="hls.min.js"></script>
+<script>
+(function () {
+  var BASE = 'https://brown-technologies.net';
+  var CCTV = 'https://cctv.travelmidwest.com/snapshots/';
+  var CAMERAS = [
+    { type: 'hls', url: BASE + '/live-camera/cam1/live.m3u8',
+      id: 'BT-CAM-01', name: '9th Street Bridge',
+      sub: 'LOCKPORT, IL · BT-CAM-01 · HLS' },
+    { type: 'hls', url: BASE + '/live-camera/cam2/live.m3u8',
+      id: 'BT-CAM-02', name: 'City Hall Yard',
+      sub: 'LOCKPORT, IL · BT-CAM-02 · HLS' },
+    { type: 'jpg', url: CCTV + 'IL-ISTHA_1_Will_SEB_I-355-CASH_4157660_-8800050_1_N.jpg',
+      id: 'TOLLWAY', name: 'I-355 @ Spring Creek Plaza — North',
+      sub: 'LOCKPORT, IL · ILLINOIS TOLLWAY · SNAPSHOT' },
+    { type: 'jpg', url: CCTV + 'IL-ISTHA_1_Will_SEB_I-355-CASH_4157660_-8800050_1_S.jpg',
+      id: 'TOLLWAY', name: 'I-355 @ Spring Creek Plaza — South',
+      sub: 'LOCKPORT, IL · ILLINOIS TOLLWAY · SNAPSHOT' },
+    { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_NB_I-55_4160876_-8816292_1_NONE.jpg',
+      id: 'IDOT D1', name: 'I-55 @ Lockport Rd',
+      sub: 'BOLINGBROOK, IL · IDOT DISTRICT 1 · SNAPSHOT' },
+    { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_SWB_I-55_4158419_-8816869_1_NONE.jpg',
+      id: 'IDOT D1', name: 'I-55 @ US 30',
+      sub: 'JOLIET, IL · IDOT DISTRICT 1 · SNAPSHOT' },
+    { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_NB_I-55_4156485_-8818055_1_NONE.jpg',
+      id: 'IDOT D1', name: 'I-55 South of Caton Farm Rd',
+      sub: 'JOLIET, IL · IDOT DISTRICT 1 · SNAPSHOT' },
+    { type: 'jpg', url: CCTV + 'IL-IDOTD1_1_Will_NEB_I-55_4152799_-8818419_1_NONE.jpg',
+      id: 'IDOT D1', name: 'I-55 North of Jefferson St',
+      sub: 'JOLIET, IL · IDOT DISTRICT 1 · SNAPSHOT' },
+    { type: 'yt', chan: 'UCF-ZXdKznuR8USRwfru222Q',
+      id: 'RAILCAM', name: 'Illinois Railway Museum',
+      sub: 'UNION, IL · LIVE RAILCAM · YOUTUBE' },
+    { type: 'yt', chan: 'UCKrTulUx22nWscKWpQarAOQ',
+      id: 'SKYLINE', name: 'Chicago Lakefront — The Playpen',
+      sub: 'CHICAGO, IL · LAKEFRONT LIVE 4K · YOUTUBE' },
+    { type: 'yt', chan: 'UCz7CQR0xt-A4y1Asl9NBdUA',
+      id: 'SKYLINE', name: 'Chicago Southern Skyline',
+      sub: 'CHICAGO, IL · SOUTH LOOP VIEW · YOUTUBE' },
+    { type: 'yt', vid: 'O0UGT7AT3aw',
+      id: 'SKYLINE', name: 'Willis Tower Skydeck',
+      sub: 'CHICAGO, IL · EARTHCAM · YOUTUBE' }
+  ];
+
+  var video      = document.getElementById('video');
+  var snap       = document.getElementById('snap');
+  var ytWrap     = document.getElementById('yt-wrap');
+  var overlay    = document.getElementById('overlay');
+  var overlayTxt = document.getElementById('overlay-text');
+  var overlaySub = document.getElementById('overlay-sub');
+  var hud        = document.getElementById('hud');
+  var help       = document.getElementById('help');
+  var camName    = document.getElementById('cam-name');
+  var camSub     = document.getElementById('cam-sub');
+  var statusEl   = document.getElementById('status');
+
+  var activeCam  = 0;
+  var hls        = null;
+  var hudTimer   = null;
+  var retryTimer = null;
+  var snapTimer  = null;
+  var snapFails  = 0;
+  var SNAP_INTERVAL = 30000;
+
+  function setStatus(state) {
+    var map = {
+      connecting: ['● CONNECTING', '#f59e0b'],
+      live:       ['● LIVE',       '#22c55e'],
+      youtube:    ['● LIVE · YOUTUBE', '#22c55e'],
+      snapshot:   ['● SNAPSHOT · UPDATES EVERY FEW MIN', '#f59e0b'],
+      error:      ['● RECONNECTING', '#ef4444']
+    };
+    var s = map[state] || map.connecting;
+    statusEl.textContent = s[0];
+    statusEl.style.color = s[1];
+  }
+
+  function showHud(autoHide) {
+    hud.classList.remove('hidden');
+    help.classList.remove('hidden');
+    if (hudTimer) clearTimeout(hudTimer);
+    if (autoHide) {
+      hudTimer = setTimeout(function () {
+        hud.classList.add('hidden');
+        help.classList.add('hidden');
+      }, 6000);
+    }
+  }
+
+  function toggleHud() {
+    if (hud.classList.contains('hidden')) {
+      showHud(true);
+    } else {
+      if (hudTimer) clearTimeout(hudTimer);
+      hud.classList.add('hidden');
+      help.classList.add('hidden');
+    }
+  }
+
+  function scheduleRetry() {
+    setStatus('error');
+    if (retryTimer) clearTimeout(retryTimer);
+    retryTimer = setTimeout(function () { load(activeCam); }, 4000);
+  }
+
+  function stopStreams() {
+    if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
+    if (snapTimer)  { clearTimeout(snapTimer);  snapTimer  = null; }
+    if (hls) { hls.destroy(); hls = null; }
+    video.onloadedmetadata = null;
+    video.onerror = null;
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    ytWrap.innerHTML = '';
+    snapFails = 0;
+  }
+
+  function playStream(cam, url, liveState, preferNative) {
+    var onUp = function () {
+      if (CAMERAS[activeCam] !== cam) return;
+      video.play();
+      overlay.classList.add('hidden');
+      setStatus(liveState);
+    };
+    var onDown = function () {
+      if (CAMERAS[activeCam] !== cam) return;
+      overlay.classList.remove('hidden');
+      overlayTxt.textContent = 'STREAM ERROR';
+      overlaySub.textContent = 'Retrying in a few seconds...';
+      scheduleRetry();
+    };
+
+    var nativeOk = video.canPlayType('application/vnd.apple.mpegurl');
+    var useNative = preferNative ? !!nativeOk : !(window.Hls && Hls.isSupported());
+
+    if (!useNative && window.Hls && Hls.isSupported()) {
+      hls = new Hls({
+        lowLatencyMode: true,
+        liveSyncDurationCount: 3,
+        maxBufferLength: 10
+      });
+      hls.loadSource(url);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, onUp);
+      hls.on(Hls.Events.ERROR, function (e, data) { if (data.fatal) onDown(); });
+    } else if (nativeOk) {
+      video.onloadedmetadata = onUp;
+      video.onerror = onDown;
+      video.src = url;
+      video.load();
+    } else {
+      overlayTxt.textContent = 'PLAYBACK NOT SUPPORTED';
+      overlaySub.textContent = 'This TV cannot play HLS streams.';
+    }
+  }
+
+  function loadYouTube(cam) {
+    video.style.display = 'none';
+    snap.style.display = 'none';
+    ytWrap.style.display = 'block';
+
+    var src = cam.vid
+      ? 'https://www.youtube.com/embed/' + cam.vid + '?'
+      : 'https://www.youtube.com/embed/live_stream?channel=' + cam.chan + '&';
+    src += 'autoplay=1&mute=1&controls=0&playsinline=1&rel=0';
+
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('allow', 'autoplay; encrypted-media');
+    iframe.setAttribute('frameborder', '0');
+    iframe.style.cssText = 'width:100%;height:100%;border:0;';
+    iframe.onload = function () {
+      if (CAMERAS[activeCam] !== cam) return;
+      overlay.classList.add('hidden');
+      setStatus('youtube');
+    };
+    iframe.src = src;
+    ytWrap.appendChild(iframe);
+  }
+
+  function snapLoop(cam) {
+    var loader = new Image();
+    loader.onload = function () {
+      if (CAMERAS[activeCam] !== cam) return;
+      snap.src = loader.src;
+      snapFails = 0;
+      overlay.classList.add('hidden');
+      setStatus('snapshot');
+      snapTimer = setTimeout(function () { snapLoop(cam); }, SNAP_INTERVAL);
+    };
+    loader.onerror = function () {
+      if (CAMERAS[activeCam] !== cam) return;
+      snapFails++;
+      if (snapFails >= 5) {
+        setStatus('error');
+        overlay.classList.remove('hidden');
+        overlayTxt.textContent = 'CAMERA UNAVAILABLE';
+        overlaySub.textContent = 'Retrying...';
+      }
+      snapTimer = setTimeout(function () { snapLoop(cam); }, SNAP_INTERVAL * 2);
+    };
+    loader.src = cam.url + '?t=' + Date.now();
+  }
+
+  function load(index) {
+    activeCam = index;
+    var cam = CAMERAS[index];
+
+    stopStreams();
+
+    setStatus('connecting');
+    overlay.classList.remove('hidden');
+    overlayTxt.textContent = 'CONNECTING...';
+    overlaySub.textContent = cam.name;
+    camName.textContent = cam.name;
+    camSub.textContent  = cam.sub;
+    showHud(true);
+
+    if (cam.type === 'jpg') {
+      video.style.display = 'none';
+      ytWrap.style.display = 'none';
+      snap.style.display = 'block';
+      snap.removeAttribute('src');
+      snapLoop(cam);
+      return;
+    }
+
+    if (cam.type === 'yt') {
+      loadYouTube(cam);
+      return;
+    }
+
+    video.style.display = 'block';
+    snap.style.display = 'none';
+    ytWrap.style.display = 'none';
+    playStream(cam, cam.url, 'live', false);
+  }
+
+  function switchCam(delta) {
+    var next = (activeCam + delta + CAMERAS.length) % CAMERAS.length;
+    load(next);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    switch (e.keyCode) {
+      case 37:  // left
+      case 34:  // channel down
+        switchCam(-1); break;
+      case 39:  // right
+      case 33:  // channel up
+        switchCam(1); break;
+      case 13:  // OK / enter
+        toggleHud(); break;
+      case 461: // webOS back
+        window.close(); break;
+    }
+  });
+
+  // Resume cleanly when app is brought back from background
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) load(activeCam);
+  });
+
+  load(0);
+})();
+</script>
+</body>
+</html>
