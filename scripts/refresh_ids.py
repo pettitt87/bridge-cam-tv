@@ -17,21 +17,61 @@ def fetch(url):
     return urllib.request.urlopen(req, timeout=30).read().decode('utf-8', 'replace')
 
 
-def _parse_lives(raw, out, seen):
-    for m in re.finditer(r'"videoId":"([A-Za-z0-9_-]{11})"', raw):
-        vid = m.group(1)
-        if vid in seen:
-            continue
-        block = raw[m.start():m.start() + 7000]
-        if 'THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE' not in block:
-            continue
-        seen.add(vid)
-        title = ''
-        for tm in re.finditer(r'"title":\{"content":"(.*?)"\}', block):
-            if tm.group(1) not in MENU:
-                title = tm.group(1)
-                break
-        out.append((vid, title))
+def _first_video_id(obj):
+    """Depth-first search for the first videoId string in a JSON subtree."""
+    if isinstance(obj, dict):
+        if isinstance(obj.get('videoId'), str):
+            return obj['videoId']
+        for v in obj.values():
+            r = _first_video_id(v)
+            if r:
+                return r
+    elif isinstance(obj, list):
+        for v in obj:
+            r = _first_video_id(v)
+            if r:
+                return r
+    return None
+
+
+def _walk_lockups(obj, out, seen):
+    """Collect (videoId, title) from live lockupViewModel nodes."""
+    if isinstance(obj, dict):
+        lv = obj.get('lockupViewModel')
+        if isinstance(lv, dict):
+            dump = json.dumps(lv)
+            if 'THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE' in dump:
+                vid = _first_video_id(lv)
+                if vid and vid not in seen:
+                    seen.add(vid)
+                    title = ''
+                    try:
+                        title = lv['metadata']['lockupMetadataViewModel']['title']['content']
+                    except (KeyError, TypeError):
+                        pass
+                    out.append((vid, title))
+        for v in obj.values():
+            _walk_lockups(v, out, seen)
+    elif isinstance(obj, list):
+        for v in obj:
+            _walk_lockups(v, out, seen)
+
+
+def _find_continuation(obj):
+    if isinstance(obj, dict):
+        cc = obj.get('continuationCommand')
+        if isinstance(cc, dict) and isinstance(cc.get('token'), str):
+            return cc['token']
+        for v in obj.values():
+            r = _find_continuation(v)
+            if r:
+                return r
+    elif isinstance(obj, list):
+        for v in obj:
+            r = _find_continuation(v)
+            if r:
+                return r
+    return None
 
 
 def channel_lives(channel):
@@ -39,10 +79,13 @@ def channel_lives(channel):
     base = ('https://www.youtube.com/channel/%s' % channel
             if channel.startswith('UC') else 'https://www.youtube.com/%s' % channel)
     raw = fetch(base + '/streams')
+    m = re.search(r'var ytInitialData = (\{.*?\});</script>', raw)
+    if not m:
+        return []
+    data = json.loads(m.group(1))
     out, seen = [], set()
-    _parse_lives(raw, out, seen)
-    tok_m = re.search(r'"continuationCommand":\{"token":"([^"]+)"', raw)
-    tok, pages = (tok_m.group(1) if tok_m else None), 0
+    _walk_lockups(data, out, seen)
+    tok, pages = _find_continuation(data), 0
     while tok and pages < 12:
         body = json.dumps({
             'context': {'client': {'clientName': 'WEB', 'clientVersion': '2.20250725.01.00'}},
@@ -54,11 +97,9 @@ def channel_lives(channel):
             obj = json.load(urllib.request.urlopen(req, timeout=30))
         except Exception:
             break
-        compact = json.dumps(obj, separators=(',', ':'), ensure_ascii=False)
-        _parse_lives(compact, out, seen)
+        _walk_lockups(obj, out, seen)
         pages += 1
-        tok_m = re.search(r'"continuationCommand":\{"token":"([^"]+)"', compact)
-        tok = tok_m.group(1) if tok_m else None
+        tok = _find_continuation(obj)
     return out
 
 
