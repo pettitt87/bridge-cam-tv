@@ -159,6 +159,17 @@
 <script>
 (function () {
   var DATA_URL = 'cameras.json';
+  var STATE_NAMES = {
+    AL:'Alabama', AK:'Alaska', AZ:'Arizona', AR:'Arkansas', CA:'California', CO:'Colorado',
+    CT:'Connecticut', DE:'Delaware', DC:'Washington, D.C.', FL:'Florida', GA:'Georgia',
+    HI:'Hawaii', ID:'Idaho', IL:'Illinois', IN:'Indiana', IA:'Iowa', KS:'Kansas', KY:'Kentucky',
+    LA:'Louisiana', ME:'Maine', MD:'Maryland', MA:'Massachusetts', MI:'Michigan', MN:'Minnesota',
+    MS:'Mississippi', MO:'Missouri', MT:'Montana', NE:'Nebraska', NV:'Nevada', NH:'New Hampshire',
+    NJ:'New Jersey', NM:'New Mexico', NY:'New York', NC:'North Carolina', ND:'North Dakota',
+    OH:'Ohio', OK:'Oklahoma', OR:'Oregon', PA:'Pennsylvania', RI:'Rhode Island',
+    SC:'South Carolina', SD:'South Dakota', TN:'Tennessee', TX:'Texas', UT:'Utah', VT:'Vermont',
+    VA:'Virginia', WA:'Washington', WV:'West Virginia', WI:'Wisconsin', WY:'Wyoming'
+  };
   var SNAP_INTERVAL = 30000;
   var ROTATE_SECONDS = 60;
   var STORE_KEY = 'bctv';
@@ -231,6 +242,25 @@
         if (allCams[j].tags && allCams[j].tags.indexOf(cat.id) !== -1) cat.cams.push(allCams[j]);
       }
       if (cat.cams.length) CATS.push(cat);
+    }
+    // State categories, generated from each camera's `state` code
+    var byState = {}, code;
+    for (j = 0; j < allCams.length; j++) {
+      code = allCams[j].state;
+      if (!code) continue;
+      if (!byState[code]) byState[code] = [];
+      byState[code].push(allCams[j]);
+    }
+    var codes = [];
+    for (code in byState) if (byState.hasOwnProperty(code)) codes.push(code);
+    codes.sort(function (a, b) {
+      var na = STATE_NAMES[a] || a, nb = STATE_NAMES[b] || b;
+      return na < nb ? -1 : (na > nb ? 1 : 0);
+    });
+    for (i = 0; i < codes.length; i++) {
+      CATS.push({ id: 'st_' + codes[i],
+                  name: '◆ ' + (STATE_NAMES[codes[i]] || codes[i]),
+                  cams: byState[codes[i]] });
     }
     CATS.push({ id: 'all', name: 'All Cameras', cams: allCams });
   }

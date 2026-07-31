@@ -87,6 +87,10 @@
     {
       "id": "socal",
       "name": "SoCal Freeways"
+    },
+    {
+      "id": "penn",
+      "name": "Pennsylvania Roads"
     }
   ],
   "cameras": [
@@ -98,7 +102,8 @@
       "url": "https://brown-technologies.net/live-camera/cam1/live.m3u8",
       "tags": [
         "local"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "bt2",
@@ -108,7 +113,8 @@
       "url": "https://brown-technologies.net/live-camera/cam2/live.m3u8",
       "tags": [
         "local"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "i355n",
@@ -119,7 +125,8 @@
       "tags": [
         "local",
         "traffic"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "i355s",
@@ -130,7 +137,8 @@
       "tags": [
         "local",
         "traffic"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "i55lock",
@@ -141,7 +149,8 @@
       "tags": [
         "local",
         "traffic"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "i55us30",
@@ -152,7 +161,8 @@
       "tags": [
         "local",
         "traffic"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "i55caton",
@@ -163,7 +173,8 @@
       "tags": [
         "local",
         "traffic"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "i55jeff",
@@ -174,7 +185,8 @@
       "tags": [
         "local",
         "traffic"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "i355dup",
@@ -184,7 +196,8 @@
       "url": "https://cctv.travelmidwest.com/snapshots/IL-DUPAGECOUNTY_1_DuPage_NB_I-355_4178609_-8805520_1_N.jpg",
       "tags": [
         "traffic"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "i88dup",
@@ -194,7 +207,8 @@
       "url": "https://cctv.travelmidwest.com/snapshots/IL-ISTHA_1_DuPage_EB_I-88_4180939_-8805290_1_S.jpg",
       "tags": [
         "traffic"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "irm",
@@ -208,7 +222,8 @@
       "tags": [
         "local",
         "trains"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "skydeck",
@@ -224,7 +239,8 @@
         "chicago",
         "skylines",
         "landmarks"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "lakefront",
@@ -239,7 +255,8 @@
         "chicago",
         "beaches",
         "skylines"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "southsky",
@@ -253,7 +270,8 @@
       "tags": [
         "chicago",
         "skylines"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "midwayec",
@@ -268,7 +286,8 @@
       "tags": [
         "chicago",
         "planes"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "midwayst",
@@ -283,7 +302,8 @@
       "tags": [
         "chicago",
         "planes"
-      ]
+      ],
+      "state": "IL"
     },
     {
       "id": "milwaukee",
@@ -297,7 +317,8 @@
       },
       "tags": [
         "skylines"
-      ]
+      ],
+      "state": "WI"
     },
     {
       "id": "deshler",
@@ -311,7 +332,8 @@
       },
       "tags": [
         "trains"
-      ]
+      ],
+      "state": "OH"
     },
     {
       "id": "lagrange",
@@ -325,7 +347,8 @@
       },
       "tags": [
         "trains"
-      ]
+      ],
+      "state": "KY"
     },
     {
       "id": "ashland",
@@ -339,7 +362,8 @@
       },
       "tags": [
         "trains"
-      ]
+      ],
+      "state": "VA"
     },
     {
       "id": "folkston",
@@ -353,7 +377,8 @@
       },
       "tags": [
         "trains"
-      ]
+      ],
+      "state": "GA"
     },
     {
       "id": "cheyenne",
@@ -367,7 +392,8 @@
       },
       "tags": [
         "trains"
-      ]
+      ],
+      "state": "WY"
     },
     {
       "id": "stlouis",
@@ -381,7 +407,8 @@
       },
       "tags": [
         "trains"
-      ]
+      ],
+      "state": "MO"
     },
     {
       "id": "seattletrain",
@@ -395,7 +422,8 @@
       },
       "tags": [
         "trains"
-      ]
+      ],
+      "state": "WA"
     },
     {
       "id": "kctrain",
@@ -409,7 +437,8 @@
       },
       "tags": [
         "trains"
-      ]
+      ],
+      "state": "MO"
     },
     {
       "id": "tsq1",
@@ -426,7 +455,8 @@
         "nye",
         "nightlife"
       ],
-      "nyeOff": -5
+      "nyeOff": -5,
+      "state": "NY"
     },
     {
       "id": "tsq2",
@@ -443,7 +473,8 @@
         "nye",
         "nightlife"
       ],
-      "nyeOff": -5
+      "nyeOff": -5,
+      "state": "NY"
     },
     {
       "id": "wtc",
@@ -461,7 +492,8 @@
         "landmarks",
         "nye"
       ],
-      "nyeOff": -5
+      "nyeOff": -5,
+      "state": "NY"
     },
     {
       "id": "liberty",
@@ -476,7 +508,8 @@
       "tags": [
         "nyc",
         "landmarks"
-      ]
+      ],
+      "state": "NY"
     },
     {
       "id": "littleitaly",
@@ -491,7 +524,8 @@
       "tags": [
         "nyc",
         "nightlife"
-      ]
+      ],
+      "state": "NY"
     },
     {
       "id": "nycharbor",
@@ -507,7 +541,8 @@
         "nyc",
         "harbors",
         "skylines"
-      ]
+      ],
+      "state": "NY"
     },
     {
       "id": "fremont",
@@ -519,7 +554,8 @@
         "nye",
         "nightlife"
       ],
-      "nyeOff": -8
+      "nyeOff": -8,
+      "state": "NV"
     },
     {
       "id": "shibuya",
@@ -548,7 +584,8 @@
         "nye",
         "nightlife"
       ],
-      "nyeOff": -6
+      "nyeOff": -6,
+      "state": "LA"
     },
     {
       "id": "ftlaud",
@@ -562,7 +599,8 @@
       },
       "tags": [
         "beaches"
-      ]
+      ],
+      "state": "FL"
     },
     {
       "id": "wildwood",
@@ -576,7 +614,8 @@
       },
       "tags": [
         "beaches"
-      ]
+      ],
+      "state": "NJ"
     },
     {
       "id": "sanibel",
@@ -590,7 +629,8 @@
       },
       "tags": [
         "beaches"
-      ]
+      ],
+      "state": "FL"
     },
     {
       "id": "napili",
@@ -604,7 +644,8 @@
       },
       "tags": [
         "beaches"
-      ]
+      ],
+      "state": "HI"
     },
     {
       "id": "northshore",
@@ -618,7 +659,8 @@
       },
       "tags": [
         "beaches"
-      ]
+      ],
+      "state": "HI"
     },
     {
       "id": "keywest",
@@ -633,7 +675,8 @@
       "tags": [
         "beaches",
         "harbors"
-      ]
+      ],
+      "state": "FL"
     },
     {
       "id": "portmiami",
@@ -647,7 +690,8 @@
       },
       "tags": [
         "harbors"
-      ]
+      ],
+      "state": "FL"
     },
     {
       "id": "soolocks",
@@ -661,7 +705,8 @@
       },
       "tags": [
         "harbors"
-      ]
+      ],
+      "state": "MI"
     },
     {
       "id": "porthuron",
@@ -675,7 +720,8 @@
       },
       "tags": [
         "harbors"
-      ]
+      ],
+      "state": "MI"
     },
     {
       "id": "welland",
@@ -703,7 +749,8 @@
       },
       "tags": [
         "harbors"
-      ]
+      ],
+      "state": "IA"
     },
     {
       "id": "pier23",
@@ -718,7 +765,8 @@
       "tags": [
         "harbors",
         "skylines"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "lakehood",
@@ -733,7 +781,8 @@
       "tags": [
         "harbors",
         "planes"
-      ]
+      ],
+      "state": "AK"
     },
     {
       "id": "miamiair",
@@ -747,7 +796,8 @@
       },
       "tags": [
         "planes"
-      ]
+      ],
+      "state": "FL"
     },
     {
       "id": "brooks",
@@ -761,7 +811,8 @@
       },
       "tags": [
         "wildlife"
-      ]
+      ],
+      "state": "AK"
     },
     {
       "id": "tembe",
@@ -789,7 +840,8 @@
       },
       "tags": [
         "wildlife"
-      ]
+      ],
+      "state": "IA"
     },
     {
       "id": "wolves",
@@ -803,7 +855,8 @@
       },
       "tags": [
         "wildlife"
-      ]
+      ],
+      "state": "MN"
     },
     {
       "id": "giraffe",
@@ -817,7 +870,8 @@
       },
       "tags": [
         "wildlife"
-      ]
+      ],
+      "state": "SC"
     },
     {
       "id": "watering",
@@ -845,7 +899,8 @@
       },
       "tags": [
         "wildlife"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "pigeonriver",
@@ -860,7 +915,8 @@
       "tags": [
         "wildlife",
         "smalltown"
-      ]
+      ],
+      "state": "TN"
     },
     {
       "id": "manatee",
@@ -875,7 +931,8 @@
       "tags": [
         "wildlife",
         "aquarium"
-      ]
+      ],
+      "state": "FL"
     },
     {
       "id": "kelp",
@@ -889,7 +946,8 @@
       },
       "tags": [
         "aquarium"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "jelly",
@@ -903,7 +961,8 @@
       },
       "tags": [
         "aquarium"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "shark",
@@ -917,7 +976,8 @@
       },
       "tags": [
         "aquarium"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "otter",
@@ -932,7 +992,8 @@
       "tags": [
         "aquarium",
         "wildlife"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "opensea",
@@ -946,7 +1007,8 @@
       },
       "tags": [
         "aquarium"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "baltaqua",
@@ -960,7 +1022,8 @@
       },
       "tags": [
         "aquarium"
-      ]
+      ],
+      "state": "MD"
     },
     {
       "id": "reef",
@@ -988,7 +1051,8 @@
       },
       "tags": [
         "landmarks"
-      ]
+      ],
+      "state": "PA"
     },
     {
       "id": "washmon",
@@ -1002,7 +1066,8 @@
       },
       "tags": [
         "landmarks"
-      ]
+      ],
+      "state": "DC"
     },
     {
       "id": "cleveland",
@@ -1016,7 +1081,8 @@
       },
       "tags": [
         "skylines"
-      ]
+      ],
+      "state": "OH"
     },
     {
       "id": "philly",
@@ -1030,7 +1096,8 @@
       },
       "tags": [
         "skylines"
-      ]
+      ],
+      "state": "PA"
     },
     {
       "id": "iss",
@@ -1058,7 +1125,8 @@
       },
       "tags": [
         "space"
-      ]
+      ],
+      "state": "FL"
     },
     {
       "id": "etna",
@@ -1189,7 +1257,8 @@
       "tags": [
         "smalltown",
         "landmarks"
-      ]
+      ],
+      "state": "WY"
     },
     {
       "id": "roswell",
@@ -1203,7 +1272,8 @@
       },
       "tags": [
         "smalltown"
-      ]
+      ],
+      "state": "NM"
     },
     {
       "id": "buffalo",
@@ -1218,7 +1288,8 @@
       "tags": [
         "smalltown",
         "landmarks"
-      ]
+      ],
+      "state": "ND"
     },
     {
       "id": "snowman",
@@ -1233,7 +1304,8 @@
       "tags": [
         "smalltown",
         "wildlife"
-      ]
+      ],
+      "state": "MI"
     },
     {
       "id": "lincolnharbor",
@@ -1248,7 +1320,8 @@
       "tags": [
         "nyc",
         "harbors"
-      ]
+      ],
+      "state": "NY"
     },
     {
       "id": "flight93",
@@ -1262,7 +1335,8 @@
       },
       "tags": [
         "landmarks"
-      ]
+      ],
+      "state": "PA"
     },
     {
       "id": "warrenton",
@@ -1276,7 +1350,8 @@
       },
       "tags": [
         "smalltown"
-      ]
+      ],
+      "state": "VA"
     },
     {
       "id": "spiritlake",
@@ -1290,7 +1365,8 @@
       },
       "tags": [
         "smalltown"
-      ]
+      ],
+      "state": "IA"
     },
     {
       "id": "councilbluffs",
@@ -1304,7 +1380,8 @@
       },
       "tags": [
         "smalltown"
-      ]
+      ],
+      "state": "IA"
     },
     {
       "id": "ruidoso",
@@ -1318,7 +1395,8 @@
       },
       "tags": [
         "smalltown"
-      ]
+      ],
+      "state": "NM"
     },
     {
       "id": "coney",
@@ -1333,7 +1411,8 @@
       "tags": [
         "nyc",
         "beaches"
-      ]
+      ],
+      "state": "NY"
     },
     {
       "id": "anglins",
@@ -1347,7 +1426,8 @@
       },
       "tags": [
         "beaches"
-      ]
+      ],
+      "state": "FL"
     },
     {
       "id": "niagara",
@@ -1362,7 +1442,8 @@
       "tags": [
         "landmarks",
         "volcano"
-      ]
+      ],
+      "state": "NY"
     },
     {
       "id": "sitka",
@@ -1377,7 +1458,8 @@
       "tags": [
         "smalltown",
         "harbors"
-      ]
+      ],
+      "state": "AK"
     },
     {
       "id": "allegiant",
@@ -1392,7 +1474,8 @@
       "tags": [
         "landmarks",
         "nightlife"
-      ]
+      ],
+      "state": "NV"
     },
     {
       "id": "scrub",
@@ -1436,7 +1519,8 @@
       },
       "tags": [
         "landmarks"
-      ]
+      ],
+      "state": "NV"
     },
     {
       "id": "kansascity",
@@ -1450,7 +1534,8 @@
       },
       "tags": [
         "skylines"
-      ]
+      ],
+      "state": "MO"
     },
     {
       "id": "summit1v",
@@ -1465,7 +1550,8 @@
       "tags": [
         "nyc",
         "skylines"
-      ]
+      ],
+      "state": "NY"
     },
     {
       "id": "scottsville",
@@ -1479,7 +1565,8 @@
       },
       "tags": [
         "smalltown"
-      ]
+      ],
+      "state": "KY"
     },
     {
       "id": "westernwall",
@@ -1509,7 +1596,8 @@
       "tags": [
         "nightlife",
         "nye"
-      ]
+      ],
+      "state": "LA"
     },
     {
       "id": "dublin",
@@ -1541,7 +1629,8 @@
       "tags": [
         "smalltown",
         "volcano"
-      ]
+      ],
+      "state": "IN"
     },
     {
       "id": "giraffebarn",
@@ -1555,7 +1644,8 @@
       },
       "tags": [
         "wildlife"
-      ]
+      ],
+      "state": "SC"
     },
     {
       "id": "v_IVSoVgGXDoU",
@@ -1569,7 +1659,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Plant City, Florida, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "FL"
     },
     {
       "id": "v_7DmivRg6FfQ",
@@ -1583,7 +1674,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Folkston, Georgia, USA | LIVE Train Camera (Turnout PTZ)"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_Vqhfy2IqDz0",
@@ -1597,7 +1689,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Folkston, Georgia, USA | LIVE Train Camera (Fixed View)"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_XRLwO9QjveA",
@@ -1611,7 +1704,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Saint Louis, Missouri, USA  |  LIVE Train Camera  (PTZ - Eas"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_9uPCPh8jWas",
@@ -1625,7 +1719,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Cresson, Pennsylvania  |  LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "PA"
     },
     {
       "id": "v_NP-bvAcswIM",
@@ -1639,7 +1734,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Salt Lake City, Utah, USA | LIVE Train Camera (Fixed View - "
-      }
+      },
+      "state": "UT"
     },
     {
       "id": "v_qJd7diix4eI",
@@ -1653,7 +1749,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Salt Lake City, Utah, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "UT"
     },
     {
       "id": "v_hV30GxkdTAs",
@@ -1667,7 +1764,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Cheyenne, Wyoming, USA  |  LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "WY"
     },
     {
       "id": "v_RhQOUKgklto",
@@ -1681,7 +1779,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Quanah, Texas, USA | LIVE Train Camera (Fixed View — East)"
-      }
+      },
+      "state": "TX"
     },
     {
       "id": "v_LInPY_D1Ln4",
@@ -1695,7 +1794,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Quanah, Texas, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "TX"
     },
     {
       "id": "v_vDdj-QLNkiY",
@@ -1709,7 +1809,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Folkston, Georgia, USA | LIVE Train Camera (Fixed View — Loo"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_1AOrlYblQR8",
@@ -1723,7 +1824,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Jesup, Georgia, USA | LIVE Train Camera | Virtual Railfan (P"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_diibGG3KEeo",
@@ -1737,7 +1839,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Cohutta, Georgia, USA  |  LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_ll3X1mH_g9Q",
@@ -1751,7 +1854,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Cordele, Georgia, USA | LIVE Train Camera (Fixed View – Diam"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v__ESx1v-hJG4",
@@ -1765,7 +1869,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Muncie, Indiana, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_q5BQRwSh41Q",
@@ -1779,7 +1884,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Tucson, Arizona, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "AZ"
     },
     {
       "id": "v_cR3kSHm7Ts0",
@@ -1793,7 +1899,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "CSX Mainline in Cumberland, Maryland, USA | LIVE Train Camer"
-      }
+      },
+      "state": "MD"
     },
     {
       "id": "v_m3iasBkPAbo",
@@ -1807,7 +1914,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Battle Creek, Michigan, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "MI"
     },
     {
       "id": "v_Ux0rtJXPPQ0",
@@ -1821,7 +1929,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Austell, Georgia, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_t66DKzx1IuQ",
@@ -1835,7 +1944,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Fairport, New York, USA | LIVE Train Camera (Fixed View – Ea"
-      }
+      },
+      "state": "NY"
     },
     {
       "id": "v_4F9idLDuvXg",
@@ -1849,7 +1959,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Rockwood, Tennessee, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "TN"
     },
     {
       "id": "v_clH9iSEN8LA",
@@ -1863,7 +1974,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Fort Madison, Iowa, USA | LIVE Train Camera (PTZ – Bridge)"
-      }
+      },
+      "state": "IA"
     },
     {
       "id": "v_a8LZ6wVb81E",
@@ -1877,7 +1989,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Chesterton, Indiana, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_irU2jyvUj5U",
@@ -1891,7 +2004,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Decatur, Alabama, USA | LIVE Train Camera (Fixed View — East"
-      }
+      },
+      "state": "AL"
     },
     {
       "id": "v_5YG01nZOygQ",
@@ -1905,7 +2019,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Decatur, Alabama, USA | LIVE Train Camera (Fixed View – West"
-      }
+      },
+      "state": "AL"
     },
     {
       "id": "v_Kz7pDVt8kmQ",
@@ -1919,7 +2034,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Lincoln, Nebraska, USA | Live Train Camera (PTZ)"
-      }
+      },
+      "state": "NE"
     },
     {
       "id": "v_xJMJegqnl8Y",
@@ -1933,7 +2049,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Spartanburg, South Carolina, USA | LIVE Train Camera (Fixed "
-      }
+      },
+      "state": "SC"
     },
     {
       "id": "v_JUNFDH1Nq6A",
@@ -1947,7 +2064,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Spartanburg, South Carolina, USA | LIVE Train Camera (Fixed "
-      }
+      },
+      "state": "SC"
     },
     {
       "id": "v_RZpIX6cq7Os",
@@ -1961,7 +2079,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Strasburg, Pennsylvania, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "PA"
     },
     {
       "id": "v_G8iIhudKPsQ",
@@ -1975,7 +2094,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Muncie, Indiana, USA | LIVE Train Camera (Fixed View – East)"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_LRTTZdNTW_0",
@@ -1989,7 +2109,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Laramie, Wyoming, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "WY"
     },
     {
       "id": "v_sOFA93jWtvA",
@@ -2003,7 +2124,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Rockwood, Tennessee, USA | LIVE Train Camera (Fixed View – N"
-      }
+      },
+      "state": "TN"
     },
     {
       "id": "v_nqW68wm_1Lc",
@@ -2017,7 +2139,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Cocoa, Florida, USA | LIVE Train Camera (Fixed View – North)"
-      }
+      },
+      "state": "FL"
     },
     {
       "id": "v_WMSiw_Hyac8",
@@ -2031,7 +2154,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Anchorage, Alaska, USA | LIVE Train Camera (Fixed View – Nor"
-      }
+      },
+      "state": "AK"
     },
     {
       "id": "v_TfAAleblDIE",
@@ -2045,7 +2169,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Anchorage, Alaska, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "AK"
     },
     {
       "id": "v_NIultPoJuaE",
@@ -2059,7 +2184,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Sweetwater, Tennessee, USA | LIVE Train Camera"
-      }
+      },
+      "state": "TN"
     },
     {
       "id": "v_geu9bc_M-kA",
@@ -2073,7 +2199,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Jonesborough, Tennessee, USA | LIVE Train Camera (Fixed View"
-      }
+      },
+      "state": "TN"
     },
     {
       "id": "v_JPdUQtZcuk8",
@@ -2087,7 +2214,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Thomasville, North Carolina, USA | LIVE Train Camera (Fixed "
-      }
+      },
+      "state": "NC"
     },
     {
       "id": "v_2MCTiR9-Qn4",
@@ -2101,7 +2229,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Thomasville, North Carolina, USA | LIVE Train Camera (Fixed "
-      }
+      },
+      "state": "NC"
     },
     {
       "id": "v_8wYiH1dZW80",
@@ -2115,7 +2244,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Steam Trains in Chattanooga, Tennessee, USA | LIVE Train Cam"
-      }
+      },
+      "state": "TN"
     },
     {
       "id": "v_BA3656Ef0bw",
@@ -2129,7 +2259,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Amherst, Ohio, USA - LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "OH"
     },
     {
       "id": "v_jBOcskBbC5A",
@@ -2143,7 +2274,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Amherst, Ohio, USA - LIVE Train Feed (Fixed)"
-      }
+      },
+      "state": "OH"
     },
     {
       "id": "v_oC1gEe0u3Ps",
@@ -2157,7 +2289,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Quincy, Illinois, USA | LIVE Train Camera | Virtual Railfan "
-      }
+      },
+      "state": "IL"
     },
     {
       "id": "v_zwwquuBxOic",
@@ -2171,7 +2304,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Greeley, Colorado, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "CO"
     },
     {
       "id": "v_Ea7nVlHscR8",
@@ -2185,7 +2319,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Johnstown, Pennsylvania, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "PA"
     },
     {
       "id": "v_fTkOmPbSXBg",
@@ -2199,7 +2334,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Battle Creek, Michigan, USA | LIVE Train Camera (Fixed View "
-      }
+      },
+      "state": "MI"
     },
     {
       "id": "v_9sFDtbWz2uc",
@@ -2213,7 +2349,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Cocoa, Florida, USA | LIVE Train Camera (Fixed View – South)"
-      }
+      },
+      "state": "FL"
     },
     {
       "id": "v_UhP0rMfgjJ8",
@@ -2227,7 +2364,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Roanoke, Virginia, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "VA"
     },
     {
       "id": "v_LhNpn9L5ndM",
@@ -2241,7 +2379,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Rochelle, Illinois, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "IL"
     },
     {
       "id": "v_DDHWS4i4eTo",
@@ -2255,7 +2394,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Greeley, Colorado, USA | LIVE Train Camera (Fixed View — Sou"
-      }
+      },
+      "state": "CO"
     },
     {
       "id": "v_wSZCdFJNkR4",
@@ -2269,7 +2409,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Chehalis, Washington, USA | LIVE Train Camera (Fixed View – "
-      }
+      },
+      "state": "WA"
     },
     {
       "id": "v_dyelb2wGOAE",
@@ -2283,7 +2424,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Chehalis, Washington, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "WA"
     },
     {
       "id": "v_blcDjPvPbss",
@@ -2297,7 +2439,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Tower 55 in Fort Worth, Texas, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "TX"
     },
     {
       "id": "v_XWxyuL9dctA",
@@ -2311,7 +2454,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Fairport, New York, USA | LIVE Train Camera (Fixed View – We"
-      }
+      },
+      "state": "NY"
     },
     {
       "id": "v_D5kKdEBmrYU",
@@ -2325,7 +2469,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Ashland, Virginia, USA | LIVE Train Camera (Fixed View — Nor"
-      }
+      },
+      "state": "VA"
     },
     {
       "id": "v_qnO188z7z5w",
@@ -2339,7 +2484,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Amtrak and Strasburg Rail Road at Paradise, Pennsylvania, US"
-      }
+      },
+      "state": "PA"
     },
     {
       "id": "v_jntMnCMiZx4",
@@ -2353,7 +2499,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "La Grange, Kentucky, USA | LIVE Train Camera (Museum Fixed V"
-      }
+      },
+      "state": "KY"
     },
     {
       "id": "v_DuXSP6y9W7U",
@@ -2367,7 +2514,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Fort Madison, Iowa, USA | LIVE Train Camera (Marina Fixed Vi"
-      }
+      },
+      "state": "IA"
     },
     {
       "id": "v_DhoVf4-0Zt4",
@@ -2381,7 +2529,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Lincoln, Nebraska, USA | LIVE Train Camera (Fixed View – Eas"
-      }
+      },
+      "state": "NE"
     },
     {
       "id": "v_HYbkx7tlSzA",
@@ -2395,7 +2544,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "St. Paul, Minnesota, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "MN"
     },
     {
       "id": "v_u5dt2mHDuxQ",
@@ -2409,7 +2559,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "St. Paul, Minnesota, USA | LIVE Train Camera (Fixed View – E"
-      }
+      },
+      "state": "MN"
     },
     {
       "id": "v_HSZDWRE5m2o",
@@ -2423,7 +2574,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Steam Trains in Chattanooga, Tennessee, USA | LIVE Train Cam"
-      }
+      },
+      "state": "TN"
     },
     {
       "id": "v_IAC4KczQuQY",
@@ -2437,7 +2589,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Lafayette, Indiana, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_vF4ZdG-_6FE",
@@ -2451,7 +2604,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Glendale, Ohio, USA | LIVE Train Camera (Fixed View – North)"
-      }
+      },
+      "state": "OH"
     },
     {
       "id": "v_qHJF04WdxHo",
@@ -2465,7 +2619,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Glendale, Ohio, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "OH"
     },
     {
       "id": "v_BDb_sSL-K5k",
@@ -2479,7 +2634,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Chesterton, Indiana, USA | LIVE Train Camera (Fixed View – E"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_nO81bQFql7M",
@@ -2493,7 +2649,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Parkville, Missouri, USA | LIVE Train Camera (Fixed View – E"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_x1D0VkJU1r4",
@@ -2507,7 +2664,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Parkville, Missouri, USA | LIVE Train Camera (Fixed View – W"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_HFV5wXA-CRA",
@@ -2521,7 +2679,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Plant City, Florida, USA | LIVE Train Camera (Fixed View — N"
-      }
+      },
+      "state": "FL"
     },
     {
       "id": "v_lUMGsNe-R9Q",
@@ -2535,7 +2694,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Johnstown, Pennsylvania, USA | LIVE Train Camera (Fixed View"
-      }
+      },
+      "state": "PA"
     },
     {
       "id": "v_HJM22MARr6w",
@@ -2549,7 +2709,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Fostoria, Ohio, USA | LIVE Train Camera (Diamond View – Sout"
-      }
+      },
+      "state": "OH"
     },
     {
       "id": "v__sy9as4wVBA",
@@ -2563,7 +2724,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Austell, Georgia, USA | LIVE Train Camera (Fixed View — Nort"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_iN7u2jKbDm0",
@@ -2577,7 +2739,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Wichita, Kansas, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "KS"
     },
     {
       "id": "v_EKohXgHGCj8",
@@ -2591,7 +2754,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "BNSF Railway Yard in Belen, New Mexico, USA | LIVE Train Cam"
-      }
+      },
+      "state": "NM"
     },
     {
       "id": "v_On1MRt0NqFs",
@@ -2605,7 +2769,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Galesburg, Illinois, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "IL"
     },
     {
       "id": "v_JsBeRV3BB5s",
@@ -2619,7 +2784,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Galesburg, Illinois, USA | LIVE Train Camera (Fixed View – W"
-      }
+      },
+      "state": "IL"
     },
     {
       "id": "v_WNSkLhEWbuY",
@@ -2633,7 +2799,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Big Sandy, Texas, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "TX"
     },
     {
       "id": "v_ya36dX89dGU",
@@ -2647,7 +2814,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Russellville, Arkansas, USA | LIVE Train Camera (Fixed View "
-      }
+      },
+      "state": "AR"
     },
     {
       "id": "v_SoqD5lVPwpc",
@@ -2661,7 +2829,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Russellville, Arkansas, USA | LIVE Train Camera (Fixed View "
-      }
+      },
+      "state": "AR"
     },
     {
       "id": "v_Kfnq9KUBQng",
@@ -2675,7 +2844,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Covington, Kentucky, USA | LIVE Train Camera (Fixed View – N"
-      }
+      },
+      "state": "KY"
     },
     {
       "id": "v_ssuM6NJQ2no",
@@ -2689,7 +2859,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Horseshoe Curve – Altoona, Pennsylvania, USA | LIVE Train Ca"
-      }
+      },
+      "state": "PA"
     },
     {
       "id": "v_W02WZ5c02LE",
@@ -2703,7 +2874,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Kansas City, Missouri, USA | LIVE Train Camera (Doc’s Caboos"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_xR3kxBG_v7Y",
@@ -2717,7 +2889,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Kansas City, Missouri, USA | LIVE Train Camera (Doc’s Caboos"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_Dv2XxhsWqWY",
@@ -2731,7 +2904,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "SoNo Tower in South Norwalk, Connecticut, USA (Fixed View – "
-      }
+      },
+      "state": "CT"
     },
     {
       "id": "v_53R1gjL0Za0",
@@ -2745,7 +2919,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "SoNo Tower in South Norwalk, Connecticut, USA (Fixed View – "
-      }
+      },
+      "state": "CT"
     },
     {
       "id": "v_iSCU6JMaIt0",
@@ -2759,7 +2934,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Big Sandy, Texas, USA | LIVE Train Camera (Fixed View – West"
-      }
+      },
+      "state": "TX"
     },
     {
       "id": "v_a__yfG4PnxY",
@@ -2773,7 +2949,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Quincy, Illinois, USA | LIVE Train Camera (Fixed View – East"
-      }
+      },
+      "state": "IL"
     },
     {
       "id": "v_Q4EsIhNF_NU",
@@ -2787,7 +2964,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Princeton, Indiana, USA | LIVE Train Camera (Fixed View – No"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_jRvnO7D-FpA",
@@ -2801,7 +2979,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Princeton, Indiana, USA | LIVE Train Camera (Fixed View – So"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_BDznAl17f10",
@@ -2815,7 +2994,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Tucson, Arizona, USA | LIVE Train Camera (Fixed View – West)"
-      }
+      },
+      "state": "AZ"
     },
     {
       "id": "v_COJyPLKqYI8",
@@ -2829,7 +3009,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Texarkana, Arkansas, USA | LIVE Train Camera (Fixed View – N"
-      }
+      },
+      "state": "AR"
     },
     {
       "id": "v_6s1KTevqrNY",
@@ -2843,7 +3024,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Texarkana, Arkansas, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "AR"
     },
     {
       "id": "v_-g1qAvXyIyQ",
@@ -2899,7 +3081,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Kearney, Nebraska, USA | LIVE Train Camera (Fixed View – Eas"
-      }
+      },
+      "state": "NE"
     },
     {
       "id": "v_23tmCNeFh7A",
@@ -2913,7 +3096,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Kearney, Nebraska, USA | LIVE Train Camera (Fixed View – Wes"
-      }
+      },
+      "state": "NE"
     },
     {
       "id": "v_05MkbHUuVNM",
@@ -2927,7 +3111,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "The Iron Triangle in Fostoria, Ohio, USA | LIVE Train Camera"
-      }
+      },
+      "state": "OH"
     },
     {
       "id": "v_KeR6KSrFwlY",
@@ -2941,7 +3126,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Kansas City, Missouri, USA | LIVE Train Camera (PTZ – Top)"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_jxvalaix3K0",
@@ -2955,7 +3141,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Skykomish, Washington, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "WA"
     },
     {
       "id": "v_9SLt3AT0rXk",
@@ -2969,7 +3156,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Trains in the Street at La Grange, Kentucky, USA | LIVE Trai"
-      }
+      },
+      "state": "KY"
     },
     {
       "id": "v_KFu4LVTJ4Xk",
@@ -2983,7 +3171,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Waupaca, Wisconsin, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "WI"
     },
     {
       "id": "v_0YIKIk76Sy0",
@@ -2997,7 +3186,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "La Grange, Kentucky, USA | LIVE Train Camera (Fixed View – S"
-      }
+      },
+      "state": "KY"
     },
     {
       "id": "v_P1ajNE3v9BE",
@@ -3011,7 +3201,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Fort Madison, Iowa, USA | LIVE Train Camera (Fixed View – We"
-      }
+      },
+      "state": "IA"
     },
     {
       "id": "v_VoeGG-WgsKY",
@@ -3025,7 +3216,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Elkhart, Indiana, USA | LIVE Train Camera (Fixed View – East"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_YR1PdWaSxgk",
@@ -3039,7 +3231,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Elkhart, Indiana, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_iz9IQhp_fu0",
@@ -3053,7 +3246,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "La Plata, Missouri, USA | LIVE Train Camera (PTZ – Lookout)"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_flEBdsoP4o0",
@@ -3067,7 +3261,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "La Plata, Missouri, USA | LIVE Train Camera (Fixed View – We"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_X-ir2KfXMX0",
@@ -3081,7 +3276,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "La Plata, Missouri, USA | LIVE Train Camera (Fixed View – Ea"
-      }
+      },
+      "state": "MO"
     },
     {
       "id": "v_DcFGngu6wV4",
@@ -3095,7 +3291,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Barstow, California, USA | LIVE Train Camera (Fixed View – W"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v__DUQnPjPC_8",
@@ -3109,7 +3306,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "BNSF Railway Yard in Barstow, California, USA | LIVE Train C"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_1P0feVMNX5s",
@@ -3123,7 +3321,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Colorado Model Railroad Museum, Greeley, CO, USA | Virtual R"
-      }
+      },
+      "state": "CO"
     },
     {
       "id": "v_xq9XATyMHJI",
@@ -3137,7 +3336,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Flagstaff, Arizona, USA | LIVE Train Camera (Fixed View — We"
-      }
+      },
+      "state": "AZ"
     },
     {
       "id": "v_7xdHH9KMSVk",
@@ -3151,7 +3351,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Flagstaff, Arizona, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "AZ"
     },
     {
       "id": "v_nUdVtKcprJU",
@@ -3165,7 +3366,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Big 10 Curve at Arvada, Colorado, USA | LIVE Train Camera (P"
-      }
+      },
+      "state": "CO"
     },
     {
       "id": "v_9uAn-VdurrE",
@@ -3179,7 +3381,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "150MPH Trains at Davisville, Rhode Island, USA | LIVE Train "
-      }
+      },
+      "state": "RI"
     },
     {
       "id": "v_3XTk72rPJjQ",
@@ -3193,7 +3396,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Jonesborough, Tennessee, USA | LIVE Train Camera (Fixed View"
-      }
+      },
+      "state": "TN"
     },
     {
       "id": "v_9laISW0jtOo",
@@ -3207,7 +3411,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Laramie, Wyoming, USA | LIVE Train Camera (Fixed View – East"
-      }
+      },
+      "state": "WY"
     },
     {
       "id": "v_KuUy6cEuwFw",
@@ -3221,7 +3426,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Greencastle, Pennsylvania, USA | LIVE Train Camera (Fixed Vi"
-      }
+      },
+      "state": "PA"
     },
     {
       "id": "v_xMMTDVlQIms",
@@ -3235,7 +3441,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Waycross, Georgia, USA | LIVE Train Camera (PTZ — Diamond)"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_DofPCzEUlXk",
@@ -3249,7 +3456,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Dalton, Georgia, USA | LIVE Train Camera (Fixed View – North"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_7C9t6xk2LVw",
@@ -3263,7 +3471,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Covington, Kentucky, USA | LIVE Train Camera (Fixed View – S"
-      }
+      },
+      "state": "KY"
     },
     {
       "id": "v_0u6wBsMlnhg",
@@ -3277,7 +3486,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Ashland, Virginia, USA | LIVE Train Camera (Fixed View — Sou"
-      }
+      },
+      "state": "VA"
     },
     {
       "id": "v_3nls-9uh714",
@@ -3291,7 +3501,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Elkhart, Indiana, USA | LIVE Train Camera (Fixed View – West"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_Q5eSocWD-4c",
@@ -3305,7 +3516,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Greencastle, Pennsylvania, USA | LIVE Train Camera (Fixed Vi"
-      }
+      },
+      "state": "PA"
     },
     {
       "id": "v_x7bpIYjykpk",
@@ -3319,7 +3531,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Dalton, Georgia, USA | LIVE Train Camera (Fixed View – South"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_bCIIn4c5LrM",
@@ -3333,7 +3546,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Waycross, Georgia, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_8U0M_mionOs",
@@ -3347,7 +3561,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Springfield, Massachusetts, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "MA"
     },
     {
       "id": "v_7IEVmX3Ykf0",
@@ -3361,7 +3576,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Roanoke, Virginia, USA | LIVE Train Camera (Fixed View — Eas"
-      }
+      },
+      "state": "VA"
     },
     {
       "id": "v_Y28qU7UsFko",
@@ -3375,7 +3591,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Deshler, Ohio, USA | LIVE Train Camera (Fixed View — Diamond"
-      }
+      },
+      "state": "OH"
     },
     {
       "id": "v_LqPsNV_b-uc",
@@ -3389,7 +3606,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Cumberland, Maryland, USA | LIVE Train Camera (PTZ — Downtow"
-      }
+      },
+      "state": "MD"
     },
     {
       "id": "v_Sj-TMZX_4_s",
@@ -3403,7 +3621,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Cordele, Georgia, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_L6eG4ahJc_Q",
@@ -3417,7 +3636,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Fort Madison, Iowa, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "IA"
     },
     {
       "id": "v_L_xBQqGzNzY",
@@ -3431,7 +3651,8 @@
       "refresh": {
         "channel": "@VirtualRailfan",
         "match": "Burlington, Iowa, USA | LIVE Train Camera (PTZ)"
-      }
+      },
+      "state": "IA"
     },
     {
       "id": "v_aaJT8y3zfWs",
@@ -3739,7 +3960,8 @@
       "refresh": {
         "channel": "@afarTV",
         "match": "🔴 Live Now: SpaceX Gigabay Construction | Starship’s Giant F"
-      }
+      },
+      "state": "FL"
     },
     {
       "id": "v_a5VnMDnzGmQ",
@@ -4005,7 +4227,8 @@
       "refresh": {
         "channel": "@afarTV",
         "match": "🔴 Live Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam C"
-      }
+      },
+      "state": "HI"
     },
     {
       "id": "v_jAA3z753QW0",
@@ -4047,7 +4270,8 @@
       "refresh": {
         "channel": "@afarTV",
         "match": "🔴 Live Now: 24/7 Hawaii Humpback Whale Marine Sanctuary in M"
-      }
+      },
+      "state": "HI"
     },
     {
       "id": "v_UDAZWxehMAI",
@@ -4103,7 +4327,8 @@
       "refresh": {
         "channel": "@afarTV",
         "match": "🔴 Live Now:  24/7 Kilauea Volcano Watch in Hawaii (Multi-cam"
-      }
+      },
+      "state": "HI"
     },
     {
       "id": "v_6IaMqotNF_s",
@@ -4117,7 +4342,8 @@
       "refresh": {
         "channel": "@afarTV",
         "match": "🔴 Live Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam B"
-      }
+      },
+      "state": "HI"
     },
     {
       "id": "v_iws3rh5vLAQ",
@@ -4131,7 +4357,8 @@
       "refresh": {
         "channel": "@afarTV",
         "match": "🔴 Live Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam A"
-      }
+      },
+      "state": "HI"
     },
     {
       "id": "v_F2KrH4QQnms",
@@ -4145,7 +4372,8 @@
       "refresh": {
         "channel": "@afarTV",
         "match": "🔴 Live Now: 24/7 Strait of Georgia, British Columbia Canada "
-      }
+      },
+      "state": "GA"
     },
     {
       "id": "v_utGfq6AkxiM",
@@ -4160,7 +4388,8 @@
       "refresh": {
         "channel": "@StreamTimeLive",
         "match": "Marysville, Michigan USA | StreamTime LIVE"
-      }
+      },
+      "state": "MI"
     },
     {
       "id": "v_MqzQdTHCTOg",
@@ -4174,7 +4403,8 @@
       "refresh": {
         "channel": "@StreamTimeLive",
         "match": "Ohio River, Jeffersonville, IN | StreamTime LIVE"
-      }
+      },
+      "state": "IN"
     },
     {
       "id": "v_fE02qa-Phs0",
@@ -4188,7 +4418,8 @@
       "refresh": {
         "channel": "@StreamTimeLive",
         "match": "Baltimore, Maryland USA | StreamTime LIVE"
-      }
+      },
+      "state": "MD"
     },
     {
       "id": "v_F_bENs4GV24",
@@ -4203,7 +4434,8 @@
       "refresh": {
         "channel": "@StreamTimeLive",
         "match": "Marine City, Michigan, USA | StreamTime LIVE"
-      }
+      },
+      "state": "MI"
     },
     {
       "id": "v_g4mpc2I5lhc",
@@ -4218,7 +4450,8 @@
       "refresh": {
         "channel": "@StreamTimeLive",
         "match": "Algonac, Michigan USA | StreamTime LIVE"
-      }
+      },
+      "state": "MI"
     },
     {
       "id": "v_t_VfYNtprYE",
@@ -4232,7 +4465,8 @@
       "refresh": {
         "channel": "@StreamTimeLive",
         "match": "Baltimore Shipping Channel | Baltimore, MD USA | StreamTime "
-      }
+      },
+      "state": "MD"
     },
     {
       "id": "v_GFzyA9BkHW4",
@@ -4247,7 +4481,8 @@
       "refresh": {
         "channel": "@StreamTimeLive",
         "match": "Marine City HomeTown Cam | Marine City, MI | StreamTime LIVE"
-      }
+      },
+      "state": "MI"
     },
     {
       "id": "v_UnTDO-7BV1k",
@@ -4261,7 +4496,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "Shelter Island Pier | San Diego Web Cam"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_fc58f5x18-w",
@@ -4275,7 +4511,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "San Diego Harbor Island (S) Live Web Cam 4K"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_cvP_F-c2Upw",
@@ -4290,7 +4527,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "The Rooftop Bar | Oceanside, CA | San Diego Web Cam"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_OYqo4dqYjh0",
@@ -4305,7 +4543,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "The Rooftop Bar (Fixed Wide West) | Oceanside, CA | San Dieg"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_OAk3giBu5_k",
@@ -4319,7 +4558,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "San Diego Bay East | San Diego Web Cam"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_zScdt7Z839s",
@@ -4333,7 +4573,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "Lake Otay | San Diego Web Cam"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_iaBfYxbmwXA",
@@ -4347,7 +4588,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "San Diego Harbor Island Live Web Cam 4K"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_edz0ux7JClE",
@@ -4361,7 +4603,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "San Diego Web Cam Live (Rotating/Switched Feed) 4K"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_ct7IRmzDggk",
@@ -4375,7 +4618,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "San Diego Shelter Island (N) Live Web Cam"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_OUB8NDFSmFI",
@@ -4389,7 +4633,8 @@
       "refresh": {
         "channel": "@SanDiegoWebCam",
         "match": "San Diego Shelter Island Live Web Cam 4K"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_M3HKLzjvKPc",
@@ -4476,7 +4721,8 @@
       "refresh": {
         "channel": "@MontereyBayAquarium",
         "match": "Live Moon Jelly Cam | Monterey Bay Aquarium"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_fVa6-zCBR7A",
@@ -4490,7 +4736,8 @@
       "refresh": {
         "channel": "@MontereyBayAquarium",
         "match": "Live Monterey Bay Cam | Monterey Bay Aquarium"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_dzmJXWmA2EM",
@@ -4504,7 +4751,8 @@
       "refresh": {
         "channel": "@MontereyBayAquarium",
         "match": "Live Spider Crab Cam | Monterey Bay Aquarium"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_cUoet3dmRU4",
@@ -4518,7 +4766,8 @@
       "refresh": {
         "channel": "@MontereyBayAquarium",
         "match": "Live Aviary Cam | Monterey Bay Aquarium"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_RhP-_jX8-Zs",
@@ -4532,7 +4781,8 @@
       "refresh": {
         "channel": "@explorelivenaturecams",
         "match": "LIVE Anan Bear Cam: Lower Falls & Caves – Alaska |"
-      }
+      },
+      "state": "AK"
     },
     {
       "id": "v_y0XPkjM9-P4",
@@ -4547,7 +4797,8 @@
       "refresh": {
         "channel": "@PTZtv",
         "match": "LIVE - Scenic Cameras - Florida, Bahamas, Caribbea"
-      }
+      },
+      "state": "FL"
     },
     {
       "id": "v_Ul6wlBwXz9Y",
@@ -4562,7 +4813,8 @@
       "refresh": {
         "channel": "@PTZtv",
         "match": "LIVE - Morgan Hill - Santa Clara Valley - Northern"
-      }
+      },
+      "state": "CA"
     },
     {
       "id": "v_IcZ-7sFi1HM",
@@ -4593,1644 +4845,3724 @@
     {
       "id": "ca_12riovistabridgesac12ebstr",
       "name": "SR-12 Hwy 12 at Rio Vista Bridge East",
-      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "SACRAMENTO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/12_Rio_Vista_Bridge_SAC12_EB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "landmarks",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50twinbridgesed50wbstream",
       "name": "US-50 Hwy 50 at Twin Bridges",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Twin_bridges_ED50_WB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "landmarks",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_w580upperdeckpier47stream",
       "name": "TVR04 -- I-580 : Upper Deck Pier 47",
-      "sub": "CONTRA COSTA CO · CALTRANS D4 · LIVE HLS",
+      "sub": "CONTRA COSTA COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/W580_Upper_Deck_Pier_47.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_267truckeebypassnev267wbst",
       "name": "SR-267 Hwy 267 at Truckee Bypass",
-      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "sub": "NEVADA COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/267_Truckee_Bypass_NEV267_WB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_80riversideaveocpla80wbstr",
       "name": "I-80 Hwy 80 at Riverside",
-      "sub": "PLACER CO · CALTRANS D3 · LIVE HLS",
+      "sub": "PLACER COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/80_Riverside_Ave_OC_PLA80_WB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_sjeb205eomthousepkwystream",
       "name": "38 - EB I-205 E/O Mountain House Parkway",
-      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "sub": "SAN JOAQUIN COUNTY, CA · CALTRANS D10",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D10/SJ_EB205_EO_MtHousePkwy.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50wrightslakeed50eb1stream",
       "name": "US-50 Hwy 50 at Wrights Lake 1",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Wrights_Lake_ED50_EB_1.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_e80eofamericancanyonrdstre",
       "name": "TV829 -- I-80 : East Of American Canyon Road",
-      "sub": "SOLANO CO · CALTRANS D4 · LIVE HLS",
+      "sub": "SOLANO COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/E80_EOF_American_Canyon_Rd.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_sjeb580wopattersonpassstre",
       "name": "I-580 114 - EB 580 W/O Patterson Pass",
-      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "sub": "SAN JOAQUIN COUNTY, CA · CALTRANS D10",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D10/SJ_EB580_WO_PattersonPass.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_e37atlakevillerdstream",
       "name": "TV137 -- SR-37 : Lakeville Road",
-      "sub": "SONOMA CO · CALTRANS D4 · LIVE HLS",
+      "sub": "SONOMA COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/E37_at_Lakeville_Rd.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50southriverrdyol50eb2stre",
       "name": "US-50 Hwy 50 at South River Rd 2",
-      "sub": "YOLO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "YOLO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_South_River_Rd_YOL50_EB_2.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_sjsb99nogoldengateavestrea",
       "name": "22 - SB SR-99 N/O Golden Gate Ave",
-      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "sub": "SAN JOAQUIN COUNTY, CA · CALTRANS D10",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D10/SJ_SB99_NO_GoldenGateAve.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "landmarks",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50wrightslakeed50eb2stream",
       "name": "US-50 Hwy 50 at Wrights Lake 2",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Wrights_Lake_ED50_EB_2.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_w80atsastowerstream",
       "name": "TVD32 -- I-80 : Bay Bridge SAS Tower East",
-      "sub": "SAN FRANCISCO CO · CALTRANS D4 · LIVE HLS",
+      "sub": "SAN FRANCISCO COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/W80_at_SAS_Tower.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "landmarks",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_80donnersummitjwonev80ebst",
       "name": "I-80 Hwy 80 at Donner Summit",
-      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "sub": "NEVADA COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/80_Donner_Summit_JWO_NEV80_EB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_89westriverstpla89nbstream",
       "name": "SR-89 Hwy 89 at West River",
-      "sub": "PLACER CO · CALTRANS D3 · LIVE HLS",
+      "sub": "PLACER COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/89_West_River_St_PLA89_NB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_w580upperdecktrusstowerpie",
       "name": "TVR03 -- I-580 : Upper Deck Truss Tower Pier 48",
-      "sub": "CONTRA COSTA CO · CALTRANS D4 · LIVE HLS",
+      "sub": "CONTRA COSTA COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/W580_Upper_Deck_Truss_Tower_Pier_48.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50rivertonsandhouseed50ebs",
       "name": "US-50 Hwy 50 at Riverton Sandhouse",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Riverton_Sandhouse_ED50_EB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_80donnerlakerdjeonev80wbst",
       "name": "I-80 Hwy 80 at Donner Lake",
-      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "sub": "NEVADA COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/80_Donner_Lake_Rd_JEO_NEV80_WB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_e80atsastowerstream",
       "name": "TVD33 -- I-80 : Bay Bridge SAS Tower West",
-      "sub": "SAN FRANCISCO CO · CALTRANS D4 · LIVE HLS",
+      "sub": "SAN FRANCISCO COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/E80_at_SAS_Tower.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "landmarks",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50echosummited50ebstream",
       "name": "US-50 Hwy 50 at Echo Summit",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Echo_Summit_ED50_EB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_28jct267jwokingsbeachpla28",
       "name": "SR-28 Hwy 28 at Hwy 267 Kings Beach",
-      "sub": "PLACER CO · CALTRANS D3 · LIVE HLS",
+      "sub": "PLACER COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/28_JCT267_JWO_KINGS_BEACH_PLA28_EB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_e580atgrandlakeshorestream",
       "name": "TVA43 -- I-580 : Grand Lakeshore",
-      "sub": "ALAMEDA CO · CALTRANS D4 · LIVE HLS",
+      "sub": "ALAMEDA COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/E580_at_Grand_Lakeshore.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50southriverrdyol50eb1stre",
       "name": "US-50 Hwy 50 at South River Rd 1",
-      "sub": "YOLO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "YOLO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_South_River_Rd_YOL50_EB_1.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_267brockwaysummitpla267ebs",
       "name": "SR-267 Hwy 267 at Brockway Summit",
-      "sub": "PLACER CO · CALTRANS D3 · LIVE HLS",
+      "sub": "PLACER COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/267_Brockway_Summit_PLA267_EB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50basslakerded50wbstream",
       "name": "US-50 Bass_Lake_ED50_WB",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Bass_Lake_Rd_ED50_WB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50jeffersonblvdyol50eb3str",
       "name": "US-50 Hwy 50 at Jefferson Blvd 3",
-      "sub": "YOLO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "YOLO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Jefferson_Blvd_YOL50_EB_3.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50silvavalleyed50wbstream",
       "name": "US-50 Hwy 50 at Silva_Valley_ED50_WB",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Silva_Valley_ED50_WB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_5seamasavejnosac5sbstream",
       "name": "I-5 Hwy 5 at Seamas",
-      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "SACRAMENTO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/5_Seamas_Ave_JNO_SAC5_SB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_99jct32ucbut99nb2stream",
       "name": "SR-99 Hwy 99 at Hwy 32 2",
-      "sub": "BUTTE CO · CALTRANS D3 · LIVE HLS",
+      "sub": "BUTTE COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/99_JCT32_UC_BUT99_NB_2.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50hazelaveocwosac50wb2stre",
       "name": "US-50 Hwy 50 at Hazel Ave OC WO WB 2",
-      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "SACRAMENTO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Hazel_Ave_OC_WO_SAC50_WB_2.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_s280atsaratogaavorstream",
       "name": "TVB95 -- I-280 : Saratoga Avenue Onramp",
-      "sub": "SANTA CLARA CO · CALTRANS D4 · LIVE HLS",
+      "sub": "SANTA CLARA COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/S280_at_Saratoga_Av_OR.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_80jct89snev80ebstream",
       "name": "I-80 Hwy 80 at Hwy 89",
-      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "sub": "NEVADA COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/80_JCT89S_NEV80_EB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_20pleasantvalleyrdnev20ebs",
       "name": "SR-20 Hwy 20 at Pleasant Valley Rd",
-      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "sub": "NEVADA COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/20_Pleasant_Valley_Rd_NEV20_EB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_sjwb4eojacktonerdstream",
       "name": "SR-4 167 - WB 4 E/O Jack Tone Rd",
-      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "sub": "SAN JOAQUIN COUNTY, CA · CALTRANS D10",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D10/SJ_WB4_EO_JackToneRd.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_sjsb5solouiseavestream",
       "name": "173 - SB I-5 S/O Louise Ave",
-      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "sub": "SAN JOAQUIN COUNTY, CA · CALTRANS D10",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D10/SJ_SB5_SO_LouiseAve.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_mernb5sosr140stream",
       "name": "135 - NB I-5 S/O SR 140",
-      "sub": "MERCED CO · CALTRANS D10 · LIVE HLS",
+      "sub": "MERCED COUNTY, CA · CALTRANS D10",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D10/MER_NB5_SO_SR140.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_5florinrdsac5mdstream",
       "name": "I-5 Hwy 5 at Florin",
-      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "SACRAMENTO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/5_Florin_Rd_SAC5_MD.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50cameronparkdruced50wb2st",
       "name": "US-50 Hwy 50 at Cameron_Park_ED50_WB_2",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Cameron_Park_Dr_UC_ED50_WB_2.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_eureka14th320x240stream",
       "name": "US-101 : Eureka / 14th - Looking North (C039)",
-      "sub": "HUMBOLDT CO · CALTRANS D1 · LIVE HLS",
+      "sub": "HUMBOLDT COUNTY, CA · CALTRANS D1",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D1/eureka_14th_320x240.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_50snowsrded50eb2stream",
       "name": "US-50 Snow_ED50_EB_2",
-      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "EL DORADO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/50_Snows_Rd_ED50_EB_2.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_sjnb99sr120andyosemiteaves",
       "name": "29 - NB SR-99 SR-120 and Yosemite Ave",
-      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "sub": "SAN JOAQUIN COUNTY, CA · CALTRANS D10",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D10/SJ_NB99_SR120AndYosemiteAve.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_n280jsocesarchavezstream",
       "name": "TV325 -- I-280 : Just South Of Cesar Chavez",
-      "sub": "SAN FRANCISCO CO · CALTRANS D4 · LIVE HLS",
+      "sub": "SAN FRANCISCO COUNTY, CA · CALTRANS D4",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D4/N280_JSO_Cesar_Chavez.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_80wattaveocsac80wbstream",
       "name": "I-80 Hwy 80 at Watt",
-      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "SACRAMENTO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/80_Watt_Ave_OC_SAC80_WB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_eurekacinema2320x240stream",
       "name": "US-101: Eureka / PHB - Looking South",
-      "sub": "HUMBOLDT CO · CALTRANS D1 · LIVE HLS",
+      "sub": "HUMBOLDT COUNTY, CA · CALTRANS D1",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D1/eureka_cinema2_320x240.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_99skywayjsobut99nb2stream",
       "name": "SR-99 Skyway_BUT99_NB_2",
-      "sub": "BUTTE CO · CALTRANS D3 · LIVE HLS",
+      "sub": "BUTTE COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/99_Skyway_JSO_BUT99_NB_2.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_9947thaveocsac99sbstream",
       "name": "SR-99 Hwy 99 at 47th Ave",
-      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "sub": "SACRAMENTO COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/99_47th_Ave_OC_SAC99_SB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_70coxlnwobut70wbstream",
       "name": "SR-70 Hwy 70 WO Cox Ln",
-      "sub": "BUTTE CO · CALTRANS D3 · LIVE HLS",
+      "sub": "BUTTE COUNTY, CA · CALTRANS D3",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D3/70_Cox_Ln_WO_BUT70_WB.stream/playlist.m3u8",
       "tags": [
         "norcal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_1atbayaveporterststream",
       "name": "SR-1 : Bay Ave / Porter St",
-      "sub": "SANTA CRUZ CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA CRUZ COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/1atBayAve-PorterSt.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_68atwestofjosselyncanyonrd",
       "name": "SR-68 : West of Josselyn Canyon Road",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/68atWestofJosselynCanyonRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atcasitaspassrdstream",
       "name": "US-101 : South of Casitas Pass Road",
-      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA BARBARA COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atCasitasPassRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atsanmiguelcynrdstream",
       "name": "US-101 : San Miguel Canyon Rd",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atSanMiguelCynRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_1atoceanavestream",
       "name": "SR-1 : Ocean Ave",
-      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA BARBARA COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/1atOceanAve.stream/playlist.m3u8",
       "tags": [
         "central",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_68atcanyondelreyroute218st",
       "name": "SR-68 : Canyon Del Rey Boulevard",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/68atCanyonDelRey-Route218.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atcrazyhorsecynrdstream",
       "name": "US-101 : Crazy Horse Canyon Rd",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atCrazyHorseCynRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atavilabeachdrstream",
       "name": "US-101 : Avila Beach Drive",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atAvilaBeachDr.stream/playlist.m3u8",
       "tags": [
         "central",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_68atjosselyncanyonrdstream",
       "name": "SR-68 : Josselyn Canyon Road",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/68atJosselynCanyonRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atmallorycynrdstream",
       "name": "US-101 : Mallory Canyon Rd",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atMalloryCynRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_68atreservationrdriverrdst",
       "name": "SR-68 : Reservation Road / River Road",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/68atReservationRd_RiverRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_17atoceanststream",
       "name": "SR-1 : Ocean Street",
-      "sub": "SANTA CRUZ CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA CRUZ COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/17atOceanSt.stream/playlist.m3u8",
       "tags": [
         "central",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atnofreservoircynrdstre",
       "name": "US-101 : North of Reservoir Canyon Road",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atNofReservoirCynRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_17southofthesummitstream",
       "name": "SR-17 : South of Summit Road",
-      "sub": "SANTA CRUZ CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA CRUZ COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/17SouthoftheSummit.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atreservoircynrdstream",
       "name": "US-101 : Reservoir Canyon Road",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atReservoirCynRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_1atbuenavistadrstream",
       "name": "SR-1 : Buena Vista Dr",
-      "sub": "SANTA CRUZ CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA CRUZ COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/1atBuenaVistaDr.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atsanluisbaydrstream",
       "name": "US-101 : San Luis Bay Drive",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atSanLuisBayDr.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101attorocanyonrdstream",
       "name": "US-101 US101- Toro Canyon Rd",
-      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA BARBARA COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atToroCanyonRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101attrafficwystream",
       "name": "US-101 : Traffic Way",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atTrafficWy.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atpasoroblesststream",
       "name": "US-101 : Paso Robles Street",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atPasoRoblesSt.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_99unionavestream",
       "name": "SR-99 KER-99-AT UNION AVE",
-      "sub": "KERN CO · CALTRANS D6 · LIVE HLS",
+      "sub": "KERN COUNTY, CA · CALTRANS D6",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D6/99_Union_Ave.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_180reedstream",
       "name": "SR-180 FRE-180-AT REED AVE",
-      "sub": "FRESNO CO · CALTRANS D6 · LIVE HLS",
+      "sub": "FRESNO COUNTY, CA · CALTRANS D6",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D6/180_Reed.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atsouthofniblickrdstrea",
       "name": "US-101 : South of Niblick Road",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atSouthofNiblickRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atdonovanrdcmsstream",
       "name": "US-101 : North of Donovan Rd",
-      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA BARBARA COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atDonovanRdCMS.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_168shawstream",
       "name": "SR-168 FRE-168-AT SHAW AVE",
-      "sub": "FRESNO CO · CALTRANS D6 · LIVE HLS",
+      "sub": "FRESNO COUNTY, CA · CALTRANS D6",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D6/168_Shaw.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atsantaclauslnstream",
       "name": "US-101 : Santa Claus Lane",
-      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA BARBARA COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atSantaClausLn.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_183atmarketststream",
       "name": "SR-183 : Salinas St",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/183atMarketSt.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_180jworte41stream",
       "name": "SR-180 FRE-180-at RTE 41",
-      "sub": "FRESNO CO · CALTRANS D6 · LIVE HLS",
+      "sub": "FRESNO COUNTY, CA · CALTRANS D6",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D6/180_JWO_Rte_41.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_5sorte58stream",
       "name": "I-5 KER-5-S/O RTE 58",
-      "sub": "KERN CO · CALTRANS D6 · LIVE HLS",
+      "sub": "KERN COUNTY, CA · CALTRANS D6",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D6/5_SO_Rte_58.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_135atbetteraviardstream",
       "name": "SR-135: Betteravia Rd",
-      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA BARBARA COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/135atBetteraviaRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atfoxhollowrdstream",
       "name": "US-101 : Fox Hollow",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atFoxHollowRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atbelloststream",
       "name": "US-101 : SR-1 and Bello St",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atBelloSt.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_68atportoladrwbonrampstrea",
       "name": "SR-68 : Portola Drive",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/68atPortolaDrWBOn-Ramp.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_9911thavestream",
       "name": "SR-99 KER-99-AT 11TH AVE",
-      "sub": "KERN CO · CALTRANS D6 · LIVE HLS",
+      "sub": "KERN COUNTY, CA · CALTRANS D6",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D6/99_11th_Ave.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atbetteraviardstream",
       "name": "US-101 : Betteravia Rd",
-      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA BARBARA COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atBetteraviaRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_135atstowellrdstream",
       "name": "SR-135: Stowell Rd",
-      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SANTA BARBARA COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/135atStowellRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_99jnorte198stream",
       "name": "SR-99 TUL-99-at RTE 198",
-      "sub": "FRESNO CO · CALTRANS D6 · LIVE HLS",
+      "sub": "FRESNO COUNTY, CA · CALTRANS D6",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D6/99_JNO_RTE_198.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_101atbroadststream",
       "name": "US-101 : Broad Street",
-      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "sub": "SAN LUIS OBISPO COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/101atBroadSt.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_1atmosslandingrdstream",
       "name": "SR-1 : Moss Landing Rd",
-      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "sub": "MONTEREY COUNTY, CA · CALTRANS D5",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D5/1atMossLandingRd.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_41rte198stream",
       "name": "SR-41 KIN-41-AT RTE 198",
-      "sub": "KINGS CO · CALTRANS D6 · LIVE HLS",
+      "sub": "KINGS COUNTY, CA · CALTRANS D6",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D6/41_RTE_198.stream/playlist.m3u8",
       "tags": [
         "central",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815313stream",
       "name": "I-15 : (313) North of Nutmeg Street Overcross",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_313.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb89144stream",
       "name": "SR-91 : (44) 0.7 Miles West of Green River",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_91_44.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815347stream",
       "name": "I-15 : (347) 1.2 Miles South of Werick Road",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_347.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb8215257stream",
       "name": "I-215 : (257) North of Nuevo Road",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_215_257.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb89132stream",
       "name": "SR-91 : (32) 0.3 Miles East of Main Street",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_91_32.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815335stream",
       "name": "I-15 : (335) 0.9 Miles South of Lake Street",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_335.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815328stream",
       "name": "I-15 : (328) South of North Main Street",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_328.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb8215233stream",
       "name": "I-215 : (233) 0.5 Mi N/O Los Alamos",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_215_233.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815323stream",
       "name": "I-15 : (323) North of Olive",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_323.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb8215251stream",
       "name": "I-215 : (251) Southbound San Jacinto",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_215_251.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815298stream",
       "name": "I-15 : (298) 0.5 mi S/O Rainbow Valley Truck Inspection St",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_298.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb810389stream",
       "name": "I-10: (389) W/O EAGLE MOUNTAIN RD",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "http://wzmedia.dot.ca.gov/D8/LB-8_10_389.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_c051sb5jnocarmelmtnroadstr",
       "name": "(C 051) I-5 : Carmel Mountain Road_T",
-      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "sub": "SAN DIEGO COUNTY, CA · CALTRANS D11",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D11/C051_SB_5_JNO_Carmel_Mtn_Road.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815327stream",
       "name": "I-15 : (327) 0.8 Miles South of North Main Street",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_327.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb860164stream",
       "name": "SR-60 : (164) Frederick / Pigeon Pass Road",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_164.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb81015stream",
       "name": "SR-60 : (574) Moreno Beach Blvd",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_10_15.stream/playlist.m3u8",
       "tags": [
         "socal",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815330stream",
       "name": "I-15 : (330) South of SR-74 / Central Avenue",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_330.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb81594stream",
       "name": "I-15 : (94) North Of Summit",
-      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "sub": "SAN BERNARDINO COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_94.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb89153stream",
       "name": "SR-91 : (53) 0.3 Miles East of Smith",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_91_53.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_c221wbi8atlakemurraytstrea",
       "name": "(C221) I-8 : Lake Murray T",
-      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "sub": "SAN DIEGO COUNTY, CA · CALTRANS D11",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D11/C221_WB_I-8_AT_Lake_Murray_T.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815309stream",
       "name": "I-15 : (309) S/O Murrieta Hot Springs Rd",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_309.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815342stream",
       "name": "I-15 : (342) North of Indian Truck Trail Road",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_342.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb241lakeforeststream",
       "name": "SR-241 : (250) 40 Meters SO Lake Forestreet Drive Undercro",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB241LakeForest.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb860360stream",
       "name": "SR-60 : (360) La Rue Street",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_360.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815303stream",
       "name": "I-15 : (303) N/O Rancho California Road",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_303.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb860355stream",
       "name": "SR-60 : (355) Offramp Pedley Street",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_355.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb405sealbeachstream",
       "name": "I-405 : (144) Seal Beach Boulevard",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB405SealBeach.stream/playlist.m3u8",
       "tags": [
         "socal",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb860161stream",
       "name": "SR-60 : (161) East of Milliken",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_161.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_wb22beachstream",
       "name": "SR-22 : (160) Beach Boulevard",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/WB22BEACH.stream/playlist.m3u8",
       "tags": [
         "socal",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb5nobeachblvdstream",
       "name": "I-5 : (190) North of Beach Boulevard",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB5NOBeachBlvd.stream/playlist.m3u8",
       "tags": [
         "socal",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815308stream",
       "name": "I-15 : (308) N/O Warm Springs Creek",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_308.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815316stream",
       "name": "I-15 : (316) North Clinton Keith",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_316.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb815299stream",
       "name": "I-15 : (299) 0.6 mi N/O Rainbow Valley Truck Insp. Sta",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_299.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_sb73newportcoastdrstream",
       "name": "SR-73 : (345) South of Newport Coast Drive B",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/SB73NEWPORTCOASTDR.stream/playlist.m3u8",
       "tags": [
         "socal",
         "beaches",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb860166stream",
       "name": "SR-60 : (166) Heacock",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_166.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb89141stream",
       "name": "SR-91 : (41) Magnolia Onramp",
-      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "sub": "RIVERSIDE COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_91_41.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb241sosantiagocynstream",
       "name": "SR-241 : (297) 230 Meters SO Santiago Canyon Road Overcros",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB241SOSantiagoCyn.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb8210176stream",
       "name": "I-210 : (176) Riverside",
-      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "sub": "SAN BERNARDINO COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_210_176.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_c187sb5atviadelavallestrea",
       "name": "I-5 (C187) SB 5: Via De La Valle",
-      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "sub": "SAN DIEGO COUNTY, CA · CALTRANS D11",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D11/C187_SB_5_at_Via_De_La_Valle.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb261soportolapkwystream",
       "name": "SR-261 : (314) 80 Meters South of Portola Parkway (West) O",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB261SOPortolaPkwy.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb8210367stream",
       "name": "I-210 : (367) Del Rosa Ave Off Ramp",
-      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "sub": "SAN BERNARDINO COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_210_367.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_eb90breablvdstream",
       "name": "SR-90 : (510) Brea Blvd NW Corner",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/EB90BreaBlvd.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_c010sb5atoldtownavestream",
       "name": "(C 010) I-5 : Old Town Avenue",
-      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "sub": "SAN DIEGO COUNTY, CA · CALTRANS D11",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D11/C010_SB_5_at_Old_Town_Ave.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb241losalisosstream",
       "name": "SR-241 : (247) Los Alisos Boulevard",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB241LosAlisos.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb57norte22stream",
       "name": "SR-57 : (12) SR-22",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB57NO_RTE22.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb8210116stream",
       "name": "I-210 : (116) Archibald",
-      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "sub": "SAN BERNARDINO COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_210_116.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb405bolsachicastream",
       "name": "I-405 : (150) South of Bolsa Chica",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB405BolsaChica.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb405warnerstream",
       "name": "I-405 : (223) South of Warner Avenue",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB405Warner.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb57nowagneravestream",
       "name": "SR-57 : (176) North of Wagner Avenue",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB57NOWagnerAve.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_c235nb5atsorrentovalleyrds",
       "name": "(C235) I-5 : Just South Of Sorrento Valley Road 1",
-      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "sub": "SAN DIEGO COUNTY, CA · CALTRANS D11",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D11/C235_NB_5_at_Sorrento_Valley_Rd.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_wb91lapalmastream",
       "name": "SR-91 : (138) La Palma",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/WB91LAPALMA.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_c085nb15jnoranchobernardos",
       "name": "(C 086 )I-15 : West Bernardo Drive / Pomerdo",
-      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "sub": "SAN DIEGO COUNTY, CA · CALTRANS D11",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D11/C085_NB_15_JNO_Rancho_Bernardo.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_eb91eoglassellstream",
       "name": "SR-91 : (140) East of Glassell Street",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/EB91EOGLASSELL.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_eb90berryststream",
       "name": "SR-90 : (508) Berry St SE Corner",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/EB90BerrySt.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_c069sb805atelcajonblvdonra",
       "name": "(C069) I-805 : El Cajon Boulevard (On Ramp)",
-      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "sub": "SAN DIEGO COUNTY, CA · CALTRANS D11",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D11/C069_SB_805_at_El_Cajon_Blvd_On_Ramp.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_lb8138393stream",
       "name": "SR-138 SR138 : (393) N/O Hwy 18",
-      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "sub": "SAN BERNARDINO COUNTY, CA · CALTRANS D8",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D8/LB-8_138_393.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb241nobakestream",
       "name": "SR-241 : (251) 310 Meters North of Bake Parkway Overcross",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB241NOBake.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_nb405soedwardstream",
       "name": "I-405 : (149) South of Edwards",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/NB405SOEdward.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_c110eb52atsbgeneseeavestre",
       "name": "(C 110) SR-52 : Genesee Avenue",
-      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "sub": "SAN DIEGO COUNTY, CA · CALTRANS D11",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D11/C110_EB_52_at_SB_Genesee_Ave.stream/playlist.m3u8",
       "tags": [
         "socal",
         "traffic"
-      ]
+      ],
+      "state": "CA"
     },
     {
       "id": "ca_wb91kreamerstream",
       "name": "SR-91 : (139) Kreamer Boulevard",
-      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "sub": "ORANGE COUNTY, CA · CALTRANS D12",
       "type": "hls",
       "url": "https://wzmedia.dot.ca.gov/D12/WB91KREAMER.stream/playlist.m3u8",
       "tags": [
         "socal",
+        "traffic"
+      ],
+      "state": "CA"
+    },
+    {
+      "id": "pa_6389",
+      "name": "Business US 30 US 30 BUSINESS (LANCASTER AVE) @ US 322/MAN",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6389",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4720",
+      "name": "I-81 N/B @ Exit 112 Hegins Schuylkill",
+      "sub": "SCHUYLKILL COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4720",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6318",
+      "name": "TOWNSHIP LINE RD @ BETHLEHEM PK",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6318",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4728",
+      "name": "I-83 S/B @ Exit 38 Reeser Summit York",
+      "sub": "YORK COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4728",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6315",
+      "name": "WAMBOLD RD @ ALLENTOWN RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6315",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4729",
+      "name": "I-83 S/B @ Exit 4 Shrewsbury York",
+      "sub": "YORK COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4729",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4721",
+      "name": "I-81 S/B @ Exit 134 Delano Schuylkill",
+      "sub": "SCHUYLKILL COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4721",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4737",
+      "name": "US 30 @ Wrights Ferry Bridge York",
+      "sub": "YORK COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4737",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4762",
+      "name": "I-90 near Clark Rd Overpass Erie",
+      "sub": "ERIE COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4762",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4732",
+      "name": "I-95 @ Girard Avenue Philadelphia",
+      "sub": "PHILADELPHIA COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4732",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4731",
+      "name": "I-90 E/B @ MM 1 / Exit 3 Welcome Center Erie",
+      "sub": "ERIE COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4731",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6196",
+      "name": "US 1 US-1 @ RING RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6196",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6393",
+      "name": "Forbes Ave/South Braddock I-376 @ OLD WILLIAM PENN",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6393",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4759",
+      "name": "US 30 @ Bus 30 Chester",
+      "sub": "CHESTER COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4759",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4763",
+      "name": "US 6 @ Coudersport Potter",
+      "sub": "POTTER COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4763",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6314",
+      "name": "WAMBOLD RD @ FRETZ RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6314",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6308",
+      "name": "I-80 @ MM 10",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6308",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4741",
+      "name": "US 322 W/B @ Exit PA-34 Newport Perry",
+      "sub": "PERRY COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4741",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4772",
+      "name": "PA 147 @ SNYDER/NORTHUMBERLAND CSVT BRIDGE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4772",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6172",
+      "name": "I-376 WEST OF HOPEWELL INTERCHANGE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6172",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4704",
+      "name": "I-80 W/B @ Exit 120 Clearfield-Shawville SR-879 Clearfield",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4704",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4723",
+      "name": "I-81 N/B @ Exit 223 New Milford Susquehanna",
+      "sub": "SUSQUEHANNA COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4723",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6309",
+      "name": "I-80 3 Miles West of OH Line",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6309",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6185",
+      "name": "I-376 EAST OF MONACA INTERCHANGE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6185",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4766",
+      "name": "I-80/I-79 JCT Mercer",
+      "sub": "MERCER COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4766",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4702",
+      "name": "I-79 S/B @ MM 100 Coopers Lake Butler",
+      "sub": "BUTLER COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4702",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6321",
+      "name": "DELAWARE AVE @ TIOGA ST",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6321",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6311",
+      "name": "PA 63 @ PA TPK NORTHEAST EXT.",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6311",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6184",
+      "name": "I-376 @ POTTER ROAD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6184",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4725",
+      "name": "I-81 S/B @ Exit 65 US 11/15 George Wade Bridge Cumberland",
+      "sub": "CUMBERLAND COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4725",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6167",
+      "name": "I-99 @ MM 64.1 (SKYTOP)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6167",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6313",
+      "name": "PA 63 @ WAMBOLD RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6313",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4726",
+      "name": "I-81 S/B @ Exit 77 PA 39 Manada Hill Dauphin",
+      "sub": "DAUPHIN COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4726",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6213",
+      "name": "US 1 US-1 @ PA 52 S (KENNETT PK)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6213",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4719",
+      "name": "I-81 N/B @ Exit 211 Lenox SR 92 Susquehanna",
+      "sub": "SUSQUEHANNA COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4719",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6221",
+      "name": "US 322 US-322 @ US-1",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6221",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6174",
+      "name": "I-376 EAST OF THE ALIQUIPPA INTERCHANGE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6174",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6222",
+      "name": "US 322 US-322 @ SMITHBRIDGE RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6222",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6403",
+      "name": "SR 0422 US 422 @ EVERGREEN RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6403",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4734",
+      "name": "PA 8 SR 8 N/B @ SR 308 Venango",
+      "sub": "VENANGO COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4734",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6319",
+      "name": "DELAWARE AVE @ CASTOR AVE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6319",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6215",
+      "name": "US 1 US-1 @ PENNSBURY WY",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6215",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6227",
+      "name": "US 202 @ HILLMAN DR / APPLIED BANK BLVD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6227",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6317",
+      "name": "TOWNSHIP LINE RD @ SOUDERTON HATFIELD PK",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6317",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6183",
+      "name": "I-376 WEST OF CENTER INTERCHANGE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6183",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6374",
+      "name": "US 322 US-322 @ FELLOWSHIP DR",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6374",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4745",
+      "name": "US 422 E/B @ Penn Run Indiana",
+      "sub": "INDIANA COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4745",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6373",
+      "name": "ROCKHILL DR @ OLD LINCOLN HWY",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6373",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6226",
+      "name": "I-81 S @ EXIT 223 (PA 492 NEW MILFORD/LAKESIDE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6226",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6391",
+      "name": "I-376 Parkway East I-376 @ RODI",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6391",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4735",
+      "name": "US 15 S/B Bloss Mtn @ Liberty Tioga",
+      "sub": "TIOGA COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4735",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6322",
+      "name": "DELAWARE AVE @ LEWIS ST",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6322",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4710",
+      "name": "I-80 E/B MM 246 @ Roadside Rest Columbia",
+      "sub": "COLUMBIA COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4710",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6225",
+      "name": "I-99 @ MM 69.9 (Valley Vista)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6225",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6401",
+      "name": "SR 0422 US 422 @ LEWIS RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6401",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6224",
+      "name": "US 1 US-1 @ CONCORD RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6224",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5382",
+      "name": "I-476 @ MM 15.9 (I-76)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5382",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5072",
+      "name": "US 30 Business US-30 BUSINESS (LANCASTER AVE) EAST OF 30 B",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5072",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5144",
+      "name": "I-95 @ SB EXIT 3A (PA-322 WEST)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5144",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4909",
+      "name": "I-81 @ EXIT 47 (PA 34 HANOVER ST)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4909",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5974",
+      "name": "PA 309 PA-309 @ I-276/ PA TURNPIKE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5974",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5045",
+      "name": "I-79 @ MM 59 (WEST HARBISON RD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5045",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5113",
+      "name": "I-76 @ MM 343.1 (GIRARD AVE/ PHILA ZOO)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5113",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5473",
+      "name": "I-80 @ EXIT 101 (PA 255 DUBOIS/PENFIELD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5473",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4900",
+      "name": "I-81 @ EXIT 72A (US 22 PAXTONIA)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4900",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4778",
+      "name": "Turnpike (I-76) I-76 @ MP 187.4, Tuscarora Tunnel",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4778",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5412",
+      "name": "I-81 @ MM 71 (COLONIAL RD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5412",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6023",
+      "name": "I-81 @ EXIT 138 MCADOO",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6023",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6007",
+      "name": "I-81 N @ MM 149.4",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6007",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4856",
+      "name": "NE Extension (I-476) I-476 @ Exit 105, Wilkes Barre Interc",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4856",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5681",
+      "name": "I-81 @ MM 85.3 (PA-934)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5681",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5315",
+      "name": "I-376 Parkway West I-376 @ EXIT 64A WB (I-79 ERIE/WASHINGT",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5315",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5719",
+      "name": "I-81 @ MM 33 (STOUGHSTOWN RD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5719",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5097",
+      "name": "I-81 @ EXIT 191A (US 6 BUSINESS EAST DICKSON CITY)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5097",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5832",
+      "name": "I-76 @ EXIT 346A (WEST OF SOUTH ST)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5832",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5732",
+      "name": "I-95 @ MM 15.4 SB GIRARD PT BRIDGE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5732",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5424",
+      "name": "I-376 Parkway Central I-376 @ MM 69.94 (FT PITT BRIDGE - L",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5424",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5780",
+      "name": "I-76 EB AT MONTGOMERY DR",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5780",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5375",
+      "name": "I-95 @ MM 19.6 (SOUTH OF COLUMBUS BLVD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5375",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4864",
+      "name": "I-79 @ EXIT 113 (PA 208/PA 258 GROVE CITY)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4864",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5108",
+      "name": "I-95 @ SB EXIT 15 (ENTERPRISE AVE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5108",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5826",
+      "name": "I-95 SOUTH RAMP TO I-476 NORTH",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5826",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5474",
+      "name": "I-80 @ EXIT 120 (PA 879 CLEARFIELD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5474",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5393",
+      "name": "I-95 SB @ GIRARD AVE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5393",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5245",
+      "name": "I-76 @ EXIT 364B (UNIVERSITY AVE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5245",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5182",
+      "name": "I-376 Parkway Central I-376 @ MM 69.92 (FT PITT BRIDGE- LO",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5182",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4823",
+      "name": "Turnpike (I-76/I-276) I-76 @ Exit 266, Lebanon/Manheim Int",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4823",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5795",
+      "name": "I-95 @ NB EXIT 19 (WALT WHITMAN BRIDGE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5795",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6307",
+      "name": "I-80 @ MM 7",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6307",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5194",
+      "name": "I-376 Parkway Central I-376 @ MM 71.9 (BIRMINGHAM BRIDGE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5194",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5089",
+      "name": "I-80 @ EXIT 147 (PA 144 SNOW SHOE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5089",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5591",
+      "name": "I-81 N MM 162.9",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5591",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5340",
+      "name": "I-79 @ Exit 154 (PA 198 Saegertown/Conneautville)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5340",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4812",
+      "name": "Turnpike (I-76) I-76 @ MP 200.4, Blue Mountain Tunnel",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4812",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6395",
+      "name": "I-81 @ MM 107.9 (MEDIAN)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6395",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5114",
+      "name": "I-76 @ MM 344.8 (30TH ST TUNNEL",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5114",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4975",
+      "name": "I-80 @ EXIT 302 (PA 33)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4975",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4709",
+      "name": "I-80 E/B @ MM 194.8 Clinton",
+      "sub": "CLINTON COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4709",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5043",
+      "name": "I-376 Parkway Central I-376 @ MM 69.88 (FT PITT BRIDGE - L",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5043",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4712",
+      "name": "I-80 W/B MM 287.2 @ Stoney Hollow Rd Monroe",
+      "sub": "MONROE COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4712",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4968",
+      "name": "US 422 @ PENN AVE WEST READING",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4968",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5008",
+      "name": "I-95 @ EXIT 4 (COMMODORE BARRY BRIDGE/ US-322 E)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5008",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4818",
+      "name": "Turnpike (I-76) I-76 @ Exit 189, Willow Hill Interchange",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4818",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4701",
+      "name": "I-79 S/B MM 86 @ Evans City Butler",
+      "sub": "BUTLER COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4701",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4822",
+      "name": "Turnpike (I-76) I-76 @ Exit 236, Gettysburg Pike Interchan",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4822",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5914",
+      "name": "S COLUMBUS BLVD @ RAMP TO I-95",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5914",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6385",
+      "name": "I-376 Parkway Central I-376 @ GREENFIELD BRIDGE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6385",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5091",
+      "name": "I-80 @ EXIT 241 (US 11 LIME RIDGE/BERWICK)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5091",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4788",
+      "name": "Turnpike (I-76) I-70 / I-76 @ MP123.4, Allegheny Tunnel",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4788",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5537",
+      "name": "I-81 @ EXIT 1 (MARYLAND LINE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5537",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5999",
+      "name": "I-79 @ EXIT 76 (US 9 NORTH CRANBERRY)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5999",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6006",
+      "name": "I-81 S MM 183.5",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6006",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5481",
+      "name": "I-81 @ SOUTHBOUND WELCOME CENTER",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5481",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5047",
+      "name": "I-79 @ EXIT 73 (PA 910 EAST WEXFORD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5047",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5464",
+      "name": "I-80 @ MM 204.4 (PORTABLE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5464",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6078",
+      "name": "I-80 @ MM 45 (EMLENTON BRIDGE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6078",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4950",
+      "name": "I-80 @ MM 251.0",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4950",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5605",
+      "name": "I-80 @ EXIT 309 (US 209)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5605",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5863",
+      "name": "I-79 @ MM 56.9 (EWING RD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5863",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4917",
+      "name": "Altoona City PA 453 @ PA 45",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4917",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4848",
+      "name": "NE Extension (I-476) I-476 @ MP 70.5, Lehigh Tunnel",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4848",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5571",
+      "name": "I-79 @ MM 110 (BRENT RD BRIDGE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5571",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6100",
+      "name": "I-79 SB @ GLENORA DRIVE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6100",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6068",
+      "name": "I-81 @ EXIT 170",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6068",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4932",
+      "name": "I-79 @ MM 52.3 (SOUTH OF EXIT 54)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4932",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4831",
+      "name": "Turnpike (I-76) I-76 @ Exit 247, Harrisburg East Interchan",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4831",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5777",
+      "name": "PA 309 PA-309 (BETHLEHEM PIKE) @ STUMP RD",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5777",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5373",
+      "name": "I-76 EB AT GIRARD AVE.",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5373",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5556",
+      "name": "I-79 @ MM 55.5 (COLLIER AVE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5556",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5844",
+      "name": "I-95 @ MM 7 .1 (NORTH OF I-476)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5844",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5112",
+      "name": "I-76 EB EAST OF MONTGOMERY DR",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5112",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5603",
+      "name": "I-81 @ EXIT 182 (MONTAGE MOUNTAIN RD/DAVIS STREET)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5603",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4714",
+      "name": "I-80 E/B MM 55 @ Knox Clarion",
+      "sub": "CLARION COUNTY, PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4714",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5456",
+      "name": "I-81 MM 86 (INDIANTOWN GAP RD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5456",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4875",
+      "name": "PA 291 SOUTH OF I-76",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4875",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5399",
+      "name": "I-95 @ SB EXIT 22 (I-676/CALLOWHILL ST)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5399",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5353",
+      "name": "I-90 @ MM 46 (NEW YORK LINE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5353",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5500",
+      "name": "26th Street 26TH ST TUNNEL TO I-76 WEST",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5500",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5071",
+      "name": "US 30 Business US-30 BUSINESS (LANCASTER AVE) @ PA-113/ UW",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5071",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5271",
+      "name": "I-95 @ NB EXIT 26/ OFF RAMP TO ARAMINGO AVE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5271",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6140",
+      "name": "I-81 @ MILE 73",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6140",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4893",
+      "name": "US 30 US-30 (BYPASS) AT US-30 BUSINESS (LANCASTER AVE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4893",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5172",
+      "name": "US 22 @ PA 764 ALTOONA EXIT",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5172",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5093",
+      "name": "I-80 @ EXIT 178 (US 220 NORTH LOCK HAVEN)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5093",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5279",
+      "name": "I-95 @ MM 38 (NORTH OF US-13)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5279",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5630",
+      "name": "I-76 @ MM 344.6 (30TH ST TUNNEL)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5630",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4872",
+      "name": "I-95 @ MM 30.3 (NORTH OF COTTMAN AVE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4872",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4876",
+      "name": "I-76 WB AT SPRING GARDEN ST.",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4876",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4846",
+      "name": "NE Extension (I-476) I-476 @ MP 69.6, Lehigh Tunnel",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4846",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5012",
+      "name": "I-95 @ MM 21.7 NB (RACE ST ON RAMP)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5012",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5161",
+      "name": "I-81 @ EXIT 59 (PA 581 EAST CAMP HILL)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5161",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4800",
+      "name": "Turnpike (I-276) I-276 @ MP 350.5",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4800",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4797",
+      "name": "Turnpike (I-76) I-76 @ Exit 242, Harrisburg West Interchan",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4797",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5796",
+      "name": "PA 51 & US 19 PA 51 @ LIBERTY TUNNEL",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5796",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4958",
+      "name": "US 219 @ TUNA CROSS RD (NEW YORK LINE)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4958",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5697",
+      "name": "I-95 @ MM 32.5 (NORTH OF ACADEMY RD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5697",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5813",
+      "name": "PA 65 SOUTH OF MCKEES ROCK BRIDGE",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5813",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_4767",
+      "name": "I-81 Franklin MM11 NB",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/4767",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5364",
+      "name": "I-80 @ EXIT 277 (PA 940/PA TPK)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5364",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_5640",
+      "name": "I-95 @ MM 37.2 (NORTH OF PA-132/ STREET RD)",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/5640",
+      "state": "PA",
+      "tags": [
+        "penn",
+        "traffic"
+      ]
+    },
+    {
+      "id": "pa_6021",
+      "name": "I-79 @ MM 141",
+      "sub": "PA · PENNDOT 511 · SNAPSHOT",
+      "type": "jpg",
+      "url": "https://www.511pa.com/map/Cctv/6021",
+      "state": "PA",
+      "tags": [
+        "penn",
         "traffic"
       ]
     }
