@@ -71,6 +71,10 @@
     {
       "id": "smalltown",
       "name": "Small Town America"
+    },
+    {
+      "id": "frontline",
+      "name": "Frontlines & News"
     }
   ],
   "cameras": [
@@ -230,7 +234,7 @@
       "name": "Chicago Southern Skyline",
       "sub": "CHICAGO, IL · SOUTH LOOP VIEW",
       "type": "yt",
-      "vid": "qCBArnNPgEE",
+      "vid": "8jcpqPVkXu0",
       "refresh": {
         "channel": "@ChicagoSouthSky"
       },
@@ -1540,6 +1544,3039 @@
       "tags": [
         "wildlife"
       ]
+    },
+    {
+      "id": "v_IVSoVgGXDoU",
+      "name": "Plant City, Florida — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "IVSoVgGXDoU",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Plant City, Florida, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_7DmivRg6FfQ",
+      "name": "Folkston, Georgia — Turnout PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "7DmivRg6FfQ",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Folkston, Georgia, USA | LIVE Train Camera (Turnout PTZ)"
+      }
+    },
+    {
+      "id": "v_Vqhfy2IqDz0",
+      "name": "Folkston, Georgia — Fixed View",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Vqhfy2IqDz0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Folkston, Georgia, USA | LIVE Train Camera (Fixed View)"
+      }
+    },
+    {
+      "id": "v_XRLwO9QjveA",
+      "name": "Saint Louis, Missouri — PTZ - East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "XRLwO9QjveA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Saint Louis, Missouri, USA  |  LIVE Train Camera  (PTZ - Eas"
+      }
+    },
+    {
+      "id": "v_9uPCPh8jWas",
+      "name": "Cresson, Pennsylvania — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "9uPCPh8jWas",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cresson, Pennsylvania  |  LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_NP-bvAcswIM",
+      "name": "Salt Lake City, Utah — Fixed View - South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "NP-bvAcswIM",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Salt Lake City, Utah, USA | LIVE Train Camera (Fixed View - "
+      }
+    },
+    {
+      "id": "v_qJd7diix4eI",
+      "name": "Salt Lake City, Utah — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "qJd7diix4eI",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Salt Lake City, Utah, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_hV30GxkdTAs",
+      "name": "Cheyenne, Wyoming — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "hV30GxkdTAs",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cheyenne, Wyoming, USA  |  LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_RhQOUKgklto",
+      "name": "Quanah, Texas — Fixed View — East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "RhQOUKgklto",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Quanah, Texas, USA | LIVE Train Camera (Fixed View — East)"
+      }
+    },
+    {
+      "id": "v_LInPY_D1Ln4",
+      "name": "Quanah, Texas — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "LInPY_D1Ln4",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Quanah, Texas, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_vDdj-QLNkiY",
+      "name": "Folkston, Georgia — Fixed View — Looking East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "vDdj-QLNkiY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Folkston, Georgia, USA | LIVE Train Camera (Fixed View — Loo"
+      }
+    },
+    {
+      "id": "v_1AOrlYblQR8",
+      "name": "Jesup, Georgia — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "1AOrlYblQR8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Jesup, Georgia, USA | LIVE Train Camera | Virtual Railfan (P"
+      }
+    },
+    {
+      "id": "v_diibGG3KEeo",
+      "name": "Cohutta, Georgia — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "diibGG3KEeo",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cohutta, Georgia, USA  |  LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_ll3X1mH_g9Q",
+      "name": "Cordele, Georgia — Fixed View – Diamond",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "ll3X1mH_g9Q",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cordele, Georgia, USA | LIVE Train Camera (Fixed View – Diam"
+      }
+    },
+    {
+      "id": "v__ESx1v-hJG4",
+      "name": "Muncie, Indiana — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "_ESx1v-hJG4",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Muncie, Indiana, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_q5BQRwSh41Q",
+      "name": "Tucson, Arizona — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "q5BQRwSh41Q",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Tucson, Arizona, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_cR3kSHm7Ts0",
+      "name": "CSX Mainline in Cumberland, Maryland — PTZ – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "cR3kSHm7Ts0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "CSX Mainline in Cumberland, Maryland, USA | LIVE Train Camer"
+      }
+    },
+    {
+      "id": "v_m3iasBkPAbo",
+      "name": "Battle Creek, Michigan — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "m3iasBkPAbo",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Battle Creek, Michigan, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_Ux0rtJXPPQ0",
+      "name": "Austell, Georgia — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Ux0rtJXPPQ0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Austell, Georgia, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_t66DKzx1IuQ",
+      "name": "Fairport, New York — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "t66DKzx1IuQ",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Fairport, New York, USA | LIVE Train Camera (Fixed View – Ea"
+      }
+    },
+    {
+      "id": "v_4F9idLDuvXg",
+      "name": "Rockwood, Tennessee — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "4F9idLDuvXg",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Rockwood, Tennessee, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_clH9iSEN8LA",
+      "name": "Fort Madison, Iowa — PTZ – Bridge",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "clH9iSEN8LA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Fort Madison, Iowa, USA | LIVE Train Camera (PTZ – Bridge)"
+      }
+    },
+    {
+      "id": "v_a8LZ6wVb81E",
+      "name": "Chesterton, Indiana — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "a8LZ6wVb81E",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Chesterton, Indiana, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_irU2jyvUj5U",
+      "name": "Decatur, Alabama — Fixed View — East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "irU2jyvUj5U",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Decatur, Alabama, USA | LIVE Train Camera (Fixed View — East"
+      }
+    },
+    {
+      "id": "v_5YG01nZOygQ",
+      "name": "Decatur, Alabama — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "5YG01nZOygQ",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Decatur, Alabama, USA | LIVE Train Camera (Fixed View – West"
+      }
+    },
+    {
+      "id": "v_Kz7pDVt8kmQ",
+      "name": "Lincoln, Nebraska — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Kz7pDVt8kmQ",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Lincoln, Nebraska, USA | Live Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_xJMJegqnl8Y",
+      "name": "Spartanburg, South Carolina — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "xJMJegqnl8Y",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Spartanburg, South Carolina, USA | LIVE Train Camera (Fixed "
+      }
+    },
+    {
+      "id": "v_JUNFDH1Nq6A",
+      "name": "Spartanburg, South Carolina — Fixed View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "JUNFDH1Nq6A",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Spartanburg, South Carolina, USA | LIVE Train Camera (Fixed "
+      }
+    },
+    {
+      "id": "v_RZpIX6cq7Os",
+      "name": "Strasburg, Pennsylvania — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "RZpIX6cq7Os",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Strasburg, Pennsylvania, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_G8iIhudKPsQ",
+      "name": "Muncie, Indiana — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "G8iIhudKPsQ",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Muncie, Indiana, USA | LIVE Train Camera (Fixed View – East)"
+      }
+    },
+    {
+      "id": "v_LRTTZdNTW_0",
+      "name": "Laramie, Wyoming — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "LRTTZdNTW_0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Laramie, Wyoming, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_sOFA93jWtvA",
+      "name": "Rockwood, Tennessee — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "sOFA93jWtvA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Rockwood, Tennessee, USA | LIVE Train Camera (Fixed View – N"
+      }
+    },
+    {
+      "id": "v_nqW68wm_1Lc",
+      "name": "Cocoa, Florida — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "nqW68wm_1Lc",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cocoa, Florida, USA | LIVE Train Camera (Fixed View – North)"
+      }
+    },
+    {
+      "id": "v_WMSiw_Hyac8",
+      "name": "Anchorage, Alaska — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "WMSiw_Hyac8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Anchorage, Alaska, USA | LIVE Train Camera (Fixed View – Nor"
+      }
+    },
+    {
+      "id": "v_TfAAleblDIE",
+      "name": "Anchorage, Alaska — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "TfAAleblDIE",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Anchorage, Alaska, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_NIultPoJuaE",
+      "name": "Sweetwater, Tennessee",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "NIultPoJuaE",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Sweetwater, Tennessee, USA | LIVE Train Camera"
+      }
+    },
+    {
+      "id": "v_geu9bc_M-kA",
+      "name": "Jonesborough, Tennessee — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "geu9bc_M-kA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Jonesborough, Tennessee, USA | LIVE Train Camera (Fixed View"
+      }
+    },
+    {
+      "id": "v_JPdUQtZcuk8",
+      "name": "Thomasville, North Carolina — Fixed View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "JPdUQtZcuk8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Thomasville, North Carolina, USA | LIVE Train Camera (Fixed "
+      }
+    },
+    {
+      "id": "v_2MCTiR9-Qn4",
+      "name": "Thomasville, North Carolina — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "2MCTiR9-Qn4",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Thomasville, North Carolina, USA | LIVE Train Camera (Fixed "
+      }
+    },
+    {
+      "id": "v_8wYiH1dZW80",
+      "name": "Steam Trains in Chattanooga, Tennessee — Fixed View — East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "8wYiH1dZW80",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Steam Trains in Chattanooga, Tennessee, USA | LIVE Train Cam"
+      }
+    },
+    {
+      "id": "v_BA3656Ef0bw",
+      "name": "Amherst, Ohio, USA - LIVE Train Camera ( — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "BA3656Ef0bw",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Amherst, Ohio, USA - LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_jBOcskBbC5A",
+      "name": "Amherst, Ohio, USA - LIVE Train Feed (Fi — Fixed",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "jBOcskBbC5A",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Amherst, Ohio, USA - LIVE Train Feed (Fixed)"
+      }
+    },
+    {
+      "id": "v_oC1gEe0u3Ps",
+      "name": "Quincy, Illinois — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "oC1gEe0u3Ps",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Quincy, Illinois, USA | LIVE Train Camera | Virtual Railfan "
+      }
+    },
+    {
+      "id": "v_zwwquuBxOic",
+      "name": "Greeley, Colorado — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "zwwquuBxOic",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Greeley, Colorado, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_Ea7nVlHscR8",
+      "name": "Johnstown, Pennsylvania — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Ea7nVlHscR8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Johnstown, Pennsylvania, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_fTkOmPbSXBg",
+      "name": "Battle Creek, Michigan — Fixed View — East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "fTkOmPbSXBg",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Battle Creek, Michigan, USA | LIVE Train Camera (Fixed View "
+      }
+    },
+    {
+      "id": "v_9sFDtbWz2uc",
+      "name": "Cocoa, Florida — Fixed View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "9sFDtbWz2uc",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cocoa, Florida, USA | LIVE Train Camera (Fixed View – South)"
+      }
+    },
+    {
+      "id": "v_UhP0rMfgjJ8",
+      "name": "Roanoke, Virginia — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "UhP0rMfgjJ8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Roanoke, Virginia, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_LhNpn9L5ndM",
+      "name": "Rochelle, Illinois — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "LhNpn9L5ndM",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Rochelle, Illinois, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_DDHWS4i4eTo",
+      "name": "Greeley, Colorado — Fixed View — South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "DDHWS4i4eTo",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Greeley, Colorado, USA | LIVE Train Camera (Fixed View — Sou"
+      }
+    },
+    {
+      "id": "v_wSZCdFJNkR4",
+      "name": "Chehalis, Washington — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "wSZCdFJNkR4",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Chehalis, Washington, USA | LIVE Train Camera (Fixed View – "
+      }
+    },
+    {
+      "id": "v_dyelb2wGOAE",
+      "name": "Chehalis, Washington — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "dyelb2wGOAE",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Chehalis, Washington, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_blcDjPvPbss",
+      "name": "Tower 55 in Fort Worth, Texas — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "blcDjPvPbss",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Tower 55 in Fort Worth, Texas, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_XWxyuL9dctA",
+      "name": "Fairport, New York — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "XWxyuL9dctA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Fairport, New York, USA | LIVE Train Camera (Fixed View – We"
+      }
+    },
+    {
+      "id": "v_D5kKdEBmrYU",
+      "name": "Ashland, Virginia — Fixed View — North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "D5kKdEBmrYU",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Ashland, Virginia, USA | LIVE Train Camera (Fixed View — Nor"
+      }
+    },
+    {
+      "id": "v_qnO188z7z5w",
+      "name": "Amtrak and Strasburg Rail Road at Paradise, Pennsylvania — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "qnO188z7z5w",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Amtrak and Strasburg Rail Road at Paradise, Pennsylvania, US"
+      }
+    },
+    {
+      "id": "v_jntMnCMiZx4",
+      "name": "La Grange, Kentucky — Museum Fixed View — South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "jntMnCMiZx4",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "La Grange, Kentucky, USA | LIVE Train Camera (Museum Fixed V"
+      }
+    },
+    {
+      "id": "v_DuXSP6y9W7U",
+      "name": "Fort Madison, Iowa — Marina Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "DuXSP6y9W7U",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Fort Madison, Iowa, USA | LIVE Train Camera (Marina Fixed Vi"
+      }
+    },
+    {
+      "id": "v_DhoVf4-0Zt4",
+      "name": "Lincoln, Nebraska — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "DhoVf4-0Zt4",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Lincoln, Nebraska, USA | LIVE Train Camera (Fixed View – Eas"
+      }
+    },
+    {
+      "id": "v_HYbkx7tlSzA",
+      "name": "St. Paul, Minnesota — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "HYbkx7tlSzA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "St. Paul, Minnesota, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_u5dt2mHDuxQ",
+      "name": "St. Paul, Minnesota — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "u5dt2mHDuxQ",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "St. Paul, Minnesota, USA | LIVE Train Camera (Fixed View – E"
+      }
+    },
+    {
+      "id": "v_HSZDWRE5m2o",
+      "name": "Steam Trains in Chattanooga, Tennessee — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "HSZDWRE5m2o",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Steam Trains in Chattanooga, Tennessee, USA | LIVE Train Cam"
+      }
+    },
+    {
+      "id": "v_IAC4KczQuQY",
+      "name": "Lafayette, Indiana — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "IAC4KczQuQY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Lafayette, Indiana, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_vF4ZdG-_6FE",
+      "name": "Glendale, Ohio — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "vF4ZdG-_6FE",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Glendale, Ohio, USA | LIVE Train Camera (Fixed View – North)"
+      }
+    },
+    {
+      "id": "v_qHJF04WdxHo",
+      "name": "Glendale, Ohio — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "qHJF04WdxHo",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Glendale, Ohio, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_BDb_sSL-K5k",
+      "name": "Chesterton, Indiana — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "BDb_sSL-K5k",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Chesterton, Indiana, USA | LIVE Train Camera (Fixed View – E"
+      }
+    },
+    {
+      "id": "v_nO81bQFql7M",
+      "name": "Parkville, Missouri — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "nO81bQFql7M",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Parkville, Missouri, USA | LIVE Train Camera (Fixed View – E"
+      }
+    },
+    {
+      "id": "v_x1D0VkJU1r4",
+      "name": "Parkville, Missouri — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "x1D0VkJU1r4",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Parkville, Missouri, USA | LIVE Train Camera (Fixed View – W"
+      }
+    },
+    {
+      "id": "v_HFV5wXA-CRA",
+      "name": "Plant City, Florida — Fixed View — North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "HFV5wXA-CRA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Plant City, Florida, USA | LIVE Train Camera (Fixed View — N"
+      }
+    },
+    {
+      "id": "v_lUMGsNe-R9Q",
+      "name": "Johnstown, Pennsylvania — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "lUMGsNe-R9Q",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Johnstown, Pennsylvania, USA | LIVE Train Camera (Fixed View"
+      }
+    },
+    {
+      "id": "v_HJM22MARr6w",
+      "name": "Fostoria, Ohio — Diamond View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "HJM22MARr6w",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Fostoria, Ohio, USA | LIVE Train Camera (Diamond View – Sout"
+      }
+    },
+    {
+      "id": "v__sy9as4wVBA",
+      "name": "Austell, Georgia — Fixed View — North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "_sy9as4wVBA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Austell, Georgia, USA | LIVE Train Camera (Fixed View — Nort"
+      }
+    },
+    {
+      "id": "v_iN7u2jKbDm0",
+      "name": "Wichita, Kansas — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "iN7u2jKbDm0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Wichita, Kansas, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_EKohXgHGCj8",
+      "name": "BNSF Railway Yard in Belen, New Mexico — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "EKohXgHGCj8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "BNSF Railway Yard in Belen, New Mexico, USA | LIVE Train Cam"
+      }
+    },
+    {
+      "id": "v_On1MRt0NqFs",
+      "name": "Galesburg, Illinois — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "On1MRt0NqFs",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Galesburg, Illinois, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_JsBeRV3BB5s",
+      "name": "Galesburg, Illinois — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "JsBeRV3BB5s",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Galesburg, Illinois, USA | LIVE Train Camera (Fixed View – W"
+      }
+    },
+    {
+      "id": "v_WNSkLhEWbuY",
+      "name": "Big Sandy, Texas — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "WNSkLhEWbuY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Big Sandy, Texas, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_ya36dX89dGU",
+      "name": "Russellville, Arkansas — Fixed View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "ya36dX89dGU",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Russellville, Arkansas, USA | LIVE Train Camera (Fixed View "
+      }
+    },
+    {
+      "id": "v_SoqD5lVPwpc",
+      "name": "Russellville, Arkansas — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "SoqD5lVPwpc",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Russellville, Arkansas, USA | LIVE Train Camera (Fixed View "
+      }
+    },
+    {
+      "id": "v_Kfnq9KUBQng",
+      "name": "Covington, Kentucky — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Kfnq9KUBQng",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Covington, Kentucky, USA | LIVE Train Camera (Fixed View – N"
+      }
+    },
+    {
+      "id": "v_ssuM6NJQ2no",
+      "name": "Horseshoe Curve – Altoona, Pennsylvania — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "ssuM6NJQ2no",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Horseshoe Curve – Altoona, Pennsylvania, USA | LIVE Train Ca"
+      }
+    },
+    {
+      "id": "v_W02WZ5c02LE",
+      "name": "Kansas City, Missouri — Doc’s Caboose – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "W02WZ5c02LE",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Kansas City, Missouri, USA | LIVE Train Camera (Doc’s Caboos"
+      }
+    },
+    {
+      "id": "v_xR3kxBG_v7Y",
+      "name": "Kansas City, Missouri — Doc’s Caboose – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "xR3kxBG_v7Y",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Kansas City, Missouri, USA | LIVE Train Camera (Doc’s Caboos"
+      }
+    },
+    {
+      "id": "v_Dv2XxhsWqWY",
+      "name": "SoNo Tower in South Norwalk, Connecticut — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Dv2XxhsWqWY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "SoNo Tower in South Norwalk, Connecticut, USA (Fixed View – "
+      }
+    },
+    {
+      "id": "v_53R1gjL0Za0",
+      "name": "SoNo Tower in South Norwalk, Connecticut — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "53R1gjL0Za0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "SoNo Tower in South Norwalk, Connecticut, USA (Fixed View – "
+      }
+    },
+    {
+      "id": "v_iSCU6JMaIt0",
+      "name": "Big Sandy, Texas — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "iSCU6JMaIt0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Big Sandy, Texas, USA | LIVE Train Camera (Fixed View – West"
+      }
+    },
+    {
+      "id": "v_a__yfG4PnxY",
+      "name": "Quincy, Illinois — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "a__yfG4PnxY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Quincy, Illinois, USA | LIVE Train Camera (Fixed View – East"
+      }
+    },
+    {
+      "id": "v_Q4EsIhNF_NU",
+      "name": "Princeton, Indiana — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Q4EsIhNF_NU",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Princeton, Indiana, USA | LIVE Train Camera (Fixed View – No"
+      }
+    },
+    {
+      "id": "v_jRvnO7D-FpA",
+      "name": "Princeton, Indiana — Fixed View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "jRvnO7D-FpA",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Princeton, Indiana, USA | LIVE Train Camera (Fixed View – So"
+      }
+    },
+    {
+      "id": "v_BDznAl17f10",
+      "name": "Tucson, Arizona — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "BDznAl17f10",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Tucson, Arizona, USA | LIVE Train Camera (Fixed View – West)"
+      }
+    },
+    {
+      "id": "v_COJyPLKqYI8",
+      "name": "Texarkana, Arkansas — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "COJyPLKqYI8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Texarkana, Arkansas, USA | LIVE Train Camera (Fixed View – N"
+      }
+    },
+    {
+      "id": "v_6s1KTevqrNY",
+      "name": "Texarkana, Arkansas — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "6s1KTevqrNY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Texarkana, Arkansas, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_-g1qAvXyIyQ",
+      "name": "San Juan Capistrano — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "-g1qAvXyIyQ",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "San Juan Capistrano, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_5EjYV3zZKY8",
+      "name": "Revelstoke, British Columbia, Canada — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "5EjYV3zZKY8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Revelstoke, British Columbia, Canada | LIVE Train Camera (Fi"
+      }
+    },
+    {
+      "id": "v_fIMbMz2P7Bs",
+      "name": "Revelstoke, British Columbia, Canada — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "fIMbMz2P7Bs",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Revelstoke, British Columbia, Canada | LIVE Train Camera (PT"
+      }
+    },
+    {
+      "id": "v_cCELB0xnc2E",
+      "name": "Kearney, Nebraska — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "cCELB0xnc2E",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Kearney, Nebraska, USA | LIVE Train Camera (Fixed View – Eas"
+      }
+    },
+    {
+      "id": "v_23tmCNeFh7A",
+      "name": "Kearney, Nebraska — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "23tmCNeFh7A",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Kearney, Nebraska, USA | LIVE Train Camera (Fixed View – Wes"
+      }
+    },
+    {
+      "id": "v_05MkbHUuVNM",
+      "name": "The Iron Triangle in Fostoria, Ohio — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "05MkbHUuVNM",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "The Iron Triangle in Fostoria, Ohio, USA | LIVE Train Camera"
+      }
+    },
+    {
+      "id": "v_KeR6KSrFwlY",
+      "name": "Kansas City, Missouri — PTZ – Top",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "KeR6KSrFwlY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Kansas City, Missouri, USA | LIVE Train Camera (PTZ – Top)"
+      }
+    },
+    {
+      "id": "v_jxvalaix3K0",
+      "name": "Skykomish, Washington — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "jxvalaix3K0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Skykomish, Washington, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_9SLt3AT0rXk",
+      "name": "Trains in the Street at La Grange, Kentucky — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "9SLt3AT0rXk",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Trains in the Street at La Grange, Kentucky, USA | LIVE Trai"
+      }
+    },
+    {
+      "id": "v_KFu4LVTJ4Xk",
+      "name": "Waupaca, Wisconsin — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "KFu4LVTJ4Xk",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Waupaca, Wisconsin, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_0YIKIk76Sy0",
+      "name": "La Grange, Kentucky — Fixed View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "0YIKIk76Sy0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "La Grange, Kentucky, USA | LIVE Train Camera (Fixed View – S"
+      }
+    },
+    {
+      "id": "v_P1ajNE3v9BE",
+      "name": "Fort Madison, Iowa — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "P1ajNE3v9BE",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Fort Madison, Iowa, USA | LIVE Train Camera (Fixed View – We"
+      }
+    },
+    {
+      "id": "v_VoeGG-WgsKY",
+      "name": "Elkhart, Indiana — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "VoeGG-WgsKY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Elkhart, Indiana, USA | LIVE Train Camera (Fixed View – East"
+      }
+    },
+    {
+      "id": "v_YR1PdWaSxgk",
+      "name": "Elkhart, Indiana — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "YR1PdWaSxgk",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Elkhart, Indiana, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_iz9IQhp_fu0",
+      "name": "La Plata, Missouri — PTZ – Lookout",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "iz9IQhp_fu0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "La Plata, Missouri, USA | LIVE Train Camera (PTZ – Lookout)"
+      }
+    },
+    {
+      "id": "v_flEBdsoP4o0",
+      "name": "La Plata, Missouri — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "flEBdsoP4o0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "La Plata, Missouri, USA | LIVE Train Camera (Fixed View – We"
+      }
+    },
+    {
+      "id": "v_X-ir2KfXMX0",
+      "name": "La Plata, Missouri — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "X-ir2KfXMX0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "La Plata, Missouri, USA | LIVE Train Camera (Fixed View – Ea"
+      }
+    },
+    {
+      "id": "v_DcFGngu6wV4",
+      "name": "Barstow, California — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "DcFGngu6wV4",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Barstow, California, USA | LIVE Train Camera (Fixed View – W"
+      }
+    },
+    {
+      "id": "v__DUQnPjPC_8",
+      "name": "BNSF Railway Yard in Barstow, California — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "_DUQnPjPC_8",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "BNSF Railway Yard in Barstow, California, USA | LIVE Train C"
+      }
+    },
+    {
+      "id": "v_1P0feVMNX5s",
+      "name": "Colorado Model Railroad Museum, Greeley, CO",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "1P0feVMNX5s",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Colorado Model Railroad Museum, Greeley, CO, USA | Virtual R"
+      }
+    },
+    {
+      "id": "v_xq9XATyMHJI",
+      "name": "Flagstaff, Arizona — Fixed View — West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "xq9XATyMHJI",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Flagstaff, Arizona, USA | LIVE Train Camera (Fixed View — We"
+      }
+    },
+    {
+      "id": "v_7xdHH9KMSVk",
+      "name": "Flagstaff, Arizona — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "7xdHH9KMSVk",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Flagstaff, Arizona, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_nUdVtKcprJU",
+      "name": "Big 10 Curve at Arvada, Colorado — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "nUdVtKcprJU",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Big 10 Curve at Arvada, Colorado, USA | LIVE Train Camera (P"
+      }
+    },
+    {
+      "id": "v_9uAn-VdurrE",
+      "name": "150MPH Trains at Davisville, Rhode Island — Fixed View — South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "9uAn-VdurrE",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "150MPH Trains at Davisville, Rhode Island, USA | LIVE Train "
+      }
+    },
+    {
+      "id": "v_3XTk72rPJjQ",
+      "name": "Jonesborough, Tennessee — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "3XTk72rPJjQ",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Jonesborough, Tennessee, USA | LIVE Train Camera (Fixed View"
+      }
+    },
+    {
+      "id": "v_9laISW0jtOo",
+      "name": "Laramie, Wyoming — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "9laISW0jtOo",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Laramie, Wyoming, USA | LIVE Train Camera (Fixed View – East"
+      }
+    },
+    {
+      "id": "v_KuUy6cEuwFw",
+      "name": "Greencastle, Pennsylvania — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "KuUy6cEuwFw",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Greencastle, Pennsylvania, USA | LIVE Train Camera (Fixed Vi"
+      }
+    },
+    {
+      "id": "v_xMMTDVlQIms",
+      "name": "Waycross, Georgia — PTZ — Diamond",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "xMMTDVlQIms",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Waycross, Georgia, USA | LIVE Train Camera (PTZ — Diamond)"
+      }
+    },
+    {
+      "id": "v_DofPCzEUlXk",
+      "name": "Dalton, Georgia — Fixed View – North",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "DofPCzEUlXk",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Dalton, Georgia, USA | LIVE Train Camera (Fixed View – North"
+      }
+    },
+    {
+      "id": "v_7C9t6xk2LVw",
+      "name": "Covington, Kentucky — Fixed View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "7C9t6xk2LVw",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Covington, Kentucky, USA | LIVE Train Camera (Fixed View – S"
+      }
+    },
+    {
+      "id": "v_0u6wBsMlnhg",
+      "name": "Ashland, Virginia — Fixed View — South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "0u6wBsMlnhg",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Ashland, Virginia, USA | LIVE Train Camera (Fixed View — Sou"
+      }
+    },
+    {
+      "id": "v_3nls-9uh714",
+      "name": "Elkhart, Indiana — Fixed View – West",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "3nls-9uh714",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Elkhart, Indiana, USA | LIVE Train Camera (Fixed View – West"
+      }
+    },
+    {
+      "id": "v_Q5eSocWD-4c",
+      "name": "Greencastle, Pennsylvania — Fixed View – East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Q5eSocWD-4c",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Greencastle, Pennsylvania, USA | LIVE Train Camera (Fixed Vi"
+      }
+    },
+    {
+      "id": "v_x7bpIYjykpk",
+      "name": "Dalton, Georgia — Fixed View – South",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "x7bpIYjykpk",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Dalton, Georgia, USA | LIVE Train Camera (Fixed View – South"
+      }
+    },
+    {
+      "id": "v_bCIIn4c5LrM",
+      "name": "Waycross, Georgia — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "bCIIn4c5LrM",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Waycross, Georgia, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_8U0M_mionOs",
+      "name": "Springfield, Massachusetts — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "8U0M_mionOs",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Springfield, Massachusetts, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_7IEVmX3Ykf0",
+      "name": "Roanoke, Virginia — Fixed View — East",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "7IEVmX3Ykf0",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Roanoke, Virginia, USA | LIVE Train Camera (Fixed View — Eas"
+      }
+    },
+    {
+      "id": "v_Y28qU7UsFko",
+      "name": "Deshler, Ohio — Fixed View — Diamond",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Y28qU7UsFko",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Deshler, Ohio, USA | LIVE Train Camera (Fixed View — Diamond"
+      }
+    },
+    {
+      "id": "v_LqPsNV_b-uc",
+      "name": "Cumberland, Maryland",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "LqPsNV_b-uc",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cumberland, Maryland, USA | LIVE Train Camera (PTZ — Downtow"
+      }
+    },
+    {
+      "id": "v_Sj-TMZX_4_s",
+      "name": "Cordele, Georgia — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "Sj-TMZX_4_s",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Cordele, Georgia, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_L6eG4ahJc_Q",
+      "name": "Fort Madison, Iowa — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "L6eG4ahJc_Q",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Fort Madison, Iowa, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_L_xBQqGzNzY",
+      "name": "Burlington, Iowa — PTZ",
+      "sub": "VIRTUAL RAILFAN",
+      "type": "yt",
+      "vid": "L_xBQqGzNzY",
+      "tags": [
+        "trains"
+      ],
+      "refresh": {
+        "channel": "@VirtualRailfan",
+        "match": "Burlington, Iowa, USA | LIVE Train Camera (PTZ)"
+      }
+    },
+    {
+      "id": "v_aaJT8y3zfWs",
+      "name": "Venice Italy Live Camera - Grand Canal in Live Streaming fro",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "aaJT8y3zfWs",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Venice Italy Live Camera - Grand Canal in Live Streaming f"
+      }
+    },
+    {
+      "id": "v_C9EKnYzYt9o",
+      "name": "Venice Italy Live - Live Streaming of Teatro La Fenice area",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "C9EKnYzYt9o",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "Venice Italy Live - Live Streaming of Teatro La Fenice area"
+      }
+    },
+    {
+      "id": "v_I6o7UWEaSbw",
+      "name": "Piano Music - Live 24/7: focus music, study music, relaxing ",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "I6o7UWEaSbw",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 ♫ Live Piano Music - Live 24/7: focus music, study music, "
+      }
+    },
+    {
+      "id": "v_9r4CJfpflmA",
+      "name": "4K Live Webcam on Scalzi bridge, Venice - Live Stream from t",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "9r4CJfpflmA",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 4K Live Webcam on Scalzi bridge, Venice - Live Stream from"
+      }
+    },
+    {
+      "id": "v_JFpV_LBgK3M",
+      "name": "Termini Beach Hotel & Suites **** - Jesolo Lido (VE) - Live ",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "JFpV_LBgK3M",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Termini Beach Hotel & Suites **** - Jesolo Lido (VE) - Liv"
+      }
+    },
+    {
+      "id": "v_V7YQ_vYyz38",
+      "name": "Bacino di San Marco from Via Garibaldi - Live View from Hote",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "V7YQ_vYyz38",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Bacino di San Marco from Via Garibaldi - Live View from Ho"
+      }
+    },
+    {
+      "id": "v_3LGl860wEaY",
+      "name": "Bagni Miki - Chioggia Sottomarina (Venezia) - Live Full HD",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "3LGl860wEaY",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Bagni Miki - Chioggia Sottomarina (Venezia) - Live Full HD"
+      }
+    },
+    {
+      "id": "v_k66z_r1C1vM",
+      "name": "Webcam - Live Streaming from Chioggia Sottomarina (Venezia) ",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "k66z_r1C1vM",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Webcam - Live Streaming from Chioggia Sottomarina (Venezia"
+      }
+    },
+    {
+      "id": "v_-wMWwWQiFgI",
+      "name": "Venice Italy Live Cam - Laguna Nord Venice - Stream from Can",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "-wMWwWQiFgI",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Venice Italy Live Cam - Laguna Nord Venice - Stream from C"
+      }
+    },
+    {
+      "id": "v_IByOruhl2ik",
+      "name": "4K Live Cam - Chioggia Sottomarina - Live Streaming from Hot",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "IByOruhl2ik",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 4K Live Cam - Chioggia Sottomarina - Live Streaming from H"
+      }
+    },
+    {
+      "id": "v_ofyDg3_72-s",
+      "name": "Venice Italy Live WebCam - The View on Canal from Hotel Paus",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "ofyDg3_72-s",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Venice Italy Live WebCam - The View on Canal from Hotel Pa"
+      }
+    },
+    {
+      "id": "v_CJLrYIS7NFg",
+      "name": "Venezia Italia Live Webcam - Campo Santa Maria Formosa Venic",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "CJLrYIS7NFg",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Venezia Italia Live Webcam - Campo Santa Maria Formosa Ven"
+      }
+    },
+    {
+      "id": "v_tdE-Uu87XmE",
+      "name": "Spectacular View of Grand Canal - Live view from Hotel San C",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "tdE-Uu87XmE",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Spectacular View of Grand Canal - Live view from Hotel San"
+      }
+    },
+    {
+      "id": "v_a1mcaV3Sf9U",
+      "name": "Rolling Cam Venice - Live Cam in Venice Italy - Livecam en d",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "a1mcaV3Sf9U",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 LIVE 24/7  Rolling Cam Venice - Live Cam in Venice Italy -"
+      }
+    },
+    {
+      "id": "v_gzgrofStPJ0",
+      "name": "Venice Italy Live Webcam - Dorsoduro in Live Streaming from ",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "gzgrofStPJ0",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Venice Italy Live Webcam - Dorsoduro in Live Streaming fro"
+      }
+    },
+    {
+      "id": "v_Ts4cAVmJrWE",
+      "name": "4k Venice Live Cam - Laguna of Venice with 4K Cam PTZ 30x - ",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "Ts4cAVmJrWE",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 4k Venice Live Cam - Laguna of Venice with 4K Cam PTZ 30x "
+      }
+    },
+    {
+      "id": "v_7-XBRpKSv4Q",
+      "name": "4K Live Webcam Venice - St. Mark's Basin in Live Streaming f",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "7-XBRpKSv4Q",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 4K Live Webcam Venice - St. Mark's Basin in Live Streaming"
+      }
+    },
+    {
+      "id": "v_GQbUdGhHw_o",
+      "name": "4K View of the Ponte delle Guglie and Strada Nova - Live Str",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "GQbUdGhHw_o",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 4K View of the Ponte delle Guglie and Strada Nova - Live S"
+      }
+    },
+    {
+      "id": "v_r8N6IsoIkTk",
+      "name": "4K Live Webcam on Grand Canal, Venice - Live Stream from Ris",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "r8N6IsoIkTk",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 4K Live Webcam on Grand Canal, Venice - Live Stream from R"
+      }
+    },
+    {
+      "id": "v_mt7uE-n0YPI",
+      "name": "4K Live Cam of Ponte delle Guglie Venice - View from Hotel L",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "mt7uE-n0YPI",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 4K Live Cam of Ponte delle Guglie Venice - View from Hotel"
+      }
+    },
+    {
+      "id": "v_i10aOLMK76k",
+      "name": "Cam around the World - Rolling Cam with Chill & Lounge Music",
+      "sub": "VENICE, ITALY · LIVE",
+      "type": "yt",
+      "vid": "i10aOLMK76k",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@IloveyouVenice",
+        "match": "🔴 Live Cam around the World - Rolling Cam with Chill & Loung"
+      }
+    },
+    {
+      "id": "v_gZa9xUursO4",
+      "name": "Now: SpaceX Gigabay Construction | Starship’s Giant Florida ",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "gZa9xUursO4",
+      "tags": [
+        "space"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: SpaceX Gigabay Construction | Starship’s Giant F"
+      }
+    },
+    {
+      "id": "v_a5VnMDnzGmQ",
+      "name": "Members-Only Popocatépetl Volcano from San Pedro Benito Juár",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "a5VnMDnzGmQ",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "✪ Live: Members-Only Popocatépetl Volcano from San Pedro Ben"
+      }
+    },
+    {
+      "id": "v_-lzTYThd9ZY",
+      "name": "Now: 24/7 Santa Maria (Santiaguito) Volcano in 4K Ultra HD (",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "-lzTYThd9ZY",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Santa Maria (Santiaguito) Volcano in 4K Ult"
+      }
+    },
+    {
+      "id": "v_ey13nzSSn3U",
+      "name": "Members-Only Merapi Volcano Erupting (Cam B)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "ey13nzSSn3U",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "✪ Live: Members-Only  Merapi Volcano Erupting (Cam B)"
+      }
+    },
+    {
+      "id": "v_zZOqyav9SuY",
+      "name": "Now: 24/7 Merapi Volcano Erupting in 4K Ultra HD (Indonesia)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "zZOqyav9SuY",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Merapi Volcano Erupting in 4K Ultra HD (Ind"
+      }
+    },
+    {
+      "id": "v_gvuBNRrcRW4",
+      "name": "Members-Only Santa Maria (Santiaguito) Volcano in Guatemala ",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "gvuBNRrcRW4",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "✪ Live: Members-Only Santa Maria (Santiaguito) Volcano in Gu"
+      }
+    },
+    {
+      "id": "v_1qL52NeS-rs",
+      "name": "Now: 24/7 Bromo and Semeru Volcano, Java, Indonesia in 4K Ul",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "1qL52NeS-rs",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Bromo and Semeru Volcano, Java, Indonesia i"
+      }
+    },
+    {
+      "id": "v_EYYgrzyqgZM",
+      "name": "Now: 24/7 Semeru Volcano Watch (Multi-cams)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "EYYgrzyqgZM",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "Live Now: 24/7 Semeru Volcano Watch (Multi-cams)"
+      }
+    },
+    {
+      "id": "v_D6Rk4tqB_fs",
+      "name": "Now: 24/7 Kanlaon Volcano in the Philippines",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "D6Rk4tqB_fs",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Kanlaon Volcano in the Philippines"
+      }
+    },
+    {
+      "id": "v_5bcIJ1JYOwA",
+      "name": "Now: 24/7 Iceland Volcano Watch in 4K Ultra HD (Cam D)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "5bcIJ1JYOwA",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Iceland Volcano Watch in 4K Ultra HD (Cam D"
+      }
+    },
+    {
+      "id": "v_a_FK2mDP4W8",
+      "name": "Now: Iceland Volcano Watch (Cam E)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "a_FK2mDP4W8",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: Iceland Volcano Watch (Cam E)"
+      }
+    },
+    {
+      "id": "v_bEOPDN710JQ",
+      "name": "Now: 24/7 Iceland Volcano Watch in 4K Ultra HD (Cam A)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "bEOPDN710JQ",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Iceland Volcano Watch in 4K Ultra HD (Cam A"
+      }
+    },
+    {
+      "id": "v__lxxEz6xYIY",
+      "name": "Now: 24/7 Erupting Semeru Volcano in Java, Indonesia (Cam C)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "_lxxEz6xYIY",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Erupting Semeru Volcano in Java, Indonesia "
+      }
+    },
+    {
+      "id": "v_Hr1Sv6B-kfM",
+      "name": "Now: 24/7 Erupting Semeru Volcano in Java, Indonesia in 4K U",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "Hr1Sv6B-kfM",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Erupting Semeru Volcano in Java, Indonesia "
+      }
+    },
+    {
+      "id": "v_1rbBmhRQ5Gs",
+      "name": "Now: 24/7 Erupting Semeru Volcano in Java, Indonesia in 4K U",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "1rbBmhRQ5Gs",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Erupting Semeru Volcano in Java, Indonesia "
+      }
+    },
+    {
+      "id": "v_QpjprHIffYM",
+      "name": "Members-Only Sangay Volcano and the Amazon Rainforest in Ecu",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "QpjprHIffYM",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "✪ Live: Members-Only Sangay Volcano and the Amazon Rainfores"
+      }
+    },
+    {
+      "id": "v_E_4y8jgvSRA",
+      "name": "Now: 24/7 Iceland Volcano Watch in 4K Ultra HD (Cam B)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "E_4y8jgvSRA",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Iceland Volcano Watch in 4K Ultra HD (Cam B"
+      }
+    },
+    {
+      "id": "v_xLjcPiN8Lo8",
+      "name": "Members-Only Iceberg Panorama Camera in Ilullisat, Greenland",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "xLjcPiN8Lo8",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "✪ Live: Members-Only Iceberg Panorama Camera in Ilullisat, G"
+      }
+    },
+    {
+      "id": "v_h8O0UXsL7uk",
+      "name": "Now: 24/7 Iceberg Cam of Ilulissat, Greenland in 4K Ultra HD",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "h8O0UXsL7uk",
+      "tags": [
+        "space"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Iceberg Cam of Ilulissat, Greenland in 4K U"
+      }
+    },
+    {
+      "id": "v_Nvjf1vZZrkk",
+      "name": "Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam C)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "Nvjf1vZZrkk",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam C"
+      }
+    },
+    {
+      "id": "v_jAA3z753QW0",
+      "name": "Members-Only Bulusan Volcano in the Philippines (Cam B)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "jAA3z753QW0",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "✪ Live: Members-Only Bulusan Volcano in the Philippines  (Ca"
+      }
+    },
+    {
+      "id": "v_GQYME0i_idI",
+      "name": "Now: 24/7 Bulusan Volcano in the Philippines in 4K Ultra HD ",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "GQYME0i_idI",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Bulusan Volcano in the Philippines in 4K Ul"
+      }
+    },
+    {
+      "id": "v_iWCeBAxRCBo",
+      "name": "Now: 24/7 Hawaii Humpback Whale Marine Sanctuary in Maui, Ha",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "iWCeBAxRCBo",
+      "tags": [
+        "beaches"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Hawaii Humpback Whale Marine Sanctuary in M"
+      }
+    },
+    {
+      "id": "v_UDAZWxehMAI",
+      "name": "Now: 24/7 Mayon Volcano is Erupting in the Philippines in 4K",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "UDAZWxehMAI",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Mayon Volcano is Erupting in the Philippine"
+      }
+    },
+    {
+      "id": "v_EGk3Mr0OshE",
+      "name": "Now: 24/7 Mount Etna Volcano, Sicily, Italy (Multi-cams)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "EGk3Mr0OshE",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Mount Etna Volcano, Sicily, Italy (Multi-ca"
+      }
+    },
+    {
+      "id": "v_OKQEMp2555A",
+      "name": "Now: 24/7 Overview Camera - View Earth from the Internationa",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "OKQEMp2555A",
+      "tags": [
+        "space"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Overview Camera - View Earth from the Inter"
+      }
+    },
+    {
+      "id": "v_FVdmnpJ2kM0",
+      "name": "Now: 24/7 Kilauea Volcano Watch in Hawaii (Multi-cams)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "FVdmnpJ2kM0",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now:  24/7 Kilauea Volcano Watch in Hawaii (Multi-cam"
+      }
+    },
+    {
+      "id": "v_6IaMqotNF_s",
+      "name": "Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam B)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "6IaMqotNF_s",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam B"
+      }
+    },
+    {
+      "id": "v_iws3rh5vLAQ",
+      "name": "Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam A)",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "iws3rh5vLAQ",
+      "tags": [
+        "volcano"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Kilauea Volcano Livestream in Hawaii (Cam A"
+      }
+    },
+    {
+      "id": "v_F2KrH4QQnms",
+      "name": "Now: 24/7 Strait of Georgia, British Columbia Canada in 4K U",
+      "sub": "AFAR TV · 24/7",
+      "type": "yt",
+      "vid": "F2KrH4QQnms",
+      "tags": [
+        "world"
+      ],
+      "refresh": {
+        "channel": "@afarTV",
+        "match": "🔴 Live Now: 24/7 Strait of Georgia, British Columbia Canada "
+      }
+    },
+    {
+      "id": "v_utGfq6AkxiM",
+      "name": "Marysville, Michigan USA",
+      "sub": "STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "utGfq6AkxiM",
+      "tags": [
+        "harbors",
+        "smalltown"
+      ],
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Marysville, Michigan USA | StreamTime LIVE"
+      }
+    },
+    {
+      "id": "v_MqzQdTHCTOg",
+      "name": "Ohio River, Jeffersonville, IN",
+      "sub": "STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "MqzQdTHCTOg",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Ohio River, Jeffersonville, IN | StreamTime LIVE"
+      }
+    },
+    {
+      "id": "v_fE02qa-Phs0",
+      "name": "Baltimore, Maryland USA",
+      "sub": "STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "fE02qa-Phs0",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Baltimore, Maryland USA | StreamTime LIVE"
+      }
+    },
+    {
+      "id": "v_F_bENs4GV24",
+      "name": "Marine City, Michigan, USA",
+      "sub": "STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "F_bENs4GV24",
+      "tags": [
+        "harbors",
+        "smalltown"
+      ],
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Marine City, Michigan, USA | StreamTime LIVE"
+      }
+    },
+    {
+      "id": "v_g4mpc2I5lhc",
+      "name": "Algonac, Michigan USA",
+      "sub": "STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "g4mpc2I5lhc",
+      "tags": [
+        "harbors",
+        "smalltown"
+      ],
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Algonac, Michigan USA | StreamTime LIVE"
+      }
+    },
+    {
+      "id": "v_t_VfYNtprYE",
+      "name": "Baltimore Shipping Channel",
+      "sub": "STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "t_VfYNtprYE",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Baltimore Shipping Channel | Baltimore, MD USA | StreamTime "
+      }
+    },
+    {
+      "id": "v_GFzyA9BkHW4",
+      "name": "Marine City HomeTown Cam",
+      "sub": "STREAMTIME LIVE",
+      "type": "yt",
+      "vid": "GFzyA9BkHW4",
+      "tags": [
+        "harbors",
+        "smalltown"
+      ],
+      "refresh": {
+        "channel": "@StreamTimeLive",
+        "match": "Marine City HomeTown Cam | Marine City, MI | StreamTime LIVE"
+      }
+    },
+    {
+      "id": "v_UnTDO-7BV1k",
+      "name": "Shelter Island Pier",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "UnTDO-7BV1k",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "Shelter Island Pier | San Diego Web Cam"
+      }
+    },
+    {
+      "id": "v_fc58f5x18-w",
+      "name": "San Diego Harbor Island (S) 4K",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "fc58f5x18-w",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "San Diego Harbor Island (S) Live Web Cam 4K"
+      }
+    },
+    {
+      "id": "v_cvP_F-c2Upw",
+      "name": "The Rooftop Bar",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "cvP_F-c2Upw",
+      "tags": [
+        "beaches",
+        "nightlife"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "The Rooftop Bar | Oceanside, CA | San Diego Web Cam"
+      }
+    },
+    {
+      "id": "v_OYqo4dqYjh0",
+      "name": "The Rooftop Bar (Fixed Wide West)",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "OYqo4dqYjh0",
+      "tags": [
+        "beaches",
+        "nightlife"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "The Rooftop Bar (Fixed Wide West) | Oceanside, CA | San Dieg"
+      }
+    },
+    {
+      "id": "v_OAk3giBu5_k",
+      "name": "San Diego Bay East",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "OAk3giBu5_k",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "San Diego Bay East | San Diego Web Cam"
+      }
+    },
+    {
+      "id": "v_zScdt7Z839s",
+      "name": "Lake Otay",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "zScdt7Z839s",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "Lake Otay | San Diego Web Cam"
+      }
+    },
+    {
+      "id": "v_iaBfYxbmwXA",
+      "name": "San Diego Harbor Island 4K",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "iaBfYxbmwXA",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "San Diego Harbor Island Live Web Cam 4K"
+      }
+    },
+    {
+      "id": "v_edz0ux7JClE",
+      "name": "San Diego Live (Rotating/Switched Feed) 4K",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "edz0ux7JClE",
+      "tags": [
+        "skylines"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "San Diego Web Cam Live (Rotating/Switched Feed) 4K"
+      }
+    },
+    {
+      "id": "v_ct7IRmzDggk",
+      "name": "San Diego Shelter Island (N)",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "ct7IRmzDggk",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "San Diego Shelter Island (N) Live Web Cam"
+      }
+    },
+    {
+      "id": "v_OUB8NDFSmFI",
+      "name": "San Diego Shelter Island 4K",
+      "sub": "SAN DIEGO, CA",
+      "type": "yt",
+      "vid": "OUB8NDFSmFI",
+      "tags": [
+        "harbors"
+      ],
+      "refresh": {
+        "channel": "@SanDiegoWebCam",
+        "match": "San Diego Shelter Island Live Web Cam 4K"
+      }
+    },
+    {
+      "id": "v_M3HKLzjvKPc",
+      "name": "Video from the International Space Station (Official NASA St",
+      "sub": "NASA · OFFICIAL",
+      "type": "yt",
+      "vid": "M3HKLzjvKPc",
+      "tags": [
+        "space"
+      ],
+      "refresh": {
+        "channel": "@NASA",
+        "match": "Live Video from the International Space Station (O"
+      }
+    },
+    {
+      "id": "v_awQzjn72bI0",
+      "name": "High-Definition Views from the International Space Station (",
+      "sub": "NASA · OFFICIAL",
+      "type": "yt",
+      "vid": "awQzjn72bI0",
+      "tags": [
+        "space"
+      ],
+      "refresh": {
+        "channel": "@NASA",
+        "match": "Live High-Definition Views from the International "
+      }
+    },
+    {
+      "id": "v_SUXPnIEpbn4",
+      "name": "Chengdu Panda Base 24/7",
+      "sub": "CHENGDU, CHINA · IPANDA",
+      "type": "yt",
+      "vid": "SUXPnIEpbn4",
+      "tags": [
+        "wildlife",
+        "world"
+      ],
+      "refresh": {
+        "channel": "@iPandaChannel",
+        "match": "Panda 24/7"
+      }
+    },
+    {
+      "id": "v_HRO9PwoduE8",
+      "name": "WildEarth Safari Channel",
+      "sub": "AFRICA · WILDEARTH",
+      "type": "yt",
+      "vid": "HRO9PwoduE8",
+      "tags": [
+        "wildlife",
+        "world"
+      ],
+      "refresh": {
+        "channel": "@WildEarth",
+        "match": "WildEarth Channel"
+      }
+    },
+    {
+      "id": "v_9Z-FBzyd0QA",
+      "name": "SafariLIVE Game Drive",
+      "sub": "AFRICA · WILDEARTH",
+      "type": "yt",
+      "vid": "9Z-FBzyd0QA",
+      "tags": [
+        "wildlife",
+        "world"
+      ],
+      "refresh": {
+        "channel": "@WildEarth",
+        "match": "SafariLIVE"
+      }
+    },
+    {
+      "id": "v_zL68biE6wAs",
+      "name": "Moon Jelly Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "zL68biE6wAs",
+      "tags": [
+        "aquarium"
+      ],
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Live Moon Jelly Cam | Monterey Bay Aquarium"
+      }
+    },
+    {
+      "id": "v_fVa6-zCBR7A",
+      "name": "Monterey Bay Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "fVa6-zCBR7A",
+      "tags": [
+        "aquarium"
+      ],
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Live Monterey Bay Cam | Monterey Bay Aquarium"
+      }
+    },
+    {
+      "id": "v_dzmJXWmA2EM",
+      "name": "Spider Crab Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "dzmJXWmA2EM",
+      "tags": [
+        "aquarium"
+      ],
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Live Spider Crab Cam | Monterey Bay Aquarium"
+      }
+    },
+    {
+      "id": "v_cUoet3dmRU4",
+      "name": "Aviary Cam",
+      "sub": "MONTEREY BAY AQUARIUM",
+      "type": "yt",
+      "vid": "cUoet3dmRU4",
+      "tags": [
+        "aquarium"
+      ],
+      "refresh": {
+        "channel": "@MontereyBayAquarium",
+        "match": "Live Aviary Cam | Monterey Bay Aquarium"
+      }
+    },
+    {
+      "id": "v_RhP-_jX8-Zs",
+      "name": "Anan Bear Cam: Lower Falls & Caves – Alaska",
+      "sub": "EXPLORE.ORG",
+      "type": "yt",
+      "vid": "RhP-_jX8-Zs",
+      "tags": [
+        "wildlife"
+      ],
+      "refresh": {
+        "channel": "@explorelivenaturecams",
+        "match": "LIVE Anan Bear Cam: Lower Falls & Caves – Alaska |"
+      }
+    },
+    {
+      "id": "v_y0XPkjM9-P4",
+      "name": "Scenic Cameras - Florida, Bahamas, Caribbean Islands and mor",
+      "sub": "PTZTV",
+      "type": "yt",
+      "vid": "y0XPkjM9-P4",
+      "tags": [
+        "beaches",
+        "world"
+      ],
+      "refresh": {
+        "channel": "@PTZtv",
+        "match": "LIVE - Scenic Cameras - Florida, Bahamas, Caribbea"
+      }
+    },
+    {
+      "id": "v_Ul6wlBwXz9Y",
+      "name": "Morgan Hill - Santa Clara Valley - Northern California - Vie",
+      "sub": "PTZTV",
+      "type": "yt",
+      "vid": "Ul6wlBwXz9Y",
+      "tags": [
+        "smalltown",
+        "traffic"
+      ],
+      "refresh": {
+        "channel": "@PTZtv",
+        "match": "LIVE - Morgan Hill - Santa Clara Valley - Northern"
+      }
+    },
+    {
+      "id": "v_IcZ-7sFi1HM",
+      "name": "Ukraine Skylines — Kharkiv · Donetsk · Kyiv · Sumy",
+      "sub": "UKRAINE · MULTI-CITY LIVE",
+      "type": "yt",
+      "vid": "IcZ-7sFi1HM",
+      "tags": [
+        "frontline",
+        "world"
+      ]
+    },
+    {
+      "id": "v_e2gC37ILQmk",
+      "name": "Ukraine Cities — Kyiv · Odesa · Kramatorsk",
+      "sub": "UKRAINE · MULTI-CITY LIVE",
+      "type": "yt",
+      "vid": "e2gC37ILQmk",
+      "tags": [
+        "frontline",
+        "world"
+      ],
+      "refresh": {
+        "channel": "UCzpQxPIFPy4PgpULtRsE-nA",
+        "match": "Ukraine live cam"
+      }
     }
   ]
 }
