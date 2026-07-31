@@ -75,6 +75,18 @@
     {
       "id": "frontline",
       "name": "Frontlines & News"
+    },
+    {
+      "id": "norcal",
+      "name": "NorCal & Sierra Highways"
+    },
+    {
+      "id": "central",
+      "name": "Central Coast & Valley"
+    },
+    {
+      "id": "socal",
+      "name": "SoCal Freeways"
     }
   ],
   "cameras": [
@@ -4577,6 +4589,1650 @@
         "channel": "UCzpQxPIFPy4PgpULtRsE-nA",
         "match": "Ukraine live cam"
       }
+    },
+    {
+      "id": "ca_12riovistabridgesac12ebstr",
+      "name": "SR-12 Hwy 12 at Rio Vista Bridge East",
+      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/12_Rio_Vista_Bridge_SAC12_EB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "landmarks",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50twinbridgesed50wbstream",
+      "name": "US-50 Hwy 50 at Twin Bridges",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Twin_bridges_ED50_WB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "landmarks",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_w580upperdeckpier47stream",
+      "name": "TVR04 -- I-580 : Upper Deck Pier 47",
+      "sub": "CONTRA COSTA CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/W580_Upper_Deck_Pier_47.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_267truckeebypassnev267wbst",
+      "name": "SR-267 Hwy 267 at Truckee Bypass",
+      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/267_Truckee_Bypass_NEV267_WB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_80riversideaveocpla80wbstr",
+      "name": "I-80 Hwy 80 at Riverside",
+      "sub": "PLACER CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/80_Riverside_Ave_OC_PLA80_WB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_sjeb205eomthousepkwystream",
+      "name": "38 - EB I-205 E/O Mountain House Parkway",
+      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D10/SJ_EB205_EO_MtHousePkwy.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50wrightslakeed50eb1stream",
+      "name": "US-50 Hwy 50 at Wrights Lake 1",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Wrights_Lake_ED50_EB_1.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_e80eofamericancanyonrdstre",
+      "name": "TV829 -- I-80 : East Of American Canyon Road",
+      "sub": "SOLANO CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/E80_EOF_American_Canyon_Rd.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_sjeb580wopattersonpassstre",
+      "name": "I-580 114 - EB 580 W/O Patterson Pass",
+      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D10/SJ_EB580_WO_PattersonPass.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_e37atlakevillerdstream",
+      "name": "TV137 -- SR-37 : Lakeville Road",
+      "sub": "SONOMA CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/E37_at_Lakeville_Rd.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50southriverrdyol50eb2stre",
+      "name": "US-50 Hwy 50 at South River Rd 2",
+      "sub": "YOLO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_South_River_Rd_YOL50_EB_2.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_sjsb99nogoldengateavestrea",
+      "name": "22 - SB SR-99 N/O Golden Gate Ave",
+      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D10/SJ_SB99_NO_GoldenGateAve.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "landmarks",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50wrightslakeed50eb2stream",
+      "name": "US-50 Hwy 50 at Wrights Lake 2",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Wrights_Lake_ED50_EB_2.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_w80atsastowerstream",
+      "name": "TVD32 -- I-80 : Bay Bridge SAS Tower East",
+      "sub": "SAN FRANCISCO CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/W80_at_SAS_Tower.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "landmarks",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_80donnersummitjwonev80ebst",
+      "name": "I-80 Hwy 80 at Donner Summit",
+      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/80_Donner_Summit_JWO_NEV80_EB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_89westriverstpla89nbstream",
+      "name": "SR-89 Hwy 89 at West River",
+      "sub": "PLACER CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/89_West_River_St_PLA89_NB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_w580upperdecktrusstowerpie",
+      "name": "TVR03 -- I-580 : Upper Deck Truss Tower Pier 48",
+      "sub": "CONTRA COSTA CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/W580_Upper_Deck_Truss_Tower_Pier_48.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50rivertonsandhouseed50ebs",
+      "name": "US-50 Hwy 50 at Riverton Sandhouse",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Riverton_Sandhouse_ED50_EB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_80donnerlakerdjeonev80wbst",
+      "name": "I-80 Hwy 80 at Donner Lake",
+      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/80_Donner_Lake_Rd_JEO_NEV80_WB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_e80atsastowerstream",
+      "name": "TVD33 -- I-80 : Bay Bridge SAS Tower West",
+      "sub": "SAN FRANCISCO CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/E80_at_SAS_Tower.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "landmarks",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50echosummited50ebstream",
+      "name": "US-50 Hwy 50 at Echo Summit",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Echo_Summit_ED50_EB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_28jct267jwokingsbeachpla28",
+      "name": "SR-28 Hwy 28 at Hwy 267 Kings Beach",
+      "sub": "PLACER CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/28_JCT267_JWO_KINGS_BEACH_PLA28_EB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_e580atgrandlakeshorestream",
+      "name": "TVA43 -- I-580 : Grand Lakeshore",
+      "sub": "ALAMEDA CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/E580_at_Grand_Lakeshore.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50southriverrdyol50eb1stre",
+      "name": "US-50 Hwy 50 at South River Rd 1",
+      "sub": "YOLO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_South_River_Rd_YOL50_EB_1.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_267brockwaysummitpla267ebs",
+      "name": "SR-267 Hwy 267 at Brockway Summit",
+      "sub": "PLACER CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/267_Brockway_Summit_PLA267_EB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50basslakerded50wbstream",
+      "name": "US-50 Bass_Lake_ED50_WB",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Bass_Lake_Rd_ED50_WB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50jeffersonblvdyol50eb3str",
+      "name": "US-50 Hwy 50 at Jefferson Blvd 3",
+      "sub": "YOLO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Jefferson_Blvd_YOL50_EB_3.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50silvavalleyed50wbstream",
+      "name": "US-50 Hwy 50 at Silva_Valley_ED50_WB",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Silva_Valley_ED50_WB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_5seamasavejnosac5sbstream",
+      "name": "I-5 Hwy 5 at Seamas",
+      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/5_Seamas_Ave_JNO_SAC5_SB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_99jct32ucbut99nb2stream",
+      "name": "SR-99 Hwy 99 at Hwy 32 2",
+      "sub": "BUTTE CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/99_JCT32_UC_BUT99_NB_2.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50hazelaveocwosac50wb2stre",
+      "name": "US-50 Hwy 50 at Hazel Ave OC WO WB 2",
+      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Hazel_Ave_OC_WO_SAC50_WB_2.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_s280atsaratogaavorstream",
+      "name": "TVB95 -- I-280 : Saratoga Avenue Onramp",
+      "sub": "SANTA CLARA CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/S280_at_Saratoga_Av_OR.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_80jct89snev80ebstream",
+      "name": "I-80 Hwy 80 at Hwy 89",
+      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/80_JCT89S_NEV80_EB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_20pleasantvalleyrdnev20ebs",
+      "name": "SR-20 Hwy 20 at Pleasant Valley Rd",
+      "sub": "NEVADA CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/20_Pleasant_Valley_Rd_NEV20_EB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_sjwb4eojacktonerdstream",
+      "name": "SR-4 167 - WB 4 E/O Jack Tone Rd",
+      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D10/SJ_WB4_EO_JackToneRd.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_sjsb5solouiseavestream",
+      "name": "173 - SB I-5 S/O Louise Ave",
+      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D10/SJ_SB5_SO_LouiseAve.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_mernb5sosr140stream",
+      "name": "135 - NB I-5 S/O SR 140",
+      "sub": "MERCED CO · CALTRANS D10 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D10/MER_NB5_SO_SR140.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_5florinrdsac5mdstream",
+      "name": "I-5 Hwy 5 at Florin",
+      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/5_Florin_Rd_SAC5_MD.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50cameronparkdruced50wb2st",
+      "name": "US-50 Hwy 50 at Cameron_Park_ED50_WB_2",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Cameron_Park_Dr_UC_ED50_WB_2.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_eureka14th320x240stream",
+      "name": "US-101 : Eureka / 14th - Looking North (C039)",
+      "sub": "HUMBOLDT CO · CALTRANS D1 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D1/eureka_14th_320x240.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_50snowsrded50eb2stream",
+      "name": "US-50 Snow_ED50_EB_2",
+      "sub": "EL DORADO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/50_Snows_Rd_ED50_EB_2.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_sjnb99sr120andyosemiteaves",
+      "name": "29 - NB SR-99 SR-120 and Yosemite Ave",
+      "sub": "SAN JOAQUIN CO · CALTRANS D10 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D10/SJ_NB99_SR120AndYosemiteAve.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_n280jsocesarchavezstream",
+      "name": "TV325 -- I-280 : Just South Of Cesar Chavez",
+      "sub": "SAN FRANCISCO CO · CALTRANS D4 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D4/N280_JSO_Cesar_Chavez.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_80wattaveocsac80wbstream",
+      "name": "I-80 Hwy 80 at Watt",
+      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/80_Watt_Ave_OC_SAC80_WB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_eurekacinema2320x240stream",
+      "name": "US-101: Eureka / PHB - Looking South",
+      "sub": "HUMBOLDT CO · CALTRANS D1 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D1/eureka_cinema2_320x240.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_99skywayjsobut99nb2stream",
+      "name": "SR-99 Skyway_BUT99_NB_2",
+      "sub": "BUTTE CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/99_Skyway_JSO_BUT99_NB_2.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_9947thaveocsac99sbstream",
+      "name": "SR-99 Hwy 99 at 47th Ave",
+      "sub": "SACRAMENTO CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/99_47th_Ave_OC_SAC99_SB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_70coxlnwobut70wbstream",
+      "name": "SR-70 Hwy 70 WO Cox Ln",
+      "sub": "BUTTE CO · CALTRANS D3 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D3/70_Cox_Ln_WO_BUT70_WB.stream/playlist.m3u8",
+      "tags": [
+        "norcal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_1atbayaveporterststream",
+      "name": "SR-1 : Bay Ave / Porter St",
+      "sub": "SANTA CRUZ CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/1atBayAve-PorterSt.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_68atwestofjosselyncanyonrd",
+      "name": "SR-68 : West of Josselyn Canyon Road",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/68atWestofJosselynCanyonRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atcasitaspassrdstream",
+      "name": "US-101 : South of Casitas Pass Road",
+      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atCasitasPassRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atsanmiguelcynrdstream",
+      "name": "US-101 : San Miguel Canyon Rd",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atSanMiguelCynRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_1atoceanavestream",
+      "name": "SR-1 : Ocean Ave",
+      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/1atOceanAve.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_68atcanyondelreyroute218st",
+      "name": "SR-68 : Canyon Del Rey Boulevard",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/68atCanyonDelRey-Route218.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atcrazyhorsecynrdstream",
+      "name": "US-101 : Crazy Horse Canyon Rd",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atCrazyHorseCynRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atavilabeachdrstream",
+      "name": "US-101 : Avila Beach Drive",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atAvilaBeachDr.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_68atjosselyncanyonrdstream",
+      "name": "SR-68 : Josselyn Canyon Road",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/68atJosselynCanyonRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atmallorycynrdstream",
+      "name": "US-101 : Mallory Canyon Rd",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atMalloryCynRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_68atreservationrdriverrdst",
+      "name": "SR-68 : Reservation Road / River Road",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/68atReservationRd_RiverRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_17atoceanststream",
+      "name": "SR-1 : Ocean Street",
+      "sub": "SANTA CRUZ CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/17atOceanSt.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atnofreservoircynrdstre",
+      "name": "US-101 : North of Reservoir Canyon Road",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atNofReservoirCynRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_17southofthesummitstream",
+      "name": "SR-17 : South of Summit Road",
+      "sub": "SANTA CRUZ CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/17SouthoftheSummit.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atreservoircynrdstream",
+      "name": "US-101 : Reservoir Canyon Road",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atReservoirCynRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_1atbuenavistadrstream",
+      "name": "SR-1 : Buena Vista Dr",
+      "sub": "SANTA CRUZ CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/1atBuenaVistaDr.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atsanluisbaydrstream",
+      "name": "US-101 : San Luis Bay Drive",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atSanLuisBayDr.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101attorocanyonrdstream",
+      "name": "US-101 US101- Toro Canyon Rd",
+      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atToroCanyonRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101attrafficwystream",
+      "name": "US-101 : Traffic Way",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atTrafficWy.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atpasoroblesststream",
+      "name": "US-101 : Paso Robles Street",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atPasoRoblesSt.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_99unionavestream",
+      "name": "SR-99 KER-99-AT UNION AVE",
+      "sub": "KERN CO · CALTRANS D6 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D6/99_Union_Ave.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_180reedstream",
+      "name": "SR-180 FRE-180-AT REED AVE",
+      "sub": "FRESNO CO · CALTRANS D6 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D6/180_Reed.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atsouthofniblickrdstrea",
+      "name": "US-101 : South of Niblick Road",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atSouthofNiblickRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atdonovanrdcmsstream",
+      "name": "US-101 : North of Donovan Rd",
+      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atDonovanRdCMS.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_168shawstream",
+      "name": "SR-168 FRE-168-AT SHAW AVE",
+      "sub": "FRESNO CO · CALTRANS D6 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D6/168_Shaw.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atsantaclauslnstream",
+      "name": "US-101 : Santa Claus Lane",
+      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atSantaClausLn.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_183atmarketststream",
+      "name": "SR-183 : Salinas St",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/183atMarketSt.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_180jworte41stream",
+      "name": "SR-180 FRE-180-at RTE 41",
+      "sub": "FRESNO CO · CALTRANS D6 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D6/180_JWO_Rte_41.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_5sorte58stream",
+      "name": "I-5 KER-5-S/O RTE 58",
+      "sub": "KERN CO · CALTRANS D6 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D6/5_SO_Rte_58.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_135atbetteraviardstream",
+      "name": "SR-135: Betteravia Rd",
+      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/135atBetteraviaRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atfoxhollowrdstream",
+      "name": "US-101 : Fox Hollow",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atFoxHollowRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atbelloststream",
+      "name": "US-101 : SR-1 and Bello St",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atBelloSt.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_68atportoladrwbonrampstrea",
+      "name": "SR-68 : Portola Drive",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/68atPortolaDrWBOn-Ramp.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_9911thavestream",
+      "name": "SR-99 KER-99-AT 11TH AVE",
+      "sub": "KERN CO · CALTRANS D6 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D6/99_11th_Ave.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atbetteraviardstream",
+      "name": "US-101 : Betteravia Rd",
+      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atBetteraviaRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_135atstowellrdstream",
+      "name": "SR-135: Stowell Rd",
+      "sub": "SANTA BARBARA CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/135atStowellRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_99jnorte198stream",
+      "name": "SR-99 TUL-99-at RTE 198",
+      "sub": "FRESNO CO · CALTRANS D6 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D6/99_JNO_RTE_198.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_101atbroadststream",
+      "name": "US-101 : Broad Street",
+      "sub": "SAN LUIS OBISPO CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/101atBroadSt.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_1atmosslandingrdstream",
+      "name": "SR-1 : Moss Landing Rd",
+      "sub": "MONTEREY CO · CALTRANS D5 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D5/1atMossLandingRd.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_41rte198stream",
+      "name": "SR-41 KIN-41-AT RTE 198",
+      "sub": "KINGS CO · CALTRANS D6 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D6/41_RTE_198.stream/playlist.m3u8",
+      "tags": [
+        "central",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815313stream",
+      "name": "I-15 : (313) North of Nutmeg Street Overcross",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_313.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb89144stream",
+      "name": "SR-91 : (44) 0.7 Miles West of Green River",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_91_44.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815347stream",
+      "name": "I-15 : (347) 1.2 Miles South of Werick Road",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_347.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb8215257stream",
+      "name": "I-215 : (257) North of Nuevo Road",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_215_257.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb89132stream",
+      "name": "SR-91 : (32) 0.3 Miles East of Main Street",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_91_32.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815335stream",
+      "name": "I-15 : (335) 0.9 Miles South of Lake Street",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_335.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815328stream",
+      "name": "I-15 : (328) South of North Main Street",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_328.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb8215233stream",
+      "name": "I-215 : (233) 0.5 Mi N/O Los Alamos",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_215_233.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815323stream",
+      "name": "I-15 : (323) North of Olive",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_323.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb8215251stream",
+      "name": "I-215 : (251) Southbound San Jacinto",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_215_251.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815298stream",
+      "name": "I-15 : (298) 0.5 mi S/O Rainbow Valley Truck Inspection St",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_298.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb810389stream",
+      "name": "I-10: (389) W/O EAGLE MOUNTAIN RD",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "http://wzmedia.dot.ca.gov/D8/LB-8_10_389.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_c051sb5jnocarmelmtnroadstr",
+      "name": "(C 051) I-5 : Carmel Mountain Road_T",
+      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D11/C051_SB_5_JNO_Carmel_Mtn_Road.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815327stream",
+      "name": "I-15 : (327) 0.8 Miles South of North Main Street",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_327.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb860164stream",
+      "name": "SR-60 : (164) Frederick / Pigeon Pass Road",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_164.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb81015stream",
+      "name": "SR-60 : (574) Moreno Beach Blvd",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_10_15.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815330stream",
+      "name": "I-15 : (330) South of SR-74 / Central Avenue",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_330.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb81594stream",
+      "name": "I-15 : (94) North Of Summit",
+      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_94.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb89153stream",
+      "name": "SR-91 : (53) 0.3 Miles East of Smith",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_91_53.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_c221wbi8atlakemurraytstrea",
+      "name": "(C221) I-8 : Lake Murray T",
+      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D11/C221_WB_I-8_AT_Lake_Murray_T.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815309stream",
+      "name": "I-15 : (309) S/O Murrieta Hot Springs Rd",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_309.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815342stream",
+      "name": "I-15 : (342) North of Indian Truck Trail Road",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_342.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb241lakeforeststream",
+      "name": "SR-241 : (250) 40 Meters SO Lake Forestreet Drive Undercro",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB241LakeForest.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb860360stream",
+      "name": "SR-60 : (360) La Rue Street",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_360.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815303stream",
+      "name": "I-15 : (303) N/O Rancho California Road",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_303.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb860355stream",
+      "name": "SR-60 : (355) Offramp Pedley Street",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_355.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb405sealbeachstream",
+      "name": "I-405 : (144) Seal Beach Boulevard",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB405SealBeach.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb860161stream",
+      "name": "SR-60 : (161) East of Milliken",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_161.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_wb22beachstream",
+      "name": "SR-22 : (160) Beach Boulevard",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/WB22BEACH.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb5nobeachblvdstream",
+      "name": "I-5 : (190) North of Beach Boulevard",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB5NOBeachBlvd.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815308stream",
+      "name": "I-15 : (308) N/O Warm Springs Creek",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_308.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815316stream",
+      "name": "I-15 : (316) North Clinton Keith",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_316.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb815299stream",
+      "name": "I-15 : (299) 0.6 mi N/O Rainbow Valley Truck Insp. Sta",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_15_299.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_sb73newportcoastdrstream",
+      "name": "SR-73 : (345) South of Newport Coast Drive B",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/SB73NEWPORTCOASTDR.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "beaches",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb860166stream",
+      "name": "SR-60 : (166) Heacock",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_60_166.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb89141stream",
+      "name": "SR-91 : (41) Magnolia Onramp",
+      "sub": "RIVERSIDE CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_91_41.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb241sosantiagocynstream",
+      "name": "SR-241 : (297) 230 Meters SO Santiago Canyon Road Overcros",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB241SOSantiagoCyn.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb8210176stream",
+      "name": "I-210 : (176) Riverside",
+      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_210_176.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_c187sb5atviadelavallestrea",
+      "name": "I-5 (C187) SB 5: Via De La Valle",
+      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D11/C187_SB_5_at_Via_De_La_Valle.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb261soportolapkwystream",
+      "name": "SR-261 : (314) 80 Meters South of Portola Parkway (West) O",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB261SOPortolaPkwy.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb8210367stream",
+      "name": "I-210 : (367) Del Rosa Ave Off Ramp",
+      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_210_367.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_eb90breablvdstream",
+      "name": "SR-90 : (510) Brea Blvd NW Corner",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/EB90BreaBlvd.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_c010sb5atoldtownavestream",
+      "name": "(C 010) I-5 : Old Town Avenue",
+      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D11/C010_SB_5_at_Old_Town_Ave.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb241losalisosstream",
+      "name": "SR-241 : (247) Los Alisos Boulevard",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB241LosAlisos.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb57norte22stream",
+      "name": "SR-57 : (12) SR-22",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB57NO_RTE22.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb8210116stream",
+      "name": "I-210 : (116) Archibald",
+      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_210_116.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb405bolsachicastream",
+      "name": "I-405 : (150) South of Bolsa Chica",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB405BolsaChica.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb405warnerstream",
+      "name": "I-405 : (223) South of Warner Avenue",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB405Warner.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb57nowagneravestream",
+      "name": "SR-57 : (176) North of Wagner Avenue",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB57NOWagnerAve.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_c235nb5atsorrentovalleyrds",
+      "name": "(C235) I-5 : Just South Of Sorrento Valley Road 1",
+      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D11/C235_NB_5_at_Sorrento_Valley_Rd.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_wb91lapalmastream",
+      "name": "SR-91 : (138) La Palma",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/WB91LAPALMA.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_c085nb15jnoranchobernardos",
+      "name": "(C 086 )I-15 : West Bernardo Drive / Pomerdo",
+      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D11/C085_NB_15_JNO_Rancho_Bernardo.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_eb91eoglassellstream",
+      "name": "SR-91 : (140) East of Glassell Street",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/EB91EOGLASSELL.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_eb90berryststream",
+      "name": "SR-90 : (508) Berry St SE Corner",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/EB90BerrySt.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_c069sb805atelcajonblvdonra",
+      "name": "(C069) I-805 : El Cajon Boulevard (On Ramp)",
+      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D11/C069_SB_805_at_El_Cajon_Blvd_On_Ramp.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_lb8138393stream",
+      "name": "SR-138 SR138 : (393) N/O Hwy 18",
+      "sub": "SAN BERNARDINO CO · CALTRANS D8 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D8/LB-8_138_393.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb241nobakestream",
+      "name": "SR-241 : (251) 310 Meters North of Bake Parkway Overcross",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB241NOBake.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_nb405soedwardstream",
+      "name": "I-405 : (149) South of Edwards",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/NB405SOEdward.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_c110eb52atsbgeneseeavestre",
+      "name": "(C 110) SR-52 : Genesee Avenue",
+      "sub": "SAN DIEGO CO · CALTRANS D11 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D11/C110_EB_52_at_SB_Genesee_Ave.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
+    },
+    {
+      "id": "ca_wb91kreamerstream",
+      "name": "SR-91 : (139) Kreamer Boulevard",
+      "sub": "ORANGE CO · CALTRANS D12 · LIVE HLS",
+      "type": "hls",
+      "url": "https://wzmedia.dot.ca.gov/D12/WB91KREAMER.stream/playlist.m3u8",
+      "tags": [
+        "socal",
+        "traffic"
+      ]
     }
   ]
 }
