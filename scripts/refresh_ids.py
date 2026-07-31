@@ -17,26 +17,48 @@ def fetch(url):
     return urllib.request.urlopen(req, timeout=30).read().decode('utf-8', 'replace')
 
 
-def channel_lives(channel):
-    """Return [(videoId, title)] of currently-live streams on a channel."""
-    base = ('https://www.youtube.com/channel/%s' % channel
-            if channel.startswith('UC') else 'https://www.youtube.com/%s' % channel)
-    raw = fetch(base + '/streams')
-    out, seen = [], set()
+def _parse_lives(raw, out, seen):
     for m in re.finditer(r'"videoId":"([A-Za-z0-9_-]{11})"', raw):
         vid = m.group(1)
         if vid in seen:
             continue
-        seen.add(vid)
-        block = raw[m.start():m.start() + 6000]
-        if ' watching"' not in block:
+        block = raw[m.start():m.start() + 7000]
+        if 'THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE' not in block:
             continue
+        seen.add(vid)
         title = ''
         for tm in re.finditer(r'"title":\{"content":"(.*?)"\}', block):
             if tm.group(1) not in MENU:
                 title = tm.group(1)
                 break
         out.append((vid, title))
+
+
+def channel_lives(channel):
+    """Return [(videoId, title)] of currently-live streams, walking all pages."""
+    base = ('https://www.youtube.com/channel/%s' % channel
+            if channel.startswith('UC') else 'https://www.youtube.com/%s' % channel)
+    raw = fetch(base + '/streams')
+    out, seen = [], set()
+    _parse_lives(raw, out, seen)
+    tok_m = re.search(r'"continuationCommand":\{"token":"([^"]+)"', raw)
+    tok, pages = (tok_m.group(1) if tok_m else None), 0
+    while tok and pages < 12:
+        body = json.dumps({
+            'context': {'client': {'clientName': 'WEB', 'clientVersion': '2.20250725.01.00'}},
+            'continuation': tok}).encode()
+        req = urllib.request.Request(
+            'https://www.youtube.com/youtubei/v1/browse', data=body,
+            headers={'Content-Type': 'application/json', 'User-Agent': UA})
+        try:
+            obj = json.load(urllib.request.urlopen(req, timeout=30))
+        except Exception:
+            break
+        compact = json.dumps(obj, separators=(',', ':'), ensure_ascii=False)
+        _parse_lives(compact, out, seen)
+        pages += 1
+        tok_m = re.search(r'"continuationCommand":\{"token":"([^"]+)"', compact)
+        tok = tok_m.group(1) if tok_m else None
     return out
 
 
