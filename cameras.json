@@ -1165,7 +1165,7 @@
       "name": "Jackson Town Square PTZ",
       "sub": "JACKSON HOLE, WY · SEEJH",
       "type": "yt",
-      "vid": "B_waF26In9o",
+      "vid": "Zj0pXlq2-jI",
       "refresh": {
         "channel": "UCEpDjqeFIGTqHwk-uULx72Q",
         "match": "Town Square"
@@ -1217,6 +1217,91 @@
       "tags": [
         "smalltown",
         "wildlife"
+      ]
+    },
+    {
+      "id": "lincolnharbor",
+      "name": "Lincoln Harbor",
+      "sub": "NEW YORK CITY · EARTHCAM",
+      "type": "yt",
+      "vid": "mIR_RCyDL_w",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Lincoln Harbor"
+      },
+      "tags": [
+        "nyc",
+        "harbors"
+      ]
+    },
+    {
+      "id": "flight93",
+      "name": "Flight 93 Memorial — Tower of Voices",
+      "sub": "SHANKSVILLE, PA · EARTHCAM",
+      "type": "yt",
+      "vid": "mjzA1Yxh7ZY",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Flight 93"
+      },
+      "tags": [
+        "landmarks"
+      ]
+    },
+    {
+      "id": "warrenton",
+      "name": "Warrenton Main Street",
+      "sub": "WARRENTON, VA · EARTHCAM",
+      "type": "yt",
+      "vid": "zu-I5jNHIxI",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Warrenton"
+      },
+      "tags": [
+        "smalltown"
+      ]
+    },
+    {
+      "id": "spiritlake",
+      "name": "Spirit Lake",
+      "sub": "SPIRIT LAKE, IA · EARTHCAM",
+      "type": "yt",
+      "vid": "XIe9vQkAd7Q",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Spirit Lake"
+      },
+      "tags": [
+        "smalltown"
+      ]
+    },
+    {
+      "id": "councilbluffs",
+      "name": "Council Bluffs",
+      "sub": "COUNCIL BLUFFS, IA · EARTHCAM",
+      "type": "yt",
+      "vid": "qsrevo5Vdkw",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Council Bluffs"
+      },
+      "tags": [
+        "smalltown"
+      ]
+    },
+    {
+      "id": "ruidoso",
+      "name": "Ruidoso Midtown",
+      "sub": "RUIDOSO, NM · EARTHCAM",
+      "type": "yt",
+      "vid": "XoANQufSSXY",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Ruidoso"
+      },
+      "tags": [
+        "smalltown"
       ]
     }
   ]
