@@ -1303,6 +1303,243 @@
       "tags": [
         "smalltown"
       ]
+    },
+    {
+      "id": "coney",
+      "name": "Coney Island",
+      "sub": "BROOKLYN, NY · EARTHCAM",
+      "type": "yt",
+      "vid": "H67j7H-7QD0",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Coney Island"
+      },
+      "tags": [
+        "nyc",
+        "beaches"
+      ]
+    },
+    {
+      "id": "anglins",
+      "name": "Anglins Fishing Pier",
+      "sub": "LAUDERDALE-BY-THE-SEA, FL · EARTHCAM",
+      "type": "yt",
+      "vid": "YEAhxXd-TiY",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Anglins"
+      },
+      "tags": [
+        "beaches"
+      ]
+    },
+    {
+      "id": "niagara",
+      "name": "Niagara Falls",
+      "sub": "NIAGARA FALLS, NY · EARTHCAM",
+      "type": "yt",
+      "vid": "qx7gry390YA",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Niagara"
+      },
+      "tags": [
+        "landmarks",
+        "volcano"
+      ]
+    },
+    {
+      "id": "sitka",
+      "name": "Sitka Harbor",
+      "sub": "SITKA, AK · EARTHCAM",
+      "type": "yt",
+      "vid": "sF5hFDGN20Y",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Sitka"
+      },
+      "tags": [
+        "smalltown",
+        "harbors"
+      ]
+    },
+    {
+      "id": "allegiant",
+      "name": "Allegiant Stadium",
+      "sub": "LAS VEGAS, NV · EARTHCAM",
+      "type": "yt",
+      "vid": "_rmUXOHSf0w",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Allegiant"
+      },
+      "tags": [
+        "landmarks",
+        "nightlife"
+      ]
+    },
+    {
+      "id": "scrub",
+      "name": "Scrub Island",
+      "sub": "BRITISH VIRGIN ISLANDS · EARTHCAM",
+      "type": "yt",
+      "vid": "t55kv94nEzc",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Scrub Island"
+      },
+      "tags": [
+        "beaches",
+        "world"
+      ]
+    },
+    {
+      "id": "tamariu",
+      "name": "Tamariu Beach",
+      "sub": "COSTA BRAVA, SPAIN · EARTHCAM",
+      "type": "yt",
+      "vid": "PMhVgTcDd1o",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Tamariu"
+      },
+      "tags": [
+        "beaches",
+        "world"
+      ]
+    },
+    {
+      "id": "bellagio",
+      "name": "Bellagio Conservatory",
+      "sub": "LAS VEGAS, NV · EARTHCAM",
+      "type": "yt",
+      "vid": "KJuGU7v5oYw",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Bellagio"
+      },
+      "tags": [
+        "landmarks"
+      ]
+    },
+    {
+      "id": "kansascity",
+      "name": "Kansas City Skyline",
+      "sub": "KANSAS CITY, MO · EARTHCAM",
+      "type": "yt",
+      "vid": "9fzUjSTK5F8",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Kansas City Cam"
+      },
+      "tags": [
+        "skylines"
+      ]
+    },
+    {
+      "id": "summit1v",
+      "name": "SUMMIT One Vanderbilt",
+      "sub": "NEW YORK, NY · EARTHCAM",
+      "type": "yt",
+      "vid": "2_PDaUJbfuI",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Vanderbilt"
+      },
+      "tags": [
+        "nyc",
+        "skylines"
+      ]
+    },
+    {
+      "id": "scottsville",
+      "name": "Scottsville Main Street",
+      "sub": "SCOTTSVILLE, KY · EARTHCAM",
+      "type": "yt",
+      "vid": "MsiHVaomJ04",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Scottsville"
+      },
+      "tags": [
+        "smalltown"
+      ]
+    },
+    {
+      "id": "westernwall",
+      "name": "Western Wall",
+      "sub": "JERUSALEM, ISRAEL · EARTHCAM",
+      "type": "yt",
+      "vid": "77akujLn4k8",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Western Wall"
+      },
+      "tags": [
+        "world",
+        "landmarks"
+      ]
+    },
+    {
+      "id": "nolastreet",
+      "name": "New Orleans Street View",
+      "sub": "NEW ORLEANS, LA · EARTHCAM",
+      "type": "yt",
+      "vid": "Ksrleaxxxhw",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "New Orleans Street"
+      },
+      "tags": [
+        "nightlife",
+        "nye"
+      ]
+    },
+    {
+      "id": "dublin",
+      "name": "Dublin — Temple Bar District",
+      "sub": "DUBLIN, IRELAND · EARTHCAM",
+      "type": "yt",
+      "vid": "3nyPER2kzqk",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Dublin"
+      },
+      "tags": [
+        "world",
+        "nightlife",
+        "nye"
+      ],
+      "nyeOff": 0
+    },
+    {
+      "id": "browncounty",
+      "name": "Brown County",
+      "sub": "NASHVILLE, IN · EARTHCAM",
+      "type": "yt",
+      "vid": "cJ7p6dEc_Yw",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Brown County"
+      },
+      "tags": [
+        "smalltown",
+        "volcano"
+      ]
+    },
+    {
+      "id": "giraffebarn",
+      "name": "Giraffe Cam — Barn",
+      "sub": "GREENVILLE, SC · EARTHCAM",
+      "type": "yt",
+      "vid": "AIwsO8sB0LM",
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Giraffe Cam Barn"
+      },
+      "tags": [
+        "wildlife"
+      ]
     }
   ]
 }
