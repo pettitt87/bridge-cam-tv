@@ -91,6 +91,10 @@
     {
       "id": "penn",
       "name": "Pennsylvania Roads"
+    },
+    {
+      "id": "appalachia",
+      "name": "Appalachian Region"
     }
   ],
   "cameras": [
@@ -361,7 +365,8 @@
         "match": "Ashland"
       },
       "tags": [
-        "trains"
+        "trains",
+        "appalachia"
       ],
       "state": "VA"
     },
@@ -914,7 +919,8 @@
       },
       "tags": [
         "wildlife",
-        "smalltown"
+        "smalltown",
+        "appalachia"
       ],
       "state": "TN"
     },
@@ -1334,7 +1340,8 @@
         "match": "Flight 93"
       },
       "tags": [
-        "landmarks"
+        "landmarks",
+        "appalachia"
       ],
       "state": "PA"
     },
@@ -1349,7 +1356,8 @@
         "match": "Warrenton"
       },
       "tags": [
-        "smalltown"
+        "smalltown",
+        "appalachia"
       ],
       "state": "VA"
     },
@@ -1628,7 +1636,8 @@
       },
       "tags": [
         "smalltown",
-        "volcano"
+        "volcano",
+        "appalachia"
       ],
       "state": "IN"
     },
@@ -1714,7 +1723,8 @@
       "type": "yt",
       "vid": "9uPCPh8jWas",
       "tags": [
-        "trains"
+        "trains",
+        "appalachia"
       ],
       "refresh": {
         "channel": "@VirtualRailfan",
@@ -8564,6 +8574,30 @@
       "tags": [
         "penn",
         "traffic"
+      ]
+    },
+    {
+      "id": "nh_falcon",
+      "name": "Peregrine Falcon Nest Cam",
+      "sub": "MANCHESTER, NH · PEREGRINE NETWORKS",
+      "type": "yt",
+      "vid": "i07IVN7ZKek",
+      "state": "NH",
+      "tags": [
+        "appalachia",
+        "wildlife"
+      ]
+    },
+    {
+      "id": "nh_winnisquam",
+      "name": "Lake Winnisquam Marina",
+      "sub": "WINNISQUAM, NH · LIVE",
+      "type": "yt",
+      "vid": "PSHMTUb7y8E",
+      "state": "NH",
+      "tags": [
+        "appalachia",
+        "harbors"
       ]
     }
   ]
