@@ -95,6 +95,14 @@
     {
       "id": "appalachia",
       "name": "Appalachian Region"
+    },
+    {
+      "id": "nordic",
+      "name": "Nordic & Alpine"
+    },
+    {
+      "id": "rolling",
+      "name": "Rolling Multi-Cam Tours"
     }
   ],
   "cameras": [
@@ -8598,6 +8606,458 @@
       "tags": [
         "appalachia",
         "harbors"
+      ]
+    },
+    {
+      "id": "n_5p_KGD4fJZs",
+      "name": "White House Cam",
+      "sub": "WASHINGTON, D.C. · EARTHTV",
+      "type": "yt",
+      "vid": "5p_KGD4fJZs",
+      "refresh": {
+        "channel": "@earthTV",
+        "match": "White House"
+      },
+      "tags": [
+        "landmarks"
+      ],
+      "state": "DC"
+    },
+    {
+      "id": "n_HfgIFGbdGJ0",
+      "name": "The World Live",
+      "sub": "GLOBAL TOUR · EARTHTV",
+      "type": "yt",
+      "vid": "HfgIFGbdGJ0",
+      "refresh": {
+        "channel": "@earthTV",
+        "match": "World Live"
+      },
+      "tags": [
+        "rolling",
+        "world"
+      ]
+    },
+    {
+      "id": "n_DHZUyS5aOJM",
+      "name": "Port of Machico",
+      "sub": "MADEIRA, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "DHZUyS5aOJM",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Port of Machico"
+      },
+      "tags": [
+        "world",
+        "harbors"
+      ]
+    },
+    {
+      "id": "n_Q_AnKD9JxyU",
+      "name": "Paul do Mar — O Precipício",
+      "sub": "MADEIRA, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "Q_AnKD9JxyU",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Paul do Mar"
+      },
+      "tags": [
+        "world",
+        "beaches"
+      ]
+    },
+    {
+      "id": "n_5nGs2b0qbjY",
+      "name": "Madalena do Mar",
+      "sub": "MADEIRA, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "5nGs2b0qbjY",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Madalena do Mar"
+      },
+      "tags": [
+        "world",
+        "beaches"
+      ]
+    },
+    {
+      "id": "n_sEo0ASp-U8A",
+      "name": "Forum Machico",
+      "sub": "MADEIRA, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "sEo0ASp-U8A",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Forum Machico"
+      },
+      "tags": [
+        "world"
+      ]
+    },
+    {
+      "id": "n_2m_6K6GETGI",
+      "name": "Funchal — CR7 Museum PTZ",
+      "sub": "MADEIRA, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "2m_6K6GETGI",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Funchal"
+      },
+      "tags": [
+        "world"
+      ]
+    },
+    {
+      "id": "n_hy2d7jv5KWA",
+      "name": "Cruz da Caldeira, Câmara de Lobos",
+      "sub": "MADEIRA, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "hy2d7jv5KWA",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Cruz da Caldeira, Câmara de Lobos"
+      },
+      "tags": [
+        "world"
+      ]
+    },
+    {
+      "id": "n__idE_q5kgtA",
+      "name": "Funchal City from São Roque",
+      "sub": "MADEIRA, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "_idE_q5kgtA",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Funchal City from São Roque"
+      },
+      "tags": [
+        "world",
+        "skylines"
+      ]
+    },
+    {
+      "id": "n_45wxTsNFPXw",
+      "name": "Porto — Ribeira & Vila Nova de Gaia",
+      "sub": "PORTO, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "45wxTsNFPXw",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Porto"
+      },
+      "tags": [
+        "world",
+        "landmarks"
+      ]
+    },
+    {
+      "id": "n_GoCh3Rw2fH4",
+      "name": "Madeira Island 13-Cam Tour",
+      "sub": "MADEIRA, PORTUGAL · WEBCAMTAXI",
+      "type": "yt",
+      "vid": "GoCh3Rw2fH4",
+      "refresh": {
+        "channel": "@webcamtaxi",
+        "match": "Madeira Island 13-Cam Tour"
+      },
+      "tags": [
+        "rolling",
+        "world"
+      ]
+    },
+    {
+      "id": "n__eS7q-G9Zqs",
+      "name": "Top Cams — USA · UK · Canada",
+      "sub": "MULTI-COUNTRY · SKYLINEWEBCAMS",
+      "type": "yt",
+      "vid": "_eS7q-G9Zqs",
+      "refresh": {
+        "channel": "@SkylineWebcams",
+        "match": "USA · UK · Canada"
+      },
+      "tags": [
+        "rolling",
+        "world"
+      ]
+    },
+    {
+      "id": "n_kUfuwa8mDrA",
+      "name": "200 Top Cams — Spain",
+      "sub": "SPAIN TOUR · SKYLINEWEBCAMS",
+      "type": "yt",
+      "vid": "kUfuwa8mDrA",
+      "refresh": {
+        "channel": "@SkylineWebcams",
+        "match": "Spain"
+      },
+      "tags": [
+        "rolling",
+        "world"
+      ]
+    },
+    {
+      "id": "n_-WkH_DfA8Q4",
+      "name": "Kongsberg Skimore — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "-WkH_DfA8Q4",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Kongsberg Skimore"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_TPBIHbObzC0",
+      "name": "Fyr til Fyr — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "TPBIHbObzC0",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Fyr til Fyr"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_6-V8dt887Fw",
+      "name": "Skimore — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "6-V8dt887Fw",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Skimore"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_7VXn9NpuSZk",
+      "name": "Oslo — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "7VXn9NpuSZk",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Oslo"
+      },
+      "tags": [
+        "nordic",
+        "world",
+        "skylines"
+      ]
+    },
+    {
+      "id": "n_wFJzXxHqKVU",
+      "name": "Solheisen Hemsedal — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "wFJzXxHqKVU",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Solheisen Hemsedal"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_QTMXSlNd5k4",
+      "name": "Oppdal Skisenter — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "QTMXSlNd5k4",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Oppdal Skisenter"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_3xohetm5I7Y",
+      "name": "Marka — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "3xohetm5I7Y",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Marka"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_BADzwd9b0RU",
+      "name": "Hafjell — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "BADzwd9b0RU",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Hafjell"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_jpCcV1-Sfnw",
+      "name": "Tromsø — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "jpCcV1-Sfnw",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Tromsø"
+      },
+      "tags": [
+        "nordic",
+        "world",
+        "skylines"
+      ]
+    },
+    {
+      "id": "n_ogH1z3eTi2Q",
+      "name": "Myrkdalen — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "ogH1z3eTi2Q",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Myrkdalen"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_6Usok3aloeU",
+      "name": "Sogndal — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "6Usok3aloeU",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Sogndal"
+      },
+      "tags": [
+        "nordic",
+        "world",
+        "skylines"
+      ]
+    },
+    {
+      "id": "n_8EKxnxlagvI",
+      "name": "Beitostølen — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "8EKxnxlagvI",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Beitostølen"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_dzvmJr3iOFg",
+      "name": "Skeikampen Live — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "dzvmJr3iOFg",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Skeikampen Live"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_z_5NCwXPSqM",
+      "name": "Norway — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "z_5NCwXPSqM",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Norway"
+      },
+      "tags": [
+        "nordic",
+        "world"
+      ]
+    },
+    {
+      "id": "n_6LiukKeHyBc",
+      "name": "Drammen Skimore — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "6LiukKeHyBc",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Drammen Skimore"
+      },
+      "tags": [
+        "nordic",
+        "world",
+        "skylines"
+      ]
+    },
+    {
+      "id": "n_uUirqfUMK94",
+      "name": "Oslo Skimore — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "uUirqfUMK94",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Oslo Skimore"
+      },
+      "tags": [
+        "nordic",
+        "world",
+        "skylines"
+      ]
+    },
+    {
+      "id": "n_5lWqAuytaG4",
+      "name": "Kvitfjell — Norway",
+      "sub": "NORWAY · NORWAY LIVE",
+      "type": "yt",
+      "vid": "5lWqAuytaG4",
+      "refresh": {
+        "channel": "@NorwayLive",
+        "match": "Kvitfjell"
+      },
+      "tags": [
+        "nordic",
+        "world"
       ]
     }
   ]
