@@ -111,6 +111,10 @@
     {
       "id": "europe",
       "name": "London & Paris"
+    },
+    {
+      "id": "southam",
+      "name": "South America"
     }
   ],
   "cameras": [
@@ -1323,7 +1327,8 @@
         "volcano",
         "world",
         "wildlife",
-        "golden"
+        "golden",
+        "southam"
       ],
       "lat": -2.0,
       "lon": -78.34
@@ -9385,6 +9390,127 @@
         "europe",
         "world",
         "landmarks",
+        "golden"
+      ]
+    },
+    {
+      "id": "sa_copa",
+      "name": "Copacabana — Posto 6",
+      "sub": "RIO DE JANEIRO, BRAZIL · LIVE",
+      "type": "yt",
+      "vid": "65lUphjTAro",
+      "lat": -22.988,
+      "lon": -43.189,
+      "tags": [
+        "southam",
+        "beaches",
+        "world",
+        "golden"
+      ]
+    },
+    {
+      "id": "sa_cristo",
+      "name": "Cristo Redentor",
+      "sub": "RIO DE JANEIRO, BRAZIL · LIVE",
+      "type": "yt",
+      "vid": "7UQzmxBhQ-4",
+      "lat": -22.952,
+      "lon": -43.211,
+      "tags": [
+        "southam",
+        "landmarks",
+        "world",
+        "golden"
+      ]
+    },
+    {
+      "id": "sa_arraial",
+      "name": "Arraial do Cabo",
+      "sub": "RIO DE JANEIRO, BRAZIL · LIVE",
+      "type": "yt",
+      "vid": "DQ0KboBmCHE",
+      "lat": -22.966,
+      "lon": -42.028,
+      "tags": [
+        "southam",
+        "beaches",
+        "world",
+        "golden"
+      ]
+    },
+    {
+      "id": "sa_camboriu",
+      "name": "Balneário Camboriú — Av. Atlântica",
+      "sub": "SANTA CATARINA, BRAZIL · LIVE",
+      "type": "yt",
+      "vid": "5Xl6pSgiy3A",
+      "lat": -26.992,
+      "lon": -48.635,
+      "tags": [
+        "southam",
+        "beaches",
+        "skylines",
+        "world",
+        "golden"
+      ]
+    },
+    {
+      "id": "sa_natal",
+      "name": "Praia de Ponta Negra",
+      "sub": "NATAL, BRAZIL · LIVE",
+      "type": "yt",
+      "vid": "TgtPkOKg5z8",
+      "lat": -5.883,
+      "lon": -35.178,
+      "tags": [
+        "southam",
+        "beaches",
+        "world",
+        "golden"
+      ]
+    },
+    {
+      "id": "sa_obelisco",
+      "name": "Obelisco de Buenos Aires",
+      "sub": "BUENOS AIRES, ARGENTINA · LIVE",
+      "type": "yt",
+      "vid": "6wqzIRzcAXs",
+      "lat": -34.604,
+      "lon": -58.382,
+      "tags": [
+        "southam",
+        "landmarks",
+        "world",
+        "golden"
+      ]
+    },
+    {
+      "id": "sa_baires",
+      "name": "Buenos Aires 24/7",
+      "sub": "BUENOS AIRES, ARGENTINA · LIVE",
+      "type": "yt",
+      "vid": "urwuIKd8eEo",
+      "lat": -34.608,
+      "lon": -58.37,
+      "tags": [
+        "southam",
+        "world",
+        "nightlife",
+        "golden"
+      ]
+    },
+    {
+      "id": "sa_necochea",
+      "name": "Necochea Beach",
+      "sub": "NECOCHEA, ARGENTINA · LIVE",
+      "type": "yt",
+      "vid": "FqgTC1hW2TE",
+      "lat": -38.578,
+      "lon": -58.739,
+      "tags": [
+        "southam",
+        "beaches",
+        "world",
         "golden"
       ]
     }
