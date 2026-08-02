@@ -502,6 +502,9 @@
     else if (cam.type === 'yt')  loadYouTube(cam);
     else                         playStream(cam, cam.url, 'live', false);
     store();
+
+    // A chase list is pointless sitting still — start following the sun on entry.
+    if (cat.chase && !rotateTimer) setRotate(true);
   }
 
   function step(delta) {
