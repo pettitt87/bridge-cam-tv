@@ -106,6 +106,8 @@
   .m-item.focus { color: #0b1220; background: #22c55e; font-weight: 600; }
   .m-item.focus .cnt { color: #0b1220; }
   .m-sub { color: #6b7280; font-size: 17px; letter-spacing: 1px; display: block; }
+  .suntag { font-size: 17px; font-weight: 700; letter-spacing: 1px; margin-left: 14px; }
+  .m-item.focus .suntag { color: #0b1220 !important; }
   .m-item.focus .m-sub { color: #14532d; }
   #menu-title {
     position: absolute; bottom: 24px; left: 0; right: 0; text-align: center;
@@ -152,7 +154,15 @@
 <div id="menu">
   <div id="menu-cats"></div>
   <div id="menu-cams"></div>
-  <div id="menu-title">&#9650;&#9660; NAVIGATE &nbsp;&middot;&nbsp; &#9664;&#9654; SWITCH PANE &nbsp;&middot;&nbsp; OK SELECT &nbsp;&middot;&nbsp; BACK CLOSE</div>
+  <div id="menu-title">
+    &#9650;&#9660; NAVIGATE &middot; &#9664;&#9654; SWITCH PANE &middot; OK SELECT &middot; BACK CLOSE
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <span style="color:#facc15">● GOLDEN</span> &middot;
+    <span style="color:#fb923c">● LOW SUN</span> &middot;
+    <span style="color:#38bdf8">● DAYLIGHT</span> &middot;
+    <span style="color:#a78bfa">● TWILIGHT</span> &middot;
+    <span style="color:#4b5563">● NIGHT</span>
+  </div>
 </div>
 
 <script src="hls.min.js"></script>
@@ -172,6 +182,7 @@
   };
   var SNAP_INTERVAL = 30000;
   var ROTATE_SECONDS = 60;
+  var GOLDEN_DEG = 6;      // sun within ±6° of the horizon ≈ golden hour
   var STORE_KEY = 'bctv';
 
   var video      = document.getElementById('video');
@@ -521,7 +532,19 @@
     var cat = CATS[activeCat];
     var now = new Date();
     if (cat.chase) {
-      var gp = goldenPick(cat.cams, cat.chase === 'rise', now);
+      var wantR = cat.chase === 'rise';
+      // Stay on the current camera for its whole golden window (±GOLDEN_DEG of
+      // the horizon, roughly half an hour either side) instead of hopping to
+      // whichever cam is momentarily a fraction closer.
+      var held = cur();
+      if (held && typeof held.lat === 'number') {
+        var ph = solarPos(held.lat, held.lon, now);
+        if (ph.rising === wantR && Math.abs(ph.elev) <= GOLDEN_DEG) {
+          refreshHudText();
+          return;
+        }
+      }
+      var gp = goldenPick(cat.cams, wantR, now);
       if (gp !== -1) {
         if (gp !== activeIdx) load(activeCat, gp);
         else refreshHudText();
@@ -691,6 +714,19 @@
   }
 
   /* ── Menu ── */
+  // Live daylight badge so you can see which cameras are worth opening.
+  function sunTag(c) {
+    if (typeof c.lat !== 'number') return '';
+    var p = solarPos(c.lat, c.lon, new Date());
+    var e = p.elev, arrow = p.rising ? '↑' : '↓', label, color;
+    if (e >= -6 && e <= 6)        { label = 'GOLDEN ' + arrow; color = '#facc15'; }
+    else if (e > 6 && e <= 15)    { label = 'LOW SUN ' + arrow; color = '#fb923c'; }
+    else if (e > 15)              { label = 'DAYLIGHT';        color = '#38bdf8'; }
+    else if (e > -12)             { label = 'TWILIGHT ' + arrow; color = '#a78bfa'; }
+    else                          { label = 'NIGHT';           color = '#4b5563'; }
+    return '<span class="suntag" style="color:' + color + '">● ' + label + '</span>';
+  }
+
   function renderMenu() {
     var i, c, div;
     catsEl.innerHTML = '';
@@ -698,20 +734,40 @@
       div = document.createElement('div');
       div.className = 'm-item' +
         (i === menuCat ? (menuPane === 0 ? ' focus' : ' sel') : '');
+      var extra = '';
+      if (CATS[i].chase) {
+        var nowC = new Date(), wr = CATS[i].chase === 'rise', hot = 0;
+        for (var q = 0; q < CATS[i].cams.length; q++) {
+          var pq = solarPos(CATS[i].cams[q].lat, CATS[i].cams[q].lon, nowC);
+          if (pq.rising === wr && Math.abs(pq.elev) <= 6) hot++;
+        }
+        extra = '<span class="suntag" style="color:#facc15">● ' + hot + ' NOW</span>';
+      }
       div.innerHTML = CATS[i].name +
-        '<span class="cnt">' + CATS[i].cams.length + '</span>';
+        '<span class="cnt">' + CATS[i].cams.length + '</span>' + extra;
       div.onclick = (function (idx) {
         return function () { menuCat = idx; menuPane = 1; menuIdx = 0; renderMenu(); };
       })(i);
       catsEl.appendChild(div);
     }
     camsEl.innerHTML = '';
-    var cams = CATS[menuCat].cams;
+    var mcat = CATS[menuCat];
+    // In a chase list, put the cameras closest to golden hour first.
+    if (mcat.chase) {
+      var nowM = new Date(), wantR = mcat.chase === 'rise';
+      mcat.cams = mcat.cams.slice().sort(function (a, b) {
+        var pa = solarPos(a.lat, a.lon, nowM), pb = solarPos(b.lat, b.lon, nowM);
+        var sa = Math.abs(pa.elev) + (pa.rising === wantR ? 0 : 500);
+        var sb = Math.abs(pb.elev) + (pb.rising === wantR ? 0 : 500);
+        return sa - sb;
+      });
+    }
+    var cams = mcat.cams;
     for (i = 0; i < cams.length; i++) {
       c = cams[i];
       div = document.createElement('div');
       div.className = 'm-item' + (menuPane === 1 && i === menuIdx ? ' focus' : '');
-      div.innerHTML = (favs.indexOf(c.id) !== -1 ? '★ ' : '') + c.name +
+      div.innerHTML = (favs.indexOf(c.id) !== -1 ? '★ ' : '') + c.name + sunTag(c) +
         '<span class="m-sub">' + (c.sub || '') + '</span>';
       div.onclick = (function (catI, camI) {
         return function () { closeMenu(); load(catI, camI); };
