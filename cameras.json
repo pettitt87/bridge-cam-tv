@@ -9514,5 +9514,9 @@
         "golden"
       ]
     }
-  ]
+  ],
+  "dashboard": {
+    "url": "http://192.168.8.177:8787/",
+    "name": "Home Dashboard"
+  }
 }

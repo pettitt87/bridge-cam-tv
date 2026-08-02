@@ -1236,6 +1236,7 @@
                               (rotateTimer ? 'ON' : 'OFF'), on: !!rotateTimer },
       { id: 'grid',   label: '▦ Grid View (4 cams)' },
       { id: 'map',    label: '◍ World Map & Sun' },
+      { id: 'dash',   label: '▤ ' + (dashCfg ? dashCfg.name : 'Home Dashboard'), dim: !dashCfg },
       { id: 'proj',   label: '◍ Projection: ' + PROJ_NAMES[PROJECTIONS[projIdx]] },
       { id: 'fav',    label: (isFav ? '★ Remove Favourite' : '☆ Add to Favourites') },
       { id: 'sound',  label: '♪ Sound: ' + (soundOn ? 'ON' : 'OFF'), on: soundOn },
@@ -1250,6 +1251,7 @@
     else if (id === 'fav')    { toggleFav(); renderMenu(); }
     else if (id === 'grid')   { closeMenu(); openGrid(); }
     else if (id === 'map')    { closeMenu(); openMap(); }
+    else if (id === 'dash')   { closeMenu(); openDashboard(); }
     else if (id === 'proj')   { cycleProjection(); renderMenu(); }
     else if (id === 'yt')     { closeMenu(); openInYouTubeApp(); }
   }
@@ -1427,6 +1429,25 @@
     }
   }
 
+  // The dashboard lives on the home computer, so it may simply be off.
+  function openDashboard() {
+    if (!dashCfg) { showHud(true); return; }
+    stopStreams();
+    overlay.classList.remove('hidden');
+    overlayTxt.textContent = 'OPENING DASHBOARD';
+    overlaySub.textContent = dashCfg.url;
+    var probe = new XMLHttpRequest();
+    probe.open('GET', dashCfg.url + 'health?t=' + Date.now(), true);
+    probe.timeout = 6000;
+    probe.onload = function () { window.location.href = dashCfg.url; };
+    probe.onerror = probe.ontimeout = function () {
+      overlayTxt.textContent = 'DASHBOARD OFFLINE';
+      overlaySub.textContent = 'The home computer is not answering at ' + dashCfg.url;
+      setTimeout(function () { load(activeCat, activeIdx); }, 5000);
+    };
+    probe.send();
+  }
+
   /* ── Keys ── */
   document.addEventListener('keydown', function (e) {
     var code = e.keyCode;
@@ -1472,6 +1493,7 @@
     try {
       var data = JSON.parse(xhr.responseText);
       allCams = data.cameras;
+      dashCfg = data.dashboard || null;
       catDefs = data.categories;
       var saved = restore();
       if (saved.favs && saved.favs.length) favs = saved.favs;
