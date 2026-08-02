@@ -924,9 +924,13 @@
       lo = lon * rad - lon0;
       s0 = Math.sin(lat0); c0 = Math.cos(lat0);
       sl = Math.sin(la);   cl = Math.cos(la);   cd = Math.cos(lo);
-      return { x: cl * Math.sin(lo),
-               y: -(c0 * sl - s0 * cl * cd),
-               vis: (s0 * sl + c0 * cl * cd) >= 0 };   // near hemisphere only
+      var gx = cl * Math.sin(lo), gy = -(c0 * sl - s0 * cl * cd);
+      var near = (s0 * sl + c0 * cl * cd) >= 0;
+      if (!near) {                                    // clamp onto the limb
+        var rr = Math.sqrt(gx * gx + gy * gy) || 1;
+        gx /= rr; gy /= rr;
+      }
+      return { x: gx, y: gy, vis: near };
     }
     return { x: lon / 90, y: -lat / 90, vis: true };
   }
@@ -987,22 +991,32 @@
       ctx.strokeStyle = 'rgba(148,197,255,0.35)';
       ctx.lineWidth = 1;
       for (var li = 0; li < WORLD_LAND.length; li++) {
-        var ring = WORLD_LAND[li], open = false, prev = null, plon = null;
-        for (var pi = 0; pi < ring.length; pi += 2) {
-          var lo = ring[pi], la = ring[pi + 1];
-          var q = P(la, lo);
-          var jump = prev && (Math.abs(lo - plon) > 180 ||
-                     Math.abs(q.x - prev.x) > W * 0.5);
+        var ring = WORLD_LAND[li];
+        var segs = [], curSeg = null, prev = null, plon = null, pi, lo, la, q, jump;
+        for (pi = 0; pi < ring.length; pi += 2) {
+          lo = ring[pi]; la = ring[pi + 1];
+          q = P(la, lo);
+          jump = prev && (Math.abs(lo - plon) > 180 || Math.abs(q.x - prev.x) > W * 0.5);
           if (!q.vis || jump) {
-            if (open) { ctx.closePath(); ctx.fill(); ctx.stroke(); open = false; }
+            if (curSeg && curSeg.length > 1) segs.push(curSeg);
+            curSeg = null;
             prev = q.vis ? q : null; plon = lo;
-            continue;
+            if (!q.vis) continue;
           }
-          if (!open) { ctx.beginPath(); ctx.moveTo(q.x, q.y); open = true; }
-          else ctx.lineTo(q.x, q.y);
+          if (!curSeg) curSeg = [];
+          curSeg.push(q);
           prev = q; plon = lo;
         }
-        if (open) { ctx.closePath(); ctx.fill(); ctx.stroke(); }
+        if (curSeg && curSeg.length > 1) segs.push(curSeg);
+        var whole = segs.length === 1 && segs[0].length === ring.length / 2;
+        for (var si = 0; si < segs.length; si++) {
+          var seg = segs[si];
+          ctx.beginPath();
+          ctx.moveTo(seg[0].x, seg[0].y);
+          for (var sj = 1; sj < seg.length; sj++) ctx.lineTo(seg[sj].x, seg[sj].y);
+          if (whole) { ctx.closePath(); ctx.fill(); }
+          ctx.stroke();
+        }
       }
     }
 
@@ -1023,7 +1037,7 @@
       for (ix = 0; ix < cols; ix++) {
         var a = vx[iy * (cols + 1) + ix],       b = vx[iy * (cols + 1) + ix + 1];
         var c = vx[(iy + 1) * (cols + 1) + ix + 1], dd = vx[(iy + 1) * (cols + 1) + ix];
-        if (!a.vis || !b.vis || !c.vis || !dd.vis) continue;
+        if (!a.vis && !b.vis && !c.vis && !dd.vis) continue;   // wholly far side
         if (Math.abs(b.x - a.x) > W * 0.5) continue;      // wrapped cell
         var v = sp + cp * Math.cos((-180 + (ix + 0.5) * 360 / cols - f.lam0) * rad);
         if (v > S6)        ctx.fillStyle = 'rgba(56,189,248,0.13)';
