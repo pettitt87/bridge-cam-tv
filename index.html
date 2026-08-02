@@ -1429,23 +1429,17 @@
     }
   }
 
-  // The dashboard lives on the home computer, so it may simply be off.
+  // The dashboard lives on the home computer. We cannot pre-flight it with a
+  // request: this page is served over HTTPS and the dashboard is plain HTTP on
+  // the LAN, so any probe is blocked as mixed content. Top-level navigation is
+  // allowed, so just go — the dashboard itself reports if something is wrong.
   function openDashboard() {
     if (!dashCfg) { showHud(true); return; }
     stopStreams();
     overlay.classList.remove('hidden');
     overlayTxt.textContent = 'OPENING DASHBOARD';
     overlaySub.textContent = dashCfg.url;
-    var probe = new XMLHttpRequest();
-    probe.open('GET', dashCfg.url + 'health?t=' + Date.now(), true);
-    probe.timeout = 6000;
-    probe.onload = function () { window.location.href = dashCfg.url; };
-    probe.onerror = probe.ontimeout = function () {
-      overlayTxt.textContent = 'DASHBOARD OFFLINE';
-      overlaySub.textContent = 'The home computer is not answering at ' + dashCfg.url;
-      setTimeout(function () { load(activeCat, activeIdx); }, 5000);
-    };
-    probe.send();
+    setTimeout(function () { window.location.href = dashCfg.url; }, 400);
   }
 
   /* ── Keys ── */
