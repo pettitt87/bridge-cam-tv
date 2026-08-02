@@ -240,14 +240,45 @@
     return { elev: 90 - Math.acos(cz) / rad, rising: ha < 0 };
   }
 
-  // Pick the camera closest to the horizon in the requested phase.
+  // Minutes until the sun next crosses the horizon in the wanted direction.
+  // null when it never does within 24h (polar day / polar night).
+  function nextEvent(lat, lon, wantRising, from) {
+    var step = 10, prev = solarPos(lat, lon, from), m, t, p, lo, hi, k, mid, pm, above;
+    for (m = step; m <= 1440; m += step) {
+      t = new Date(from.getTime() + m * 60000);
+      p = solarPos(lat, lon, t);
+      if (wantRising ? (prev.elev < 0 && p.elev >= 0) : (prev.elev > 0 && p.elev <= 0)) {
+        lo = m - step; hi = m;
+        for (k = 0; k < 7; k++) {
+          mid = (lo + hi) / 2;
+          pm = solarPos(lat, lon, new Date(from.getTime() + mid * 60000));
+          above = pm.elev >= 0;
+          if (wantRising ? above : !above) hi = mid; else lo = mid;
+        }
+        return (lo + hi) / 2;
+      }
+      prev = p;
+    }
+    return null;
+  }
+
+  // Rank for a chase: events in progress first, then soonest upcoming.
+  // Scored forward in time so a sunrise that already finished sorts to the back.
+  function chaseScore(cam, wantRising, now) {
+    if (typeof cam.lat !== 'number') return 1e9;
+    var p = solarPos(cam.lat, cam.lon, now);
+    if (p.rising === wantRising && Math.abs(p.elev) <= GOLDEN_DEG) {
+      return -GOLDEN_DEG + Math.abs(p.elev);   // in progress, best light first
+    }
+    var mins = nextEvent(cam.lat, cam.lon, wantRising, now);
+    return mins === null ? 1e8 : mins;
+  }
+
   function goldenPick(cams, wantRising, now) {
-    var best = -1, bestScore = 1e9, i, p, score;
+    var best = -1, bestScore = 1e9, i, s;
     for (i = 0; i < cams.length; i++) {
-      if (typeof cams[i].lat !== 'number') continue;
-      p = solarPos(cams[i].lat, cams[i].lon, now);
-      score = Math.abs(p.elev) + (p.rising === wantRising ? 0 : 500);
-      if (score < bestScore) { bestScore = score; best = i; }
+      s = chaseScore(cams[i], wantRising, now);
+      if (s < bestScore) { bestScore = s; best = i; }
     }
     return best;
   }
@@ -718,6 +749,28 @@
 
   /* ── Menu ── */
   // Live daylight badge so you can see which cameras are worth opening.
+  function hm(mins) {
+    var m = Math.round(mins);
+    return m >= 60 ? (Math.floor(m / 60) + 'h' + ('0' + (m % 60)).slice(-2)) : (m + 'm');
+  }
+
+  // Countdown badge used inside the chase lists.
+  function chaseTag(c, wantRising) {
+    if (typeof c.lat !== 'number') return '';
+    var word = wantRising ? 'SUNRISE' : 'SUNSET';
+    var p = solarPos(c.lat, c.lon, new Date());
+    if (p.rising === wantRising && Math.abs(p.elev) <= GOLDEN_DEG) {
+      return '<span class="suntag" style="color:#facc15">● ' + word + ' NOW</span>';
+    }
+    var mins = nextEvent(c.lat, c.lon, wantRising, new Date());
+    if (mins === null) {
+      return '<span class="suntag" style="color:#a78bfa">● ' +
+             (p.elev > 0 ? 'MIDNIGHT SUN' : 'POLAR NIGHT') + '</span>';
+    }
+    var col = mins <= 90 ? '#fb923c' : '#4b5563';
+    return '<span class="suntag" style="color:' + col + '">● ' + word + ' IN ' + hm(mins) + '</span>';
+  }
+
   function sunTag(c) {
     if (typeof c.lat !== 'number') return '';
     var p = solarPos(c.lat, c.lon, new Date());
@@ -759,10 +812,7 @@
     if (mcat.chase) {
       var nowM = new Date(), wantR = mcat.chase === 'rise';
       mcat.cams = mcat.cams.slice().sort(function (a, b) {
-        var pa = solarPos(a.lat, a.lon, nowM), pb = solarPos(b.lat, b.lon, nowM);
-        var sa = Math.abs(pa.elev) + (pa.rising === wantR ? 0 : 500);
-        var sb = Math.abs(pb.elev) + (pb.rising === wantR ? 0 : 500);
-        return sa - sb;
+        return chaseScore(a, wantR, nowM) - chaseScore(b, wantR, nowM);
       });
     }
     var cams = mcat.cams;
@@ -770,7 +820,8 @@
       c = cams[i];
       div = document.createElement('div');
       div.className = 'm-item' + (menuPane === 1 && i === menuIdx ? ' focus' : '');
-      div.innerHTML = (favs.indexOf(c.id) !== -1 ? '★ ' : '') + c.name + sunTag(c) +
+      div.innerHTML = (favs.indexOf(c.id) !== -1 ? '★ ' : '') + c.name +
+        (mcat.chase ? chaseTag(c, mcat.chase === 'rise') : sunTag(c)) +
         '<span class="m-sub">' + (c.sub || '') + '</span>';
       div.onclick = (function (catI, camI) {
         return function () { closeMenu(); load(catI, camI); };
