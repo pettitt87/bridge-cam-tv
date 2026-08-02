@@ -264,8 +264,13 @@
 
   // Rank for a chase: events in progress first, then soonest upcoming.
   // Scored forward in time so a sunrise that already finished sorts to the back.
-  function chaseScore(cam, wantRising, now) {
+  // mode: 'rise' | 'set' | 'both'
+  function chaseScore(cam, mode, now) {
     if (typeof cam.lat !== 'number') return 1e9;
+    if (mode === 'both') {
+      return Math.min(chaseScore(cam, 'rise', now), chaseScore(cam, 'set', now));
+    }
+    var wantRising = mode === 'rise';
     var p = solarPos(cam.lat, cam.lon, now);
     if (p.rising === wantRising && Math.abs(p.elev) <= GOLDEN_DEG) {
       return -GOLDEN_DEG + Math.abs(p.elev);   // in progress, best light first
@@ -274,10 +279,18 @@
     return mins === null ? 1e8 : mins;
   }
 
-  function goldenPick(cams, wantRising, now) {
+  // Is this camera mid-event for the given mode?
+  function inGolden(cam, mode, now) {
+    if (typeof cam.lat !== 'number') return false;
+    var p = solarPos(cam.lat, cam.lon, now);
+    if (Math.abs(p.elev) > GOLDEN_DEG) return false;
+    return mode === 'both' || (p.rising === (mode === 'rise'));
+  }
+
+  function goldenPick(cams, mode, now) {
     var best = -1, bestScore = 1e9, i, s;
     for (i = 0; i < cams.length; i++) {
-      s = chaseScore(cams[i], wantRising, now);
+      s = chaseScore(cams[i], mode, now);
       if (s < bestScore) { bestScore = s; best = i; }
     }
     return best;
@@ -346,6 +359,7 @@
       geo = geo.slice().sort(function (a, b) { return b.lon - a.lon; });
       CATS.push({ id: 'sun_rise', name: '☀ Sunrise Chase', cams: geo, chase: 'rise' });
       CATS.push({ id: 'sun_set',  name: '☾ Sunset Chase',  cams: geo, chase: 'set'  });
+      CATS.push({ id: 'sun_both', name: '☀☾ Golden Hour Chase', cams: geo, chase: 'both' });
     }
     CATS.push({ id: 'all', name: 'All Cameras', cams: allCams });
   }
@@ -566,19 +580,15 @@
     var cat = CATS[activeCat];
     var now = new Date();
     if (cat.chase) {
-      var wantR = cat.chase === 'rise';
       // Stay on the current camera for its whole golden window (±GOLDEN_DEG of
       // the horizon, roughly half an hour either side) instead of hopping to
       // whichever cam is momentarily a fraction closer.
       var held = cur();
-      if (held && typeof held.lat === 'number') {
-        var ph = solarPos(held.lat, held.lon, now);
-        if (ph.rising === wantR && Math.abs(ph.elev) <= GOLDEN_DEG) {
-          refreshHudText();
-          return;
-        }
+      if (held && inGolden(held, cat.chase, now)) {
+        refreshHudText();
+        return;
       }
-      var gp = goldenPick(cat.cams, wantR, now);
+      var gp = goldenPick(cat.cams, cat.chase, now);
       if (gp !== -1) {
         if (gp !== activeIdx) load(activeCat, gp);
         else refreshHudText();
@@ -603,7 +613,8 @@
       // Golden-hour chases re-evaluate often; the sun moves ~0.25°/min.
       rotateTimer = setInterval(rotateTick, (chase ? 120 : ROTATE_SECONDS) * 1000);
       rotBadge.innerHTML = chase
-        ? (chase === 'rise' ? '☀ SUNRISE CHASE' : '☾ SUNSET CHASE')
+        ? (chase === 'rise' ? '☀ SUNRISE CHASE'
+           : chase === 'set' ? '☾ SUNSET CHASE' : '☀☾ GOLDEN HOUR CHASE')
         : (nye ? '&#127878; MIDNIGHT CHASE' : '&#8635; AUTO-ROTATE');
       rotBadge.style.display = 'inline-block';
       if (chase || nye) rotateTick();
@@ -755,12 +766,23 @@
   }
 
   // Countdown badge used inside the chase lists.
-  function chaseTag(c, wantRising) {
+  function chaseTag(c, mode) {
     if (typeof c.lat !== 'number') return '';
+    var now = new Date();
+    var p = solarPos(c.lat, c.lon, now);
+    var wantRising = mode === 'both' ? p.rising : (mode === 'rise');
     var word = wantRising ? 'SUNRISE' : 'SUNSET';
-    var p = solarPos(c.lat, c.lon, new Date());
-    if (p.rising === wantRising && Math.abs(p.elev) <= GOLDEN_DEG) {
+    if (inGolden(c, mode, now)) {
       return '<span class="suntag" style="color:#facc15">● ' + word + ' NOW</span>';
+    }
+    if (mode === 'both') {
+      var mr = nextEvent(c.lat, c.lon, true, now), ms = nextEvent(c.lat, c.lon, false, now);
+      if (mr === null && ms === null) {
+        return '<span class="suntag" style="color:#a78bfa">● ' +
+               (p.elev > 0 ? 'MIDNIGHT SUN' : 'POLAR NIGHT') + '</span>';
+      }
+      wantRising = (ms === null) || (mr !== null && mr <= ms);
+      word = wantRising ? 'SUNRISE' : 'SUNSET';
     }
     var mins = nextEvent(c.lat, c.lon, wantRising, new Date());
     if (mins === null) {
@@ -792,10 +814,9 @@
         (i === menuCat ? (menuPane === 0 ? ' focus' : ' sel') : '');
       var extra = '';
       if (CATS[i].chase) {
-        var nowC = new Date(), wr = CATS[i].chase === 'rise', hot = 0;
+        var nowC = new Date(), hot = 0;
         for (var q = 0; q < CATS[i].cams.length; q++) {
-          var pq = solarPos(CATS[i].cams[q].lat, CATS[i].cams[q].lon, nowC);
-          if (pq.rising === wr && Math.abs(pq.elev) <= 6) hot++;
+          if (inGolden(CATS[i].cams[q], CATS[i].chase, nowC)) hot++;
         }
         extra = '<span class="suntag" style="color:#facc15">● ' + hot + ' NOW</span>';
       }
@@ -810,9 +831,9 @@
     var mcat = CATS[menuCat];
     // In a chase list, put the cameras closest to golden hour first.
     if (mcat.chase) {
-      var nowM = new Date(), wantR = mcat.chase === 'rise';
+      var nowM = new Date();
       mcat.cams = mcat.cams.slice().sort(function (a, b) {
-        return chaseScore(a, wantR, nowM) - chaseScore(b, wantR, nowM);
+        return chaseScore(a, mcat.chase, nowM) - chaseScore(b, mcat.chase, nowM);
       });
     }
     var cams = mcat.cams;
@@ -821,7 +842,7 @@
       div = document.createElement('div');
       div.className = 'm-item' + (menuPane === 1 && i === menuIdx ? ' focus' : '');
       div.innerHTML = (favs.indexOf(c.id) !== -1 ? '★ ' : '') + c.name +
-        (mcat.chase ? chaseTag(c, mcat.chase === 'rise') : sunTag(c)) +
+        (mcat.chase ? chaseTag(c, mcat.chase) : sunTag(c)) +
         '<span class="m-sub">' + (c.sub || '') + '</span>';
       div.onclick = (function (catI, camI) {
         return function () { closeMenu(); load(catI, camI); };
