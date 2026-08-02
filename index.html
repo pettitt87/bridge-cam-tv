@@ -81,6 +81,23 @@
     font-size: 19px; color: #fff; background: rgba(0,0,0,0.55); letter-spacing: 1px;
   }
 
+  /* ── Map ── */
+  #mapview {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: #050a14; z-index: 18; display: none;
+  }
+  #mapview.open { display: block; }
+  #mapcanvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  #map-info {
+    position: absolute; top: 34px; left: 50px; right: 50px; color: #fff;
+    font-size: 26px; letter-spacing: 1px; text-shadow: 0 2px 8px rgba(0,0,0,.9);
+  }
+  #map-info .sub { display: block; color: #9ca3af; font-size: 20px; margin-top: 6px; }
+  #map-help {
+    position: absolute; bottom: 26px; left: 0; right: 0; text-align: center;
+    color: #6b7280; font-size: 19px; letter-spacing: 2px;
+  }
+
   /* ── Menu ── */
   #menu {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -160,6 +177,12 @@
 
 <div id="grid"></div>
 
+<div id="mapview">
+  <canvas id="mapcanvas"></canvas>
+  <div id="map-info"></div>
+  <div id="map-help">&#9664;&#9654; SELECT CAMERA &middot; OK WATCH &middot; BACK CLOSE</div>
+</div>
+
 <div id="menu">
   <div id="menu-ctrls"></div>
   <div id="menu-cats"></div>
@@ -212,6 +235,9 @@
   var gridEl     = document.getElementById('grid');
   var menuEl     = document.getElementById('menu');
   var ctrlsEl    = document.getElementById('menu-ctrls');
+  mapEl          = document.getElementById('mapview');
+  mapCanvas      = document.getElementById('mapcanvas');
+  mapInfo        = document.getElementById('map-info');
   var catsEl     = document.getElementById('menu-cats');
   var camsEl     = document.getElementById('menu-cams');
 
@@ -769,6 +795,141 @@
     }
   }
 
+  /* ── World map with day/night terminator ── */
+  var mapEl = null, mapCanvas = null, mapInfo = null;
+  var mapOpen = false, mapSel = 0, mapTimer = null, mapCams = [];
+
+  function drawMap() {
+    var cv = mapCanvas, ctx = cv.getContext('2d');
+    var W = cv.width = cv.clientWidth, H = cv.height = cv.clientHeight;
+    var now = new Date();
+    var X = function (lon) { return (lon + 180) / 360 * W; };
+    var Y = function (lat) { return (90 - lat) / 180 * H; };
+
+    ctx.fillStyle = '#050a14';
+    ctx.fillRect(0, 0, W, H);
+
+    // Day/night shading: sample the sun elevation on a coarse grid.
+    var cols = 180, rows = 90, cw = W / cols, ch = H / rows, ix, iy, lat, lon, e;
+    for (ix = 0; ix < cols; ix++) {
+      lon = -180 + (ix + 0.5) * 360 / cols;
+      for (iy = 0; iy < rows; iy++) {
+        lat = 90 - (iy + 0.5) * 180 / rows;
+        e = solarPos(lat, lon, now).elev;
+        if (e > 6)        ctx.fillStyle = 'rgba(56,189,248,0.13)';
+        else if (e > -6)  ctx.fillStyle = 'rgba(250,204,21,0.34)';   // golden band
+        else if (e > -18) ctx.fillStyle = 'rgba(139,92,246,0.13)';
+        else              ctx.fillStyle = 'rgba(2,6,18,0.55)';
+        ctx.fillRect(ix * cw, iy * ch, cw + 1, ch + 1);
+      }
+    }
+
+    // Graticule
+    ctx.strokeStyle = 'rgba(148,163,184,0.14)'; ctx.lineWidth = 1;
+    for (lon = -180; lon <= 180; lon += 30) {
+      ctx.beginPath(); ctx.moveTo(X(lon), 0); ctx.lineTo(X(lon), H); ctx.stroke();
+    }
+    for (lat = -60; lat <= 60; lat += 30) {
+      ctx.beginPath(); ctx.moveTo(0, Y(lat)); ctx.lineTo(W, Y(lat)); ctx.stroke();
+    }
+    ctx.strokeStyle = 'rgba(148,163,184,0.30)';
+    ctx.beginPath(); ctx.moveTo(0, Y(0)); ctx.lineTo(W, Y(0)); ctx.stroke();
+
+    // Cameras
+    var i, c, p, r;
+    for (i = 0; i < mapCams.length; i++) {
+      c = mapCams[i];
+      p = solarPos(c.lat, c.lon, now);
+      var sel = i === mapSel;
+      ctx.beginPath();
+      r = sel ? 11 : 5;
+      ctx.arc(X(c.lon), Y(c.lat), r, 0, Math.PI * 2);
+      if (Math.abs(p.elev) <= GOLDEN_DEG)      ctx.fillStyle = '#facc15';
+      else if (p.elev > GOLDEN_DEG)            ctx.fillStyle = '#38bdf8';
+      else                                     ctx.fillStyle = '#64748b';
+      ctx.fill();
+      if (sel) {
+        ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 4; ctx.stroke();
+        ctx.beginPath(); ctx.arc(X(c.lon), Y(c.lat), 20, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(34,197,94,0.6)'; ctx.lineWidth = 2; ctx.stroke();
+      }
+    }
+
+    // Subsolar point — where the sun is directly overhead
+    var best = null, bl, bo;
+    for (lon = -180; lon < 180; lon += 2) {
+      for (lat = -60; lat <= 60; lat += 2) {
+        e = solarPos(lat, lon, now).elev;
+        if (best === null || e > best) { best = e; bl = lat; bo = lon; }
+      }
+    }
+    ctx.beginPath(); ctx.arc(X(bo), Y(bl), 9, 0, Math.PI * 2);
+    ctx.fillStyle = '#fde047'; ctx.fill();
+    ctx.strokeStyle = 'rgba(253,224,71,0.45)'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.arc(X(bo), Y(bl), 22, 0, Math.PI * 2); ctx.stroke();
+
+    var c2 = mapCams[mapSel];
+    if (c2) {
+      var p2 = solarPos(c2.lat, c2.lon, now);
+      var golden = Math.abs(p2.elev) <= GOLDEN_DEG;
+      mapInfo.innerHTML = c2.name +
+        '<span class="sub">' + (c2.sub || '') + ' &nbsp;·&nbsp; SUN ' +
+        (p2.elev >= 0 ? '+' : '') + p2.elev.toFixed(1) + '° ' + (p2.rising ? '↑' : '↓') +
+        (golden ? ' &nbsp;<b style="color:#facc15">GOLDEN NOW</b>' : '') + '</span>';
+    }
+  }
+
+  function openMap() {
+    mapOpen = true;
+    mapCams = [];
+    for (var i = 0; i < allCams.length; i++) {
+      if (typeof allCams[i].lat === 'number') mapCams.push(allCams[i]);
+    }
+    mapCams.sort(function (a, b) { return a.lon - b.lon; });
+    var c = cur(), k;
+    mapSel = 0;
+    for (k = 0; k < mapCams.length; k++) if (mapCams[k] === c) mapSel = k;
+    stopStreams();
+    hud.classList.add('hidden'); help.classList.add('hidden');
+    overlay.classList.add('hidden');
+    video.style.display = snap.style.display = ytWrap.style.display = 'none';
+    mapEl.classList.add('open');
+    drawMap();
+    mapTimer = setInterval(drawMap, 60000);
+  }
+
+  function closeMap(playCam) {
+    if (mapTimer) { clearInterval(mapTimer); mapTimer = null; }
+    mapEl.classList.remove('open');
+    mapOpen = false;
+    if (playCam) {
+      var cat = CATS[activeCat], idx = -1, i;
+      for (i = 0; i < cat.cams.length; i++) if (cat.cams[i] === playCam) idx = i;
+      if (idx === -1) {
+        var all = findCat('all');
+        for (i = 0; i < CATS[all].cams.length; i++) {
+          if (CATS[all].cams[i] === playCam) { activeCat = all; idx = i; }
+        }
+      }
+      load(activeCat, idx === -1 ? activeIdx : idx);
+    } else {
+      load(activeCat, activeIdx);
+    }
+  }
+
+  function mapKey(code) {
+    if (code === 37)      { mapSel = (mapSel - 1 + mapCams.length) % mapCams.length; drawMap(); }
+    else if (code === 39) { mapSel = (mapSel + 1) % mapCams.length; drawMap(); }
+    else if (code === 38 || code === 40) {
+      // jump a quarter of the way around the globe
+      var step = Math.max(1, Math.round(mapCams.length / 8));
+      mapSel = (mapSel + (code === 38 ? -step : step) + mapCams.length) % mapCams.length;
+      drawMap();
+    }
+    else if (code === 13)  closeMap(mapCams[mapSel]);
+    else if (code === 461) closeMap(null);
+  }
+
   /* ── On-screen controls (remotes without colour/transport keys) ── */
   function ctrlItems() {
     var c = cur();
@@ -778,6 +939,7 @@
       { id: 'rotate', label: (chase ? '☀ Sun Chase: ' : '⟳ Auto-Rotate: ') +
                               (rotateTimer ? 'ON' : 'OFF'), on: !!rotateTimer },
       { id: 'grid',   label: '▦ Grid View (4 cams)' },
+      { id: 'map',    label: '◍ World Map & Sun' },
       { id: 'fav',    label: (isFav ? '★ Remove Favourite' : '☆ Add to Favourites') },
       { id: 'sound',  label: '♪ Sound: ' + (soundOn ? 'ON' : 'OFF'), on: soundOn },
       { id: 'yt',     label: '▶ Open in YouTube app',
@@ -790,6 +952,7 @@
     else if (id === 'sound')  { soundOn = !soundOn; applySound(); store(); renderMenu(); }
     else if (id === 'fav')    { toggleFav(); renderMenu(); }
     else if (id === 'grid')   { closeMenu(); openGrid(); }
+    else if (id === 'map')    { closeMenu(); openMap(); }
     else if (id === 'yt')     { closeMenu(); openInYouTubeApp(); }
   }
 
@@ -976,6 +1139,7 @@
     }
     if (menuOpen) { menuKey(code); return; }
     if (gridOpen) { gridKey(code); return; }
+    if (mapOpen)  { mapKey(code); return; }
     switch (code) {
       case 13:  openMenu(); break;                       // OK
       case 37: case 34: step(-1); break;                 // left / ch-down
@@ -984,6 +1148,7 @@
       case 415: case 19: case 80:                        // play / pause / P
         setRotate(!rotateTimer); break;
       case 403: case 82: openGrid(); break;              // red / R: grid
+      case 77: openMap(); break;                         // M: world map
       case 404: case 71: openInYouTubeApp(); break;      // green / G: native YT app
       case 405: case 70: toggleFav(); break;             // yellow / F: favorite
       case 406: case 83:                                 // blue / S: sound
