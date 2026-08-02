@@ -228,6 +228,7 @@
 </div>
 
 <script src="hls.min.js"></script>
+<script src="world.js"></script>
 <script>
 (function () {
   var DATA_URL = 'cameras.json';
@@ -890,6 +891,26 @@
 
     ctx.fillStyle = '#050a14';
     ctx.fillRect(0, 0, W, H);
+
+    // Landmasses, so the terminator has something recognisable to fall across.
+    if (window.WORLD_LAND) {
+      ctx.fillStyle = '#16304a';
+      ctx.strokeStyle = 'rgba(148,197,255,0.35)';
+      ctx.lineWidth = 1;
+      for (var li = 0; li < WORLD_LAND.length; li++) {
+        var ring = WORLD_LAND[li], started = false, px = null;
+        ctx.beginPath();
+        for (var pi = 0; pi < ring.length; pi += 2) {
+          var lo = ring[pi], la = ring[pi + 1];
+          // Break the path where a ring wraps the antimeridian.
+          if (px !== null && Math.abs(lo - px) > 180) { ctx.closePath(); ctx.fill(); ctx.stroke(); started = false; }
+          if (!started) { ctx.beginPath(); ctx.moveTo(X(lo), Y(la)); started = true; }
+          else ctx.lineTo(X(lo), Y(la));
+          px = lo;
+        }
+        ctx.closePath(); ctx.fill(); ctx.stroke();
+      }
+    }
 
     // Shade day / golden band / twilight / night. Compare the sine of the
     // elevation against fixed thresholds so there is no asin() per cell.
