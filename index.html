@@ -125,9 +125,12 @@
   #map-clock b { color: #facc15; font-weight: 700; }
   #map-clock .sub2 { display: block; color: #6b7280; font-size: 19px; letter-spacing: 2px; }
   #map-proj {
-    position: absolute; bottom: 58px; left: 0; right: 0; text-align: center;
+    position: absolute; bottom: 52px; left: 50%; transform: translateX(-50%);
     color: #38bdf8; font-size: 20px; letter-spacing: 2px;
+    border: 1px solid rgba(56,189,248,0.45); border-radius: 4px;
+    padding: 6px 18px; cursor: pointer;
   }
+  #map-proj .tap { color: #6b7280; }
   #map-help {
     position: absolute; bottom: 26px; left: 0; right: 0; text-align: center;
     color: #6b7280; font-size: 19px; letter-spacing: 2px;
@@ -222,7 +225,7 @@
   <div id="map-info"></div>
   <div id="map-clock"></div>
   <div id="map-proj"></div>
-  <div id="map-help">&#9664;&#9654; CAMERA &middot; &#9650;&#9660; JUMP &middot; <b style="color:#38bdf8">0</b> / <b style="color:#38bdf8">P</b> PROJECTION &middot; OK WATCH &middot; BACK CLOSE</div>
+  <div id="map-help">&#9664;&#9654; CAMERA &middot; &#9650;&#9660; JUMP &middot; <b style="color:#facc15">&#9679;</b> PROJECTION &middot; OK WATCH &middot; BACK CLOSE</div>
 </div>
 
 <div id="menu">
@@ -287,6 +290,7 @@
   mapInfo        = document.getElementById('map-info');
   mapClockEl     = document.getElementById('map-clock');
   mapProjEl      = document.getElementById('map-proj');
+  if (mapProjEl) mapProjEl.onclick = cycleProjection;
   var catsEl     = document.getElementById('menu-cats');
   var camsEl     = document.getElementById('menu-cams');
 
@@ -888,6 +892,7 @@
     globe:     'Globe (facing the sun)'
   };
   var projIdx = 0;
+  try { projIdx = Math.min(3, Math.max(0, parseInt(localStorage.getItem('bctv_proj'), 10) || 0)); } catch (e) {}
 
   function projExtent(kind) {
     if (kind === 'mercator')  return { xmax: 2, ymax: 1.6 };
@@ -1116,7 +1121,13 @@
         (golden ? ' &nbsp;<b style="color:#facc15">GOLDEN NOW</b>' : '') + '</span>';
     }
     updateMapClock();
-    if (mapProjEl) mapProjEl.textContent = PROJ_NAMES[kind];
+    if (mapProjEl) mapProjEl.innerHTML = '◍ ' + PROJ_NAMES[kind] + ' <span class="tap">— change</span>';
+  }
+
+  function cycleProjection() {
+    projIdx = (projIdx + 1) % PROJECTIONS.length;
+    try { localStorage.setItem('bctv_proj', String(projIdx)); } catch (e) {}
+    if (mapOpen) safeDrawMap();
   }
 
   function fmtLatLon(lat, lon) {
@@ -1194,9 +1205,8 @@
       mapSel = (mapSel + (code === 38 ? -step : step) + mapCams.length) % mapCams.length;
       safeDrawMap();
     }
-    else if (code === 48 || code === 80) {        // 0 / P: next projection
-      projIdx = (projIdx + 1) % PROJECTIONS.length;
-      safeDrawMap();
+    else if (code === 405 || code === 48 || code === 80) {   // yellow (0 / P on a keyboard)
+      cycleProjection();
     }
     else if (code === 13)  closeMap(mapCams[mapSel]);
     else if (code === 461) closeMap(null);
@@ -1212,6 +1222,7 @@
                               (rotateTimer ? 'ON' : 'OFF'), on: !!rotateTimer },
       { id: 'grid',   label: '▦ Grid View (4 cams)' },
       { id: 'map',    label: '◍ World Map & Sun' },
+      { id: 'proj',   label: '◍ Projection: ' + PROJ_NAMES[PROJECTIONS[projIdx]] },
       { id: 'fav',    label: (isFav ? '★ Remove Favourite' : '☆ Add to Favourites') },
       { id: 'sound',  label: '♪ Sound: ' + (soundOn ? 'ON' : 'OFF'), on: soundOn },
       { id: 'yt',     label: '▶ Open in YouTube app',
@@ -1225,6 +1236,7 @@
     else if (id === 'fav')    { toggleFav(); renderMenu(); }
     else if (id === 'grid')   { closeMenu(); openGrid(); }
     else if (id === 'map')    { closeMenu(); openMap(); }
+    else if (id === 'proj')   { cycleProjection(); renderMenu(); }
     else if (id === 'yt')     { closeMenu(); openInYouTubeApp(); }
   }
 
