@@ -87,8 +87,16 @@
     background: rgba(4, 8, 16, 0.94); z-index: 20; display: none;
   }
   #menu.open { display: flex; }
+  #menu-ctrls {
+    width: 22%; height: 100%; overflow: hidden;
+    border-right: 1px solid #1f2937; padding: 50px 0;
+    box-sizing: border-box;
+  }
+  #menu-ctrls .ctrl-head {
+    padding: 0 30px 14px; color: #4b5563; font-size: 17px; letter-spacing: 2px;
+  }
   #menu-cats {
-    width: 34%; height: 100%; overflow: hidden;
+    width: 30%; height: 100%; overflow: hidden;
     border-right: 1px solid #1f2937; padding: 50px 0;
     box-sizing: border-box;
   }
@@ -141,7 +149,8 @@
 </div>
 
 <div id="help" class="hidden">
-  <b>OK</b> menu &middot; <b>&#9664;&#9654;</b> cam &middot; <b>&#9654;&#10073;&#10073;</b> rotate
+  <b>OK</b> menu &rarr; <b>CONTROLS</b> (rotate / sun chase)
+  &middot; <b>&#9664;&#9654;</b> cam
   &middot; <b style="color:#ef4444">&#9679;</b> grid
   &middot; <b style="color:#22c55e">&#9679;</b> YT app
   &middot; <b style="color:#facc15">&#9679;</b> &#9733; fav
@@ -152,10 +161,11 @@
 <div id="grid"></div>
 
 <div id="menu">
+  <div id="menu-ctrls"></div>
   <div id="menu-cats"></div>
   <div id="menu-cams"></div>
   <div id="menu-title">
-    &#9650;&#9660; NAVIGATE &middot; &#9664;&#9654; SWITCH PANE &middot; OK SELECT &middot; BACK CLOSE
+    &#9650;&#9660; NAVIGATE &middot; &#9664;&#9654; CONTROLS / CATEGORIES / CAMERAS &middot; OK SELECT &middot; BACK CLOSE
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <span style="color:#facc15">● GOLDEN</span> &middot;
     <span style="color:#fb923c">● LOW SUN</span> &middot;
@@ -201,6 +211,7 @@
   var sndBadge   = document.getElementById('sound-badge');
   var gridEl     = document.getElementById('grid');
   var menuEl     = document.getElementById('menu');
+  var ctrlsEl    = document.getElementById('menu-ctrls');
   var catsEl     = document.getElementById('menu-cats');
   var camsEl     = document.getElementById('menu-cams');
 
@@ -212,7 +223,7 @@
   var rotateTimer = null;
   var soundOn = false;
   var favs = [];
-  var menuOpen = false, menuPane = 0, menuCat = 0, menuIdx = 0;
+  var menuOpen = false, menuPane = 0, menuCat = 0, menuIdx = 0, menuCtrl = 0;
   var gridOpen = false, gridPage = 0, gridSel = 0, gridMedia = [];
 
   function cur() {
@@ -758,6 +769,30 @@
     }
   }
 
+  /* ── On-screen controls (remotes without colour/transport keys) ── */
+  function ctrlItems() {
+    var c = cur();
+    var isFav = c && favs.indexOf(c.id) !== -1;
+    var chase = CATS.length && CATS[activeCat].chase;
+    return [
+      { id: 'rotate', label: (chase ? '☀ Sun Chase: ' : '⟳ Auto-Rotate: ') +
+                              (rotateTimer ? 'ON' : 'OFF'), on: !!rotateTimer },
+      { id: 'grid',   label: '▦ Grid View (4 cams)' },
+      { id: 'fav',    label: (isFav ? '★ Remove Favourite' : '☆ Add to Favourites') },
+      { id: 'sound',  label: '♪ Sound: ' + (soundOn ? 'ON' : 'OFF'), on: soundOn },
+      { id: 'yt',     label: '▶ Open in YouTube app',
+                      dim: !(c && c.type === 'yt') }
+    ];
+  }
+
+  function doCtrl(id) {
+    if (id === 'rotate')      { setRotate(!rotateTimer); renderMenu(); }
+    else if (id === 'sound')  { soundOn = !soundOn; applySound(); store(); renderMenu(); }
+    else if (id === 'fav')    { toggleFav(); renderMenu(); }
+    else if (id === 'grid')   { closeMenu(); openGrid(); }
+    else if (id === 'yt')     { closeMenu(); openInYouTubeApp(); }
+  }
+
   /* ── Menu ── */
   // Live daylight badge so you can see which cameras are worth opening.
   function hm(mins) {
@@ -807,6 +842,18 @@
 
   function renderMenu() {
     var i, c, div;
+    var items = ctrlItems();
+    ctrlsEl.innerHTML = '<div class="ctrl-head">CONTROLS</div>';
+    for (i = 0; i < items.length; i++) {
+      div = document.createElement('div');
+      div.className = 'm-item' + (menuPane === 2 && i === menuCtrl ? ' focus' : '');
+      div.style.fontSize = '23px';
+      if (items[i].dim) div.style.opacity = '0.4';
+      div.innerHTML = items[i].label +
+        (items[i].on ? '<span class="suntag" style="color:#22c55e">●</span>' : '');
+      div.onclick = (function (id) { return function () { doCtrl(id); }; })(items[i].id);
+      ctrlsEl.appendChild(div);
+    }
     catsEl.innerHTML = '';
     for (i = 0; i < CATS.length; i++) {
       div = document.createElement('div');
@@ -849,8 +896,8 @@
       })(menuCat, i);
       camsEl.appendChild(div);
     }
-    var pane = menuPane === 0 ? catsEl : camsEl;
-    var idx  = menuPane === 0 ? menuCat : menuIdx;
+    var pane = menuPane === 2 ? ctrlsEl : (menuPane === 0 ? catsEl : camsEl);
+    var idx  = menuPane === 2 ? menuCtrl + 1 : (menuPane === 0 ? menuCat : menuIdx);
     var node = pane.children[idx];
     if (node) {
       var want = node.offsetTop - pane.clientHeight / 2 + node.clientHeight;
@@ -873,7 +920,10 @@
     var n;
     if (code === 38 || code === 40) {
       var d = code === 38 ? -1 : 1;
-      if (menuPane === 0) {
+      if (menuPane === 2) {
+        n = ctrlItems().length;
+        menuCtrl = (menuCtrl + d + n) % n;
+      } else if (menuPane === 0) {
         menuCat = (menuCat + d + CATS.length) % CATS.length;
         menuIdx = 0;
       } else {
@@ -882,15 +932,37 @@
       }
       renderMenu();
     } else if (code === 37) {
-      menuPane = 0; renderMenu();
+      menuPane = menuPane === 0 ? 2 : (menuPane === 1 ? 0 : 2);
+      renderMenu();
     } else if (code === 39) {
-      menuPane = 1; renderMenu();
+      menuPane = menuPane === 2 ? 0 : 1;
+      renderMenu();
     } else if (code === 13) {
-      if (menuPane === 0) { menuPane = 1; menuIdx = 0; renderMenu(); }
+      if (menuPane === 2) doCtrl(ctrlItems()[menuCtrl].id);
+      else if (menuPane === 0) { menuPane = 1; menuIdx = 0; renderMenu(); }
       else { closeMenu(); load(menuCat, menuIdx); }
     } else if (code === 461) {
       if (menuPane === 1) { menuPane = 0; renderMenu(); }
+      else if (menuPane === 2) { menuPane = 0; renderMenu(); }
       else closeMenu();
+    }
+  }
+
+  function openInYouTubeApp() {
+    var c = cur();
+    if (!c || c.type !== 'yt') { showHud(true); return; }
+    try {
+      var br = new PalmServiceBridge();
+      br.onservicecallback = function () {};
+      br.call('luna://com.webos.applicationManager/launch', JSON.stringify({
+        id: 'youtube.leanback.v4',
+        params: { contentTarget: 'https://www.youtube.com/tv?v=' + c.vid }
+      }));
+    } catch (err) {
+      overlay.classList.remove('hidden');
+      overlayTxt.textContent = 'CANNOT OPEN YOUTUBE APP';
+      overlaySub.textContent = 'This TV blocked the app hand-off.';
+      setTimeout(function () { overlay.classList.add('hidden'); }, 4000);
     }
   }
 
@@ -912,24 +984,7 @@
       case 415: case 19: case 80:                        // play / pause / P
         setRotate(!rotateTimer); break;
       case 403: case 82: openGrid(); break;              // red / R: grid
-      case 404: case 71: {                               // green / G: native YT app
-        var c = cur();
-        if (!c || c.type !== 'yt') { showHud(true); break; }
-        try {
-          var br = new PalmServiceBridge();
-          br.onservicecallback = function () {};
-          br.call('luna://com.webos.applicationManager/launch', JSON.stringify({
-            id: 'youtube.leanback.v4',
-            params: { contentTarget: 'https://www.youtube.com/tv?v=' + c.vid }
-          }));
-        } catch (err) {
-          overlay.classList.remove('hidden');
-          overlayTxt.textContent = 'CANNOT OPEN YOUTUBE APP';
-          overlaySub.textContent = 'This TV blocked the app hand-off.';
-          setTimeout(function () { overlay.classList.add('hidden'); }, 4000);
-        }
-        break;
-      }
+      case 404: case 71: openInYouTubeApp(); break;      // green / G: native YT app
       case 405: case 70: toggleFav(); break;             // yellow / F: favorite
       case 406: case 83:                                 // blue / S: sound
         soundOn = !soundOn;
