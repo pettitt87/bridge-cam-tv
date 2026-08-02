@@ -328,6 +328,17 @@
   function rebuildCats() {
     var i, j, cat;
     CATS = [];
+    // Golden-hour chases lead the menu — they are the app's headline feature.
+    var geo = [];
+    for (j = 0; j < allCams.length; j++) {
+      if (typeof allCams[j].lat === 'number') geo.push(allCams[j]);
+    }
+    if (geo.length) {
+      geo = geo.slice().sort(function (a, b) { return b.lon - a.lon; });
+      CATS.push({ id: 'sun_both', name: '☀☾ Golden Hour Chase', cams: geo, chase: 'both' });
+      CATS.push({ id: 'sun_rise', name: '☀ Sunrise Chase',      cams: geo, chase: 'rise' });
+      CATS.push({ id: 'sun_set',  name: '☾ Sunset Chase',       cams: geo, chase: 'set'  });
+    }
     if (favs.length) {
       var fc = [];
       for (j = 0; j < allCams.length; j++) {
@@ -360,17 +371,6 @@
       CATS.push({ id: 'st_' + codes[i],
                   name: '◆ ' + (STATE_NAMES[codes[i]] || codes[i]),
                   cams: byState[codes[i]] });
-    }
-    // Golden-hour chases: same camera pool, sorted east → west
-    var geo = [];
-    for (j = 0; j < allCams.length; j++) {
-      if (typeof allCams[j].lat === 'number') geo.push(allCams[j]);
-    }
-    if (geo.length) {
-      geo = geo.slice().sort(function (a, b) { return b.lon - a.lon; });
-      CATS.push({ id: 'sun_rise', name: '☀ Sunrise Chase', cams: geo, chase: 'rise' });
-      CATS.push({ id: 'sun_set',  name: '☾ Sunset Chase',  cams: geo, chase: 'set'  });
-      CATS.push({ id: 'sun_both', name: '☀☾ Golden Hour Chase', cams: geo, chase: 'both' });
     }
     CATS.push({ id: 'all', name: 'All Cameras', cams: allCams });
   }

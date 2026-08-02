@@ -107,6 +107,10 @@
     {
       "id": "golden",
       "name": "Golden Hour Cams"
+    },
+    {
+      "id": "europe",
+      "name": "London & Paris"
     }
   ],
   "cameras": [
@@ -9300,6 +9304,99 @@
       ],
       "lat": 61.45,
       "lon": 10.13
+    },
+    {
+      "id": "eu_abbey",
+      "name": "Abbey Road Crossing",
+      "sub": "LONDON, ENGLAND · EARTHCAM",
+      "type": "yt",
+      "vid": "M3EYAY2MftI",
+      "lat": 51.532,
+      "lon": -0.1777,
+      "tags": [
+        "europe",
+        "world",
+        "landmarks",
+        "golden"
+      ],
+      "refresh": {
+        "channel": "@EarthCam",
+        "match": "Abbey Road"
+      }
+    },
+    {
+      "id": "eu_heathrow",
+      "name": "Heathrow Airport Live",
+      "sub": "LONDON, ENGLAND · LIVE",
+      "type": "yt",
+      "vid": "SCzPFfQfLEM",
+      "lat": 51.47,
+      "lon": -0.4543,
+      "tags": [
+        "europe",
+        "planes",
+        "world",
+        "golden"
+      ]
+    },
+    {
+      "id": "eu_tube",
+      "name": "London Underground Journey",
+      "sub": "LONDON, ENGLAND · 24/7",
+      "type": "yt",
+      "vid": "gzV7uUxwgwI",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "tags": [
+        "europe",
+        "world",
+        "golden"
+      ]
+    },
+    {
+      "id": "eu_iena",
+      "name": "Eiffel Tower — Palais d’Iéna",
+      "sub": "PARIS, FRANCE · LIVE 4K",
+      "type": "yt",
+      "vid": "OzYp4NRZlwQ",
+      "lat": 48.8629,
+      "lon": 2.2912,
+      "tags": [
+        "europe",
+        "world",
+        "landmarks",
+        "golden"
+      ]
+    },
+    {
+      "id": "eu_sacre",
+      "name": "Sacré-Cœur de Montmartre",
+      "sub": "PARIS, FRANCE · PARIS TV",
+      "type": "yt",
+      "vid": "-xzg3wujOVM",
+      "lat": 48.8867,
+      "lon": 2.3431,
+      "tags": [
+        "europe",
+        "world",
+        "landmarks",
+        "golden"
+      ]
+    },
+    {
+      "id": "eu_seine",
+      "name": "La Seine & Notre-Dame",
+      "sub": "PARIS, FRANCE · LIVE",
+      "type": "yt",
+      "vid": "I2wYxnjTLWg",
+      "lat": 48.853,
+      "lon": 2.3499,
+      "tags": [
+        "europe",
+        "world",
+        "landmarks",
+        "golden"
+      ]
     }
   ]
 }
