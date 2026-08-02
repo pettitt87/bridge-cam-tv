@@ -855,7 +855,9 @@
   }
 
   /* ── World map with day/night terminator ── */
-  var mapEl = null, mapCanvas = null, mapInfo = null;
+  // Declared only — these are assigned with the other element refs above.
+  // Re-initialising them here would clobber those assignments at run time.
+  var mapEl, mapCanvas, mapInfo;
   var mapOpen = false, mapSel = 0, mapTimer = null, mapCams = [];
 
   // Sun geometry for a whole frame: declination + the longitude where the sun
