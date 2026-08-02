@@ -9327,7 +9327,7 @@
     {
       "id": "eu_heathrow",
       "name": "Heathrow Airport Live",
-      "sub": "LONDON, ENGLAND · LIVE",
+      "sub": "LONDON HEATHROW · DAILY LIVE STREAM",
       "type": "yt",
       "vid": "SCzPFfQfLEM",
       "lat": 51.47,
@@ -9337,21 +9337,11 @@
         "planes",
         "world",
         "golden"
-      ]
-    },
-    {
-      "id": "eu_tube",
-      "name": "London Underground Journey",
-      "sub": "LONDON, ENGLAND · 24/7",
-      "type": "yt",
-      "vid": "gzV7uUxwgwI",
-      "lat": 51.5074,
-      "lon": -0.1278,
-      "tags": [
-        "europe",
-        "world",
-        "golden"
-      ]
+      ],
+      "refresh": {
+        "channel": "UC6q_hfBThkGdmQ5Vb4kWjWA",
+        "match": "Heathrow"
+      }
     },
     {
       "id": "eu_iena",
