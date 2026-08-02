@@ -117,6 +117,17 @@
     font-size: 26px; letter-spacing: 1px; text-shadow: 0 2px 8px rgba(0,0,0,.9);
   }
   #map-info .sub { display: block; color: #9ca3af; font-size: 20px; margin-top: 6px; }
+  #map-clock {
+    position: absolute; top: 30px; right: 50px; text-align: right;
+    color: #e2e8f0; font-size: 34px; letter-spacing: 3px;
+    font-variant-numeric: tabular-nums; text-shadow: 0 2px 8px rgba(0,0,0,.9);
+  }
+  #map-clock b { color: #facc15; font-weight: 700; }
+  #map-clock .sub2 { display: block; color: #6b7280; font-size: 19px; letter-spacing: 2px; }
+  #map-proj {
+    position: absolute; bottom: 58px; left: 0; right: 0; text-align: center;
+    color: #38bdf8; font-size: 20px; letter-spacing: 2px;
+  }
   #map-help {
     position: absolute; bottom: 26px; left: 0; right: 0; text-align: center;
     color: #6b7280; font-size: 19px; letter-spacing: 2px;
@@ -209,7 +220,9 @@
 <div id="mapview">
   <canvas id="mapcanvas"></canvas>
   <div id="map-info"></div>
-  <div id="map-help">&#9664;&#9654; SELECT CAMERA &middot; OK WATCH &middot; BACK CLOSE</div>
+  <div id="map-clock"></div>
+  <div id="map-proj"></div>
+  <div id="map-help">&#9664;&#9654; CAMERA &middot; &#9650;&#9660; JUMP &middot; <b style="color:#38bdf8">0</b> / <b style="color:#38bdf8">P</b> PROJECTION &middot; OK WATCH &middot; BACK CLOSE</div>
 </div>
 
 <div id="menu">
@@ -272,6 +285,8 @@
   mapEl          = document.getElementById('mapview');
   mapCanvas      = document.getElementById('mapcanvas');
   mapInfo        = document.getElementById('map-info');
+  mapClockEl     = document.getElementById('map-clock');
+  mapProjEl      = document.getElementById('map-proj');
   var catsEl     = document.getElementById('menu-cats');
   var camsEl     = document.getElementById('menu-cams');
 
@@ -858,8 +873,58 @@
   /* ── World map with day/night terminator ── */
   // Declared only — these are assigned with the other element refs above.
   // Re-initialising them here would clobber those assignments at run time.
-  var mapEl, mapCanvas, mapInfo;
+  var mapEl, mapCanvas, mapInfo, mapClockEl, mapProjEl;
+  var mapClockTimer = null;
   var mapOpen = false, mapSel = 0, mapTimer = null, mapCams = [];
+
+  /* ── Map projections ────────────────────────────────────────────────
+     Each returns world units plus the half-extent of the frame, so the
+     drawing code can fit any of them to the screen the same way. */
+  var PROJECTIONS = ['equirect', 'mercator', 'mollweide', 'globe'];
+  var PROJ_NAMES = {
+    equirect:  'Equirectangular',
+    mercator:  'Mercator',
+    mollweide: 'Mollweide (equal-area)',
+    globe:     'Globe (facing the sun)'
+  };
+  var projIdx = 0;
+
+  function projExtent(kind) {
+    if (kind === 'mercator')  return { xmax: 2, ymax: 1.6 };
+    if (kind === 'mollweide') return { xmax: 2 * Math.SQRT2, ymax: Math.SQRT2 };
+    if (kind === 'globe')     return { xmax: 1, ymax: 1 };
+    return { xmax: 2, ymax: 1 };
+  }
+
+  // `f` carries the sun frame so the globe can face the subsolar point.
+  function project(kind, lat, lon, f) {
+    var rad = Math.PI / 180, la = lat * rad, lo, th, k, d, s0, c0, sl, cl, cd;
+    if (kind === 'mercator') {
+      var cla = Math.max(-80, Math.min(80, lat)) * rad;
+      return { x: lon / 90, y: -Math.log(Math.tan(Math.PI / 4 + cla / 2)) / Math.PI * 2, vis: true };
+    }
+    if (kind === 'mollweide') {
+      th = la;
+      for (k = 0; k < 6; k++) {                      // Newton solve for theta
+        d = (2 * th + Math.sin(2 * th) - Math.PI * Math.sin(la)) /
+            (2 + 2 * Math.cos(2 * th));
+        th -= d;
+        if (Math.abs(d) < 1e-6) break;
+      }
+      return { x: 2 * Math.SQRT2 / Math.PI * (lon * rad) * Math.cos(th),
+               y: -Math.SQRT2 * Math.sin(th), vis: true };
+    }
+    if (kind === 'globe') {
+      var lat0 = f.decl, lon0 = f.lam0 * rad;
+      lo = lon * rad - lon0;
+      s0 = Math.sin(lat0); c0 = Math.cos(lat0);
+      sl = Math.sin(la);   cl = Math.cos(la);   cd = Math.cos(lo);
+      return { x: cl * Math.sin(lo),
+               y: -(c0 * sl - s0 * cl * cd),
+               vis: (s0 * sl + c0 * cl * cd) >= 0 };   // near hemisphere only
+    }
+    return { x: lon / 90, y: -lat / 90, vis: true };
+  }
 
   // Sun geometry for a whole frame: declination + the longitude where the sun
   // is directly overhead. Everything else is cheap trig against these two.
@@ -886,101 +951,187 @@
     var now = new Date();
     var f = sunFrame(now);
     var rad = Math.PI / 180;
-    var X = function (lon) { return (lon + 180) / 360 * W; };
-    var Y = function (lat) { return (90 - lat) / 180 * H; };
+    var kind = PROJECTIONS[projIdx];
+    var ext = projExtent(kind);
+    var sc = Math.min(W / (2 * ext.xmax), H / (2 * ext.ymax)) * 0.94;
+    var cx = W / 2, cy = H / 2;
+    var P = function (lat, lon) {
+      var q = project(kind, lat, lon, f);
+      return { x: cx + q.x * sc, y: cy + q.y * sc, vis: q.vis };
+    };
 
     ctx.fillStyle = '#050a14';
     ctx.fillRect(0, 0, W, H);
 
-    // Landmasses, so the terminator has something recognisable to fall across.
+    // Ocean/globe body, so the projection's outline is visible
+    ctx.fillStyle = '#081426';
+    if (kind === 'globe') {
+      ctx.beginPath(); ctx.arc(cx, cy, sc, 0, Math.PI * 2); ctx.fill();
+    } else {
+      var bodyPath = new Path2D ? null : null;   // simple bbox for flat maps
+      ctx.beginPath();
+      var bi;
+      for (bi = -180; bi <= 180; bi += 5) { var t = P(90, bi); if (bi === -180) ctx.moveTo(t.x, t.y); else ctx.lineTo(t.x, t.y); }
+      for (bi = 180; bi >= -180; bi -= 5) { var b2 = P(-90, bi); ctx.lineTo(b2.x, b2.y); }
+      ctx.closePath(); ctx.fill();
+    }
+
+    // ── Landmasses ──
     if (window.WORLD_LAND) {
       ctx.fillStyle = '#16304a';
       ctx.strokeStyle = 'rgba(148,197,255,0.35)';
       ctx.lineWidth = 1;
       for (var li = 0; li < WORLD_LAND.length; li++) {
-        var ring = WORLD_LAND[li], started = false, px = null;
-        ctx.beginPath();
+        var ring = WORLD_LAND[li], open = false, prev = null, plon = null;
         for (var pi = 0; pi < ring.length; pi += 2) {
           var lo = ring[pi], la = ring[pi + 1];
-          // Break the path where a ring wraps the antimeridian.
-          if (px !== null && Math.abs(lo - px) > 180) { ctx.closePath(); ctx.fill(); ctx.stroke(); started = false; }
-          if (!started) { ctx.beginPath(); ctx.moveTo(X(lo), Y(la)); started = true; }
-          else ctx.lineTo(X(lo), Y(la));
-          px = lo;
+          var q = P(la, lo);
+          var jump = prev && (Math.abs(lo - plon) > 180 ||
+                     Math.abs(q.x - prev.x) > W * 0.5);
+          if (!q.vis || jump) {
+            if (open) { ctx.closePath(); ctx.fill(); ctx.stroke(); open = false; }
+            prev = q.vis ? q : null; plon = lo;
+            continue;
+          }
+          if (!open) { ctx.beginPath(); ctx.moveTo(q.x, q.y); open = true; }
+          else ctx.lineTo(q.x, q.y);
+          prev = q; plon = lo;
         }
-        ctx.closePath(); ctx.fill(); ctx.stroke();
+        if (open) { ctx.closePath(); ctx.fill(); ctx.stroke(); }
       }
     }
 
-    // Shade day / golden band / twilight / night. Compare the sine of the
-    // elevation against fixed thresholds so there is no asin() per cell.
+    // ── Day / golden band / twilight / night ──
+    // Project a vertex grid once, then fill each cell as a quad.
     var S6 = Math.sin(6 * rad), S18 = Math.sin(18 * rad);
-    var cols = 120, rows = 60, cw = W / cols, ch = H / rows;
-    var cosH = new Array(cols), ix, iy, lat, sp, cp, v;
-    for (ix = 0; ix < cols; ix++) {
-      cosH[ix] = Math.cos((-180 + (ix + 0.5) * 360 / cols - f.lam0) * rad);
+    var cols = 96, rows = 48, ix, iy;
+    var vx = new Array((cols + 1) * (rows + 1));
+    for (iy = 0; iy <= rows; iy++) {
+      var vlat = 90 - iy * 180 / rows;
+      for (ix = 0; ix <= cols; ix++) {
+        vx[iy * (cols + 1) + ix] = P(vlat, -180 + ix * 360 / cols);
+      }
     }
     for (iy = 0; iy < rows; iy++) {
-      lat = 90 - (iy + 0.5) * 180 / rows;
-      sp = Math.sin(lat * rad) * f.sd;
-      cp = Math.cos(lat * rad) * f.cd;
+      var mlat = 90 - (iy + 0.5) * 180 / rows;
+      var sp = Math.sin(mlat * rad) * f.sd, cp = Math.cos(mlat * rad) * f.cd;
       for (ix = 0; ix < cols; ix++) {
-        v = sp + cp * cosH[ix];                 // sin(elevation)
+        var a = vx[iy * (cols + 1) + ix],       b = vx[iy * (cols + 1) + ix + 1];
+        var c = vx[(iy + 1) * (cols + 1) + ix + 1], dd = vx[(iy + 1) * (cols + 1) + ix];
+        if (!a.vis || !b.vis || !c.vis || !dd.vis) continue;
+        if (Math.abs(b.x - a.x) > W * 0.5) continue;      // wrapped cell
+        var v = sp + cp * Math.cos((-180 + (ix + 0.5) * 360 / cols - f.lam0) * rad);
         if (v > S6)        ctx.fillStyle = 'rgba(56,189,248,0.13)';
         else if (v > -S6)  ctx.fillStyle = 'rgba(250,204,21,0.34)';
         else if (v > -S18) ctx.fillStyle = 'rgba(139,92,246,0.13)';
         else               ctx.fillStyle = 'rgba(2,6,18,0.55)';
-        ctx.fillRect(ix * cw, iy * ch, cw + 1, ch + 1);
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+        ctx.lineTo(c.x, c.y); ctx.lineTo(dd.x, dd.y);
+        ctx.closePath(); ctx.fill();
       }
     }
 
-    // Graticule
-    var lon;
-    ctx.strokeStyle = 'rgba(148,163,184,0.14)'; ctx.lineWidth = 1;
-    for (lon = -180; lon <= 180; lon += 30) {
-      ctx.beginPath(); ctx.moveTo(X(lon), 0); ctx.lineTo(X(lon), H); ctx.stroke();
-    }
-    for (lat = -60; lat <= 60; lat += 30) {
-      ctx.beginPath(); ctx.moveTo(0, Y(lat)); ctx.lineTo(W, Y(lat)); ctx.stroke();
-    }
-    ctx.strokeStyle = 'rgba(148,163,184,0.30)';
-    ctx.beginPath(); ctx.moveTo(0, Y(0)); ctx.lineTo(W, Y(0)); ctx.stroke();
-
-    // Subsolar point, straight from the frame — no searching.
-    ctx.beginPath(); ctx.arc(X(f.lam0), Y(f.decl / rad), 9, 0, Math.PI * 2);
-    ctx.fillStyle = '#fde047'; ctx.fill();
-    ctx.strokeStyle = 'rgba(253,224,71,0.45)'; ctx.lineWidth = 3;
-    ctx.beginPath(); ctx.arc(X(f.lam0), Y(f.decl / rad), 22, 0, Math.PI * 2); ctx.stroke();
-
-    // Cameras (only ~85 — full precision is fine here)
-    var i, c, p, r, sel;
-    for (i = 0; i < mapCams.length; i++) {
-      c = mapCams[i];
-      p = solarPos(c.lat, c.lon, now);
-      sel = i === mapSel;
-      r = sel ? 11 : 5;
+    // ── Graticule with latitude / longitude labels ──
+    function polyline(pts) {
+      var started = false, k2, pv = null;
       ctx.beginPath();
-      ctx.arc(X(c.lon), Y(c.lat), r, 0, Math.PI * 2);
-      if (Math.abs(p.elev) <= GOLDEN_DEG) ctx.fillStyle = '#facc15';
-      else if (p.elev > GOLDEN_DEG)       ctx.fillStyle = '#38bdf8';
-      else                                ctx.fillStyle = '#64748b';
+      for (k2 = 0; k2 < pts.length; k2++) {
+        var q2 = pts[k2];
+        if (!q2.vis || (pv && Math.abs(q2.x - pv.x) > W * 0.5)) { started = false; pv = q2.vis ? q2 : null; continue; }
+        if (!started) { ctx.moveTo(q2.x, q2.y); started = true; } else ctx.lineTo(q2.x, q2.y);
+        pv = q2;
+      }
+      ctx.stroke();
+    }
+    var lat, lon, pts, k3;
+    ctx.lineWidth = 1;
+    ctx.font = '15px sans-serif';
+    ctx.textAlign = 'center';
+    for (lon = -180; lon <= 180; lon += 30) {
+      ctx.strokeStyle = lon === 0 ? 'rgba(148,163,184,0.34)' : 'rgba(148,163,184,0.14)';
+      pts = [];
+      for (lat = -90; lat <= 90; lat += 3) pts.push(P(lat, lon));
+      polyline(pts);
+      var lp = P(0, lon);
+      if (lp.vis && lon !== 180) {
+        ctx.fillStyle = 'rgba(148,163,184,0.6)';
+        ctx.fillText(lon === 0 ? '0°' : Math.abs(lon) + '°' + (lon < 0 ? 'W' : 'E'), lp.x, lp.y - 6);
+      }
+    }
+    ctx.textAlign = 'left';
+    for (lat = -60; lat <= 60; lat += 30) {
+      ctx.strokeStyle = lat === 0 ? 'rgba(148,163,184,0.34)' : 'rgba(148,163,184,0.14)';
+      pts = [];
+      for (lon = -180; lon <= 180; lon += 3) pts.push(P(lat, lon));
+      polyline(pts);
+      var la2 = P(lat, kind === 'globe' ? f.lam0 : -175);
+      if (la2.vis) {
+        ctx.fillStyle = 'rgba(148,163,184,0.6)';
+        ctx.fillText(lat === 0 ? '0°' : Math.abs(lat) + '°' + (lat < 0 ? 'S' : 'N'), la2.x + 6, la2.y - 5);
+      }
+    }
+
+    // ── Subsolar point ──
+    var sp2 = P(f.decl / rad, f.lam0);
+    if (sp2.vis) {
+      ctx.beginPath(); ctx.arc(sp2.x, sp2.y, 9, 0, Math.PI * 2);
+      ctx.fillStyle = '#fde047'; ctx.fill();
+      ctx.strokeStyle = 'rgba(253,224,71,0.45)'; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.arc(sp2.x, sp2.y, 22, 0, Math.PI * 2); ctx.stroke();
+    }
+
+    // ── Cameras ──
+    var i2, cam, pr, q3, r2, sel;
+    for (i2 = 0; i2 < mapCams.length; i2++) {
+      cam = mapCams[i2];
+      q3 = P(cam.lat, cam.lon);
+      if (!q3.vis) continue;
+      pr = solarPos(cam.lat, cam.lon, now);
+      sel = i2 === mapSel;
+      r2 = sel ? 11 : 5;
+      ctx.beginPath(); ctx.arc(q3.x, q3.y, r2, 0, Math.PI * 2);
+      if (Math.abs(pr.elev) <= GOLDEN_DEG) ctx.fillStyle = '#facc15';
+      else if (pr.elev > GOLDEN_DEG)       ctx.fillStyle = '#38bdf8';
+      else                                 ctx.fillStyle = '#64748b';
       ctx.fill();
       if (sel) {
         ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 4; ctx.stroke();
-        ctx.beginPath(); ctx.arc(X(c.lon), Y(c.lat), 20, 0, Math.PI * 2);
+        ctx.beginPath(); ctx.arc(q3.x, q3.y, 20, 0, Math.PI * 2);
         ctx.strokeStyle = 'rgba(34,197,94,0.6)'; ctx.lineWidth = 2; ctx.stroke();
       }
     }
 
+    // ── Readouts ──
     var c2 = mapCams[mapSel];
     if (c2) {
       var p2 = solarPos(c2.lat, c2.lon, now);
       var golden = Math.abs(p2.elev) <= GOLDEN_DEG;
+      var offSel = mapCams[mapSel];
       mapInfo.innerHTML = c2.name +
-        '<span class="sub">' + (c2.sub || '') + ' &nbsp;·&nbsp; SUN ' +
-        (p2.elev >= 0 ? '+' : '') + p2.elev.toFixed(1) + '° ' + (p2.rising ? '↑' : '↓') +
+        '<span class="sub">' + (c2.sub || '') +
+        ' &nbsp;·&nbsp; ' + fmtLatLon(c2.lat, c2.lon) +
+        ' &nbsp;·&nbsp; SUN ' + (p2.elev >= 0 ? '+' : '') + p2.elev.toFixed(1) + '° ' +
+        (p2.rising ? '↑' : '↓') +
         (golden ? ' &nbsp;<b style="color:#facc15">GOLDEN NOW</b>' : '') + '</span>';
     }
+    updateMapClock();
+    if (mapProjEl) mapProjEl.textContent = PROJ_NAMES[kind];
+  }
+
+  function fmtLatLon(lat, lon) {
+    return Math.abs(lat).toFixed(2) + '° ' + (lat >= 0 ? 'N' : 'S') + ', ' +
+           Math.abs(lon).toFixed(2) + '° ' + (lon >= 0 ? 'E' : 'W');
+  }
+
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+
+  function updateMapClock() {
+    if (!mapClockEl) return;
+    var n = new Date();
+    var gmt = pad2(n.getUTCHours()) + ':' + pad2(n.getUTCMinutes()) + ':' + pad2(n.getUTCSeconds());
+    var loc = pad2(n.getHours()) + ':' + pad2(n.getMinutes());
+    mapClockEl.innerHTML = '<b>' + gmt + '</b> GMT<span class="sub2">local ' + loc + '</span>';
   }
 
   function safeDrawMap() {
@@ -1010,10 +1161,13 @@
     mapInfo.innerHTML = 'Loading map…';
     setTimeout(safeDrawMap, 0);
     mapTimer = setInterval(safeDrawMap, 60000);
+    if (mapClockTimer) clearInterval(mapClockTimer);
+    mapClockTimer = setInterval(updateMapClock, 1000);
   }
 
   function closeMap(playCam) {
     if (mapTimer) { clearInterval(mapTimer); mapTimer = null; }
+    if (mapClockTimer) { clearInterval(mapClockTimer); mapClockTimer = null; }
     mapEl.classList.remove('open');
     mapOpen = false;
     if (playCam) {
@@ -1038,6 +1192,10 @@
       // jump a quarter of the way around the globe
       var step = Math.max(1, Math.round(mapCams.length / 8));
       mapSel = (mapSel + (code === 38 ? -step : step) + mapCams.length) % mapCams.length;
+      safeDrawMap();
+    }
+    else if (code === 48 || code === 80) {        // 0 / P: next projection
+      projIdx = (projIdx + 1) % PROJECTIONS.length;
       safeDrawMap();
     }
     else if (code === 13)  closeMap(mapCams[mapSel]);
