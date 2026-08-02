@@ -103,6 +103,10 @@
     {
       "id": "rolling",
       "name": "Rolling Multi-Cam Tours"
+    },
+    {
+      "id": "golden",
+      "name": "Golden Hour Cams"
     }
   ],
   "cameras": [
@@ -250,9 +254,12 @@
       "tags": [
         "chicago",
         "skylines",
-        "landmarks"
+        "landmarks",
+        "golden"
       ],
-      "state": "IL"
+      "state": "IL",
+      "lat": 41.879,
+      "lon": -87.636
     },
     {
       "id": "lakefront",
@@ -266,9 +273,12 @@
       "tags": [
         "chicago",
         "beaches",
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "IL"
+      "state": "IL",
+      "lat": 41.9,
+      "lon": -87.61
     },
     {
       "id": "southsky",
@@ -281,9 +291,12 @@
       },
       "tags": [
         "chicago",
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "IL"
+      "state": "IL",
+      "lat": 41.867,
+      "lon": -87.62
     },
     {
       "id": "midwayec",
@@ -328,9 +341,12 @@
         "match": "Milwaukee"
       },
       "tags": [
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "WI"
+      "state": "WI",
+      "lat": 43.039,
+      "lon": -87.906
     },
     {
       "id": "deshler",
@@ -466,10 +482,13 @@
       "tags": [
         "nyc",
         "nye",
-        "nightlife"
+        "nightlife",
+        "golden"
       ],
       "nyeOff": -5,
-      "state": "NY"
+      "state": "NY",
+      "lat": 40.758,
+      "lon": -73.985
     },
     {
       "id": "tsq2",
@@ -484,10 +503,13 @@
       "tags": [
         "nyc",
         "nye",
-        "nightlife"
+        "nightlife",
+        "golden"
       ],
       "nyeOff": -5,
-      "state": "NY"
+      "state": "NY",
+      "lat": 40.759,
+      "lon": -73.985
     },
     {
       "id": "wtc",
@@ -503,10 +525,13 @@
         "nyc",
         "skylines",
         "landmarks",
-        "nye"
+        "nye",
+        "golden"
       ],
       "nyeOff": -5,
-      "state": "NY"
+      "state": "NY",
+      "lat": 40.713,
+      "lon": -74.013
     },
     {
       "id": "liberty",
@@ -520,9 +545,12 @@
       },
       "tags": [
         "nyc",
-        "landmarks"
+        "landmarks",
+        "golden"
       ],
-      "state": "NY"
+      "state": "NY",
+      "lat": 40.689,
+      "lon": -74.045
     },
     {
       "id": "littleitaly",
@@ -553,9 +581,12 @@
       "tags": [
         "nyc",
         "harbors",
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "NY"
+      "state": "NY",
+      "lat": 40.7,
+      "lon": -74.02
     },
     {
       "id": "fremont",
@@ -565,10 +596,13 @@
       "vid": "ZvYvZLfPatQ",
       "tags": [
         "nye",
-        "nightlife"
+        "nightlife",
+        "golden"
       ],
       "nyeOff": -8,
-      "state": "NV"
+      "state": "NV",
+      "lat": 36.171,
+      "lon": -115.144
     },
     {
       "id": "shibuya",
@@ -579,9 +613,12 @@
       "tags": [
         "nye",
         "nightlife",
-        "world"
+        "world",
+        "golden"
       ],
-      "nyeOff": 9
+      "nyeOff": 9,
+      "lat": 35.66,
+      "lon": 139.7
     },
     {
       "id": "nola",
@@ -595,10 +632,13 @@
       },
       "tags": [
         "nye",
-        "nightlife"
+        "nightlife",
+        "golden"
       ],
       "nyeOff": -6,
-      "state": "LA"
+      "state": "LA",
+      "lat": 29.954,
+      "lon": -90.065
     },
     {
       "id": "ftlaud",
@@ -611,9 +651,12 @@
         "match": "Fort Lauderdale Beach"
       },
       "tags": [
-        "beaches"
+        "beaches",
+        "golden"
       ],
-      "state": "FL"
+      "state": "FL",
+      "lat": 26.122,
+      "lon": -80.104
     },
     {
       "id": "wildwood",
@@ -626,9 +669,12 @@
         "match": "Wildwoods"
       },
       "tags": [
-        "beaches"
+        "beaches",
+        "golden"
       ],
-      "state": "NJ"
+      "state": "NJ",
+      "lat": 38.991,
+      "lon": -74.815
     },
     {
       "id": "sanibel",
@@ -641,9 +687,12 @@
         "match": "Sanibel"
       },
       "tags": [
-        "beaches"
+        "beaches",
+        "golden"
       ],
-      "state": "FL"
+      "state": "FL",
+      "lat": 26.448,
+      "lon": -82.101
     },
     {
       "id": "napili",
@@ -656,9 +705,12 @@
         "match": "Napili Bay"
       },
       "tags": [
-        "beaches"
+        "beaches",
+        "golden"
       ],
-      "state": "HI"
+      "state": "HI",
+      "lat": 20.994,
+      "lon": -156.667
     },
     {
       "id": "northshore",
@@ -671,9 +723,12 @@
         "match": "North Shore"
       },
       "tags": [
-        "beaches"
+        "beaches",
+        "golden"
       ],
-      "state": "HI"
+      "state": "HI",
+      "lat": 21.66,
+      "lon": -158.05
     },
     {
       "id": "keywest",
@@ -687,9 +742,12 @@
       },
       "tags": [
         "beaches",
-        "harbors"
+        "harbors",
+        "golden"
       ],
-      "state": "FL"
+      "state": "FL",
+      "lat": 24.555,
+      "lon": -81.805
     },
     {
       "id": "portmiami",
@@ -702,9 +760,12 @@
         "match": "Port Miami"
       },
       "tags": [
-        "harbors"
+        "harbors",
+        "golden"
       ],
-      "state": "FL"
+      "state": "FL",
+      "lat": 25.775,
+      "lon": -80.176
     },
     {
       "id": "soolocks",
@@ -777,9 +838,12 @@
       },
       "tags": [
         "harbors",
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "CA"
+      "state": "CA",
+      "lat": 37.802,
+      "lon": -122.4
     },
     {
       "id": "lakehood",
@@ -793,9 +857,12 @@
       },
       "tags": [
         "harbors",
-        "planes"
+        "planes",
+        "golden"
       ],
-      "state": "AK"
+      "state": "AK",
+      "lat": 61.181,
+      "lon": -149.972
     },
     {
       "id": "miamiair",
@@ -823,9 +890,12 @@
         "match": "Brooks Falls"
       },
       "tags": [
-        "wildlife"
+        "wildlife",
+        "golden"
       ],
-      "state": "AK"
+      "state": "AK",
+      "lat": 58.55,
+      "lon": -155.78
     },
     {
       "id": "tembe",
@@ -838,8 +908,11 @@
         "match": "Elephant"
       },
       "tags": [
-        "wildlife"
-      ]
+        "wildlife",
+        "golden"
+      ],
+      "lat": -27.03,
+      "lon": 32.4
     },
     {
       "id": "decorah",
@@ -897,8 +970,11 @@
         "match": "Watering Hole"
       },
       "tags": [
-        "wildlife"
-      ]
+        "wildlife",
+        "golden"
+      ],
+      "lat": -18.6,
+      "lon": 24.5
     },
     {
       "id": "kittens",
@@ -928,9 +1004,12 @@
       "tags": [
         "wildlife",
         "smalltown",
-        "appalachia"
+        "appalachia",
+        "golden"
       ],
-      "state": "TN"
+      "state": "TN",
+      "lat": 35.8,
+      "lon": -83.18
     },
     {
       "id": "manatee",
@@ -1035,9 +1114,12 @@
         "match": "Aquarium Cam"
       },
       "tags": [
-        "aquarium"
+        "aquarium",
+        "golden"
       ],
-      "state": "MD"
+      "state": "MD",
+      "lat": 39.285,
+      "lon": -76.608
     },
     {
       "id": "reef",
@@ -1064,9 +1146,12 @@
         "match": "Liberty Bell"
       },
       "tags": [
-        "landmarks"
+        "landmarks",
+        "golden"
       ],
-      "state": "PA"
+      "state": "PA",
+      "lat": 39.949,
+      "lon": -75.15
     },
     {
       "id": "washmon",
@@ -1079,9 +1164,12 @@
         "match": "Washington Monument"
       },
       "tags": [
-        "landmarks"
+        "landmarks",
+        "golden"
       ],
-      "state": "DC"
+      "state": "DC",
+      "lat": 38.889,
+      "lon": -77.035
     },
     {
       "id": "cleveland",
@@ -1094,9 +1182,12 @@
         "match": "Terminal Tower"
       },
       "tags": [
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "OH"
+      "state": "OH",
+      "lat": 41.498,
+      "lon": -81.694
     },
     {
       "id": "philly",
@@ -1109,9 +1200,12 @@
         "match": "Live: Philadelphia"
       },
       "tags": [
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "PA"
+      "state": "PA",
+      "lat": 39.953,
+      "lon": -75.165
     },
     {
       "id": "iss",
@@ -1154,8 +1248,11 @@
       },
       "tags": [
         "volcano",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 37.751,
+      "lon": 14.993
     },
     {
       "id": "popo",
@@ -1168,8 +1265,11 @@
         "match": "Popocat"
       },
       "tags": [
-        "volcano"
-      ]
+        "volcano",
+        "golden"
+      ],
+      "lat": 19.023,
+      "lon": -98.622
     },
     {
       "id": "fuego",
@@ -1182,8 +1282,11 @@
         "match": "Fuego Volcano Eruption"
       },
       "tags": [
-        "volcano"
-      ]
+        "volcano",
+        "golden"
+      ],
+      "lat": 14.475,
+      "lon": -90.88
     },
     {
       "id": "iceland",
@@ -1196,8 +1299,11 @@
         "match": "Iceland Volcano Watch (Multi"
       },
       "tags": [
-        "volcano"
-      ]
+        "volcano",
+        "golden"
+      ],
+      "lat": 63.88,
+      "lon": -22.27
     },
     {
       "id": "amazon",
@@ -1212,8 +1318,11 @@
       "tags": [
         "volcano",
         "world",
-        "wildlife"
-      ]
+        "wildlife",
+        "golden"
+      ],
+      "lat": -2.0,
+      "lon": -78.34
     },
     {
       "id": "rialto",
@@ -1227,8 +1336,11 @@
       },
       "tags": [
         "world",
-        "landmarks"
-      ]
+        "landmarks",
+        "golden"
+      ],
+      "lat": 45.438,
+      "lon": 12.336
     },
     {
       "id": "grandcanal",
@@ -1241,8 +1353,11 @@
         "match": "Grand Canal from Ca"
       },
       "tags": [
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 45.434,
+      "lon": 12.33
     },
     {
       "id": "sanmarco",
@@ -1255,8 +1370,11 @@
         "match": "San Marco Basin in Live"
       },
       "tags": [
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 45.433,
+      "lon": 12.339
     },
     {
       "id": "jackson",
@@ -1270,9 +1388,12 @@
       },
       "tags": [
         "smalltown",
-        "landmarks"
+        "landmarks",
+        "golden"
       ],
-      "state": "WY"
+      "state": "WY",
+      "lat": 43.479,
+      "lon": -110.762
     },
     {
       "id": "roswell",
@@ -1285,9 +1406,12 @@
         "match": "Roswell"
       },
       "tags": [
-        "smalltown"
+        "smalltown",
+        "golden"
       ],
-      "state": "NM"
+      "state": "NM",
+      "lat": 33.394,
+      "lon": -104.523
     },
     {
       "id": "buffalo",
@@ -1301,9 +1425,12 @@
       },
       "tags": [
         "smalltown",
-        "landmarks"
+        "landmarks",
+        "golden"
       ],
-      "state": "ND"
+      "state": "ND",
+      "lat": 46.91,
+      "lon": -98.708
     },
     {
       "id": "snowman",
@@ -1333,9 +1460,12 @@
       },
       "tags": [
         "nyc",
-        "harbors"
+        "harbors",
+        "golden"
       ],
-      "state": "NY"
+      "state": "NY",
+      "lat": 40.774,
+      "lon": -74.017
     },
     {
       "id": "flight93",
@@ -1349,9 +1479,12 @@
       },
       "tags": [
         "landmarks",
-        "appalachia"
+        "appalachia",
+        "golden"
       ],
-      "state": "PA"
+      "state": "PA",
+      "lat": 40.058,
+      "lon": -78.905
     },
     {
       "id": "warrenton",
@@ -1380,9 +1513,12 @@
         "match": "Spirit Lake"
       },
       "tags": [
-        "smalltown"
+        "smalltown",
+        "golden"
       ],
-      "state": "IA"
+      "state": "IA",
+      "lat": 43.423,
+      "lon": -95.102
     },
     {
       "id": "councilbluffs",
@@ -1410,9 +1546,12 @@
         "match": "Ruidoso"
       },
       "tags": [
-        "smalltown"
+        "smalltown",
+        "golden"
       ],
-      "state": "NM"
+      "state": "NM",
+      "lat": 33.332,
+      "lon": -105.673
     },
     {
       "id": "coney",
@@ -1426,9 +1565,12 @@
       },
       "tags": [
         "nyc",
-        "beaches"
+        "beaches",
+        "golden"
       ],
-      "state": "NY"
+      "state": "NY",
+      "lat": 40.575,
+      "lon": -73.979
     },
     {
       "id": "anglins",
@@ -1441,9 +1583,12 @@
         "match": "Anglins"
       },
       "tags": [
-        "beaches"
+        "beaches",
+        "golden"
       ],
-      "state": "FL"
+      "state": "FL",
+      "lat": 26.187,
+      "lon": -80.093
     },
     {
       "id": "niagara",
@@ -1457,9 +1602,12 @@
       },
       "tags": [
         "landmarks",
-        "volcano"
+        "volcano",
+        "golden"
       ],
-      "state": "NY"
+      "state": "NY",
+      "lat": 43.082,
+      "lon": -79.075
     },
     {
       "id": "sitka",
@@ -1473,9 +1621,12 @@
       },
       "tags": [
         "smalltown",
-        "harbors"
+        "harbors",
+        "golden"
       ],
-      "state": "AK"
+      "state": "AK",
+      "lat": 57.053,
+      "lon": -135.33
     },
     {
       "id": "allegiant",
@@ -1489,9 +1640,12 @@
       },
       "tags": [
         "landmarks",
-        "nightlife"
+        "nightlife",
+        "golden"
       ],
-      "state": "NV"
+      "state": "NV",
+      "lat": 36.091,
+      "lon": -115.184
     },
     {
       "id": "scrub",
@@ -1505,8 +1659,11 @@
       },
       "tags": [
         "beaches",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 18.48,
+      "lon": -64.5
     },
     {
       "id": "tamariu",
@@ -1520,8 +1677,11 @@
       },
       "tags": [
         "beaches",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 41.923,
+      "lon": 3.203
     },
     {
       "id": "bellagio",
@@ -1534,9 +1694,12 @@
         "match": "Bellagio"
       },
       "tags": [
-        "landmarks"
+        "landmarks",
+        "golden"
       ],
-      "state": "NV"
+      "state": "NV",
+      "lat": 36.113,
+      "lon": -115.177
     },
     {
       "id": "kansascity",
@@ -1549,9 +1712,12 @@
         "match": "Kansas City Cam"
       },
       "tags": [
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "MO"
+      "state": "MO",
+      "lat": 39.1,
+      "lon": -94.579
     },
     {
       "id": "summit1v",
@@ -1565,9 +1731,12 @@
       },
       "tags": [
         "nyc",
-        "skylines"
+        "skylines",
+        "golden"
       ],
-      "state": "NY"
+      "state": "NY",
+      "lat": 40.753,
+      "lon": -73.978
     },
     {
       "id": "scottsville",
@@ -1596,8 +1765,11 @@
       },
       "tags": [
         "world",
-        "landmarks"
-      ]
+        "landmarks",
+        "golden"
+      ],
+      "lat": 31.777,
+      "lon": 35.234
     },
     {
       "id": "nolastreet",
@@ -1611,9 +1783,12 @@
       },
       "tags": [
         "nightlife",
-        "nye"
+        "nye",
+        "golden"
       ],
-      "state": "LA"
+      "state": "LA",
+      "lat": 29.958,
+      "lon": -90.064
     },
     {
       "id": "dublin",
@@ -1628,9 +1803,12 @@
       "tags": [
         "world",
         "nightlife",
-        "nye"
+        "nye",
+        "golden"
       ],
-      "nyeOff": 0
+      "nyeOff": 0,
+      "lat": 53.345,
+      "lon": -6.264
     },
     {
       "id": "browncounty",
@@ -4690,12 +4868,15 @@
       "vid": "SUXPnIEpbn4",
       "tags": [
         "wildlife",
-        "world"
+        "world",
+        "golden"
       ],
       "refresh": {
         "channel": "@iPandaChannel",
         "match": "Panda 24/7"
-      }
+      },
+      "lat": 30.73,
+      "lon": 104.06
     },
     {
       "id": "v_HRO9PwoduE8",
@@ -4705,12 +4886,15 @@
       "vid": "HRO9PwoduE8",
       "tags": [
         "wildlife",
-        "world"
+        "world",
+        "golden"
       ],
       "refresh": {
         "channel": "@WildEarth",
         "match": "WildEarth Channel"
-      }
+      },
+      "lat": -24.4,
+      "lon": 31.5
     },
     {
       "id": "v_9Z-FBzyd0QA",
@@ -8605,8 +8789,11 @@
       "state": "NH",
       "tags": [
         "appalachia",
-        "harbors"
-      ]
+        "harbors",
+        "golden"
+      ],
+      "lat": 43.552,
+      "lon": -71.51
     },
     {
       "id": "n_5p_KGD4fJZs",
@@ -8619,9 +8806,12 @@
         "match": "White House"
       },
       "tags": [
-        "landmarks"
+        "landmarks",
+        "golden"
       ],
-      "state": "DC"
+      "state": "DC",
+      "lat": 38.898,
+      "lon": -77.037
     },
     {
       "id": "n_HfgIFGbdGJ0",
@@ -8650,8 +8840,11 @@
       },
       "tags": [
         "world",
-        "harbors"
-      ]
+        "harbors",
+        "golden"
+      ],
+      "lat": 32.717,
+      "lon": -16.766
     },
     {
       "id": "n_Q_AnKD9JxyU",
@@ -8665,8 +8858,11 @@
       },
       "tags": [
         "world",
-        "beaches"
-      ]
+        "beaches",
+        "golden"
+      ],
+      "lat": 32.76,
+      "lon": -17.23
     },
     {
       "id": "n_5nGs2b0qbjY",
@@ -8680,8 +8876,11 @@
       },
       "tags": [
         "world",
-        "beaches"
-      ]
+        "beaches",
+        "golden"
+      ],
+      "lat": 32.7,
+      "lon": -17.13
     },
     {
       "id": "n_sEo0ASp-U8A",
@@ -8694,8 +8893,11 @@
         "match": "Forum Machico"
       },
       "tags": [
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 32.717,
+      "lon": -16.766
     },
     {
       "id": "n_2m_6K6GETGI",
@@ -8708,8 +8910,11 @@
         "match": "Funchal"
       },
       "tags": [
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 32.645,
+      "lon": -16.91
     },
     {
       "id": "n_hy2d7jv5KWA",
@@ -8722,8 +8927,11 @@
         "match": "Cruz da Caldeira, Câmara de Lobos"
       },
       "tags": [
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 32.66,
+      "lon": -16.98
     },
     {
       "id": "n__idE_q5kgtA",
@@ -8737,8 +8945,11 @@
       },
       "tags": [
         "world",
-        "skylines"
-      ]
+        "skylines",
+        "golden"
+      ],
+      "lat": 32.665,
+      "lon": -16.93
     },
     {
       "id": "n_45wxTsNFPXw",
@@ -8752,8 +8963,11 @@
       },
       "tags": [
         "world",
-        "landmarks"
-      ]
+        "landmarks",
+        "golden"
+      ],
+      "lat": 41.141,
+      "lon": -8.611
     },
     {
       "id": "n_GoCh3Rw2fH4",
@@ -8827,8 +9041,11 @@
       },
       "tags": [
         "nordic",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 58.97,
+      "lon": 5.7
     },
     {
       "id": "n_6-V8dt887Fw",
@@ -8858,8 +9075,11 @@
       "tags": [
         "nordic",
         "world",
-        "skylines"
-      ]
+        "skylines",
+        "golden"
+      ],
+      "lat": 59.913,
+      "lon": 10.752
     },
     {
       "id": "n_wFJzXxHqKVU",
@@ -8888,8 +9108,11 @@
       },
       "tags": [
         "nordic",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 62.594,
+      "lon": 9.69
     },
     {
       "id": "n_3xohetm5I7Y",
@@ -8918,8 +9141,11 @@
       },
       "tags": [
         "nordic",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 61.23,
+      "lon": 10.44
     },
     {
       "id": "n_jpCcV1-Sfnw",
@@ -8934,8 +9160,11 @@
       "tags": [
         "nordic",
         "world",
-        "skylines"
-      ]
+        "skylines",
+        "golden"
+      ],
+      "lat": 69.649,
+      "lon": 18.956
     },
     {
       "id": "n_ogH1z3eTi2Q",
@@ -8949,8 +9178,11 @@
       },
       "tags": [
         "nordic",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 60.87,
+      "lon": 6.52
     },
     {
       "id": "n_6Usok3aloeU",
@@ -8965,8 +9197,11 @@
       "tags": [
         "nordic",
         "world",
-        "skylines"
-      ]
+        "skylines",
+        "golden"
+      ],
+      "lat": 61.23,
+      "lon": 7.1
     },
     {
       "id": "n_8EKxnxlagvI",
@@ -9010,8 +9245,11 @@
       },
       "tags": [
         "nordic",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 60.472,
+      "lon": 8.469
     },
     {
       "id": "n_6LiukKeHyBc",
@@ -9057,8 +9295,11 @@
       },
       "tags": [
         "nordic",
-        "world"
-      ]
+        "world",
+        "golden"
+      ],
+      "lat": 61.45,
+      "lon": 10.13
     }
   ]
 }

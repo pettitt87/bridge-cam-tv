@@ -208,6 +208,39 @@
     return CATS.length ? CATS[activeCat].cams[activeIdx] : null;
   }
 
+  /* ── Solar position (NOAA approximation) ── */
+  function solarPos(lat, lon, date) {
+    var rad = Math.PI / 180;
+    var doy = Math.floor((date.getTime() - Date.UTC(date.getUTCFullYear(), 0, 1)) / 86400000);
+    var hUTC = date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600;
+    var g = 2 * Math.PI / 365 * (doy + (hUTC - 12) / 24);
+    var eqtime = 229.18 * (0.000075 + 0.001868 * Math.cos(g) - 0.032077 * Math.sin(g)
+                 - 0.014615 * Math.cos(2 * g) - 0.040849 * Math.sin(2 * g));
+    var decl = 0.006918 - 0.399912 * Math.cos(g) + 0.070257 * Math.sin(g)
+               - 0.006758 * Math.cos(2 * g) + 0.000907 * Math.sin(2 * g)
+               - 0.002697 * Math.cos(3 * g) + 0.00148 * Math.sin(3 * g);
+    var tst = hUTC * 60 + eqtime + 4 * lon;
+    var ha = (tst / 4) - 180;
+    while (ha < -180) ha += 360;
+    while (ha > 180) ha -= 360;
+    var cz = Math.sin(lat * rad) * Math.sin(decl) +
+             Math.cos(lat * rad) * Math.cos(decl) * Math.cos(ha * rad);
+    cz = Math.max(-1, Math.min(1, cz));
+    return { elev: 90 - Math.acos(cz) / rad, rising: ha < 0 };
+  }
+
+  // Pick the camera closest to the horizon in the requested phase.
+  function goldenPick(cams, wantRising, now) {
+    var best = -1, bestScore = 1e9, i, p, score;
+    for (i = 0; i < cams.length; i++) {
+      if (typeof cams[i].lat !== 'number') continue;
+      p = solarPos(cams[i].lat, cams[i].lon, now);
+      score = Math.abs(p.elev) + (p.rising === wantRising ? 0 : 500);
+      if (score < bestScore) { bestScore = score; best = i; }
+    }
+    return best;
+  }
+
   /* ── Persistence ── */
   function store() {
     try {
@@ -262,6 +295,16 @@
                   name: '◆ ' + (STATE_NAMES[codes[i]] || codes[i]),
                   cams: byState[codes[i]] });
     }
+    // Golden-hour chases: same camera pool, sorted east → west
+    var geo = [];
+    for (j = 0; j < allCams.length; j++) {
+      if (typeof allCams[j].lat === 'number') geo.push(allCams[j]);
+    }
+    if (geo.length) {
+      geo = geo.slice().sort(function (a, b) { return b.lon - a.lon; });
+      CATS.push({ id: 'sun_rise', name: '☀ Sunrise Chase', cams: geo, chase: 'rise' });
+      CATS.push({ id: 'sun_set',  name: '☾ Sunset Chase',  cams: geo, chase: 'set'  });
+    }
     CATS.push({ id: 'all', name: 'All Cameras', cams: allCams });
   }
   function findCat(id) {
@@ -304,7 +347,13 @@
     var star = favs.indexOf(cam.id) !== -1 ? '★ ' : '';
     camName.textContent = star + cam.name;
     camSub.textContent  = cam.sub || '';
-    camCat.textContent  = cat.name.toUpperCase() + ' · ' + (activeIdx + 1) + '/' + cat.cams.length;
+    var line = cat.name.toUpperCase() + ' · ' + (activeIdx + 1) + '/' + cat.cams.length;
+    if (typeof cam.lat === 'number') {
+      var p = solarPos(cam.lat, cam.lon, new Date());
+      line += ' · SUN ' + (p.elev >= 0 ? '+' : '') + p.elev.toFixed(1) + '° ' +
+              (p.rising ? '↑' : '↓');
+    }
+    camCat.textContent = line;
   }
 
   /* ── Players ── */
@@ -471,6 +520,14 @@
     if (menuOpen || gridOpen) return;
     var cat = CATS[activeCat];
     var now = new Date();
+    if (cat.chase) {
+      var gp = goldenPick(cat.cams, cat.chase === 'rise', now);
+      if (gp !== -1) {
+        if (gp !== activeIdx) load(activeCat, gp);
+        else refreshHudText();
+        return;
+      }
+    }
     if (cat.id === 'nye' && isNyeWindow(now)) {
       var pick = nyePick(cat.cams, now);
       if (pick !== -1) {
@@ -483,11 +540,16 @@
   function setRotate(on) {
     if (rotateTimer) { clearInterval(rotateTimer); rotateTimer = null; }
     if (on) {
-      rotateTimer = setInterval(rotateTick, ROTATE_SECONDS * 1000);
-      var nye = CATS[activeCat] && CATS[activeCat].id === 'nye' && isNyeWindow(new Date());
-      rotBadge.innerHTML = nye ? '&#127878; MIDNIGHT CHASE' : '&#8635; AUTO-ROTATE';
+      var cat = CATS[activeCat];
+      var chase = cat && cat.chase;
+      var nye = cat && cat.id === 'nye' && isNyeWindow(new Date());
+      // Golden-hour chases re-evaluate often; the sun moves ~0.25°/min.
+      rotateTimer = setInterval(rotateTick, (chase ? 120 : ROTATE_SECONDS) * 1000);
+      rotBadge.innerHTML = chase
+        ? (chase === 'rise' ? '☀ SUNRISE CHASE' : '☾ SUNSET CHASE')
+        : (nye ? '&#127878; MIDNIGHT CHASE' : '&#8635; AUTO-ROTATE');
       rotBadge.style.display = 'inline-block';
-      if (nye) rotateTick();
+      if (chase || nye) rotateTick();
     } else {
       rotBadge.style.display = 'none';
     }
