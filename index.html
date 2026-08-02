@@ -60,6 +60,20 @@
   }
   @keyframes spin { to { transform: rotate(360deg); } }
 
+  /* Info strip for YouTube cams — sits BESIDE the player, never over it, so no
+     overlay covers any part of the embedded player. */
+  #ytbar {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 92px;
+    display: none; align-items: center; justify-content: space-between;
+    padding: 0 50px; box-sizing: border-box; background: #050a14; z-index: 10;
+  }
+  body.ytmode #ytbar { display: flex; }
+  body.ytmode #yt-wrap { height: calc(100% - 92px); }
+  #yb-name  { color: #fff; font-size: 30px; font-weight: 600; letter-spacing: 1px; }
+  #yb-sub   { color: #9ca3af; font-size: 20px; letter-spacing: 2px; margin-left: 18px; }
+  #yb-status{ color: #22c55e; font-size: 22px; font-weight: 700; letter-spacing: 2px; }
+  #yb-cat   { color: #22c55e; font-size: 19px; letter-spacing: 2px; margin-left: 18px; }
+
   /* ── Grid ── */
   #grid {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -75,6 +89,16 @@
   .g-cell video, .g-cell img, .g-cell iframe {
     width: 100%; height: 100%; object-fit: contain; border: 0; display: block;
     background: #000;
+  }
+  .g-live {
+    position: absolute; top: 10px; left: 12px; padding: 3px 10px;
+    font-size: 17px; font-weight: 700; letter-spacing: 1px;
+    color: #0b1220; background: #facc15; border-radius: 3px;
+  }
+  .g-ph {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    color: #4b5563; font-size: 21px; letter-spacing: 1px;
   }
   .g-label {
     position: absolute; left: 0; right: 0; bottom: 0; padding: 6px 14px;
@@ -175,6 +199,11 @@
   &middot; <b>BACK</b> exit
 </div>
 
+<div id="ytbar">
+  <div class="yb-main"><span id="yb-name"></span><span id="yb-sub"></span></div>
+  <div class="yb-side"><span id="yb-status"></span><span id="yb-cat"></span></div>
+</div>
+
 <div id="grid"></div>
 
 <div id="mapview">
@@ -235,6 +264,10 @@
   var gridEl     = document.getElementById('grid');
   var menuEl     = document.getElementById('menu');
   var ctrlsEl    = document.getElementById('menu-ctrls');
+  var ybName     = document.getElementById('yb-name');
+  var ybSub      = document.getElementById('yb-sub');
+  var ybStatus   = document.getElementById('yb-status');
+  var ybCat      = document.getElementById('yb-cat');
   mapEl          = document.getElementById('mapview');
   mapCanvas      = document.getElementById('mapcanvas');
   mapInfo        = document.getElementById('map-info');
@@ -422,8 +455,15 @@
     var s = map[state] || map.connecting;
     statusEl.textContent = s[0];
     statusEl.style.color = s[1];
+    if (ybStatus) { ybStatus.textContent = s[0]; ybStatus.style.color = s[1]; }
   }
   function showHud(autoHide) {
+    if (document.body.classList.contains('ytmode')) {
+      hud.classList.add('hidden');
+      help.classList.add('hidden');
+      if (hudTimer) clearTimeout(hudTimer);
+      return;
+    }
     hud.classList.remove('hidden');
     help.classList.remove('hidden');
     if (hudTimer) clearTimeout(hudTimer);
@@ -447,6 +487,9 @@
               (p.rising ? '↑' : '↓');
     }
     camCat.textContent = line;
+    ybName.textContent = camName.textContent;
+    ybSub.textContent  = cam.sub || '';
+    ybCat.textContent  = line;
   }
 
   /* ── Players ── */
@@ -575,6 +618,9 @@
     refreshHudText();
     showHud(true);
 
+    var ytMode = cam.type === 'yt';
+    if (ytMode) document.body.classList.add('ytmode');
+    else        document.body.classList.remove('ytmode');
     video.style.display  = (cam.type === 'jpg' || cam.type === 'yt') ? 'none' : 'block';
     snap.style.display   = cam.type === 'jpg' ? 'block' : 'none';
     ytWrap.style.display = cam.type === 'yt' ? 'block' : 'none';
@@ -714,6 +760,9 @@
         var cell = document.createElement('div');
         cell.className = 'g-cell' + (idx === gridSel ? ' sel' : '');
         var rec = {};
+        // Only ONE moving picture at a time: webOS has a single hardware video
+        // path, and YouTube's terms forbid several players auto-playing at once.
+        // Everything else in the grid is a still.
         if (cam.type === 'jpg') {
           var img = document.createElement('img');
           img.referrerPolicy = 'no-referrer';
@@ -723,13 +772,17 @@
           }, SNAP_INTERVAL);
           cell.appendChild(img);
         } else if (cam.type === 'yt') {
-          var f = document.createElement('iframe');
-          f.setAttribute('allow', 'autoplay; encrypted-media');
-          f.setAttribute('frameborder', '0');
-          f.src = 'https://www.youtube.com/embed/' + cam.vid +
-            '?autoplay=1&mute=1&controls=0&playsinline=1&rel=0';
-          cell.appendChild(f);
-        } else {
+          var th = document.createElement('img');
+          th.src = 'https://i.ytimg.com/vi/' + cam.vid + '/hqdefault.jpg';
+          rec.timer = setInterval(function () {
+            th.src = 'https://i.ytimg.com/vi/' + cam.vid + '/hqdefault.jpg?t=' + Date.now();
+          }, 120000);
+          cell.appendChild(th);
+          var tag = document.createElement('div');
+          tag.className = 'g-live';
+          tag.textContent = '● LIVE — OK TO WATCH';
+          cell.appendChild(tag);
+        } else if (idx === gridSel) {
           var v = document.createElement('video');
           v.autoplay = true; v.muted = true;
           if (window.Hls && Hls.isSupported()) {
@@ -740,6 +793,11 @@
             v.src = cam.url;
           }
           cell.appendChild(v);
+        } else {
+          var ph = document.createElement('div');
+          ph.className = 'g-ph';
+          ph.textContent = '▶ live video — select to play';
+          cell.appendChild(ph);
         }
         var lbl = document.createElement('div');
         lbl.className = 'g-label';
@@ -753,6 +811,7 @@
   }
   function openGrid() {
     gridOpen = true;
+    document.body.classList.remove('ytmode');
     stopStreams();
     overlay.classList.add('hidden');
     hud.classList.add('hidden');
@@ -775,15 +834,15 @@
   function gridKey(code) {
     var count = gridCells().length;
     if (code === 37) {                       // left
-      if (gridSel > 0) { gridSel--; renderGridSel(); }
+      if (gridSel > 0) { gridSel--; renderGrid(); }
       else { gridPage--; gridSel = 3; renderGrid(); }
     } else if (code === 39) {                // right
-      if (gridSel < count - 1) { gridSel++; renderGridSel(); }
+      if (gridSel < count - 1) { gridSel++; renderGrid(); }
       else { gridPage++; gridSel = 0; renderGrid(); }
     } else if (code === 38) {                // up
-      if (gridSel >= 2) { gridSel -= 2; renderGridSel(); }
+      if (gridSel >= 2) { gridSel -= 2; renderGrid(); }
     } else if (code === 40) {                // down
-      if (gridSel + 2 < count) { gridSel += 2; renderGridSel(); }
+      if (gridSel + 2 < count) { gridSel += 2; renderGrid(); }
     } else if (code === 33) {                // ch up: next page
       gridPage++; gridSel = 0; renderGrid();
     } else if (code === 34) {                // ch down: prev page
@@ -799,32 +858,61 @@
   var mapEl = null, mapCanvas = null, mapInfo = null;
   var mapOpen = false, mapSel = 0, mapTimer = null, mapCams = [];
 
+  // Sun geometry for a whole frame: declination + the longitude where the sun
+  // is directly overhead. Everything else is cheap trig against these two.
+  function sunFrame(date) {
+    var doy = Math.floor((date.getTime() - Date.UTC(date.getUTCFullYear(), 0, 1)) / 86400000);
+    var hUTC = date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600;
+    var g = 2 * Math.PI / 365 * (doy + (hUTC - 12) / 24);
+    var eqtime = 229.18 * (0.000075 + 0.001868 * Math.cos(g) - 0.032077 * Math.sin(g)
+                 - 0.014615 * Math.cos(2 * g) - 0.040849 * Math.sin(2 * g));
+    var decl = 0.006918 - 0.399912 * Math.cos(g) + 0.070257 * Math.sin(g)
+               - 0.006758 * Math.cos(2 * g) + 0.000907 * Math.sin(2 * g)
+               - 0.002697 * Math.cos(3 * g) + 0.00148 * Math.sin(3 * g);
+    var lam0 = (720 - hUTC * 60 - eqtime) / 4;         // subsolar longitude
+    while (lam0 < -180) lam0 += 360;
+    while (lam0 > 180)  lam0 -= 360;
+    return { decl: decl, lam0: lam0, sd: Math.sin(decl), cd: Math.cos(decl) };
+  }
+
   function drawMap() {
     var cv = mapCanvas, ctx = cv.getContext('2d');
-    var W = cv.width = cv.clientWidth, H = cv.height = cv.clientHeight;
+    var W = cv.clientWidth || window.innerWidth || 1920;
+    var H = cv.clientHeight || window.innerHeight || 1080;
+    cv.width = W; cv.height = H;
     var now = new Date();
+    var f = sunFrame(now);
+    var rad = Math.PI / 180;
     var X = function (lon) { return (lon + 180) / 360 * W; };
     var Y = function (lat) { return (90 - lat) / 180 * H; };
 
     ctx.fillStyle = '#050a14';
     ctx.fillRect(0, 0, W, H);
 
-    // Day/night shading: sample the sun elevation on a coarse grid.
-    var cols = 180, rows = 90, cw = W / cols, ch = H / rows, ix, iy, lat, lon, e;
+    // Shade day / golden band / twilight / night. Compare the sine of the
+    // elevation against fixed thresholds so there is no asin() per cell.
+    var S6 = Math.sin(6 * rad), S18 = Math.sin(18 * rad);
+    var cols = 120, rows = 60, cw = W / cols, ch = H / rows;
+    var cosH = new Array(cols), ix, iy, lat, sp, cp, v;
     for (ix = 0; ix < cols; ix++) {
-      lon = -180 + (ix + 0.5) * 360 / cols;
-      for (iy = 0; iy < rows; iy++) {
-        lat = 90 - (iy + 0.5) * 180 / rows;
-        e = solarPos(lat, lon, now).elev;
-        if (e > 6)        ctx.fillStyle = 'rgba(56,189,248,0.13)';
-        else if (e > -6)  ctx.fillStyle = 'rgba(250,204,21,0.34)';   // golden band
-        else if (e > -18) ctx.fillStyle = 'rgba(139,92,246,0.13)';
-        else              ctx.fillStyle = 'rgba(2,6,18,0.55)';
+      cosH[ix] = Math.cos((-180 + (ix + 0.5) * 360 / cols - f.lam0) * rad);
+    }
+    for (iy = 0; iy < rows; iy++) {
+      lat = 90 - (iy + 0.5) * 180 / rows;
+      sp = Math.sin(lat * rad) * f.sd;
+      cp = Math.cos(lat * rad) * f.cd;
+      for (ix = 0; ix < cols; ix++) {
+        v = sp + cp * cosH[ix];                 // sin(elevation)
+        if (v > S6)        ctx.fillStyle = 'rgba(56,189,248,0.13)';
+        else if (v > -S6)  ctx.fillStyle = 'rgba(250,204,21,0.34)';
+        else if (v > -S18) ctx.fillStyle = 'rgba(139,92,246,0.13)';
+        else               ctx.fillStyle = 'rgba(2,6,18,0.55)';
         ctx.fillRect(ix * cw, iy * ch, cw + 1, ch + 1);
       }
     }
 
     // Graticule
+    var lon;
     ctx.strokeStyle = 'rgba(148,163,184,0.14)'; ctx.lineWidth = 1;
     for (lon = -180; lon <= 180; lon += 30) {
       ctx.beginPath(); ctx.moveTo(X(lon), 0); ctx.lineTo(X(lon), H); ctx.stroke();
@@ -835,18 +923,24 @@
     ctx.strokeStyle = 'rgba(148,163,184,0.30)';
     ctx.beginPath(); ctx.moveTo(0, Y(0)); ctx.lineTo(W, Y(0)); ctx.stroke();
 
-    // Cameras
-    var i, c, p, r;
+    // Subsolar point, straight from the frame — no searching.
+    ctx.beginPath(); ctx.arc(X(f.lam0), Y(f.decl / rad), 9, 0, Math.PI * 2);
+    ctx.fillStyle = '#fde047'; ctx.fill();
+    ctx.strokeStyle = 'rgba(253,224,71,0.45)'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.arc(X(f.lam0), Y(f.decl / rad), 22, 0, Math.PI * 2); ctx.stroke();
+
+    // Cameras (only ~85 — full precision is fine here)
+    var i, c, p, r, sel;
     for (i = 0; i < mapCams.length; i++) {
       c = mapCams[i];
       p = solarPos(c.lat, c.lon, now);
-      var sel = i === mapSel;
-      ctx.beginPath();
+      sel = i === mapSel;
       r = sel ? 11 : 5;
+      ctx.beginPath();
       ctx.arc(X(c.lon), Y(c.lat), r, 0, Math.PI * 2);
-      if (Math.abs(p.elev) <= GOLDEN_DEG)      ctx.fillStyle = '#facc15';
-      else if (p.elev > GOLDEN_DEG)            ctx.fillStyle = '#38bdf8';
-      else                                     ctx.fillStyle = '#64748b';
+      if (Math.abs(p.elev) <= GOLDEN_DEG) ctx.fillStyle = '#facc15';
+      else if (p.elev > GOLDEN_DEG)       ctx.fillStyle = '#38bdf8';
+      else                                ctx.fillStyle = '#64748b';
       ctx.fill();
       if (sel) {
         ctx.strokeStyle = '#22c55e'; ctx.lineWidth = 4; ctx.stroke();
@@ -854,19 +948,6 @@
         ctx.strokeStyle = 'rgba(34,197,94,0.6)'; ctx.lineWidth = 2; ctx.stroke();
       }
     }
-
-    // Subsolar point — where the sun is directly overhead
-    var best = null, bl, bo;
-    for (lon = -180; lon < 180; lon += 2) {
-      for (lat = -60; lat <= 60; lat += 2) {
-        e = solarPos(lat, lon, now).elev;
-        if (best === null || e > best) { best = e; bl = lat; bo = lon; }
-      }
-    }
-    ctx.beginPath(); ctx.arc(X(bo), Y(bl), 9, 0, Math.PI * 2);
-    ctx.fillStyle = '#fde047'; ctx.fill();
-    ctx.strokeStyle = 'rgba(253,224,71,0.45)'; ctx.lineWidth = 3;
-    ctx.beginPath(); ctx.arc(X(bo), Y(bl), 22, 0, Math.PI * 2); ctx.stroke();
 
     var c2 = mapCams[mapSel];
     if (c2) {
@@ -879,8 +960,17 @@
     }
   }
 
+  function safeDrawMap() {
+    try {
+      drawMap();
+    } catch (err) {
+      mapInfo.innerHTML = 'MAP ERROR<span class="sub">' + String(err).slice(0, 90) + '</span>';
+    }
+  }
+
   function openMap() {
     mapOpen = true;
+    document.body.classList.remove('ytmode');
     mapCams = [];
     for (var i = 0; i < allCams.length; i++) {
       if (typeof allCams[i].lat === 'number') mapCams.push(allCams[i]);
@@ -894,8 +984,9 @@
     overlay.classList.add('hidden');
     video.style.display = snap.style.display = ytWrap.style.display = 'none';
     mapEl.classList.add('open');
-    drawMap();
-    mapTimer = setInterval(drawMap, 60000);
+    mapInfo.innerHTML = 'Loading map…';
+    setTimeout(safeDrawMap, 0);
+    mapTimer = setInterval(safeDrawMap, 60000);
   }
 
   function closeMap(playCam) {
@@ -918,13 +1009,13 @@
   }
 
   function mapKey(code) {
-    if (code === 37)      { mapSel = (mapSel - 1 + mapCams.length) % mapCams.length; drawMap(); }
-    else if (code === 39) { mapSel = (mapSel + 1) % mapCams.length; drawMap(); }
+    if (code === 37)      { mapSel = (mapSel - 1 + mapCams.length) % mapCams.length; safeDrawMap(); }
+    else if (code === 39) { mapSel = (mapSel + 1) % mapCams.length; safeDrawMap(); }
     else if (code === 38 || code === 40) {
       // jump a quarter of the way around the globe
       var step = Math.max(1, Math.round(mapCams.length / 8));
       mapSel = (mapSel + (code === 38 ? -step : step) + mapCams.length) % mapCams.length;
-      drawMap();
+      safeDrawMap();
     }
     else if (code === 13)  closeMap(mapCams[mapSel]);
     else if (code === 461) closeMap(null);
